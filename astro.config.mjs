@@ -26,7 +26,7 @@ export default defineConfig({
     plugins: [tailwind()]
   },
   server: {
-    port: 3000,
+    port: 3002,
     host: '0.0.0.0'
   }
 });
