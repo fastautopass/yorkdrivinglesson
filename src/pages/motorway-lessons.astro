@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MotorwayLessons from '../components/pages/MotorwayLessons';
+---
+
+<Layout 
+  title="Motorway Driving Lessons York | A64, A1237 & Ring Roads"
+  description="Passed but never driven on a motorway? Our lessons near York take you through slip roads, lane changes, and real A1(M) driving — step by step. Book today."
+>
+  <MotorwayLessons client:load />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Motorway driving lessons in York. Build confidence at high speeds with DVSA-approved lane discipline and planning tuition.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Motorway Driving Lessons",
+          "item": "https://yorkdrivinglesson.co.uk/motorway-lessons/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are motorway lessons worth it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Motorways are the UK's safest but fastest roads. Guided tuition helps you develop high-speed observations, lane discipline, and safe merging—skills that significantly reduce stress and improve safety. Many students find this training a perfect stepping stone towards a full Pass Plus course."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can newly passed drivers take motorway lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we highly recommend it. Since the law changed, learners can drive on motorways with an instructor, but many wait until they pass. Taking lessons post-test helps you transition to independent high-speed driving safely. This is often the most effective form of post-test refresher training for new drivers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are motorway lessons available in automatic cars?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer motorway tuition in both automatic and manual vehicles. Choosing our automatic driving lessons can often make high-speed driving simpler as you can focus entirely on your positioning and observations without the distraction of gear changes on the A1(M)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many motorway lessons do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most drivers find that a single 2 or 3-hour session is enough to cover the essentials and build baseline confidence. For more anxious drivers, a short course of 2-3 sessions allows for more gradual exposure to the M62 or M1. If you're on a tight schedule, we can also integrate these into our intensive driving courses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we focus on confidence only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Motorway training is client-led. If you already have the technical skills but feel 'blocked' by anxiety, we focus on psychological reassurance, calm exposure, and confidence-building techniques. Our nervous driver support is ideal for those who have avoided high-speed roads for years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover dual carriageways?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. High-speed dual carriageways like the A64 are often the starting point for motorway training around York. They share many similarities with motorways and are excellent for practising joining and leaving at speed before we move onto the more complex A1(M) corridor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are motorway lessons good for nervous drivers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are specifically designed for nervous drivers. We use a patient, zero-judgment approach to help you overcome the physical and emotional barriers of high-speed travel in a safe, dual-controlled environment. This is a core part of our refresher lessons for those in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can refresher learners take motorway lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many of our refresher students haven't driven for years and motorways are their biggest fear. We combine general refresher training with dedicated high-speed sessions on the A64 and M62 to rebuild complete independence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you drive on real motorways?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While we often start on dual carriageways like the York ring road to build your skills, the goal is to get you onto real motorways (like the M1 or M62) to experience real-world traffic flows and modern smart motorway systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What roads around York are used?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We typically use a combination of the A64, A1(M), M1, and M62. These provide a diverse range of high-speed environments, from traditional dual carriageways near the Hopgrove roundabout to complex smart motorways with variable speed limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are night motorway lessons available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Night-time motorway driving presents unique challenges with visibility and glare. We can schedule sessions during evening hours to help you build confidence in these specific conditions, which is also a key component of the Pass Plus curriculum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my own car for motorway tuition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases, we recommend using the instructor's dual-controlled car for safety and peace of mind. However, if you are a full licence holder, we can discuss using your own vehicle once an initial assessment is completed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a specific motorway driving course?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer flexible motorway sessions or a structured motorway course. Both are shaped around your existing skill level and specific goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm too nervous to start on the motorway?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We never force you onto a road you aren't ready for. We'll start on quieter 60mph or 70mph roads to build your confidence gradually until you feel ready for the full motorway experience."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

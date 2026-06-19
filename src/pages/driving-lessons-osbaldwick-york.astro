@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Osbaldwick?", 
+    answer: "We can start from your home in Osbaldwick or a convenient local spot. Beginners often start in the quieter residential loops off Osbaldwick Lane to build basic confidence before tackling the busier main roads during your <a href='/manual-driving-lessons' class='font-bold underline'>driving lessons in York</a>." 
+  },
+  { 
+    question: "How do you help learners with the traffic towards the York test centre?", 
+    answer: "The routes towards Monks Cross connect the village to busier bypass and arterial roads. We introduce these once your basics are strong, helping you manage commuter traffic and junction planning near the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "Can we practise for the A64 junctions in Osbaldwick?",
+    answer: "Yes, the approaches towards the A64 and the Grimston Bar area are excellent for practising higher-speed merging, multi-lane roundabouts, and forward planning."
+  },
+  { 
+    question: "Do you offer automatic driving lessons in YO10/YO19?", 
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Osbaldwick and the wider YO10 and YO19 postcodes, which is ideal for navigating York's busier arterial roads."
+  },
+  { 
+    question: "Is Osbaldwick a good area for absolute beginners?", 
+    answer: "Yes, the residential estates around Osbaldwick Primary School and the local park offer a calm environment for building clutch control and steering. It's an ideal spot for starting <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>." 
+  },
+  { 
+    question: "How do you teach lane discipline on the routes towards Hull Road?", 
+    answer: "The routes connecting Osbaldwick to Hull Road are perfect for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow near the <a href='/driving-lessons-heslington-york' class='font-bold underline'>university area</a>."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Osbaldwick?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Osbaldwick. They are a focused way to build your driving skills quickly using local road layouts and York routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on routes near Osbaldwick?",
+    answer: "While we cover various parts of the city, the road conditions in Osbaldwick—including residential meeting situations and high-speed merging—are essential for reaching the DVSA test standard required to pass at the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>practical test</a>." 
+  },
+  { 
+    question: "Do you pick up from local offices or schools in Osbaldwick?", 
+    answer: "We're very flexible and can arrange pickups from your home in Osbaldwick — including anywhere on Tranby Avenue or Osbaldwick Lane — so your lessons fit into your day."
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Osbaldwick?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Osbaldwick Lane and Hull Road."
+  },
+  {
+    question: "How do you handle the narrow sections of Osbaldwick Village?", 
+    answer: "The older village sections can be tight with parked cars. We'll practise 'meeting' traffic, using priority correctly, and maintaining safe passing distances until you feel confident."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true <a href='/manual-driving-lessons' class='font-bold underline'>independent driving</a> along Osbaldwick Lane, Hull Road, and the routes towards Grimston Bar."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving towards the A64?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Osbaldwick roads until you're truly ready for the busier higher-speed junctions." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Osbaldwick?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Tranby Avenue, Osbaldwick Lane, and the surrounding YO10 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Village Green Junctions',
+    description: 'Build spatial awareness and "meeting traffic" routines on the narrow historic streets near the heart of the village.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Hull Road Approaches',
+    description: 'Practise your lane choices and observations as you head towards the busier commuter flow on this main city artery.'
+  },
+  {
+    icon: 'School',
+    title: 'Monks Cross Speed Preparation',
+    description: 'Build your confidence on the arterial roads towards the test centre, focusing on your observations and planning for the A64 interchange.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Hull Road Commuter Flow',
+    description: 'Practise managing busy arterial traffic and multi-lane junctions on the main city-bound approaches.',
+    badge: 'High-Speed Skill'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Osbaldwick Village Priority',
+    description: 'Navigate the narrow sections near the village green, focusing on priority and safe passing distances.',
+    badge: 'Precision Control'
+  },
+  {
+    icon: 'Clock',
+    title: 'A64 Merging Skills',
+    description: 'Build the confidence to manage higher speeds and decisive lane changes when approaching the outer ring road.',
+    badge: 'Calm Observation'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Osbaldwick, York YO10 | York Driving Lesson"
+  description="Driving lessons in Osbaldwick YO10. Quiet cul-de-sacs near Osbaldwick Village give a steady start before moving onto the A64 and Monks Cross. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Osbaldwick"
+    postcode="YO10"
+    localitySlang="Osbaldwick Roads"
+    heroDescription="Tranby Avenue’s quiet loops serve as a calm starting point before you move onto the busier multi-lane roundabouts at Grimston Bar."
+    overviewP1="Osbaldwick is a brilliant area for learning because it covers so much. You can get your early car control sorted on quiet streets like Tranby Avenue, and then move on to the bigger multi-lane roundabouts at Grimston Bar and the A64."
+    overviewP2="We provide all kinds of tuition here, including <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> and <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> throughout YO10. We spend time on the specific hurdles of Osbaldwick, like the narrow 'meeting' spots by the village green and the lane discipline needed for the Hull Road commuter traffic."
+    overviewP3="Whether it's your first time in the driver's seat or you're looking for <a href='/refresher-lessons' class='font-bold underline'>Refresher Lessons</a>, we keep things supportive. We use the variety of roads around Osbaldwick to help you reach the level of observation and independent planning that the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a> looks for."
+    whyChooseItems={[
+      "Proper insight into Osbaldwick's historic village meeting zones",
+      "Convenient pickups from home or local YO10 secondary schools",
+      "Plenty of practice on the Grimston Bar multi-lane roundabouts",
+      "Support with high-speed merging and A64 exit layouts",
+      "Practical prep for urban hazard perception on test day"
+    ]}
+    confidenceP1="Starting your driving lessons in Osbaldwick gives you the chance to practise on some of the best residential training grounds in York. We'll build your confidence with steering and junctions on the quiet loops like The Mead before moving on to the busier through-traffic and the high-speed challenges of the Grimston Bar interchange."
+    confidenceChallenge="Building confidence with the multi-lane approach and decision-making required for the Grimston Bar roundabout, where clear lane positioning is vital."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> while based in Osbaldwick is a great way to link up quiet residential control with busy interchange navigation. We'll spend plenty of time on the narrow sections of Osbaldwick Village before heading out to tackle the multi-lane junctions of Grimston Bar."
+    intensiveP2="The frequent lessons help you keep your lane discipline and mirror routines sharp as you head towards the city on Hull Road. We’ll focus on early planning and decisive lane changes, making sure you’re ready for the flow of commuter traffic and the varied road types you'll find throughout the YO10 and YO19 area."
+    intensiveFeatures={[
+      "Getting comfortable with the narrow Osbaldwick Village core",
+      "Confident lane planning at Grimston Bar",
+      "Handling Hull Road commuter through-traffic",
+      "Daily practice of multi-lane junction priority"
+    ]}
+    mockTestP1="Walking you through a mock test in Osbaldwick helps you bridge the gap between residential control and major interchange navigation. We’ll replicate the pressure of the practical exam, focusing on your decision-making at Grimston Bar and mirror routines through the village, so nothing feels new on the big day."
+    mockTestPoints={[
+      "Examiner-style feedback on Grimston Bar lane discipline",
+      "Simulated test routes through Osbaldwick Village meeting spots",
+      "Confidence building for Hull Road commuter traffic planning"
+    ]}
+    nearbyAreas={['Tang Hall', 'Heworth', 'Badger Hill', 'Layerthorpe', 'Heslington', 'Clifton Moor']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18832.956501257193!2d-1.0400529177638!3d53.95125306260005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879308f6c48995%3A0xc346ec0373ab9357!2sOsbaldwick%2C%20York!5e0!3m2!1sen!2suk!4v1715124000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Osbaldwick, York. Local instruction covering Tranby Avenue, Osbaldwick Lane, and the Grimston Bar roundabouts near YO10.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Osbaldwick",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-osbaldwick-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Osbaldwick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Osbaldwick or a convenient local spot. Beginners often start in the quieter residential loops off Osbaldwick Lane to build basic confidence before tackling the busier main roads during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the traffic towards the York test centre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The routes towards Monks Cross connect the village to busier bypass and arterial roads. We introduce these once your basics are strong, helping you manage commuter traffic and junction planning near the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the A64 junctions in Osbaldwick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the approaches towards the A64 and the Grimston Bar area are excellent for practising higher-speed merging, multi-lane roundabouts, and forward planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO10/YO19?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Osbaldwick and the wider YO10 and YO19 postcodes, which is ideal for navigating York's busier arterial roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Osbaldwick a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the residential estates around Osbaldwick Primary School and the local park offer a calm environment for building clutch control and steering. It's an ideal spot for starting manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline on the routes towards Hull Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The routes connecting Osbaldwick to Hull Road are perfect for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow near the university area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Osbaldwick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Osbaldwick. They are a focused way to build your driving skills quickly using local road layouts and York routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Osbaldwick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we cover various parts of the city, the road conditions in Osbaldwick—including residential meeting situations and high-speed merging—are essential for reaching the DVSA test standard required to pass at the practical test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local offices or schools in Osbaldwick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your home in Osbaldwick — including anywhere on Tranby Avenue or Osbaldwick Lane — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Osbaldwick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Osbaldwick Lane and Hull Road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the narrow sections of Osbaldwick Village?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The older village sections can be tight with parked cars. We'll practise 'meeting' traffic, using priority correctly, and maintaining safe passing distances until you feel confident."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving along Osbaldwick Lane, Hull Road, and the routes towards Grimston Bar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving towards the A64?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Osbaldwick roads until you're truly ready for the busier higher-speed junctions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Osbaldwick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Tranby Avenue, Osbaldwick Lane, and the surrounding YO10 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

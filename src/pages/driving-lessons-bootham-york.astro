@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Bootham?", 
+    answer: "We can start from your home in Bootham, a local university campus, or a convenient spot like the railway station. Beginners often start on the quieter residential streets off Bootham Stray to build basic car control."
+  },
+  {
+    question: "How do you handle the traffic on Bootham and Gillygate?",
+    answer: "Bootham and Gillygate are key routes into York. We'll practise lane discipline, mirror routines, and junction anticipation during your <a href='/manual-driving-lessons' class='font-bold underline'>driving lessons in York</a> to help you feel confident in busy urban flow."
+  },
+  {
+    question: "Can we practise for the York driving test routes in Bootham?",
+    answer: "Yes, many test routes include the junctions and roundabouts near Bootham. We'll walk you through the specific layouts, such as the approach to the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  {
+    question: "Do you offer automatic driving lessons in YO30?",
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Bootham and YO30, perfect for navigating busy city traffic with ease."
+  },
+  { 
+    question: "Is Bootham a good area for absolute beginners?", 
+    answer: "While the main roads are busy, nearby residential streets offer a calm environment for building clutch control and confidence at basic junctions. It's an ideal place to start <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>." 
+  },
+  {
+    question: "How do you teach lane discipline near the city walls?",
+    answer: "The junctions near the city walls are excellent for practising forward planning and mirror routines. We help you feel confident navigating York's historic and busy inner-city roads safely."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Bootham?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Bootham. They provide a concentrated learning experience built around York's specific road layouts." 
+  },
+  {
+    question: "Can I practise for my driving test on routes near Bootham?",
+    answer: "While we cover various parts of the city, the road conditions in and around Bootham are essential for reaching the DVSA test standard expected by examiners."
+  },
+  { 
+    question: "Do you pick up from local offices or schools in Bootham?", 
+    answer: "We're very flexible and can arrange pickups from your place of work, local school, or home in Bootham — including near Burton Stone Lane or anywhere on Wigginton Road — so your lessons fit into your day." 
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Bootham?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Gillygate and Wigginton Road during peak city traffic." 
+  },
+  {
+    question: "How do you handle the mini-roundabouts near the hospital?",
+    answer: "Mini-roundabouts require quick observation. We'll practise these junctions regularly until you feel calm and capable of navigating them instinctively and safely."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once your car control is steady, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Wigginton Road, Gillygate, and the inner city approaches towards York."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving in city centre traffic?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, starting in quieter areas until you're truly ready for the busier spots on <a href='/driving-lessons-york-city-centre' class='font-bold underline'>York city centre</a>." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Bootham?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Gillygate, Wigginton Road, and the surrounding YO30 area." 
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'City Centre Approaches',
+    description: 'Build your observations and mirror routines as you navigate the busy flow past the historic walls and towards Gillygate.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Quiet Loops near the Stray',
+    description: 'The residential side streets here give you the peace needed to get your clutch control and technical steering feeling second-nature.'
+  },
+  {
+    icon: 'School',
+    title: 'Wigginton Road Outbound',
+    description: 'Good for building speed awareness and lane planning as the road opens up towards the hospital and further out to Clifton Moor.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'City Gateway Planning',
+    description: 'Navigate the historic approaches near the city walls, focusing on lane discipline and reading urban road signs.',
+    badge: 'Urban Planning'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Bootham Stray Loops',
+    description: 'Perfect for getting used to gear changes and steering on the calmer residential side streets away from main traffic.',
+    badge: 'Lane Discipline'
+  },
+  {
+    icon: 'Clock',
+    title: 'Hospital Roundabout Skills',
+    description: 'Build confidence at the busy mini-roundabouts near the district hospital, where observation timing is everything.',
+    badge: 'Hazard Perception'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Bootham, York YO30 | York Driving Lesson"
+  description="Driving lessons in Bootham YO30. From residential streets near Burton Stone Lane to the busy inner ring road and Clifton city centre. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Bootham"
+    postcode="YO30"
+    localitySlang="Bootham Roads"
+    heroDescription="Tree-lined streets and historic city gateways in Bootham provide a varied training ground, leading from quiet residential pockets to busy urban junctions."
+    overviewP1="Driving around Bootham gives you a proper feel for city driving. We'll work through the gateways like Gillygate and the residential pockets near Bootham Stray, helping you get your clutch control down before we head into the heavier traffic. It's all about making the transition to busy roads feel natural."
+    overviewP2="We have various options here, from <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> to regular <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a>, covering the whole YO30 area. We'll spend time on those tricky hospital mini-roundabouts and the busy pedestrian areas where quick eyes and good lane planning are essential."
+    overviewP3="Everyone learns differently, so we also offer <a href='/refresher-lessons' class='font-bold underline'>Refresher Lessons</a> and <a href='/mock-driving-tests' class='font-bold underline'>Mock Driving Tests</a> to see how you're getting on. We'll make sure you're ready for the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a> routes and the busy inner ring road junctions."
+    whyChooseItems={[
+      "Strong understanding of Bootham's urban gateways",
+      "Easy pickups from home or central YO30 spots",
+      "Focus on the tricky hospital mini-roundabouts",
+      "Calm help with navigating the historic city walls",
+      "Practical focus on the Monks Cross Driving Test Centre routes"
+    ]}
+    confidenceP1="Lessons in Bootham often start in the quieter residential areas tucked away from the main road, giving you space to build your car control. Once you're steady, we'll begin navigating the tree-lined streets of Bootham itself, gradually working up to the busier junctions that lead into the city walls."
+    confidenceChallenge="Navigating the dense concentration of cyclists, buses, and tourists near the city approaches, requiring constant observation and quick reactions."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="If you're looking to pass quickly, an <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> starting in Bootham is ideal for getting used to high-pressure city roads. We'll spend time navigating Gillygate and the inner ring road, so you feel confident with pedestrians and constant junctions."
+    intensiveP2="Intensive blocks allow you to see the same busy spots at different times of day, helping you understand how traffic flow changes near the city walls. It’s perfect preparation for the real test, where your ability to plan ahead and stay calm in traffic is key."
+    intensiveFeatures={[
+      "Frequent practice on city wall approaches",
+      "Managing lane discipline on Gillygate and Bootham",
+      "Scanning for pedestrians in high-activity zones",
+      "Building mirror routines for heavy urban flow"
+    ]}
+    mockTestP1="Our Bootham mock tests are designed to tackle the unique pressure of city-approaches and high-density urban planning. We’ll simulate real test conditions on the routes heading towards the city walls, evaluating your lane choice and pedestrian awareness so you reach the level expected at the Monks Cross Driving Test Centre."
+    mockTestPoints={[
+      "Detailed observation feedback on city-bound corridors",
+      "Assessment of lane planning near Bootham Park area",
+      "Focused practice for managing high-volume urban traffic flow"
+    ]}
+    nearbyAreas={['Clifton', 'Rawcliffe', 'York City Centre', 'Heworth', 'Huntington', 'Layerthorpe']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18831.028501257321!2d-1.0900529177638!3d53.96750506250005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487931086c48995%3A0xc346ec0373ab9357!2sBootham%2C%20York!5e0!3m2!1sen!2suk!4v1715110000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Bootham, York. Local instruction covering Gillygate, Bootham Stray, Wigginton Road, and the inner city approaches in YO30.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Bootham",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-bootham-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Bootham, a local university campus, or a convenient spot like the railway station. Beginners often start on the quieter residential streets off Bootham Stray to build basic car control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the traffic on Bootham and Gillygate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bootham and Gillygate are key routes into York. We'll practise lane discipline, mirror routines, and junction anticipation during your driving lessons in York to help you feel confident in busy urban flow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the York driving test routes in Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, many test routes include the junctions and roundabouts near Bootham. We'll walk you through the specific layouts, such as the approach to the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO30?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Bootham and YO30, perfect for navigating busy city traffic with ease."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Bootham a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the main roads are busy, nearby residential streets offer a calm environment for building clutch control and confidence at basic junctions. It's an ideal place to start manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline near the city walls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The junctions near the city walls are excellent for practising forward planning and mirror routines. We help you feel confident navigating York's historic and busy inner-city roads safely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Bootham. They provide a concentrated learning experience built around York's specific road layouts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we cover various parts of the city, the road conditions in and around Bootham are essential for reaching the DVSA test standard expected by examiners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local offices or schools in Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your place of work, local school, or home in Bootham — including near Burton Stone Lane or anywhere on Wigginton Road — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Gillygate and Wigginton Road during peak city traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the mini-roundabouts near the hospital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini-roundabouts require quick observation. We'll practise these junctions regularly until you feel calm and capable of navigating them instinctively and safely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once your car control is steady, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Wigginton Road, Gillygate, and the inner city approaches towards York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving in city centre traffic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, starting in quieter areas until you're truly ready for the busier spots on York city centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Gillygate, Wigginton Road, and the surrounding YO30 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

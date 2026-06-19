@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Dringhouses?", 
+    answer: "We can start from your home or a local spot like the Knavesmire. Beginners often start in the quieter residential grids off Moor Lane to build basic car control before heading towards Tadcaster Road."
+  },
+  { 
+    question: "How do you help learners with the traffic on Tadcaster Road?", 
+    answer: "Tadcaster Road is a major route. We introduce it once your basics are strong, helping you manage commuter traffic and lane positioning, which is excellent preparation for the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "Can we practise roundabouts near the Askham Bar area?",
+    answer: "Yes, the roundabouts near Tesco Askham Bar are excellent for practising multi-lane observation, signalling, and correct priority early in your <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>."
+  },
+  { 
+    question: "Do you offer automatic driving lessons in Dringhouses?", 
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> across Dringhouses and YO24, perfect for navigating York's busier arterial roads with zero gear stress."
+  },
+  { 
+    question: "Is Dringhouses a good area for absolute beginners?", 
+    answer: "Yes, the quieter residential streets off Askham Lane offer a calm environment for building clutch control and confidence at basic junctions. It's a great place to begin <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>."
+  },
+  { 
+    question: "How do you teach lane discipline near the Knavesmire?", 
+    answer: "The Knavesmire approach is a great place to practise forward planning and mirror routines before heading towards the city centre or the outer ring road."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Dringhouses?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for Dringhouses residents. They are a focused way to build your driving skills quickly using local road layouts and common local routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on Dringhouses roads?", 
+    answer: "While we cover many parts of the city, the road conditions in Dringhouses—including speed limit changes—are vital for reaching the DVSA test standard expected by examiners."
+  },
+  { 
+    question: "Do you pick up from local offices or schools in Dringhouses?", 
+    answer: "We're very flexible and can arrange pickups from your workplace, school, or home in Dringhouses — including near Moor Lane or The Chalfonts — so your lessons fit into your day."
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Dringhouses?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Moor Lane and Tadcaster Road near Askham Bar."
+  },
+  { 
+    question: "How do you handle the mini-roundabouts near Moor Lane?", 
+    answer: "Mini-roundabouts are common in Dringhouses. We'll practise observation and priority at these junctions until you feel confident and entirely safe navigating them."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Tadcaster Road, Moor Lane, and the Askham Bar roundabout approaches."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving on busier roads?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying in quieter parts of Dringhouses until you're ready for busier spots like those in <a href='/driving-lessons-woodthorpe-york' class='font-bold underline'>Woodthorpe</a> or Tadcaster Road." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Dringhouses?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Moor Lane, Tadcaster Road, and the surrounding YO24 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'The Chalfonts Residential',
+    description: 'The quiet residential grids are ideal for getting your technical car control and mirror routines solid in a low-pressure spot.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Tadcaster Road Corridor',
+    description: 'Develop your urban driving on this busy city approach, focusing on bus lane rules and planning for multi-lane junctions.'
+  },
+  {
+    icon: 'School',
+    title: 'Askham Bar Interchanges',
+    description: 'Practise the larger roundabouts and merging situations that connect the YO24 area to the York bypass and outer ring road.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Askham Bar Roundabouts',
+    description: 'Navigating the larger, multi-lane junctions near the Park & Ride, focusing on lane discipline and follow-through.',
+    badge: 'Roundabout Skill'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Tadcaster Road Observation',
+    description: 'Build your city driving skills on this busy artery, focusing on bus lane awareness and junction planning.',
+    badge: 'Sharp Observation'
+  },
+  {
+    icon: 'Clock',
+    title: 'Residential Road Control',
+    description: 'Practise your mirror routines and car control in the quiet residential grids off Moor Lane and The Gables.',
+    badge: 'Smooth Control'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Dringhouses, York YO24 | York Driving Lesson"
+  description="Driving lessons in Dringhouses YO24. From residential streets near Moor Lane to Tadcaster Road and the A64 — York driving test preparation. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Dringhouses"
+    postcode="YO24"
+    localitySlang="Dringhouses Roads"
+    heroDescription="The Chalfonts offer a steady starting ground, allowing you to settle your steering before you join the busier commuter flow on Tadcaster Road."
+    overviewP1="Dringhouses is a brilliant place to learn, spanning from the quiet cul-de-sacs near the park to the bustling flow of Tadcaster Road. We'll help you get to grips with the technical residential grids like the Chalfonts before you start playing your part in the heavier commuter traffic heading towards the city."
+    overviewP2="We offer both <a href='/manual-driving-lessons' class='font-bold underline'>Manual Driving Lessons</a> and <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> throughout the YO24 area. We spend time on the complex lane planning needed for the Knavesmire approaches and the mini-roundabouts near the local shops, keeping your observation sharp and your decisions sound."
+    overviewP3="Whether you're starting from scratch or taking <a href='/mock-driving-tests' class='font-bold underline'>Mock Driving Tests</a>, we keep things supportive. We use the local Dringhouses roads to prepare you for the high standards of the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>, focusing on real-world confidence."
+    whyChooseItems={[
+      "Good knowledge of Dringhouses' residential grids",
+      "Convenient pickups from home, York College, or local shops",
+      "Lots of practice on the Tadcaster Road commuter flow",
+      "Support with the Knavesmire junction lane positioning",
+      "Training that follows the actual York test routes"
+    ]}
+    confidenceP1="Practising in Dringhouses usually begins in the quiet residential streets around Moor Lane or The Gables, where you can get used to the car's feedback in a low-pressure environment. As your skills grow, we'll start weaving in the busier commuter routes along Tadcaster Road and towards the Askham Bar interchange."
+    confidenceChallenge="Navigating the complex lane changes and high traffic volume near Askham Bar Park & Ride, especially during peak commuter hours when early planning is essential."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> is a great way for Dringhouses learners to get their gear changes and observations solid. We'll use the Tadcaster Road corridor to practise urban planning and the quieter estate roads near The Chalfonts to build confidence with your technical manoeuvres."
+    intensiveP2="Because intensive lessons are back-to-back, you'll find your confidence growing much faster on the busy roundabouts near Askham Bar. It’s all about building that muscle memory so that your mirror checks and junction routines feel natural, whether you’re in heavy traffic or navigating residential side streets."
+    intensiveFeatures={[
+      "Handling bus lanes and city flow on Tadcaster Road",
+      "Navigating the multi-lane Askham Bar junctions",
+      "Building technical control in Dringhouses estates",
+      "Building planning skills for the YO24 commuter hub"
+    ]}
+    mockTestP1="A mock test through Dringhouses is perfect for refining your lane discipline on the busy Tadcaster Road corridor. We’ll recreate the exam atmosphere, putting your observation and hazard perception to the test around Askham Bar and the local school zones, keeping your routines instinctive and reliable."
+    mockTestPoints={[
+      "Realistic feedback on Tadcaster Road lane planning",
+      "Assessment of junction anticipation near local landmarks",
+      "Focused practice for multi-lane roundabout exits and entries"
+    ]}
+    nearbyAreas={['Woodthorpe', 'Foxwood', 'Acomb', 'York City Centre', 'Holgate', 'Bishopthorpe']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18835.340941457497!2d-1.1070529177638!3d53.93510506265005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48793033f7c48995%3A0xc346ec0373ab9357!2sDringhouses%2C%20York!5e0!3m2!1sen!2suk!4v1715113000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Dringhouses, York. Local instruction covering Moor Lane, Tadcaster Road, and the Askham Bar roundabouts near YO24.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Dringhouses",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-dringhouses-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Dringhouses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home or a local spot like the Knavesmire. Beginners often start in the quieter residential grids off Moor Lane to build basic car control before heading towards Tadcaster Road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the traffic on Tadcaster Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tadcaster Road is a major route. We introduce it once your basics are strong, helping you manage commuter traffic and lane positioning, which is excellent preparation for the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise roundabouts near the Askham Bar area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the roundabouts near Tesco Askham Bar are excellent for practising multi-lane observation, signalling, and correct priority early in your manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in Dringhouses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York across Dringhouses and YO24, perfect for navigating York's busier arterial roads with zero gear stress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Dringhouses a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the quieter residential streets off Askham Lane offer a calm environment for building clutch control and confidence at basic junctions. It's a great place to begin manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline near the Knavesmire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Knavesmire approach is a great place to practise forward planning and mirror routines before heading towards the city centre or the outer ring road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Dringhouses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for Dringhouses residents. They are a focused way to build your driving skills quickly using local road layouts and common local routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on Dringhouses roads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we cover many parts of the city, the road conditions in Dringhouses—including speed limit changes—are vital for reaching the DVSA test standard expected by examiners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local offices or schools in Dringhouses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your workplace, school, or home in Dringhouses — including near Moor Lane or The Chalfonts — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Dringhouses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Moor Lane and Tadcaster Road near Askham Bar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the mini-roundabouts near Moor Lane?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini-roundabouts are common in Dringhouses. We'll practise observation and priority at these junctions until you feel confident and entirely safe navigating them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Tadcaster Road, Moor Lane, and the Askham Bar roundabout approaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving on busier roads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying in quieter parts of Dringhouses until you're ready for busier spots like those in Woodthorpe or Tadcaster Road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Dringhouses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Moor Lane, Tadcaster Road, and the surrounding YO24 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

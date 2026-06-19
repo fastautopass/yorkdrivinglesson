@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+const corePages = [
+  { name: 'Home', url: '/' },
+  { name: 'About Us', url: '/about-us' },
+  { name: 'Contact Us', url: '/contact-us' },
+];
+
+const learnerServices = [
+  { name: 'Automatic Driving Lessons', url: '/automatic-driving-lessons' },
+  { name: 'Manual Driving Lessons', url: '/manual-driving-lessons' },
+  { name: 'Intensive Courses', url: '/intensive-driving-courses' },
+  { name: 'Mock Driving Tests', url: '/mock-driving-tests' },
+  { name: 'Refresher Lessons', url: '/refresher-lessons' },
+  { name: 'Motorway Lessons', url: '/motorway-lessons' },
+  { name: 'Pass Plus Course', url: '/pass-plus-course' },
+];
+
+const learnerResources = [
+  { name: 'Learner Insurance & Test Car Hire', url: '/learner-insurance' },
+  { name: 'Swap Your Driving Test Slot', url: '/driving-test-swap' },
+];
+
+const articles = [
+  { name: 'How to Pass Your Driving Test First Time in York', url: '/articles/pass-driving-test-first-time-york' },
+  { name: 'Automatic vs Manual Driving Lessons: Which Should You Choose?', url: '/articles/automatic-vs-manual-driving-lessons-york' },
+  { name: 'York Driving Test Routes & Common Mistakes', url: '/articles/york-driving-test-routes-common-mistakes' },
+  { name: 'What Happens On The York Driving Test?', url: '/articles/what-happens-on-the-york-driving-test' },
+  { name: 'Driving Test Nerves: How to Stay Calm on Test Day', url: '/articles/driving-test-nerves-how-to-stay-calm' },
+];
+
+const locationsGrouped = {
+  'WEST YORK AREAS': [
+    { name: 'Acomb', url: '/driving-lessons-acomb-york' },
+    { name: 'Holgate', url: '/driving-lessons-holgate-york' },
+    { name: 'Foxwood', url: '/driving-lessons-foxwood-york' },
+    { name: 'Dringhouses', url: '/driving-lessons-dringhouses-york' },
+    { name: 'Woodthorpe', url: '/driving-lessons-woodthorpe-york' },
+  ],
+  'NORTH YORK AREAS': [
+    { name: 'Clifton', url: '/driving-lessons-clifton-york' },
+    { name: 'Rawcliffe', url: '/driving-lessons-rawcliffe-york' },
+    { name: 'Bootham', url: '/driving-lessons-bootham-york' },
+    { name: 'Haxby', url: '/driving-lessons-haxby-york' },
+    { name: 'Wigginton', url: '/driving-lessons-wigginton-york' },
+    { name: 'Huntington', url: '/driving-lessons-huntington-york' },
+  ],
+  'EAST YORK AREAS': [
+    { name: 'Heworth', url: '/driving-lessons-heworth-york' },
+    { name: 'Tang Hall', url: '/driving-lessons-tang-hall-york' },
+    { name: 'Osbaldwick', url: '/driving-lessons-osbaldwick-york' },
+    { name: 'Murton', url: '/driving-lessons-murton-york' },
+    { name: 'Layerthorpe', url: '/driving-lessons-layerthorpe-york' },
+  ],
+  'SOUTH YORK AREAS': [
+    { name: 'Fulford', url: '/driving-lessons-fulford-york' },
+    { name: 'Bishopthorpe', url: '/driving-lessons-bishopthorpe-york' },
+    { name: 'Copmanthorpe', url: '/driving-lessons-copmanthorpe-york' },
+    { name: 'Heslington', url: '/driving-lessons-heslington-york' },
+    { name: 'Badger Hill', url: '/driving-lessons-badger-hill-york' },
+  ],
+  'CENTRAL YORK': [
+    { name: 'York City Centre', url: '/driving-lessons-york-city-centre' },
+    { name: 'Poppleton', url: '/driving-lessons-poppleton-york' },
+  ]
+};
+---
+
+<Layout title="Sitemap - York Driving Lesson" description="Browse all pages on the York Driving Lesson School website, including driving services, York area locations, articles, and contact information.">
+  <Header client:load />
+  
+  <main class="pt-28 pb-12 px-6 sm:px-10 bg-soft-bg min-h-screen font-sans">
+    <div class="max-w-[1280px] mx-auto">
+      {/* PAGE HEADER */}
+      <div class="mb-16 lg:mb-24">
+        <h1 class="text-[3rem] sm:text-[4rem] font-black text-primary-text mb-4 leading-none tracking-tighter uppercase">
+          Sitemap
+        </h1>
+        <p class="text-[1.1rem] sm:text-[1.25rem] text-secondary-text leading-relaxed max-w-[700px] font-medium opacity-80">
+          Browse York Driving Lesson pages, services, and York locations covered.
+        </p>
+      </div>
+
+      <div class="space-y-12 lg:space-y-14">
+        {/* SECTION 1 — CORE PAGES */}
+        <section>
+          <div class="flex items-center gap-4 mb-6">
+            <h2 class="text-[0.8rem] font-bold text-primary-dark uppercase tracking-[0.2em] whitespace-nowrap">Core Pages</h2>
+            <div class="h-px bg-primary-dark/10 w-full"></div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-3">
+            {corePages.map((page) => (
+              <a 
+                href={page.url} 
+                class="group inline-flex items-center text-[0.95rem] font-bold text-secondary-text hover:text-primary-dark transition-all duration-200 no-underline"
+              >
+                <span class="w-1 h-1 rounded-full bg-primary-dark/20 mr-3 group-hover:bg-primary-dark group-hover:scale-125 transition-all"></span>
+                {page.name}
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 2 — DRIVING LESSON SERVICES */}
+        <section>
+          <div class="flex items-center gap-4 mb-6">
+            <h2 class="text-[0.8rem] font-bold text-primary-dark uppercase tracking-[0.2em] whitespace-nowrap">Driving Lesson Services</h2>
+            <div class="h-px bg-primary-dark/10 w-full"></div>
+          </div>
+          
+          <div class="max-w-[1000px]">
+            <h3 class="text-[1.1rem] font-black text-primary-text mb-6 tracking-tighter uppercase">Learner Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4">
+              <ul class="space-y-3.5 list-none p-0">
+                {learnerServices.slice(0, 4).map((service) => (
+                  <li>
+                    <a href={service.url} class="group inline-flex items-center text-[0.95rem] font-bold text-secondary-text hover:text-primary-dark transition-all duration-200 no-underline">
+                      <span class="w-1 h-1 rounded-full bg-primary-dark/20 mr-3 group-hover:bg-primary-dark group-hover:scale-125 transition-all"></span>
+                      {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul class="space-y-3.5 list-none p-0">
+                {learnerServices.slice(4).map((service) => (
+                  <li>
+                    <a href={service.url} class="group inline-flex items-center text-[0.95rem] font-bold text-secondary-text hover:text-primary-dark transition-all duration-200 no-underline">
+                      <span class="w-1 h-1 rounded-full bg-primary-dark/20 mr-3 group-hover:bg-primary-dark group-hover:scale-125 transition-all"></span>
+                      {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3 — LEARNER RESOURCES */}
+        <section>
+          <div class="flex items-center gap-4 mb-6">
+            <h2 class="text-[0.8rem] font-bold text-primary-dark uppercase tracking-[0.2em] whitespace-nowrap">Learner Resources</h2>
+            <div class="h-px bg-primary-dark/10 w-full"></div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-3">
+            {learnerResources.map((page) => (
+              <a
+                href={page.url}
+                class="group inline-flex items-center text-[0.95rem] font-bold text-secondary-text hover:text-primary-dark transition-all duration-200 no-underline"
+              >
+                <span class="w-1 h-1 rounded-full bg-primary-dark/20 mr-3 group-hover:bg-primary-dark group-hover:scale-125 transition-all"></span>
+                {page.name}
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 5 — ARTICLES */}
+        <section>
+          <div class="flex items-center gap-4 mb-6">
+            <h2 class="text-[0.8rem] font-bold text-primary-dark uppercase tracking-[0.2em] whitespace-nowrap">Articles</h2>
+            <div class="h-px bg-primary-dark/10 w-full"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-12">
+            {articles.map((article) => (
+              <a 
+                href={article.url} 
+                class="group inline-flex items-center text-[0.95rem] font-bold text-secondary-text hover:text-primary-dark transition-all duration-200 no-underline"
+              >
+                <span class="w-1 h-1 rounded-full bg-primary-dark/20 mr-3 group-hover:bg-primary-dark group-hover:scale-125 transition-all"></span>
+                {article.name}
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 6 — DRIVING TEST CENTRES */}
+        <section>
+          <div class="flex items-center gap-4 mb-6">
+            <h2 class="text-[0.8rem] font-bold text-primary-dark uppercase tracking-[0.2em] whitespace-nowrap">Driving Test Centres</h2>
+            <div class="h-px bg-primary-dark/10 w-full"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-12">
+            <a 
+              href="/monks-cross-driving-test-centre" 
+              class="group inline-flex items-center text-[0.95rem] font-bold text-secondary-text hover:text-primary-dark transition-all duration-200 no-underline"
+            >
+              <span class="w-1 h-1 rounded-full bg-primary-dark/20 mr-3 group-hover:bg-primary-dark group-hover:scale-125 transition-all"></span>
+              Monks Cross Driving Test Centre
+            </a>
+          </div>
+        </section>
+
+        {/* SECTION 7 — YORK LOCATIONS COVERED */}
+        <section>
+          <div class="flex items-center gap-4 mb-6">
+            <h2 class="text-[0.8rem] font-bold text-primary-dark uppercase tracking-[0.2em] whitespace-nowrap">York Locations Covered</h2>
+            <div class="h-px bg-primary-dark/10 w-full"></div>
+          </div>
+
+          <div class="mb-8">
+            <a 
+              href="/york" 
+              class="group inline-flex items-center text-[1rem] font-bold text-primary-text hover:text-primary-dark transition-all duration-200 no-underline uppercase tracking-widest border-b border-primary-dark/10 hover:border-primary-dark/40 pb-1"
+            >
+              York Location Hub
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-y-8 gap-x-8">
+            {Object.entries(locationsGrouped).map(([region, locs]) => (
+              <div key={region}>
+                <h3 class="text-[0.75rem] font-black text-primary-text mb-5 uppercase tracking-widest pb-2 border-b border-primary-dark/5">
+                  {region}
+                </h3>
+                <ul class="space-y-2.5 list-none p-0">
+                  {locs.map((loc) => (
+                    <li>
+                      <a 
+                        href={loc.url} 
+                        class="text-[0.9rem] font-bold text-secondary-text hover:text-primary-dark transition-all duration-200 block no-underline"
+                      >
+                        Driving Lessons {loc.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* Subtle Decorative Element */}
+      <div class="max-w-[1280px] mx-auto mt-16 border-t border-border-main/20 pt-8 flex justify-start opacity-10">
+        <div class="text-[1.2rem] font-black text-[#1F2937] tracking-tight uppercase">York Driving Lesson</div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Layerthorpe?", 
+    answer: "We can start from your home in Layerthorpe or a convenient local spot. Beginners often start in the quieter residential streets off Hallfield Road to build basic confidence before tackling the busier main road." 
+  },
+  { 
+    question: "How do you help learners with the traffic near Foss Islands?", 
+    answer: "The Foss Islands retail area can be very busy. We'll practise lane planning, reading road signs, and junction anticipation in these high-volume zones during your <a href='/manual-driving-lessons' class='font-bold underline'>driving lessons in York</a>." 
+  },
+  { 
+    question: "Can we practise for the inner ring road in Layerthorpe?", 
+    answer: "Yes, Layerthorpe offers several approaches to the York inner ring road. We'll help you gain confidence with merging, lane positioning, and understanding multi-lane junction priority safely." 
+  },
+  { 
+    question: "Do you offer automatic driving lessons in YO31?", 
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Layerthorpe and the wider YO31 postcode, perfect for navigating York's busier urban junctions." 
+  },
+  { 
+    question: "Is Layerthorpe a good area for absolute beginners?", 
+    answer: "While the main road is busy, the residential pockets around Hallfield Road offer a calm environment for building clutch control and steering confidence. It's an ideal spot for starting <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>." 
+  },
+  { 
+    question: "How do you teach lane discipline on the routes towards the city walls?", 
+    answer: "The approaches from Layerthorpe towards the city centre are excellent for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow near the city centre."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Layerthorpe?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Layerthorpe. They are a focused way to build your driving skills quickly using local urban road layouts and York routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on routes near Layerthorpe?", 
+    answer: "While we cover various parts of the city, the road conditions in Layerthorpe—including busy retail traffic and inner ring road junctions—are essential for reaching the DVSA test standard at the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>." 
+  },
+  { 
+    question: "Do you pick up from local offices or workplaces in Layerthorpe?", 
+    answer: "We're very flexible and can arrange pickups from your place of work, local school, or home in Layerthorpe — including near Foss Islands Road or The Groves — so your lessons fit into your day." 
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Layerthorpe?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Foss Islands Road and the inner ring road." 
+  },
+  { 
+    question: "How do you handle the mini-roundabouts near Hallfield Road?", 
+    answer: "Mini-roundabouts are common in the Layerthorpe area. We'll practise observation and priority at these specific junctions until you feel confident and safe navigating them." 
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Foss Islands Road, Hallfield Road, and the inner ring road approaches."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving in busier urban traffic?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying in quieter parts of Layerthorpe until you're ready for busier spots like <a href='/driving-lessons-huntington-york' class='font-bold underline'>Huntington Road</a> or Foss Islands." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Layerthorpe?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Foss Islands Road, Hallfield Road, and the surrounding YO31 area." 
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Foss Islands Retail Run',
+    description: 'Practise your lane transitions and pedestrian awareness through the busy shopping areas where traffic flow is constant.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'City Wall Approaches',
+    description: 'Build your observation and timing as you head towards the inner ring road junctions near the historic landmarks.'
+  },
+  {
+    icon: 'School',
+    title: 'Side Streets near Hallfield Road',
+    description: 'Get your car control and junction priorities second-nature on the quieter residential roads away from the main traffic.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Foss Islands Lane Planning',
+    description: 'Build confidence navigating the busy retail area where early lane selection and mirror checks are vital.',
+    badge: 'Urban Planning'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Inner Ring Road Approaches',
+    description: 'Build the observation and timing required to merge safely onto the York inner ring road junctions.',
+    badge: 'Sharp Observation'
+  },
+  {
+    icon: 'Clock',
+    title: 'Hallfield Road Grid',
+    description: 'Practise your basic junctions and residential priority on the quieter side streets away from the main road.',
+    badge: 'Priority Skill'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Layerthorpe, York YO31 | York Driving Lesson"
+  description="Driving lessons in Layerthorpe YO31. Central York location with quick access to key test junctions on the inner ring road and A1079. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Layerthorpe"
+    postcode="YO31"
+    localitySlang="Layerthorpe Roads"
+    heroDescription="Foss Islands retail traffic and the quiet streets off Hallfield Road provide a diverse range of road types for developing your urban planning."
+    overviewP1="Learning to drive in Layerthorpe puts you right on the doorstep of the city centre. You'll find a real mix of roads, from the quiet streets around Hallfield Road where you can practise your basics, to the busy retail flow of Foss Islands where planning your lane position is key."
+    overviewP2="We help with all kinds of learning here, including <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> and <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> across YO31. We spend time on the specific hurdles of the Layerthorpe corridor, like the different mini-roundabouts and the busy shopping zones where you need to be ready for anything."
+    overviewP3="Whether you're just starting your journey or looking for <a href='/mock-driving-tests' class='font-bold underline'>Mock Driving Tests</a>, we keep things supportive. We'll use the local roads to make sure you're ready for the technical standards of the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>, focusing on real-world observation and making your own decisions."
+    whyChooseItems={[
+      "Proper knowledge of Layerthorpe's inner ring road junctions",
+      "Easy pickups from home or local places of work",
+      "Focused help with Foss Islands retail traffic flow",
+      "Practise on the residential side-streets around Hallfield Road",
+      "Training that covers test-standard urban hazard perception"
+    ]}
+    confidenceP1="Learning to drive in Layerthorpe starts by getting the basics right in the quieter residential pockets around Hallfield Road or the streets near The Groves. This allows you to focus on your car's feedback before we gradually introduce the busier urban flow of Layerthorpe itself and the bustling retail areas around Foss Islands."
+    confidenceChallenge="Navigating the constant mix of retail shoppers, delivery drivers, and heavy through-traffic near Foss Islands Road, requiring sharp observation and decisive lane choices."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> in the Layerthorpe area focuses heavily on urban awareness and lane planning. We'll practise navigating the busy retail sections of Foss Islands and the technical junctions that lead towards the city walls, so you're ready for high-volume city traffic."
+    intensiveP2="The benefit of back-to-back lessons is that your decision-making at busy junctions becomes faster and more intuitive. We’ll use the inner ring road approaches to build your confidence with multi-lane setups and merging, so that these complex urban situations feel completely manageable by your test date."
+    intensiveFeatures={[
+      "Navigating Foss Islands retail traffic flow",
+      "Building confidence on the inner ring road",
+      "Managing lane planning for city centre approaches",
+      "Building confidence with junction priority in busy urban zones"
+    ]}
+    mockTestP1="Getting test-ready in a busy urban area like Layerthorpe means getting comfortable with high-volume traffic and technical lane setups. We’ll simulate a real test environment, navigating the Foss Islands retail corridor and the inner ring road approaches so your observation and timing are exactly where they need to be."
+    mockTestPoints={[
+      "Realistic assessment of Foss Islands urban planning",
+      "Examiner-style feedback on city wall junctions",
+      "Focused independent driving practice through YO31"
+    ]}
+    nearbyAreas={['Tang Hall', 'Heworth', 'York City Centre', 'Fulford', 'Osbaldwick', 'Bootham']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18831.956501457193!2d-1.0700529177663!3d53.961253062615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879308f6c48995%3A0xc346ec0373ab9357!2sLayerthorpe%2C%20York!5e0!3m2!1sen!2suk!4v1715127000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Layerthorpe, York. Local instruction covering Foss Islands Road, Hallfield Road, and the inner ring road approaches in YO31.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Layerthorpe",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-layerthorpe-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Layerthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Layerthorpe or a convenient local spot. Beginners often start in the quieter residential streets off Hallfield Road to build basic confidence before tackling the busier main road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the traffic near Foss Islands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Foss Islands retail area can be very busy. We'll practise lane planning, reading road signs, and junction anticipation in these high-volume zones during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the inner ring road in Layerthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Layerthorpe offers several approaches to the York inner ring road. We'll help you gain confidence with merging, lane positioning, and understanding multi-lane junction priority safely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO31?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Layerthorpe and the wider YO31 postcode, perfect for navigating York's busier urban junctions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Layerthorpe a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the main road is busy, the residential pockets around Hallfield Road offer a calm environment for building clutch control and steering confidence. It's an ideal spot for starting manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline on the routes towards the city walls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The approaches from Layerthorpe towards the city centre are excellent for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow near the city centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Layerthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Layerthorpe. They are a focused way to build your driving skills quickly using local urban road layouts and York routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Layerthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we cover various parts of the city, the road conditions in Layerthorpe—including busy retail traffic and inner ring road junctions—are essential for reaching the DVSA test standard at the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local offices or workplaces in Layerthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your place of work, local school, or home in Layerthorpe — including near Foss Islands Road or The Groves — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Layerthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Foss Islands Road and the inner ring road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the mini-roundabouts near Hallfield Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini-roundabouts are common in the Layerthorpe area. We'll practise observation and priority at these specific junctions until you feel confident and safe navigating them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Foss Islands Road, Hallfield Road, and the inner ring road approaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving in busier urban traffic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying in quieter parts of Layerthorpe until you're ready for busier spots like Huntington Road or Foss Islands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Layerthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Foss Islands Road, Hallfield Road, and the surrounding YO31 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

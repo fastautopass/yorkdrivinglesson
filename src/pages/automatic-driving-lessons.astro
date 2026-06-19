@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AutomaticLessons from '../components/pages/AutomaticLessons';
+---
+
+<Layout 
+  title="Automatic Driving Lessons in York | DVSA-Approved School"
+  description="Learning to drive in York without the clutch? Our automatic lessons let you focus on the road, not the gearstick. Beginners welcome. Enquire now."
+>
+  <AutomaticLessons client:load />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Automatic driving lessons in York. Build confidence without the stress of manual gear changes.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Automatic Driving Lessons",
+          "item": "https://yorkdrivinglesson.co.uk/automatic-driving-lessons/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do automatic driving lessons cost in York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We strive to keep our automatic driving tuition prices fair and competitive. For current hourly rates and block booking discounts, please send us an enquiry above; we typically reply within two hours with availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many lessons will I actually need to pass?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every learner is different, but the goal is to get you to a test-ready driving standard safely. While the DVSA average is 45 hours, our structured approach often helps intensive driving students progress quickly. We provide honest feedback after every session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I start from scratch as a complete beginner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Most of our beginner drivers have never sat in the driver's seat before. We start in very quiet residential areas where you can learn basic vehicle control without any pressure from traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas of York do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover the majority of the city. Includes Acomb, Heworth, Fulford, Clifton, and Huntington. We can usually pick you up from home, work, or college."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer refresher lessons for automatic drivers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we do. Our refresher lessons are perfect if you've had a long break or have just moved to York and want to get used to local roundabouts and busy junctions in an automatic car."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will we practice on real York test routes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. As you become more test-ready, we'll spend time on real DVSA test routes. This helps you become familiar with the specific junctions you'll encounter at the York Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is learning in York's traffic harder in an automatic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Actually, it's easier. York's inner ring road can be busy, but in an automatic, you don't worry about constant gear changes in stop-start traffic. This is especially helpful for motorway-style driving preparation and busy city junctions like Gillygate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are automatic driving lessons easier than manual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally, yes. Most people pick up the basics quicker without a clutch. Remember, passing in an automatic means your licence is restricted to automatics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I expect on my first lesson?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your first lesson is about comfort. We'll introduce you to our local driving school vehicle, explain the simple controls, and get you moving in a quiet spot. It's calm, supportive, and focused on your learner driver support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I take my test in an automatic car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You'll take the same practical driving test as manual learners, using our modern, dual-controlled automatic car. We recommend a few mock driving tests first so you have total composure on the day."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Do you pick up from Clifton Green for driving lessons?", 
+    answer: "Yes, we can start your lessons from Clifton Green or any residential address in Clifton. It's a great starting point for practising junctions and lane positioning before heading towards Water End or the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "How do you help beginners near Water End in York?", 
+    answer: "Water End can be busy, so we usually start absolute beginners in the quieter residential pockets around Shipton Road. Once your car control is steady, we'll progress to the traffic flow and roundabouts in the Clifton area during your driving lessons in York."
+  },
+  { 
+    question: "Are automatic driving lessons available in Clifton?", 
+    answer: "We offer full <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> across Clifton. This is a popular choice for those who want to navigate York's busier junctions without the added complexity of a clutch pedal." 
+  },
+  {
+    question: "Can I practise for the York driving test around Clifton?",
+    answer: "While the test centre is in another part of the city, the road conditions in Clifton—including large roundabouts—are perfect for developing the observation and planning skills examiners look for during the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>practical test</a>."
+  },
+  { 
+    question: "Do you offer intensive courses for learners in Clifton?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for Clifton residents. We adapt the schedule to help you reach test standard while keeping you safe and confident on York's diverse roads."
+  },
+  { 
+    question: "What is the best area in Clifton for first-time learners?", 
+    answer: "We often recommend the quieter streets off Shipton Road or residential areas near the library. These spots allow you to build clutch control and basic steering without the pressure of heavy commuter traffic starting your <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>."
+  },
+  {
+    question: "Do you cover the YO30 area for driving tuition?",
+    answer: "Absolutely. We provide driving tuition throughout the YO30 postcode, covering all of Clifton and surrounding neighbourhoods with our driving lessons in York."
+  },
+  { 
+    question: "How do you handle nervous learners in busy junction areas?", 
+    answer: "We use a step-by-step approach. We won't tackle the busier Clifton junctions until you feel ready. Our goal is to build your confidence gradually in a calm, supportive environment until you're ready for busier spots like <a href='/driving-lessons-acomb-york' class='font-bold underline'>Acomb</a> or the city centre." 
+  },
+  { 
+    question: "Can I have lessons during the school run in Clifton?", 
+    answer: "Yes, lessons during busy times are helpful for learning to anticipate other road users. We'll focus on your hazard perception and defensive driving skills to help you feel safe in all traffic conditions."
+  },
+  { 
+    question: "Do you offer mock driving tests near Clifton?", 
+    answer: "We provide <a href='/mock-driving-tests' class='font-bold underline'>mock driving tests in York</a> that simulate real exam conditions. We use local road layouts to test your independent driving and observation skills under realistic pressure." 
+  },
+  { 
+    question: "Can I learn manual gear changes on the roads leading to Bootham?", 
+    answer: "The roads towards <a href='/driving-lessons-bootham-york' class='font-bold underline'>Bootham</a> offer varied traffic conditions, making them excellent for practising smooth gear changes and hill starts in a real-world York environment."
+  },
+  { 
+    question: "Is there availability for weekend lessons in Clifton?", 
+    answer: "We aim to be flexible. Depending on our current schedule, we can often accommodate weekend or evening lessons for learners in the Clifton area who have busy weekday commitments." 
+  },
+  { 
+    question: "How long are the driving lessons usually?", 
+    answer: "Our standard lessons are typically 90 minutes or 2 hours. This provides enough time to practise local Clifton routes and venture into wider York traffic for a more varied experience."
+  },
+  {
+    question: "Do you provide help with the theory test as well?",
+    answer: "While our focus is on practical driving, we're always happy to offer advice on hazard perception and road signs during your lessons in Clifton to help prepare you for the theory exam."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Compass',
+    title: 'Clifton Green Hub',
+    description: 'Practise your lane choices and pedestrian awareness at this busy local junction where many city routes converge.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Shipton Road (A19)',
+    description: 'A great stretch for getting used to consistent speeds and reading signs on the main way out towards the ring road.'
+  },
+  {
+    icon: 'School',
+    title: 'Water End Residential',
+    description: 'Head into the quieter side streets to get comfortable with meeting situations and clutch control away from the main commuter flow.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Clifton Green Junctions',
+    description: 'Build confidence with the multi-lane approaches and pedestrian crossings at this busy local hub with early planning.',
+    badge: 'Junction Expertise'
+  },
+  {
+    icon: 'Navigation',
+    title: 'A19 Speed Management',
+    description: 'Practise maintaining safe distances and adapting to speed changes on the main Shipton Road commuter corridor.',
+    badge: 'Precision Driving'
+  },
+  {
+    icon: 'Clock',
+    title: 'Residential Meeting Practice',
+    description: 'Navigate the narrower streets off Rawcliffe Lane, focusing on clearance and forward planning with parked cars.',
+    badge: 'Calm Observation'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Clifton, York YO30 | York Driving Lesson"
+  description="Driving lessons in Clifton YO30. Start near Rawcliffe Moor then build up to the A19 and Burton Stone Lane on the approach to York city centre. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Clifton"
+    postcode="YO30"
+    localitySlang="Clifton Roads"
+    heroDescription="Shipton Road’s multi-lane flow and the busy junctions at Clifton Green help you develop the planning skills needed for navigating larger urban routes."
+    overviewP1="Clifton has a bit of everything, making it a brilliant area to learn in. We start on the quiet streets near Rawcliffe Moor before building up to Burton Stone Lane and the wide commuter stretches of the A19 Shipton Road and the technical, busy junctions at Clifton Green. It's a great place to learn how to plan your drive and keep your cool when things get a bit busier."
+    overviewP2="There are several ways to get started, including <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> and <a href='/motorway-lessons' class='font-bold underline'>Motorway Lessons</a> if you're ready to head further afield. We'll spend plenty of time on the Water End roundabouts and the different traffic flows you'll meet as you head towards the city centre."
+    overviewP3="Whether you're just starting out or coming back for <a href='/refresher-lessons' class='font-bold underline'>Refresher Lessons</a>, we'll use our local knowledge to keep things moving. We'll help you deal with busy school zones and pedestrian activity, making sure you're properly prepared for your <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a> practical test."
+    whyChooseItems={[
+      "Clear guidance on the Clifton Green junction layouts",
+      "Easy pickups near the library or York District Hospital",
+      "Lots of practice on the A19 commuter corridor",
+      "Support with the busy pedestrian zones near local schools",
+      "Preparation for the bigger York bypass roundabouts"
+    ]}
+    confidenceP1="We often begin lessons in the quieter pockets of Clifton near Rawcliffe Lane or the residential stretches off Water End. This helps you get comfortable with the vehicle before we tackle the busier commuter traffic and the unique lane layouts that lead towards the city centre."
+    confidenceChallenge="Managing the multi-lane junctions and heavy pedestrian flow near Clifton Green, which demands early planning and decisive lane positioning."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="Doing an <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> while based in Clifton is the fastest way to get used to the city's busier commuter routes. We'll focus on your lane discipline at Clifton Green and your planning through the diverse traffic flow on Water End."
+    intensiveP2="Blocked lessons allow you to stay in the flow of learning, which is perfect for building confidence on the multi-lane approaches to the city centre. We’ll spend time navigating the busy school zones and pedestrian activity, so your hazard perception and observation become instinctive before your test day arrives."
+    intensiveFeatures={[
+      "Building confidence at the busy Clifton Green junctions",
+      "Handling dual carriageways and A-road junctions",
+      "Handling high-volume commuter traffic flow",
+      "Daily practice of urban observation routines"
+    ]}
+    mockTestP1="Taking a mock test in Clifton allows you to sharpen your skills on some of York's busiest multi-lane roundabouts. We’ll put you through a realistic test simulation, focusing on your exit planning at the ring road and your speed control through the residential streets, giving you the confidence to pass your test."
+    mockTestPoints={[
+      "Examiner-style feedback on A1237 roundabout discipline",
+      "Realistic assessment of Water End junction planning",
+      "Focused Independent driving practice on local Clifton routes"
+    ]}
+    nearbyAreas={['Rawcliffe', 'Bootham', 'Haxby', 'Huntington', 'York City Centre', 'Heworth']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18831.06649495147!2d-1.107052917767!3d53.97125306259005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48793165b4c48995%3A0x933068772a5a034!2sClifton%2C%20York!5e0!3m2!1sen!2suk!4v1715109000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Clifton, York. Local instruction on the A19 commuter corridor, Clifton Green junctions, and the road towards York city centre.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Clifton",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-clifton-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you pick up from Clifton Green for driving lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can start your lessons from Clifton Green or any residential address in Clifton. It's a great starting point for practising junctions and lane positioning before heading towards Water End or the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help beginners near Water End in York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Water End can be busy, so we usually start absolute beginners in the quieter residential pockets around Shipton Road. Once your car control is steady, we'll progress to the traffic flow and roundabouts in the Clifton area during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are automatic driving lessons available in Clifton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer full automatic driving lessons in York across Clifton. This is a popular choice for those who want to navigate York's busier junctions without the added complexity of a clutch pedal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for the York driving test around Clifton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the test centre is in another part of the city, the road conditions in Clifton—including large roundabouts—are perfect for developing the observation and planning skills examiners look for during the practical test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive courses for learners in Clifton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for Clifton residents. We adapt the schedule to help you reach the DVSA test standard while keeping you safe and confident on York's diverse roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best area in Clifton for first-time learners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We often recommend the quieter streets off Shipton Road or residential areas near the library. These spots allow you to build clutch control and basic steering without the pressure of heavy commuter traffic starting your manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover the YO30 area for driving tuition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide driving tuition throughout the YO30 postcode, covering all of Clifton and surrounding neighbourhoods with our driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle nervous learners in busy junction areas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use a step-by-step approach. We won't tackle the busier Clifton junctions until you feel ready. Our goal is to build your confidence gradually in a calm, supportive environment until you're ready for busier spots like Acomb or the city centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I have lessons during the school run in Clifton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, lessons during busy times are helpful for learning to anticipate other road users. We'll focus on your hazard perception and defensive driving skills to help you feel safe in all traffic conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer mock driving tests near Clifton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide mock driving tests in York that simulate real exam conditions. We use local road layouts to test your independent driving and observation skills under realistic pressure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I learn manual gear changes on the roads leading to Bootham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The roads towards Bootham offer varied traffic conditions, making them excellent for practising smooth gear changes and hill starts in a real-world York environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there availability for weekend lessons in Clifton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on our current schedule, we can often accommodate weekend or evening lessons for learners in the Clifton area who have busy weekday commitments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long are the driving lessons usually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our standard lessons are typically 90 minutes or 2 hours. This provides enough time to practise local Clifton routes and venture into wider York traffic for a more varied experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide help with the theory test as well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While our focus is on practical driving, we're always happy to offer advice on hazard perception and road signs during your lessons in Clifton to help prepare you for the theory exam."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

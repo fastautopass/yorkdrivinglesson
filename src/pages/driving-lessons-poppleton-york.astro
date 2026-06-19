@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Poppleton?", 
+    answer: "We can start from your home in Nether or Upper Poppleton or a local spot like Station Road. Beginners often start in the quieter residential loops off Main Street to build basic confidence before tackling busier roads during your <a href='/manual-driving-lessons' class='font-bold underline'>driving lessons in York</a>." 
+  },
+  { 
+    question: "How do you help learners with the major roundabouts near the A1237?", 
+    answer: "The Poppleton Bar roundabouts and the ring road junctions are excellent for practising multi-lane observation, lane positioning, and correct signalling early in your training near the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "Can we practise for the A59 routes in Poppleton?",
+    answer: "Yes, the A59 corridor is a key route. We'll introduce this once your basics are strong, helping you manage commuter traffic, speed limit changes, and major junction planning."
+  },
+  { 
+    question: "Do you offer automatic driving lessons in YO26?", 
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Poppleton and the wider YO26 postcode, making it easier to focus on navigation."
+  },
+  { 
+    question: "Is Poppleton a good area for absolute beginners?", 
+    answer: "Yes, the quieter residential streets in Upper and Nether Poppleton offer a calm environment for building clutch control and steering. It's an ideal spot for starting <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>." 
+  },
+  { 
+    question: "How do you teach lane discipline on the routes towards York city centre?", 
+    answer: "The routes connecting Poppleton to the city via the A59 are perfect for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow towards central York."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Poppleton?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Poppleton. They are a focused way to build your driving skills quickly using local road layouts and York routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on routes near Poppleton?",
+    answer: "While we cover various parts of the city, the road conditions in Poppleton are essential for reaching the DVSA test standard required to pass at the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>practical test</a>." 
+  },
+  { 
+    question: "Do you pick up from Poppleton station for lessons?", 
+    answer: "We're very flexible and can arrange pickups from your home in Poppleton — including near Poppleton railway station or Station Road — so your lessons fit into your day."
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Poppleton?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Station Road and the A59."
+  },
+  {
+    question: "How do you handle the narrow sections of Poppleton Village?", 
+    answer: "The historic parts of Poppleton can be tight. We'll practise 'meeting' traffic, using priority correctly, and maintaining safe passing distances until you feel confident."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on the A59, the A1237, and the Poppleton Bar roundabout approaches."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving towards the ring road?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Poppleton roads until you're truly ready for the busier ring road junctions." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Poppleton?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Station Road, the A59, and the surrounding YO26 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Station Road Loop',
+    description: 'Good for building low-speed car control and "meeting traffic" scenarios near the railway station and local schools.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'A59 City Link',
+    description: 'Practise your lane choices and speed transitions as you head towards the city on this busy commuter corridor.'
+  },
+  {
+    icon: 'School',
+    title: 'Interchange Junctions',
+    description: 'Build your confidence on large, multi-lane junctions where early planning and steady positioning are vital.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Poppleton Bar Roundabouts',
+    description: 'Develop your lane discipline and observation on the large, multi-lane junctions on the A59/A1237.',
+    badge: 'Roundabout Skill'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Station Road Observation',
+    description: 'Practise navigating high-activity residential streets near the railway station and local schools.',
+    badge: 'Precision Control'
+  },
+  {
+    icon: 'Clock',
+    title: 'Village Meeting Skills',
+    description: 'Build your spatial awareness in the historic village core where parked cars and narrow lanes require careful planning.',
+    badge: 'Calm Observation'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Poppleton, York YO26 | York Driving Lesson"
+  description="Driving lessons in Poppleton YO26. Residential practice on Poppleton's streets leads naturally onto the A59 and A1237 ring road. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Poppleton"
+    postcode="YO26"
+    localitySlang="Poppleton Roads"
+    heroDescription="Poppleton Bar’s busy interchanges and the station-side streets provide a varied environment for building confidence on both local and arterial routes."
+    overviewP1="Learning to drive in the Poppletons gives you a lot to work with. You've got the quiet, leafy roads in Nether and Upper Poppleton for getting your car control right, and then the bigger challenges like Poppleton Bar and the fast traffic on the outer ring road."
+    overviewP2="We provide plenty of learning options here, including <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> and <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> throughout YO26. Our focus is on the village 'meeting' spots in the old centre and the lane planning you'll need for the A59 corridor heading into <a href='/driving-lessons-york-city-centre' class='font-bold underline'>York centre</a>."
+    overviewP3="Whether you're starting as a total beginner or preparing for your <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a> practical test, we work at your pace. We'll use the local Poppleton roads to make sure you're comfortable with everything from the station-side streets to the major interchanges that often show up during <a href='/mock-driving-tests' class='font-bold underline'>Mock Driving Tests</a>."
+    whyChooseItems={[
+      "Proper knowledge of Poppleton Bar's multi-lane roundabout systems",
+      "Easy pickups from home or Poppleton railway station",
+      "Clear help with the A59 corridor and A1237 ring road",
+      "Practice on the narrow historic village streets",
+      "Solid preparation for both urban and rural route types"
+    ]}
+    confidenceP1="Learning in Poppleton provides an excellent mix of quiet village loops and busier arterial road practice. We'll often start on the residential streets in Nether Poppleton or Upper Poppleton while you get used to the car's controls, before we tackle the busier junctions and the large roundabouts along the A59 corridor."
+    confidenceChallenge="Navigating the complex lane layouts and high-volume traffic at the A59 and A1237 junctions, which require early planning and sharp observation."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> while based in Poppleton is a great way to build confidence with village-style 'meeting' traffic and large-scale interchange navigation. We'll spend plenty of time on the Poppleton Bar roundabouts and the A59 corridor, so you're comfortable with high-volume arterial roads."
+    intensiveP2="The concentrated schedule allows you to develop the early planning skills vital for the A1237 outer ring road. We’ll focus on lane positioning at major junctions and managing narrow historic streets, so that whether you’re merging onto the bypass or navigating the village core, your driving routines feel automatic."
+    intensiveFeatures={[
+      "Building confidence at the Poppleton Bar interchange",
+      "Developing speed awareness on the A1237 ring road",
+      "Handling narrow 'meeting' spots in the village",
+      "Daily practice of high-speed arterial junction planning"
+    ]}
+    mockTestP1="Our mock tests in Poppleton focus on the diverse challenges of the A59 corridor and the historic village core. We’ll simulate the full test experience, assessing your lane positioning at Poppleton Bar and your spatial awareness on narrow streets, giving you the technical edge needed for a first-time pass."
+    mockTestPoints={[
+      "Realistic feedback on Poppleton Bar interchange planning",
+      "Assessment of village-style 'meeting' traffic situations",
+      "Focused practice for A1237 ring road merging and exits"
+    ]}
+    nearbyAreas={['Acomb', 'Rawcliffe', 'Clifton', 'York City Centre', 'Holgate', 'Bootham']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18828.98772659345!2d-1.147417317768826!3d53.98565546257321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879305597793541%3A0xc346ec0373ab9357!2sPoppleton%2C%20York!5e0!3m2!1sen!2suk!4v1715122000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Poppleton, York. Local instruction covering Station Road, the A59, and the Poppleton Bar roundabouts near YO26.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Poppleton",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-poppleton-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Poppleton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Nether or Upper Poppleton or a local spot like Station Road. Beginners often start in the quieter residential loops off Main Street to build basic confidence before tackling busier roads during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the major roundabouts near the A1237?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Poppleton Bar roundabouts and the ring road junctions are excellent for practising multi-lane observation, lane positioning, and correct signalling early in your training near the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the A59 routes in Poppleton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the A59 corridor is a key route. We'll introduce this once your basics are strong, helping you manage commuter traffic, speed limit changes, and major junction planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO26?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Poppleton and the wider YO26 postcode, making it easier to focus on navigation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Poppleton a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the quieter residential streets in Upper and Nether Poppleton offer a calm environment for building clutch control and steering. It's an ideal spot for starting manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline on the routes towards York city centre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The routes connecting Poppleton to the city via the A59 are perfect for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow towards central York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Poppleton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Poppleton. They are a focused way to build your driving skills quickly using local road layouts and York routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Poppleton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we cover various parts of the city, the road conditions in Poppleton are essential for reaching the DVSA test standard required to pass at the practical test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from Poppleton station for lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your home in Poppleton — including near Poppleton railway station or Station Road — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Poppleton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Station Road and the A59."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the narrow sections of Poppleton Village?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The historic parts of Poppleton can be tight. We'll practise 'meeting' traffic, using priority correctly, and maintaining safe passing distances until you feel confident."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on the A59, the A1237, and the Poppleton Bar roundabout approaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving towards the ring road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Poppleton roads until you're truly ready for the busier ring road junctions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Poppleton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Station Road, the A59, and the surrounding YO26 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

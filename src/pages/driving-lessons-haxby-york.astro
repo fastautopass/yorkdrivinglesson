@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Haxby?", 
+    answer: "We can start from your home in Haxby or a local landmark in The Village. Beginners often start in the quieter residential loops off York Road to build basic car control before moving onto busier village roads."
+  },
+  { 
+    question: "How do you help learners with the mini-roundabouts in Haxby Village?", 
+    answer: "Haxby has several busy mini-roundabouts. We'll practise observation, priority, and signalling here early on, as these are brilliant for developing quick decision-making skills for the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "Can we practise for the York outer ring road in Haxby?", 
+    answer: "Definitely. Haxby offers safe approaches to the A1237. We'll help you gain confidence with merging, lane positioning, and understanding multi-lane exits during your <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>."
+  },
+  { 
+    question: "Do you offer automatic driving lessons in YO32?", 
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Haxby and YO32, making it easier to focus on navigation without the stress of gear changes."
+  },
+  { 
+    question: "Is Haxby a good area for absolute beginners?", 
+    answer: "Yes, Haxby's residential streets offer a calm environment for building clutch control and steering basics. It's a popular spot to start <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a> before tackling busier traffic."
+  },
+  { 
+    question: "How do you teach lane discipline on the routes towards Wigginton?", 
+    answer: "The roads towards <a href='/driving-lessons-wigginton-york' class='font-bold underline'>Wigginton</a> are excellent for practising lane planning and mirror routines. We focus on helping you adapt smoothly to speed limit changes and semi-rural hazards."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Haxby?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Haxby. They are a focused way to build your driving skills quickly using local road layouts and York routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on routes near Haxby?", 
+    answer: "While the test centre is elsewhere, the road conditions in Haxby—including varied roundabouts—are essential for reaching the DVSA test standard required to pass."
+  },
+  { 
+    question: "Do you pick up from local shops or schools in Haxby?", 
+    answer: "We're very flexible and can arrange pickups from your workplace, local school, or home in Haxby — including anywhere on York Road or near the village centre — so your lessons fit into your day."
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Haxby?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on York Road and the A1237 during peak traffic flow."
+  },
+  { 
+    question: "How do you handle the pedestrian activity near the Haxby shops?", 
+    answer: "The Village can be busy. We'll practise keen observation and speed control in these high-activity zones to help you develop strong hazard perception skills needed for the road."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on York Road, the A1237, and the approach to Monks Cross Driving Test Centre."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving towards the ring road?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Haxby roads until you're ready for busier junctions near <a href='/driving-lessons-huntington-york' class='font-bold underline'>Huntington</a>." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Haxby?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering York Road, the A1237, and the surrounding YO32 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Haxby Shopping Core',
+    description: 'Good for sharpening your hazard perception near the pedestrian crossings and those constant mini-roundabouts in the village centre.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'York Road Approaches',
+    description: 'Work on your gear changes and positioning on this busier stretch as you head towards the A1237 intersection.'
+  },
+  {
+    icon: 'School',
+    title: 'Village-to-Village Loop',
+    description: 'Practise your speed transitions smoothly on the semi-rural stretch that links Haxby with its neighbour, Wigginton.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Haxby Village Shops',
+    description: 'Practise navigating the high-activity pedestrian zones and mini-roundabouts near the local shopping area.',
+    badge: 'Precision Priority'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Ring Road Approaches',
+    description: 'Build confidence for the faster multi-lane roundabouts connecting the YO32 area to the A1237.',
+    badge: 'Higher Speed Skill'
+  },
+  {
+    icon: 'Clock',
+    title: 'Residential Road Control',
+    description: 'Perfect your gear changes and steering on the quiet, winding residential loops away from the main road.',
+    badge: 'Sharp Observation'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Haxby, York YO32 | York Driving Lesson"
+  description="Driving lessons in Haxby YO32. From residential streets to the A1237 ring road and Monks Cross roundabouts — York test centre preparation. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Haxby"
+    postcode="YO32"
+    localitySlang="Haxby Roads"
+    heroDescription="Village roundabouts and A1237 approaches around Haxby give you a solid mix of technical junctions and faster road experience."
+    overviewP1="Haxby is a brilliant area for making steady progress. You'll likely start on the flat residential loops near York Road to get your car control down, then move into the village centre where dealing with mini-roundabouts and pedestrians becomes more of a focus."
+    overviewP2="We do all sorts of lessons here, including <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> and <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> throughout YO32. We make sure to spend time on the A1237 junctions and the commuter routes that connect Haxby to <a href='/driving-lessons-wigginton-york' class='font-bold underline'>Wigginton</a>."
+    overviewP3="Everyone learns differently, so we offer <a href='/mock-driving-tests' class='font-bold underline'>Mock Driving Tests</a> that mirror real York conditions. We'll help you with the higher-speed approaches to the outer ring road while making sure you're comfortable with the narrow streets and 20mph zones in the village."
+    whyChooseItems={[
+      "Proper understanding of Haxby's mini-roundabout systems",
+      "Convenient pickups from home or village landmarks",
+      "Plenty of practice on the A1237 ring road approaches",
+      "Calm help with the busy village shopping zones",
+      "Training that covers test-standard observation and planning"
+    ]}
+    confidenceP1="The winding residential loops of Haxby provide the perfect space to get comfortable with the vehicle's controls. We'll start in the quiet pockets away from the shops, building your confidence with slow-speed manoeuvres and junctions before we head towards the busier village mini-roundabouts and the approaches to the A1237 ring road."
+    confidenceChallenge="Navigating the dense pedestrian activity and multiple mini-roundabouts near the Haxby shopping area, which requires sharp eyes and early decision-making."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> while living in Haxby is ideal for linking quiet residential control with busy interchange navigation. We'll focus on your observation through the village shopping core and your planning as we head towards the A1237 roundabouts."
+    intensiveP2="The concentrated schedule helps you build the confidence needed for higher-speed approaches and multi-lane exits. We’ll spend specific time on the York Road corridor and the semi-rural links to Wigginton, making sure your speed transitions and hazard perception are sharp and test-ready."
+    intensiveFeatures={[
+      "Building confidence on Haxby Village mini-roundabouts",
+      "Developing lane discipline on A1237 ring road merges",
+      "Handling village core pedestrian activity",
+      "Daily practice of speed limit transitions"
+    ]}
+    mockTestP1="Preparing for your test in Haxby involves building confidence on the village centre roundabouts and the varied speed limits of the YO32 area. We’ll put you through a full mock exam, focusing on your independent driving through the village and your planning for the ring road approaches, giving you honest feedback on your readiness."
+    mockTestPoints={[
+      "Realistic feedback on Haxby Village roundabout observation",
+      "Assessment of speed limit awareness on residential link roads",
+      "Focused planning practice for A1237 outer ring road merging"
+    ]}
+    nearbyAreas={['Wigginton', 'Huntington', 'Rawcliffe', 'Clifton', 'Bootham', 'New Earswick']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18826.68052166345!2d-1.0770529177698!3d53.99750506255005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879307775a0df8b%3A0xc346ec0373ab9357!2sHaxby%2C%20York!5e0!3m2!1sen!2suk!4v1715116000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Haxby, York. Local instruction covering York Road, the A1237 ring road, and the Monks Cross Driving Test Centre approaches near YO32.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Haxby",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-haxby-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Haxby or a local landmark in The Village. Beginners often start in the quieter residential loops off York Road to build basic car control before moving onto busier village roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the mini-roundabouts in Haxby Village?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Haxby has several busy mini-roundabouts. We'll practise observation, priority, and signalling here early on, as these are brilliant for developing quick decision-making skills for the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the York outer ring road in Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Definitely. Haxby offers safe approaches to the A1237. We'll help you gain confidence with merging, lane positioning, and understanding multi-lane exits during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO32?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Haxby and YO32, making it easier to focus on navigation without the stress of gear changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Haxby a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Haxby's residential streets offer a calm environment for building clutch control and steering basics. It's a popular spot to start manual driving lessons before tackling busier traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline on the routes towards Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The roads towards Wigginton are excellent for practising lane planning and mirror routines. We focus on helping you adapt smoothly to speed limit changes and semi-rural hazards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Haxby. They are a focused way to build your driving skills quickly using local road layouts and York routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the test centre is elsewhere, the road conditions in Haxby—including varied roundabouts—are essential for reaching the DVSA test standard required to pass."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local shops or schools in Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your workplace, local school, or home in Haxby — including anywhere on York Road or near the village centre — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on York Road and the A1237 during peak traffic flow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the pedestrian activity near the Haxby shops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Village can be busy. We'll practise keen observation and speed control in these high-activity zones to help you develop strong hazard perception skills needed for the road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on York Road, the A1237, and the approach to Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving towards the ring road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Haxby roads until you're ready for busier junctions near Huntington."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering York Road, the A1237, and the surrounding YO32 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

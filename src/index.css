@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #111827;
+  --color-secondary-dark: #0F172A;
+  --color-light-bg: #F8F9FA;
+  --color-soft-bg: #EAECEE;
+  --color-primary-text: #1F2937;
+  --color-secondary-text: #374151;
+  --color-muted-text: #4B5563;
+  --color-white-text: #FFFFFF;
+  --color-border-main: #E2E8F0;
+  
+  --color-gold-star: #F4B400;
+  
+  /* Retain naming conventions for easier mapping */
+  --color-navy: #0F172A;
+  --color-navy-dark: #111827;
+  --color-soft-white: #FFFFFF;
+  --color-soft-off-white: #F8FAFC;
+  --color-muted-grey: #475569;
+  --color-hero-paragraph: #E2E8F0;
+  --color-deep-charcoal: #111827;
+  --color-stone-grey: #475569;
+  --color-slate-body: #475569;
+  --color-border-light: #E2E8F0;
+  --color-contrast-navy: #111827;
+  --color-border-slate: #E2E8F0;
+
+  /* Legacy compatibility variables */
+  --color-charcoal: #111827;
+  --color-near-black: #111827;
+  --color-warm-white: #FFFFFF;
+  --color-off-white: #EEF1F4;
+  --color-slate-navy: #0F172A;
+
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-slate-body antialiased;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--color-light-bg);
+  }
+
+  @media (max-width: 768px) {
+    body.has-floating-widgets {
+      padding-bottom: 72px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary-text tracking-tight;
+  }
+}
+
+/* Homepage Theme Overrides */
+.home-page {
+  --color-primary: #111827;
+  --color-accent: #475569;
+  --color-warm-white: #FFFFFF;
+  --color-off-white: #EEF1F4;
+  --color-charcoal: #111827;
+}
+
+.home-page .btn-primary-light {
+  @apply inline-block bg-white-text text-primary-dark px-10 py-4 rounded-full text-[0.95rem] font-bold no-underline transition-all duration-200 cursor-pointer text-center hover:bg-white hover:-translate-y-px shadow-lg;
+}
+
+.home-page .btn-primary-dark {
+  @apply inline-block bg-primary-dark text-white-text px-10 py-4 rounded-full text-[0.95rem] font-bold no-underline transition-all duration-200 cursor-pointer text-center hover:bg-secondary-dark hover:-translate-y-px shadow-lg;
+}
+
+.home-page .btn-secondary-light {
+  @apply inline-block bg-transparent text-white-text border-2 border-white-text/40 px-10 py-4 rounded-full text-[0.95rem] font-bold no-underline transition-all duration-300 block text-center hover:border-white-text/80 hover:bg-white-text/5;
+}
+
+.home-page .btn-secondary-dark {
+  @apply inline-block bg-transparent text-primary-text border-2 border-border-main px-10 py-4 rounded-full text-[0.95rem] font-bold no-underline transition-all duration-300 block text-center hover:bg-primary-dark hover:text-white-text hover:border-primary-dark;
+}
+
+/* Premium UI Components */
+.submit-btn-primary {
+  @apply w-full bg-primary-dark text-white-text p-4 rounded-[10px] text-[0.92rem] font-bold cursor-pointer transition-all duration-200 tracking-[0.05em] uppercase hover:bg-secondary-dark hover:-translate-y-px shadow-[0_4px_12px_rgba(17,24,39,0.2)] hover:shadow-[0_6px_16px_rgba(17,24,39,0.3)];
+}
+
+.faq-item {
+  @apply bg-white rounded-lg p-6 mb-4 border border-border-main/50 transition-all;
+}
+
+.faq-question {
+  @apply text-[1.05rem] font-bold text-primary-dark cursor-pointer flex justify-between items-center select-none transition-colors duration-200 hover:text-primary-dark/70;
+}
+
+.faq-question::after {
+  content: '+';
+  @apply text-primary-dark/30 text-[2rem] font-normal transition-transform duration-200 ml-4 shrink-0;
+}
+
+.faq-item.open .faq-question::after {
+  @apply rotate-45 text-primary-dark;
+}
+
+.faq-answer {
+  @apply text-[0.92rem] text-secondary-text leading-[1.75] mt-4 pr-12;
+}
+

@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Not Found"
+  description="The page you're looking for doesn't exist. Find driving lessons in York — automatic, manual, intensive, refresher, and more."
+  noindex={true}
+>
+  <div class="min-h-screen bg-light-bg font-sans flex flex-col items-center justify-center px-6 py-24 text-center">
+    <div class="max-w-[600px] mx-auto">
+      <p class="text-[0.7rem] font-black uppercase tracking-[0.3em] text-primary-dark/30 mb-6">Error 404</p>
+      <h1 class="text-[4rem] sm:text-[6rem] font-black text-primary-dark tracking-tighter leading-none mb-6">
+        Page Not Found
+      </h1>
+      <p class="text-[1rem] sm:text-[1.1rem] text-secondary-text font-medium leading-relaxed mb-10 max-w-[480px] mx-auto">
+        We couldn't find that page. It may have moved or never existed. Here's where you can go instead.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <a
+          href="/"
+          class="inline-block bg-primary-dark text-white px-8 py-4 rounded-xl font-black text-[0.8rem] uppercase tracking-[0.15em] no-underline hover:bg-secondary-dark transition-colors shadow-lg"
+        >
+          Go to Homepage
+        </a>
+        <a
+          href="/contact-us"
+          class="inline-block bg-white text-primary-dark border border-border-main px-8 py-4 rounded-xl font-black text-[0.8rem] uppercase tracking-[0.15em] no-underline hover:bg-soft-bg transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-left">
+        {[
+          { label: 'Automatic Lessons', href: '/automatic-driving-lessons' },
+          { label: 'Manual Lessons', href: '/manual-driving-lessons' },
+          { label: 'Intensive Courses', href: '/intensive-driving-courses' },
+          { label: 'Mock Driving Tests', href: '/mock-driving-tests' },
+          { label: 'Refresher Lessons', href: '/refresher-lessons' },
+          { label: 'York Areas', href: '/york' },
+        ].map(link => (
+          <a
+            href={link.href}
+            class="bg-white rounded-xl p-4 border border-border-main/20 text-[0.8rem] font-bold text-secondary-text hover:text-primary-dark hover:border-primary-dark/20 no-underline transition-all"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>

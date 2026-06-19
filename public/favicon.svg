@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="5" fill="#1B2333"/>
+  <text
+    x="16"
+    y="13"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900"
+    font-size="8.5"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="0.5"
+  >YDL</text>
+  <text
+    x="16"
+    y="22"
+    font-family="Arial, sans-serif"
+    font-weight="400"
+    font-size="4.5"
+    fill="#8a97aa"
+    text-anchor="middle"
+    letter-spacing="1.2"
+  >DRIVING</text>
+  <text
+    x="16"
+    y="28"
+    font-family="Arial, sans-serif"
+    font-weight="400"
+    font-size="4.5"
+    fill="#8a97aa"
+    text-anchor="middle"
+    letter-spacing="1.2"
+  >SCHOOL</text>
+</svg>

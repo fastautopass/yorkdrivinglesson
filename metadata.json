@@ -1,0 +1,8 @@
+{
+  "name": "York Driving Lesson",
+  "description": "DVSA approved driving lessons in York, offering both automatic and manual instruction with structured lessons for beginners and nervous drivers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

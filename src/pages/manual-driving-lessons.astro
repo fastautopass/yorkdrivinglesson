@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ManualLessons from '../components/pages/ManualLessons';
+---
+
+<Layout 
+  title="Manual Driving Lessons in York | DVSA-Approved School"
+  description="Manual driving lessons in York covering clutch control, gear changes, and real test routes. DVSA-approved tuition for beginners and returners. Book today."
+>
+  <ManualLessons client:load />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Manual driving lessons in York. Learn gear changes and clutch control with DVSA-approved tuition.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Manual Driving Lessons",
+          "item": "https://yorkdrivinglesson.co.uk/manual-driving-lessons/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many manual driving lessons will I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The number of lessons varies depending on confidence and previous experience, though the DVSA average is around 45 hours. For those looking to progress faster, our intensive driving courses offer a condensed schedule to build skills rapidly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is learning manual worth it long term?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Passing in a manual vehicle gives you the flexibility to drive both manual and automatic cars without restriction. We recommend checking our automatic vs manual guide to help decide which path matches your technical goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I struggle with manual driving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We adapt every lesson to your individual pace. If gears feel challenging, we focus on technical coordination. Many students also find that a mock driving test later in their training helps verify their vehicle control under real test conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover York driving test routes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We incorporate real DVSA test routes into your training so you become familiar with the specific junctions, hills, and roundabouts surrounding the York Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch to automatic lessons later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. If manual tuition no longer feels suitable for your goals, you can discuss transitioning to automatic tuition at any stage. Our priority is that you become a safe, competent driver."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the York driving test harder in a manual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The marking standard is identical for both transmission types. While manual requires gear management, we get you fully test-ready by practising on varied York road systems, helping you maintain composure on the day of your practical exam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I handle hill starts on York's steeper roads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We practise hill starts on various gradients so you can find the bite point and move off smoothly without rolling. Strong clutch control here is essential for nervous learners and beginner drivers alike."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I stall during my driving test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stalling is common and often considered a minor fault unless it results in a hazard. To build your confidence, we offer mock driving tests that replicate the pressure of test day, helping you learn to recover calmly and safely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer manual refresher lessons for those with a licence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our refresher lessons are perfect if you've had a break from driving or have recently moved to York and want to get accustomed to the local roads and busy junctions in a manual car."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I learn motorway driving in a manual car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once you have passed, or as part of post-test training, we provide motorway driving lessons. This builds your confidence in high-speed gear selection and lane discipline on the A1(M) and M62 corridors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a course for improving safety after passing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We highly recommend the Pass Plus course. It helps new manual drivers refine their skills in more challenging environments, such as night driving, extreme weather, and rural road systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book my first manual lesson?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The easiest way is to fill out the form above. We'll check our current York location coverage and availability, getting back to you within two hours to schedule your first session."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Murton?", 
+    answer: "We can start from your home in Murton or a convenient local spot. Beginners often start on the quieter residential roads or semirural lanes to build basic car control during your <a href='/manual-driving-lessons' class='font-bold underline'>driving lessons in York</a>." 
+  },
+  { 
+    question: "How do you help learners with the higher-speed roads near Murton?", 
+    answer: "The nearby A64 links and semirural roads offer varied speed limits. We'll practise scanning for road signs and adapting your speed smoothly in a real local environment."
+  },
+  { 
+    question: "Can we practise for the A64 roundabouts in Murton?",
+    answer: "Yes, the roundabouts near Grimston Bar and the outer ring road are excellent for practising multi-lane observation, lane positioning, and correct signalling safely."
+  },
+  { 
+    question: "Do you offer automatic driving lessons in YO19?", 
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Murton and the wider YO19 postcode, making it easier to focus on navigation."
+  },
+  { 
+    question: "Is Murton a good area for absolute beginners?", 
+    answer: "Yes, Murton's quieter semirural roads offer a calm environment for building clutch control and steering. It's an ideal spot for starting <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>." 
+  },
+  { 
+    question: "How do you teach lane discipline on the routes towards Huntington?", 
+    answer: "The routes connecting Murton to <a href='/driving-lessons-huntington-york' class='font-bold underline'>Huntington</a> are perfect for practising lane planning, mirror routines, and anticipating speed limit changes."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Murton?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Murton. They are a focused way to build your driving skills quickly using local road layouts and York routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on routes near Murton?",
+    answer: "While the Monks Cross Driving Test Centre is the nearest test centre, the road conditions in Murton are still excellent for reaching the DVSA test standard required to pass and getting comfortable with semirural hazards."
+  },
+  { 
+    question: "Do you pick up from home or workplaces in Murton?", 
+    answer: "We're very flexible and can arrange pickups from your home in Murton — including anywhere in the village or near the A64 access — so your lessons fit into your day."
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Murton?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on the village lanes and the A64 approaches."
+  },
+  {
+    question: "How do you handle the semirural meeting situations in Murton?", 
+    answer: "The rural stretches can be narrow. We'll practise 'meeting' traffic, using mirrors correctly, and maintaining safe passing distances until you feel confident and safe."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true <a href='/manual-driving-lessons' class='font-bold underline'>independent driving</a> on the A64, Grimston Bar, and the surrounding semirural routes near YO19."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving towards the A64?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Murton roads until you're truly ready for the busier higher-speed junctions." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Murton?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Murton village lanes, the A64, and the surrounding YO19 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Murton Village Lanes',
+    description: 'Work on your "meeting traffic" skills on these narrow semi-rural roads where judging space and priority is essential.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Grimston Bar Junctions',
+    description: 'Observation and mirror checks on the larger interchanges where the A64 meets the city approaches.'
+  },
+  {
+    icon: 'School',
+    title: 'Semirural Transitions',
+    description: 'Get comfortable adjusting your speed smoothly as the limits change between the quiet village and the faster ring road links.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Grimston Bar Interchange',
+    description: 'Practise the complex lane layouts and higher-speed merging at the junction where the A64 meets the ring road.',
+    badge: 'High-Speed Skill'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Village Lane Meeting',
+    description: 'Develop the \'meeting traffic\' skill on narrow semirural roads where judging space and priority is essential.',
+    badge: 'Precision Control'
+  },
+  {
+    icon: 'Clock',
+    title: 'Speed Limit Transitions',
+    description: 'Build your awareness as speed limits change between the quiet 30mph village zones and the faster arterial routes.',
+    badge: 'Visual Observation'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Murton, York YO19 | York Driving Lesson"
+  description="Driving lessons in Murton YO19. A quiet village near the A64 — great for nervous learners before building up to busier York roads. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Murton"
+    postcode="YO19"
+    localitySlang="Murton Roads"
+    heroDescription="Narrow village lanes in Murton are excellent for practising space management before you build confidence on the higher-speed interchanges nearby."
+    overviewP1="Learning to drive in Murton gives you a great mix of quiet village lanes and fast-paced interchanges like Grimston Bar. You'll get plenty of experience with narrow 'meeting' situations where you have to judge space carefully, alongside high-speed merging on the A64."
+    overviewP2="We help with both <a href='/manual-driving-lessons' class='font-bold underline'>Manual Driving Lessons</a> and <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> throughout the YO19 area. Our focus is on the transition between the 30mph village zones and the open roads where speed awareness and anticipation are so important for safety."
+    overviewP3="Whether you're starting from scratch or looking at <a href='/motorway-lessons' class='font-bold underline'>Motorway Lessons</a> for after you pass, we go at a pace that suits you. We use the local roads to highlight the types of hurdles you'll face on a <a href='/monks-cross-driving-test-centre' class='font-bold underline'>practical driving test</a>, from big roundabouts to rural lane hazards."
+    whyChooseItems={[
+      "Clear help with the Grimston Bar and A64 interchange",
+      "Easy pickups from home or village locations",
+      "Practise on semirural road priorities and hazards",
+      "Support with high-speed merging and changing speed limits",
+      "Solid prep for test-standard observation and planning"
+    ]}
+    confidenceP1="Initial lessons in Murton often take place on the quiet village lanes where you can build the foundations of driving away from heavy traffic. Once you're steady on the basics, we'll begin to explore the busier semirural routes towards Osbaldwick and the more complex interchanges leading out to the A64."
+    confidenceChallenge="Adapting to the rapid transition from quiet, narrow village roads to the high-speed traffic and complex merging lanes of the York bypass."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> while based in Murton is ideal for building confidence with the transition from village lanes to high-speed dual carriageways. We'll spend plenty of time on the narrow meeting situations through the village and the complex interchanges near Grimston Bar."
+    intensiveP2="Because intensive lessons are concentrated, you’ll find it much easier to build the spatial awareness needed for judging gaps on faster roads. We’ll focus on early planning and speed transitions, so you’re just as comfortable navigating a narrow semi-rural lane as you are merging onto the busy flow of the A64."
+    intensiveFeatures={[
+      "Building confidence with high-speed merging near Grimston Bar",
+      "Confident space management on village lanes",
+      "Handling rural-to-urban speed transitions",
+      "Building planning for multi-lane interchanges"
+    ]}
+    mockTestP1="A mock test through Murton focuses on the sharp transition from quiet village lanes to the high-speed interchanges near Grimston Bar. We’ll put your observation skills to the test in a calm, simulated environment, so you’re comfortable with the specific hurdles found on the semirural approaches to York."
+    mockTestPoints={[
+      "Detailed feedback on A64 interchange merging",
+      "Assessment of spatial awareness on narrow village lanes",
+      "Focused practice for rural-to-urban speed transitions"
+    ]}
+    nearbyAreas={['Osbaldwick', 'Huntington', 'Tang Hall', 'Layerthorpe', 'York City Centre', 'Heworth']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18831.68052166345!2d-1.0270529177698!3d53.96250506255005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879308f6c48995%3A0xc346ec0373ab9357!2sMurton%2C%20York!5e0!3m2!1sen!2suk!4v1715125000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Murton, York. Local instruction covering Murton village lanes, the A64, and the Grimston Bar interchanges near YO19.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Murton",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-murton-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Murton or a convenient local spot. Beginners often start on the quieter residential roads or semirural lanes to build basic car control during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the higher-speed roads near Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The nearby A64 links and semirural roads offer varied speed limits. We'll practise scanning for road signs and adapting your speed smoothly in a real local environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the A64 roundabouts in Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the roundabouts near Grimston Bar and the outer ring road are excellent for practising multi-lane observation, lane positioning, and correct signalling safely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO19?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Murton and the wider YO19 postcode, making it easier to focus on navigation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Murton a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Murton's quieter semirural roads offer a calm environment for building clutch control and steering. It's an ideal spot for starting manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline on the routes towards Huntington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The routes connecting Murton to Huntington are perfect for practising lane planning, mirror routines, and anticipating speed limit changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Murton. They are a focused way to build your driving skills quickly using local road layouts and York routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the Monks Cross Driving Test Centre is the nearest test centre, the road conditions in Murton are still excellent for reaching the DVSA test standard required to pass and getting comfortable with semirural hazards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from home or workplaces in Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your home in Murton — including anywhere in the village or near the A64 access — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on the village lanes and the A64 approaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the semirural meeting situations in Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The rural stretches can be narrow. We'll practise 'meeting' traffic, using mirrors correctly, and maintaining safe passing distances until you feel confident and safe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on the A64, Grimston Bar, and the surrounding semirural routes near YO19."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving towards the A64?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Murton roads until you're truly ready for the busier higher-speed junctions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Murton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Murton village lanes, the A64, and the surrounding YO19 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

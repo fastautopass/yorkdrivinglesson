@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Fulford?", 
+    answer: "We can start from your home in Fulford or a local spot like Main Street. Beginners often start in the quieter residential loops near Connaught Court to build basic car control before heading onto busier roads."
+  },
+  { 
+    question: "How do you help learners with the traffic on Fulford Road?", 
+    answer: "Fulford Road is a major route. We introduce it once your basics are strong, helping you manage commuter traffic and lane positioning near the city centre approaches and the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "Can we practise for the A64/A19 interchange in Fulford?",
+    answer: "Absolutely. The approaches to the Designer Outlet and the A64 interchange are excellent for practising higher-speed merging and multi-lane roundabouts during your <a href='/manual-driving-lessons' class='font-bold underline'>driving lessons in York</a>."
+  },
+  { 
+    question: "Do you offer automatic driving lessons in YO10/YO19?", 
+    answer: "Yes, we provide full <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Fulford and the YO10/YO19 postcodes, which is great for navigating York's busier arterial roads without the gear stress." 
+  },
+  { 
+    question: "Is Fulford a good area for absolute beginners?", 
+    answer: "Yes, the residential streets off Main Street offer a calm environment for building clutch control and confidence at basic junctions. It's an ideal starting point for <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>."
+  },
+  { 
+    question: "How do you teach lane discipline near the Fulford Designer Outlet?", 
+    answer: "The large roundabouts near the outlet are perfect for practising forward planning, mirror routines, and anticipating traffic flow from multiple directions."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Fulford?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Fulford. They are a focused way to build your driving skills quickly using local road layouts and common local routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on routes near Fulford?", 
+    answer: "While we cover various parts of the city, the road conditions in Fulford—including high-speed exits—are essential for reaching the DVSA test standard required to pass."
+  },
+  {
+    question: "Do you pick up from local offices or the University for lessons?",
+    answer: "We're very flexible and can arrange pickups from your place of work, the University of York campus, or home in Fulford — including anywhere along Fulford Road or the A19 — so your lessons fit into your day."
+  },
+  {
+    question: "Are evening or weekend driving lessons available in Fulford?",
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Fulford Road and the A19 during peak commuter hours."
+  },
+  { 
+    question: "How do you handle the narrow sections of Fulford Main Street?", 
+    answer: "The village section of Fulford can be tight. We'll practise observation and priority correctly in these 'meeting' situations to help you develop strong hazard perception skills."
+  },
+  {
+    question: "Do we learn to use a sat-nav during our lessons?",
+    answer: "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Fulford Road, the A19, and the A64 interchange approaches."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving towards the A64?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Fulford roads until you're truly ready for the busier junctions near <a href='/driving-lessons-heslington-york' class='font-bold underline'>Heslington</a>." 
+  },
+  {
+    question: "How can I book an assessment lesson in Fulford?",
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Fulford Road, the A19, and the surrounding YO10 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Main Street Transitions',
+    description: 'Navigate the narrow village centre where you\'ll practise meeting traffic and judging space around the historic stone walls.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'A19 City Inbound',
+    description: 'Build your confidence with bus lanes and speed management as you head towards the city centre past the barracks.'
+  },
+  {
+    icon: 'School',
+    title: 'Interchange Practice',
+    description: 'Get confident with the larger roundabouts and high-speed merges near the Designer Outlet and the A64 bypass connection.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Designer Outlet Roundabouts',
+    description: 'Practise planning and positioning on the larger multi-lane roundabouts near the A19/A64 interchange.',
+    badge: 'High-Speed Skill'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Village Priority Practice',
+    description: 'Navigate the narrow meeting situations and historic lane layouts through the heart of Fulford Village.',
+    badge: 'Precision Control'
+  },
+  {
+    icon: 'Clock',
+    title: 'Bus Lane Awareness',
+    description: 'Build confidence managing city-bound routes, focusing on reading signs and following road markings correctly.',
+    badge: 'Calm Observation'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Fulford, York YO10 | York Driving Lesson"
+  description="Driving lessons in Fulford YO10. Fulford Road and the A19 give direct practice on common York test routes, close to Monks Cross test centre. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Fulford"
+    postcode="YO10"
+    localitySlang="Fulford Roads"
+    heroDescription="Historic Main Street and the Designer Outlet junctions around Fulford offer a mix of technical village driving and busier multi-lane roundabouts."
+    overviewP1="Fulford is a great place to learn because you get a bit of everything. You'll go from the narrow, technical streets of the village centre to the fast interchanges near the A64 and the Designer Outlet. It's a location that really helps you develop both car control and good hazard awareness."
+    overviewP2="We provide plenty of training options here, including <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> and <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a>, across YO10 and YO19. We pay close attention to the Fulford corridor, including those multi-lane roundabouts and the bus lanes that you'll meet as you head into the city."
+    overviewP3="Whether you're just starting out or you're gearing up for your <a href='/manual-driving-lessons' class='font-bold underline'>Manual Driving Lessons</a>, we keep things supportive. We'll help you get used to the 'meeting' situations on Main Street and build your confidence for merging onto the ring road or heading towards the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+    whyChooseItems={[
+      "Proper knowledge of the A19 and A64 interchange layouts",
+      "Easy pickups from home, work, or the university",
+      "Practice on Fulford's narrow historic village streets",
+      "Lessons on the Designer Outlet multi-lane roundabouts",
+      "Training that covers both urban and rural route types"
+    ]}
+    confidenceP1="Practising in Fulford gives you a great mix of historic village layouts and modern arterial roads. We often start in the quieter residential pockets off Fulford Main Street, giving you chance to get your clutch control and steering smooth before we tackle the busier multi-lane junctions near the Designer Outlet."
+    confidenceChallenge="Navigating the tight lanes and frequent bus traffic through the heart of Fulford, which demands excellent observation and careful road positioning."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="For those in Fulford, an <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> is ideal for getting comfortable with the mix of historic village lanes and busy arterial roads. We'll focus on your space management through the narrow village centre and your lane discipline as we head out towards the Designer Outlet."
+    intensiveP2="Intensive blocks give you the chance to see how different junctions feel at various times of day. You'll get plenty of experience on the A19 city approach, making sure your bus lane awareness and speed control are spot-on before you think about your final test."
+    intensiveFeatures={[
+      "Judging narrow gaps in the village core",
+      "Navigating the Designer Outlet interchange loops",
+      "Confident bus lane awareness on Fulford Road",
+      "Building a rhythm for busy city-bound traffic"
+    ]}
+    mockTestP1="Mock test preparation in Fulford focuses on the technical junctions near the Designer Outlet and the city-bound commuter traffic. We’ll simulate the test environment, evaluating your lane choice and your anticipation of changing traffic flow, so your observations meet the standard required at the <a href=’/monks-cross-driving-test-centre’ class=’font-bold underline’>Monks Cross Driving Test Centre</a>."
+    mockTestPoints={[
+      "Examiner-style feedback on A19 village crossing planning",
+      "Detailed assessment of Designer Outlet roundabout discipline",
+      "Focused practice for managing commuter traffic towards the city"
+    ]}
+    nearbyAreas={['Heslington', 'York City Centre', 'Bishopthorpe', 'Heworth', 'Dringhouses', 'Badger Hill']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18836.987726557497!2d-1.0770529176338!3d53.92125306267005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879308f6c48995%3A0xc346ec0373ab9357!2sFulford%2C%20York!5e0!3m2!1sen!2suk!4v1715119000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Fulford, York. Local instruction covering the A19/A64 interchange, Fulford Road, and village priority junctions.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Fulford",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-fulford-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Fulford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Fulford or a local spot like Main Street. Beginners often start in the quieter residential loops near Connaught Court to build basic car control before heading onto busier roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the traffic on Fulford Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fulford Road is a major route. We introduce it once your basics are strong, helping you manage commuter traffic and lane positioning near the city centre approaches and the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the A64/A19 interchange in Fulford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. The approaches to the Designer Outlet and the A64 interchange are excellent for practising higher-speed merging and multi-lane roundabouts during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO10/YO19?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide full automatic driving lessons in York throughout Fulford and the YO10/YO19 postcodes, which is great for navigating York's busier arterial roads without the gear stress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Fulford a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the residential streets off Main Street offer a calm environment for building clutch control and confidence at basic junctions. It's an ideal starting point for manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline near the Fulford Designer Outlet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The large roundabouts near the outlet are perfect for practising forward planning, mirror routines, and anticipating traffic flow from multiple directions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Fulford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Fulford. They are a focused way to build your driving skills quickly using local road layouts and common local routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Fulford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we cover various parts of the city, the road conditions in Fulford—including high-speed exits—are essential for reaching the DVSA test standard required to pass."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local offices or the University for lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your place of work, the University of York campus, or home in Fulford — including anywhere along Fulford Road or the A19 — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Fulford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Fulford Road and the A19 during peak commuter hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the narrow sections of Fulford Main Street?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The village section of Fulford can be tight. We'll practise observation and priority correctly in these 'meeting' situations to help you develop strong hazard perception skills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Fulford Road, the A19, and the A64 interchange approaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving towards the A64?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Fulford roads until you're truly ready for the busier junctions near Heslington."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Fulford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Fulford Road, the A19, and the surrounding YO10 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import LearnerInsuranceFAQ from '../components/pages/LearnerInsuranceFAQ';
+---
+
+<Layout
+  title="Learner Driver Insurance York | Test Car Hire Available"
+  description="Need to practise in a family car or hire a vehicle for your York driving test? Get a quick learner insurance quote or book test day car hire."
+>
+  <Header client:visible />
+
+  <main class="pt-28 font-sans bg-soft-bg">
+
+    {/* HERO */}
+    <section class="px-6 sm:px-10 pb-16">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="mb-3">
+          <span class="text-[0.7rem] font-black uppercase tracking-[0.2em] text-primary-dark/60">Affiliate Partners</span>
+        </div>
+        <h1 class="text-[2.8rem] sm:text-[4rem] font-black text-primary-text mb-4 leading-none tracking-tighter uppercase">
+          Learner Driver Insurance & Test Car Hire
+        </h1>
+        <p class="text-[1.1rem] sm:text-[1.2rem] text-secondary-text leading-relaxed font-medium opacity-80">
+          Whether you want extra practice in a family member's car or need a vehicle for your driving test at Monks Cross, we've partnered with trusted providers to help.
+        </p>
+      </div>
+    </section>
+
+    {/* TWO CARDS */}
+    <section class="px-6 sm:px-10 pb-20">
+      <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        {/* GoShorty Card */}
+        <div class="bg-white rounded-[32px] p-10 border border-border-main/10 shadow-sm flex flex-col">
+          <div class="w-12 h-1.5 bg-primary-dark/10 mb-6"></div>
+          <h2 class="text-[1.8rem] font-black text-primary-text uppercase tracking-tight leading-tight mb-4">
+            Short-Term Learner Driver Insurance
+          </h2>
+          <p class="text-secondary-text text-[0.95rem] leading-relaxed font-bold opacity-70 mb-4">
+            Want more practice hours before your test? GoShorty offers short-term learner driver insurance so you can get behind the wheel of a parent's or family member's car — without affecting their existing policy.
+          </p>
+          <ul class="flex flex-col gap-2 mb-8">
+            {[
+              'From 1 hour to 24 weeks cover',
+              'Drive a parent or guardian\'s car safely',
+              'Won\'t affect the car owner\'s no-claims bonus',
+              'Instant cover — get a quote in minutes',
+              'Ideal for extra practice before your York test',
+            ].map((point) => (
+              <li class="flex items-start gap-3 text-[0.9rem] text-secondary-text font-bold opacity-80">
+                <span class="text-primary-dark font-black mt-0.5">✓</span>
+                {point}
+              </li>
+            ))}
+          </ul>
+
+          {/* QR Code */}
+          <div class="flex flex-col sm:flex-row items-center gap-6 mb-8 p-6 bg-soft-bg rounded-2xl">
+            <img
+              src="/images/goshorty-qr.jpg"
+              alt="Scan to get a GoShorty learner insurance quote"
+              class="w-28 h-28 rounded-xl object-cover shrink-0"
+            />
+            <div>
+              <p class="text-[0.8rem] font-black uppercase tracking-widest text-secondary-text opacity-60 mb-1">Scan to get a quote</p>
+              <p class="text-[0.9rem] font-bold text-secondary-text opacity-70 leading-relaxed">
+                Point your phone camera at this QR code to go straight to the GoShorty quote page.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-auto">
+            <a
+              href="https://b2b.goshorty.co.uk/?goidst=TestDay&utm_source=TestDay_embed&utm_medium=referral&utm_campaign=TestDay&gspar1=&gspar2=&reg="
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              class="flex items-center justify-center gap-2 bg-primary-dark text-white py-4 px-8 rounded-xl text-[0.8rem] font-black uppercase tracking-widest no-underline hover:bg-secondary-dark transition-colors w-full"
+            >
+              Get a Learner Insurance Quote →
+            </a>
+          </div>
+        </div>
+
+        {/* TestDay Card */}
+        <div class="bg-primary-dark rounded-[32px] p-10 flex flex-col">
+          <div class="w-12 h-1.5 bg-white/10 mb-6"></div>
+          <h2 class="text-[1.8rem] font-black text-white uppercase tracking-tight leading-tight mb-4">
+            Driving Test Car Hire in York
+          </h2>
+          <p class="text-white/70 text-[0.95rem] leading-relaxed font-bold mb-4">
+            Don't have access to a car for your driving test at Monks Cross? TestDay provides fully insured, dual-controlled hire cars for your practical test — so you can sit your test with confidence.
+          </p>
+          <ul class="flex flex-col gap-2 mb-8">
+            {[
+              'Fully insured dual-controlled test cars',
+              'Available for Monks Cross Driving Test Centre',
+              'Pick up from a convenient local point',
+              'Includes a warm-up lesson before your test',
+              'Emergency last-minute bookings available',
+            ].map((point) => (
+              <li class="flex items-start gap-3 text-[0.9rem] text-white/70 font-bold">
+                <span class="text-white font-black mt-0.5">✓</span>
+                {point}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-auto">
+            <a
+              href="https://quote.testday.co.uk"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              class="flex items-center justify-center gap-2 bg-white text-primary-dark py-4 px-8 rounded-xl text-[0.8rem] font-black uppercase tracking-widest no-underline hover:bg-soft-bg transition-colors w-full"
+            >
+              Book a Test Day Car →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <LearnerInsuranceFAQ client:visible />
+
+  </main>
+
+  <Footer />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Learner driver insurance and driving test car hire options for learners in York. Practise in a family car or hire a vehicle for your Monks Cross driving test.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "areaServed": { "@type": "City", "name": "York" },
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I need separate insurance to practise in a family member's car?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A car owner's standard policy does not cover a learner driver. You must have your own learner insurance policy before driving someone else's car. GoShorty provides short-term cover from as little as one hour." } },
+        { "@type": "Question", "name": "Will learner insurance affect the car owner's no-claims bonus?", "acceptedAnswer": { "@type": "Answer", "text": "No. Because it is a separate policy in your name, any claim you make will not touch the car owner's no-claims bonus or their existing policy." } },
+        { "@type": "Question", "name": "How quickly can I get covered with GoShorty?", "acceptedAnswer": { "@type": "Answer", "text": "Cover can be arranged online in minutes. You can buy a policy on your phone or laptop and be insured almost immediately." } },
+        { "@type": "Question", "name": "How long can I get learner insurance for?", "acceptedAnswer": { "@type": "Answer", "text": "GoShorty offers flexible cover from 1 hour up to 24 weeks. You can choose exactly how much cover you need." } },
+        { "@type": "Question", "name": "What is test day car hire and do I need it?", "acceptedAnswer": { "@type": "Answer", "text": "If you don't have access to a car for your practical test at Monks Cross, TestDay provides a fully insured, dual-controlled hire car specifically for test day." } },
+        { "@type": "Question", "name": "Does the TestDay hire include a warm-up lesson before my test?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. TestDay bookings typically include time in the car before your test begins so you can get familiar with the vehicle's controls before the examiner gets in." } },
+        { "@type": "Question", "name": "Can I book a TestDay car at short notice for Monks Cross?", "acceptedAnswer": { "@type": "Answer", "text": "TestDay handles emergency and last-minute bookings where possible. Visit quote.testday.co.uk as early as possible to check availability for your date." } },
+        { "@type": "Question", "name": "Is practising in a family car worth it before my test?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Learners who get more practice hours outside of paid lessons pass sooner. Practising local York roads in a family car builds confidence and reduces the number of paid lessons needed." } },
+        { "@type": "Question", "name": "How do I get a quote for learner insurance or test day car hire?", "acceptedAnswer": { "@type": "Answer", "text": "Click the Get a Learner Insurance Quote button to go straight to GoShorty, or visit quote.testday.co.uk for a test day car hire quote. Both are quick online processes." } }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Learner Driver Insurance",
+          "item": "https://yorkdrivinglesson.co.uk/learner-insurance/"
+        }
+      ]
+    }
+  </script>
+
+</Layout>

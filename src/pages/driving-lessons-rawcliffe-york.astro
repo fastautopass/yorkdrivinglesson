@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where is the best place for a beginner to start in Rawcliffe?", 
+    answer: "We often start beginners in the quieter residential loops off Rawcliffe Lane or near the parkland areas. These spots are ideal for building clutch control and steering basics during your driving lessons in York."
+  },
+  { 
+    question: "Do you offer driving lessons near the Rawcliffe Park & Ride?", 
+    answer: "Yes, the area around the Park & Ride and Manor School is excellent for practising roundabouts and larger junction layouts. We regularly include these routes in our training."
+  },
+  { 
+    question: "Can I practise for the outer ring road junctions in Rawcliffe?",
+    answer: "Definitely. Rawcliffe provides several safe approaches to the A1237. We'll help you gain confidence with merging, speed matching, and understanding roundabout exits on the York ring road."
+  },
+  { 
+    question: "How do you handle the busy traffic on Shipton Road?", 
+    answer: "Shipton Road is a key commuter route. We usually tackle this once your basics are strong, helping you manage lane changes at higher speeds near the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>." 
+  },
+  { 
+    question: "Are evening lessons available for learners in Rawcliffe?", 
+    answer: "We try to accommodate learners with busy schedules. Weekend and evening slots are often available, allowing you to practise in different lighting conditions on Rawcliffe Lane and the A19 Shipton Road."
+  },
+  { 
+    question: "Do you teach automatic driving around the YO30 area?", 
+    answer: "Yes, we have instructors providing <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Rawcliffe. This is ideal for those who want to focus more on the road." 
+  },
+  { 
+    question: "Can we practise parallel parking on residential Rawcliffe streets?",
+    answer: "Rawcliffe has many suitable residential streets for practising manoeuvres like parallel parking. We make sure you get plenty of practice in real-world situations."
+  },
+  { 
+    question: "How do lessons help with the York practical driving test?",
+    answer: "Rawcliffe's road types—from mini-roundabouts to faster dual carriageway sections—build the skill set needed to reach the DVSA test standard required to pass at the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "Do you pick up from Manor CE Academy for lessons?", 
+    answer: "We can arrange pickups from your workplace, local school, or home in Rawcliffe — including near Manor CE Academy or anywhere on Rawcliffe Lane — so your lessons fit into your day."
+  },
+  { 
+    question: "Do you offer intensive driving courses in the Rawcliffe area?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for Rawcliffe residents. They are a great way to build muscle memory quickly while focusing on local York road conditions." 
+  },
+  { 
+    question: "Is there enough time to drive into York city centre from Rawcliffe?", 
+    answer: "Most of our 90-minute or 2-hour lessons allow enough time to practise local Rawcliffe routes and then venture towards the city centre to experience busier urban traffic."
+  },
+  { 
+    question: "What if I'm a particularly nervous learner in Rawcliffe?", 
+    answer: "Our instructors are known for their calm and patient approach. We'll stay in the quietest parts of Rawcliffe until you feel ready to take on busier junctions at your own pace." 
+  },
+  { 
+    question: "Do we practise independent driving using a sat-nav?",
+    answer: "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Shipton Road, the A1237, and the Rawcliffe Bar interchange approaches."
+  },
+  { 
+    question: "How many lessons will I need to pass in York?", 
+    answer: "Everyone learns at a different speed. We'll provide you with a clear progress record so you can see exactly how your skills are developing across different road types." 
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Rawcliffe Bar Interchanges',
+    description: 'A proper test of your lane selection and observation on large multi-lane junctions near the Park & Ride.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Shipton Road Flow',
+    description: 'Work on your speed awareness and lane planning as you navigate the busy A19 commuter route into the city.'
+  },
+  {
+    icon: 'School',
+    title: 'Residential Control Loops',
+    description: 'Head to the quieter side streets off Rawcliffe Lane to get your car control steady and practise your manoeuvres in peace.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Rawcliffe Bar Planning',
+    description: 'Build confidence on the major roundabouts near the Park & Ride, focusing on reading signs and selecting lanes early.',
+    badge: 'Precision Priority'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Shipton Road Awareness',
+    description: 'Practise managing commuter traffic on this busy arterial route, focusing on speed control and junction safety.',
+    badge: 'Forward Planning'
+  },
+  {
+    icon: 'Clock',
+    title: 'Residential Loop Control',
+    description: 'Perfect your slow-speed manoeuvres and steering on the quiet, wide residential streets off Rawcliffe Lane.',
+    badge: 'Urban Traffic Skill'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Rawcliffe, York YO30 | York Driving Lesson"
+  description="Driving lessons in Rawcliffe YO30. Start on residential loops off Rawcliffe Lane, build to Shipton Road and the A1237 ring road interchanges. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Rawcliffe"
+    postcode="YO30"
+    localitySlang="Rawcliffe Roads"
+    heroDescription="Steady practice on the residential loops off Rawcliffe Lane helps you build the basics before you encounter the busier A19 and ring road interchanges."
+    overviewP1="Rawcliffe is a great place to get a feel for the road. You'll likely start on the wide residential loops off Rawcliffe Lane to get your basics right, then step up to the busier A19 Shipton Road and the big junctions near the Park & Ride."
+    overviewP2="We provide plenty of options here, including <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> and <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> across YO30. Our focus is on the specific hurdles of Rawcliffe, like the mini-roundabouts and the lane discipline you'll need for the outer ring road."
+    overviewP3="Everyone learns differently, which is why we offer <a href='/mock-driving-tests' class='font-bold underline'>Mock Driving Tests</a> that mirror real test conditions. We'll help you with the busy traffic near Manor Academy while making sure you're comfortable with the narrow meeting spots and the standards expected at the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+    whyChooseItems={[
+      "Proper understanding of Rawcliffe Bar's multi-lane roundabout systems",
+      "Easy pickups from home, Manor Academy, or the Park & Ride",
+      "Focused help with Shipton Road and the city-bound traffic",
+      "Support with the A1237 ring road merging and exits",
+      "Lessons that cover both urban and residential route layouts"
+    ]}
+    confidenceP1="Practising in Rawcliffe often begins on the quiet residential cul-de-sacs away from the main road, giving you plenty of space to build your clutch control and steering. Once you're steady, we'll gradually introduce the more complex junctions on Rawcliffe Lane and the busier stretches of Shipton Road."
+    confidenceChallenge="Adapting to the rapid speed changes and constant lane planning required when merging onto the A19 and the A1237 ring road."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> while based in Rawcliffe lets you build confidence with both residential control and high-speed interchange navigation. We'll spend plenty of time on the multi-lane roundabouts near the Rawcliffe Bar Park & Ride and the busy city-bound stretches of Shipton Road."
+    intensiveP2="Back-to-back lessons help you build muscle memory quickly, which is perfect for perfecting your lane positioning on the A1237 ring road approaches. We’ll focus on early sign reading and junction planning, so whether you’re navigating a narrow residential turn or a major interchange, your routines feel second nature."
+    intensiveFeatures={[
+      "Building confidence on the multi-lane Rawcliffe Bar roundabouts",
+      "Developing speed awareness on the A19 Shipton Road",
+      "Handling merging and exits on the A1237 ring road",
+      "Daily practice of high-traffic urban planning"
+    ]}
+    mockTestP1="Preparing for your test in Rawcliffe involves getting comfortable with the balance between quiet residential loops and the busy A19 commuter flow. We’ll run a full mock exam that mirrors the standards of the Monks Cross Driving Test Centre, focusing on your early planning at the Rawcliffe Bar roundabouts and your speed control on Shipton Road."
+    mockTestPoints={[
+      "Detailed assessment of Rawcliffe Bar multi-lane positioning",
+      "Simulated test conditions on A19 city-bound approaches",
+      "Refined feedback on residential manoeuvre precision and observation"
+    ]}
+    nearbyAreas={['Clifton', 'Bootham', 'Huntington', 'Poppleton', 'York City Centre', 'Haxby']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18828.98772659345!2d-1.127417317768826!3d53.98565546257321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879305597793541%3A0xc346ec0373ab9357!2sRawcliffe%2C%20York!5e0!3m2!1sen!2suk!4v1715110000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Rawcliffe, York. Local instruction covering Rawcliffe Lane, Shipton Road, and the A1237 Rawcliffe Bar interchanges near YO30.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Rawcliffe",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-rawcliffe-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is the best place for a beginner to start in Rawcliffe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We often start beginners in the quieter residential loops off Rawcliffe Lane or near the parkland areas. These spots are ideal for building clutch control and steering basics during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer driving lessons near the Rawcliffe Park & Ride?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the area around the Park & Ride and Manor School is excellent for practising roundabouts and larger junction layouts. We regularly include these routes in our training."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for the outer ring road junctions in Rawcliffe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Definitely. Rawcliffe provides several safe approaches to the A1237. We'll help you gain confidence with merging, speed matching, and understanding roundabout exits on the York ring road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the busy traffic on Shipton Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shipton Road is a key commuter route. We usually tackle this once your basics are strong, helping you manage lane changes at higher speeds near the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening lessons available for learners in Rawcliffe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We try to accommodate learners with busy schedules. Weekend and evening slots are often available, allowing you to practise in different lighting conditions on Rawcliffe Lane and the A19 Shipton Road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you teach automatic driving around the YO30 area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we have instructors providing automatic driving lessons in York throughout Rawcliffe. This is ideal for those who want to focus more on the road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise parallel parking on residential Rawcliffe streets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rawcliffe has many suitable residential streets for practising manoeuvres like parallel parking. We make sure you get plenty of practice in real-world situations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do lessons help with the York practical driving test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rawcliffe's road types—from mini-roundabouts to faster dual carriageway sections—build the skill set needed to reach the DVSA test standard required to pass at the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from Manor CE Academy for lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can arrange pickups from your workplace, local school, or home in Rawcliffe — including near Manor CE Academy or anywhere on Rawcliffe Lane — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in the Rawcliffe area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for Rawcliffe residents. They are a great way to build muscle memory quickly while focusing on local York road conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there enough time to drive into York city centre from Rawcliffe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most of our 90-minute or 2-hour lessons allow enough time to practise local Rawcliffe routes and then venture towards the city centre to experience busier urban traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm a particularly nervous learner in Rawcliffe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their calm and patient approach. We'll stay in the quietest parts of Rawcliffe until you feel ready to take on busier junctions at your own pace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we practise independent driving using a sat-nav?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Shipton Road, the A1237, and the Rawcliffe Bar interchange approaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many lessons will I need to pass in York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Everyone learns at a different speed. We'll provide you with a clear progress record so you can see exactly how your skills are developing across different road types."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Wigginton?", 
+    answer: "We can start from your home in Wigginton or a convenient local spot. Beginners often start in the quieter residential loops off Mill Lane to build basic confidence during your <a href='/manual-driving-lessons' class='font-bold underline'>driving lessons in York</a>." 
+  },
+  { 
+    question: "How do you help learners with the transition between Wigginton and Haxby?", 
+    answer: "The two villages are closely linked. We'll practise navigating the residential connections and smaller roundabouts that join <a href='/driving-lessons-haxby-york' class='font-bold underline'>Haxby</a>, ideal for building solid priority habits."
+  },
+  { 
+    question: "Can we practise for the York outer ring road in Wigginton?",
+    answer: "Yes, Wigginton Road offers several approaches to the A1237. We'll help you gain confidence with merging, lane positioning, and understanding multi-lane roundabout exits safely near the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  {
+    question: "Do you offer automatic driving lessons in YO32?", 
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Wigginton and the wider YO32 postcode, making it easier to focus on navigation."
+  },
+  { 
+    question: "Is Wigginton a good area for absolute beginners?", 
+    answer: "Yes, Wigginton's quieter residential streets offer a calm environment for building clutch control and steering. It's an ideal spot for starting <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>." 
+  },
+  { 
+    question: "How do you teach lane discipline on the routes towards York Hospital?", 
+    answer: "Wigginton Road is an excellent route for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow towards central York."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Wigginton?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Wigginton. They are a focused way to build your driving skills quickly using local road layouts and York routes." 
+  },
+  { 
+    question: "Can I practise for my driving test on routes near Wigginton?",
+    answer: "While the test centre is elsewhere, the road conditions in Wigginton are essential for reaching the DVSA test standard required to pass at the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>practical test</a>."
+  },
+  { 
+    question: "Do you pick up from local primary or secondary schools in Wigginton?", 
+    answer: "We're very flexible and can arrange pickups from local schools or home in Wigginton — including anywhere on Mill Lane or Wigginton Road — so your lessons fit into your day."
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Wigginton?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Wigginton Road and the A1237 at varying speed limits."
+  },
+  {
+    question: "How do you handle the speed limit changes on Wigginton Road?", 
+    answer: "Wigginton Road has several speed limit changes. We'll practise scanning for road signs and adapting your speed smoothly to keep you safe and observant."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Wigginton Road, the A1237, and the routes towards <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving in busier traffic?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Wigginton roads until you're ready for busier commuter routes." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Wigginton?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Wigginton Road, Mill Lane, and the surrounding YO32 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Mill Lane Estates',
+    description: 'A calm residential area ideal for getting your steering and clutch control solid away from the main road traffic.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Wigginton Road Flow',
+    description: 'Practise your speed awareness and observations as you head towards the city, managing the busy commuter and hospital traffic.'
+  },
+  {
+    icon: 'School',
+    title: 'Ring Road Interchanges',
+    description: 'Build your confidence on the larger roundabouts that connect Wigginton to the A1237, focusing on lane choices and merging.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Wigginton Road Transitions',
+    description: 'Practise managing the frequent speed limit changes smoothly while maintaining a high standard of observation.',
+    badge: 'Precision Priority'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Mill Lane Residential Loops',
+    description: 'Build your basic car control and junction foundations on the calm residential streets away from the main road.',
+    badge: 'Higher Speed Skill'
+  },
+  {
+    icon: 'Clock',
+    title: 'Ring Road Approach Planning',
+    description: 'Build confidence for the larger roundabouts connecting the village to the A1237, focusing on lane selection.',
+    badge: 'Visual Observation'
+  }
+];
+---
+
+<Layout 
+  title="Driving Lessons in Wigginton, York YO32 | York Driving Lesson"
+  description="Driving lessons in Wigginton YO32. Start on Wigginton's quiet lanes and build towards the A1237 ring road and Haxby Road approaches into York. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Wigginton"
+    postcode="YO32"
+    localitySlang="Wigginton Roads"
+    heroDescription="Quiet side-streets off Mill Lane allow for focused early practice before you progress to the busier Wigginton Road and nearby ring road links."
+    overviewP1="Learning to drive in Wigginton offers a calm but highly effective training ground. You can develop your fundamental car control in the quiet residential side-streets off Mill Lane, before progressing to the busier Wigginton Road commuter routes and the technical interchanges that connect you to the York outer ring road."
+    overviewP2="We offer structured driving tuition, including <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> and <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a>, across the YO32 district. Our instructors focus on the specific challenges of the village, such as the numerous speed limit transitions and the complex residential connections with <a href='/driving-lessons-haxby-york' class='font-bold underline'>Haxby</a>."
+    overviewP3="Whether you're starting your first lesson or looking for <a href='/mock-driving-tests' class='font-bold underline'>Mock Driving Tests</a>, we provide a patient environment. We use the local Wigginton road network to keep your observation and hazard perception at a test-ready standard, preparing you for everything from village-centre 'meeting' situations to the high technical demands of the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+    whyChooseItems={[
+      "Local expertise on Wigginton Road's speed transitions",
+      "Flexible pickups from home or local Wigginton landmarks",
+      "Focused training on A1237 ring road merging and exits",
+      "Focused support for Wigginton and Haxby residential links",
+      "Structured prep for test-standard urban and village planning"
+    ]}
+    confidenceP1="Initial practice in Wigginton usually takes place on the quiet residential loops where you can build your car control away from heavy traffic. We'll build your confidence with steering and gears on streets like Wigginton Village before moving on to the busier junctions on Wigginton Road and the large roundabouts along the A1237."
+    confidenceChallenge="Balancing the transition from slow-speed village traffic to the high-speed lane planning required for the York ring road junctions."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> while based in Wigginton is a great way to bridge the gap between quiet village life and busy arterial roads. We'll focus on your speed awareness through the village core and your planning as we head towards the A1237 roundabouts."
+    intensiveP2="Back-to-back lessons help your driving routines become second nature, which is vital when navigating the multi-lane junctions near the ring road. We’ll spend time on Wigginton Road and the Haxby links, making sure you’re comfortable with changing speed limits and urban planning before your test."
+    intensiveFeatures={[
+      "Building confidence with speed transitions on Wigginton Road",
+      "Confident lane planning for the A1237 ring road",
+      "Handling the Wigginton and Haxby residential links",
+      "Daily practice of urban and semi-rural observation"
+    ]}
+    mockTestP1="Taking a mock test in Wigginton allows you to build confidence with the technical lane choices and speed transitions that link the village to the outer ring road. We’ll provide a structured, test-standard assessment of your planning at the A1237 roundabouts and your observation through the village connections, building your confidence for the real exam."
+    mockTestPoints={[
+      "Examiner-style feedback on A1237 ring road lane selection",
+      "Simulated test routes through Wigginton and Haxby residential links",
+      "Detailed assessment of speed transition awareness on Wigginton Road"
+    ]}
+    nearbyAreas={['Haxby', 'Rawcliffe', 'Huntington', 'Clifton', 'Bootham', 'York City Centre']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18826.128501662497!2d-1.0870529176938!3d54.00250506253448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879307775a0df8b%3A0xc346ec0373ab9357!2sWigginton%2C%20York!5e0!3m2!1sen!2suk!4v1715117000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Wigginton, York. Local instruction covering Wigginton Road, Mill Lane, and the A1237 ring road approaches near YO32.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Wigginton",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-wigginton-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Wigginton or a convenient local spot. Beginners often start in the quieter residential loops off Mill Lane to build basic confidence during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the transition between Wigginton and Haxby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The two villages are closely linked. We'll practise navigating the residential connections and smaller roundabouts that join Haxby, ideal for building solid priority habits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the York outer ring road in Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Wigginton Road offers several approaches to the A1237. We'll help you gain confidence with merging, lane positioning, and understanding multi-lane roundabout exits safely near the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO32?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Wigginton and the wider YO32 postcode, making it easier to focus on navigation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Wigginton a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Wigginton's quieter residential streets offer a calm environment for building clutch control and steering. It's an ideal spot for starting manual driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline on the routes towards York Hospital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wigginton Road is an excellent route for practising lane planning and mirror routines. We focus on helping you anticipate varied traffic flow towards central York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Wigginton. They are a focused way to build your driving skills quickly using local road layouts and York routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the test centre is elsewhere, the road conditions in Wigginton are essential for reaching the DVSA test standard required to pass at the practical test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local primary or secondary schools in Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from local schools or home in Wigginton — including anywhere on Mill Lane or Wigginton Road — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Wigginton Road and the A1237 at varying speed limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the speed limit changes on Wigginton Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wigginton Road has several speed limit changes. We'll practise scanning for road signs and adapting your speed smoothly to keep you safe and observant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're confident with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Wigginton Road, the A1237, and the routes towards Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving in busier traffic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Wigginton roads until you're ready for busier commuter routes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Wigginton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and current level of experience to match you with a local instructor covering Wigginton Road, Mill Lane, and the surrounding YO32 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

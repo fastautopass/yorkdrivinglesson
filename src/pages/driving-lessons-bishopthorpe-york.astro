@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationTemplate from '../components/PageTemplates/LocationTemplate';
+
+const faqs = [
+  { 
+    question: "Where do we start driving lessons in Bishopthorpe?", 
+    answer: "We can start from your home in Bishopthorpe or a convenient local spot. Beginners often start in the quieter residential loops off Sim Balk Lane to build basic car control before moving onto busier village roads."
+  },
+  {
+    question: "How do you help learners with the narrower roads in Bishopthorpe?",
+    answer: "The village roads can be tight with parked cars. We'll practise meeting traffic, using priority correctly, and maintaining safe passing distances, which is great preparation for the <a href='/monks-cross-driving-test-centre' class='font-bold underline'>Monks Cross Driving Test Centre</a>."
+  },
+  {
+    question: "Can we practise for the Tadcaster Road junctions in Bishopthorpe?",
+    answer: "Yes, the approaches towards Tadcaster Road and Askham Bar are excellent for practising larger roundabouts, lane positioning, and speed limit changes during your <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a>."
+  },
+  {
+    question: "Do you offer automatic driving lessons in YO23?",
+    answer: "Absolutely. We provide <a href='/automatic-driving-lessons' class='font-bold underline'>automatic driving lessons in York</a> throughout Bishopthorpe and the wider YO23 postcode, perfect for navigating York's busier arterial roads with zero gear stress."
+  },
+  { 
+    question: "Is Bishopthorpe a good area for absolute beginners?", 
+    answer: "Yes, Bishopthorpe's quieter residential streets offer a calm environment for building clutch control and confidence at basic junctions. It's a popular spot to begin <a href='/manual-driving-lessons' class='font-bold underline'>manual driving lessons</a> before tackling busier dual carriageway links."
+  },
+  {
+    question: "How do you teach lane discipline on the routes towards the A64?",
+    answer: "The routes connecting Bishopthorpe to the A64 are perfect for practising forward planning and mirror routines. We help you feel confident merging with faster traffic and following sat-nav directions used in the real test."
+  },
+  { 
+    question: "Do you offer intensive driving courses in Bishopthorpe?", 
+    answer: "Yes, our <a href='/intensive-driving-courses' class='font-bold underline'>intensive driving courses in York</a> are available for residents in Bishopthorpe. They offer a focused way to build your skills quickly using local road layouts and varying traffic conditions." 
+  },
+  {
+    question: "Can I practise for my driving test on routes near Bishopthorpe?",
+    answer: "While we cover various parts of the city, the road conditions in Bishopthorpe—including junction priority and speed management—are essential for reaching the DVSA test standard expected by examiners."
+  },
+  { 
+    question: "Do you pick up from local offices or schools in Bishopthorpe?", 
+    answer: "We're very flexible and can arrange pickups from your workplace, local school, or home in Bishopthorpe — including anywhere on Main Street or Sim Balk Lane — so your lessons fit into your day."
+  },
+  { 
+    question: "Are evening or weekend driving lessons available in Bishopthorpe?", 
+    answer: "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Main Street and Bishopthorpe Road during peak hours."
+  },
+  {
+    question: "How do you handle the pedestrian activity near the village shops?",
+    answer: "Bishopthorpe Village can be busy with residents. We'll practise keen observation and speed control in these zones to help you develop strong hazard perception skills needed for independence."
+  },
+  { 
+    question: "Do we learn to use a sat-nav during our lessons?", 
+    answer: "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Bishopthorpe Road, Sim Balk Lane, and the Askham Bar approaches."
+  },
+  { 
+    question: "What if I'm particularly nervous about driving towards York city centre?", 
+    answer: "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Bishopthorpe roads until you're truly ready for busier routes like those in <a href='/driving-lessons-acomb-york' class='font-bold underline'>Acomb</a> or the city centre." 
+  },
+  { 
+    question: "How can I book an assessment lesson in Bishopthorpe?", 
+    answer: "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Sim Balk Lane, Bishopthorpe Road, and the surrounding YO23 area."
+  }
+];
+
+const practiceRoutesItems = [
+  {
+    icon: 'Navigation',
+    title: 'Village Core Practice',
+    description: 'Handle "meeting traffic" situations and narrow lanes through the heart of the village where parked cars limit your space.'
+  },
+  {
+    icon: 'MapPinned',
+    title: 'Askham Bar Links',
+    description: 'A great route for practising lane discipline and roundabout entries as you head towards the busy Tadcaster Road interchange.'
+  },
+  {
+    icon: 'School',
+    title: 'Rural Lane Awareness',
+    description: 'Get used to changing speed limits and narrower country lanes on the scenic routes moving away from the village towards Acaster Malbis.'
+  }
+];
+
+const roadsJunctionsItems = [
+  {
+    icon: 'Map',
+    title: 'Village Priority Practice',
+    description: 'Meeting traffic on narrow roads through the village core where observation is key.',
+    badge: 'Precision Control'
+  },
+  {
+    icon: 'Navigation',
+    title: 'Askham Bar Approaches',
+    description: 'Practise planning for the larger roundabouts and multi-lane exits as you head towards Tadcaster Road.',
+    badge: 'Planning Skill'
+  },
+  {
+    icon: 'Clock',
+    title: 'Residential Road Control',
+    description: 'Get your car control second nature on the wider loops like Sim Balk Lane before tackling tighter village spots.',
+    badge: 'Sharp Observation'
+  }
+];
+---
+
+<Layout
+  title="Driving Lessons in Bishopthorpe, York YO23 | York Driving Lesson"
+  description="Driving lessons in Bishopthorpe YO23. Quiet village roads give learners a calm start before progressing to Bishopthorpe Road and the A64. Enquire now."
+>
+	<LocationTemplate 
+    client:visible
+    locationName="Bishopthorpe"
+    postcode="YO23"
+    localitySlang="Bishopthorpe Roads"
+    heroDescription="Sim Balk Lane’s wider loops provide a steady start before you navigate the narrow corners and parked cars of the Bishopthorpe village core."
+    overviewP1="Bishopthorpe is a lovely spot to learn, offering a mix of quiet village lanes and faster arterial roads. We'll spend time on the residential stretches to build your confidence before we tackle the more technical spots like the junctions leading onto Tadcaster Road or the approaches to the A64."
+    overviewP2="You can choose from <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Courses</a> or standard <a href='/automatic-driving-lessons' class='font-bold underline'>Automatic Driving Lessons</a> throughout the YO23 area. We make sure to practise the meeting situations on Main Street and the lane discipline needed for the roundabouts at Askham Bar, so you feel prepared for real-world driving."
+    overviewP3="Our lessons are always taken at a pace that suits you. Whether it's your very first time in a car or you're looking to complete a <a href='/pass-plus-course' class='font-bold underline'>Pass Plus course</a>, we'll help you become a steady, capable driver on York's diverse road network."
+    whyChooseItems={[
+      "Clear help with Bishopthorpe's narrow village priorities",
+      "Convenient pickups from home or local YO23 spots",
+      "Focus on the high-activity pedestrian zones near village shops",
+      "Preparation for the busier junctions near Askham Bar",
+      "Training that hits the high standards of the Monks Cross Driving Test Centre"
+    ]}
+    confidenceP1="Learning in Bishopthorpe starts on the wider, calmer loops like Sim Balk Lane or Main Street, where you can focus on your steering and gear changes without too much pressure. It’s the perfect place to get the basics down before we head towards the busier village centre or the link roads out to the A64."
+    confidenceChallenge="Dealing with the tight bends and high volume of parked cars through the village core, which tests your meeting skills and spatial awareness to the limit."
+    roadsJunctionsItems={roadsJunctionsItems}
+    practiceRoutesItems={practiceRoutesItems}
+    intensiveP1="An <a href='/intensive-driving-courses' class='font-bold underline'>Intensive Driving Course in York</a> is a popular choice for Bishopthorpe learners who want to bridge the gap between quiet village lanes and busy city traffic. We'll use the village core for your basic control and the Askham Bar area for more technical, high-speed practice."
+    intensiveP2="Doing your lessons in blocks helps you stay focused on those tricky lane choices and roundabout entries that join the village to the A64. It’s a great way to build up to test standard, giving you the time to practise your full observation routines until they become second nature."
+    intensiveFeatures={[
+      "Building confidence on transitions to the A64 bypass junctions",
+      "Repeated practice at Askham Bar interchanges",
+      "Judging space on narrow village through-roads",
+      "Building stamina for longer city-bound routes"
+    ]}
+    mockTestP1="Mock test preparation in Bishopthorpe helps you get comfortable with the ‘meeting traffic’ challenges and narrow bends of the village core. We’ll guide you through a simulated practical exam, focusing on your spatial awareness and your decision-making on the approaches to Tadcaster Road, so you’re fully prepared."
+    mockTestPoints={[
+      "Realistic assessments of village meeting situations",
+      "Examiner-style feedback on Askham Bar roundabout entries",
+      "Focused practice for rural speed transition observation"
+    ]}
+    nearbyAreas={['Acomb', 'Holgate', 'Fulford', 'Copmanthorpe', 'Woodthorpe', 'Dringhouses']}
+    faqs={faqs}
+    mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18837.280984557497!2d-1.1070529177638!3d53.91510506267005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48793033f7c48995%3A0xc346ec0373ab9357!2sBishopthorpe%2C%20York!5e0!3m2!1sen!2suk!4v1715120000000!5m2!1sen!2suk"
+  />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Driving lessons in Bishopthorpe, York. Local instruction covering Sim Balk Lane, Bishopthorpe Road, and the Askham Bar roundabouts near YO23.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Driving Lessons in Bishopthorpe",
+          "item": "https://yorkdrivinglesson.co.uk/driving-lessons-bishopthorpe-york/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do we start driving lessons in Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can start from your home in Bishopthorpe or a convenient local spot. Beginners often start in the quieter residential loops off Sim Balk Lane to build basic car control before moving onto busier village roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help learners with the narrower roads in Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The village roads can be tight with parked cars. We'll practise meeting traffic, using priority correctly, and maintaining safe passing distances, which is great preparation for the Monks Cross Driving Test Centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we practise for the Tadcaster Road junctions in Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the approaches towards Tadcaster Road and Askham Bar are excellent for practising larger roundabouts, lane positioning, and speed limit changes during your driving lessons in York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer automatic driving lessons in YO23?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We provide automatic driving lessons in York throughout Bishopthorpe and the wider YO23 postcode, perfect for navigating York's busier arterial roads with zero gear stress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Bishopthorpe a good area for absolute beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Bishopthorpe's quieter residential streets offer a calm environment for building clutch control and confidence at basic junctions. It's a popular spot to begin manual driving lessons before tackling busier dual carriageway links."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you teach lane discipline on the routes towards the A64?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The routes connecting Bishopthorpe to the A64 are perfect for practising forward planning and mirror routines. We help you feel confident merging with faster traffic and following sat-nav directions used in the real test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer intensive driving courses in Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our intensive driving courses in York are available for residents in Bishopthorpe. They offer a focused way to build your skills quickly using local road layouts and varying traffic conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I practise for my driving test on routes near Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we cover various parts of the city, the road conditions in Bishopthorpe—including junction priority and speed management—are essential for reaching the DVSA test standard expected by examiners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you pick up from local offices or schools in Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're very flexible and can arrange pickups from your workplace, local school, or home in Bishopthorpe — including anywhere on Main Street or Sim Balk Lane — so your lessons fit into your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are evening or weekend driving lessons available in Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We aim to be flexible. Depending on current instructor availability, evening or weekend lessons can be arranged so you can experience driving in different lighting conditions on Main Street and Bishopthorpe Road during peak hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the pedestrian activity near the village shops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bishopthorpe Village can be busy with residents. We'll practise keen observation and speed control in these zones to help you develop strong hazard perception skills needed for independence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we learn to use a sat-nav during our lessons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, once you're steady with basic car control, we incorporate sat-nav training. It's a key part of the modern test and vital for building true independent driving on Bishopthorpe Road, Sim Balk Lane, and the Askham Bar approaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm particularly nervous about driving towards York city centre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our instructors are known for their patient approach. We'll progress at your pace, staying on quieter Bishopthorpe roads until you're truly ready for busier routes like those in Acomb or the city centre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an assessment lesson in Bishopthorpe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply fill out our online enquiry form. We’ll discuss your goals and match you with a local instructor covering Sim Balk Lane, Bishopthorpe Road, and the surrounding YO23 area."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

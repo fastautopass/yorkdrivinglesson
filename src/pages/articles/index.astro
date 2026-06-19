@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
+const articles = [
+  { 
+    title: 'How to Pass Your Driving Test First Time in York', 
+    description: 'Practical tips and local York road knowledge to help you secure a first-time pass at the Monks Cross test centre.',
+    url: '/articles/pass-driving-test-first-time-york' 
+  },
+  { 
+    title: 'Automatic vs Manual Driving Lessons: Which is Best?', 
+    description: 'A complete comparison to help you decide between manual and automatic driving lessons on York\'s busy roads.',
+    url: '/articles/automatic-vs-manual-driving-lessons-york' 
+  },
+  { 
+    title: 'Driving Test Nerves: How to Stay Calm', 
+    description: 'Practical strategies to manage test-day anxiety and perform at your best during your York driving test.',
+    url: '/articles/driving-test-nerves-how-to-stay-calm' 
+  },
+  { 
+    title: 'York Driving Test Routes & Common Mistakes', 
+    description: 'Identify the common pressure points on York test routes and learn how to avoid avoidable faults.',
+    url: '/articles/york-driving-test-routes-common-mistakes' 
+  },
+  { 
+    title: 'What Happens On The York Driving Test?', 
+    description: 'A step-by-step walkthrough of the official driving test process at the York (Monks Cross) test centre.',
+    url: '/articles/what-happens-on-the-york-driving-test' 
+  },
+];
+---
+
+<Layout
+  title="York Driving Guides for Learners | Tips & Free Advice"
+  description="Practical driving guides for learners in York. Covers passing first time, test routes, automatic vs manual, and managing nerves. Read our free guides."
+>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "York Driving Guides & Learner Tips",
+      "description": "Practical driving guides for learners in York covering passing first time, test routes, automatic vs manual, managing nerves, and what happens on test day.",
+      "url": "https://yorkdrivinglesson.co.uk/articles/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "York Driving Lesson",
+        "url": "https://yorkdrivinglesson.co.uk"
+      },
+      "hasPart": [
+        { "@type": "Article", "name": "How to Pass Your Driving Test First Time in York", "url": "https://yorkdrivinglesson.co.uk/articles/pass-driving-test-first-time-york/" },
+        { "@type": "Article", "name": "Automatic vs Manual Driving Lessons: Which is Best?", "url": "https://yorkdrivinglesson.co.uk/articles/automatic-vs-manual-driving-lessons-york/" },
+        { "@type": "Article", "name": "Driving Test Nerves: How to Stay Calm", "url": "https://yorkdrivinglesson.co.uk/articles/driving-test-nerves-how-to-stay-calm/" },
+        { "@type": "Article", "name": "York Driving Test Routes & Common Mistakes", "url": "https://yorkdrivinglesson.co.uk/articles/york-driving-test-routes-common-mistakes/" },
+        { "@type": "Article", "name": "What Happens On The York Driving Test?", "url": "https://yorkdrivinglesson.co.uk/articles/what-happens-on-the-york-driving-test/" }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "York Driving Guides",
+          "item": "https://yorkdrivinglesson.co.uk/articles/"
+        }
+      ]
+    }
+  </script>
+  <Header client:visible />
+  
+  <main class="pt-28 pb-20 px-6 sm:px-10 bg-soft-bg min-h-screen font-sans">
+    <div class="max-w-[1280px] mx-auto">
+      {/* PAGE HEADER */}
+      <div class="mb-12 lg:mb-16">
+        <h1 class="text-[3rem] sm:text-[4rem] font-black text-primary-text mb-4 leading-none tracking-tighter uppercase">
+          Driving Guides for York Learners
+        </h1>
+        <p class="text-[1.1rem] sm:text-[1.25rem] text-secondary-text leading-relaxed max-w-[700px] font-medium opacity-80">
+          Helpful learner guides from York Driving Lesson, covering driving tests, lesson choices, nerves, and learning to drive in York.
+        </p>
+      </div>
+
+      {/* ARTICLES GRID */}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {articles.map((article) => (
+          <a 
+            href={article.url} 
+            class="group bg-white p-8 rounded-[32px] border border-border-main/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline flex flex-col"
+          >
+            <div class="mb-6">
+              <div class="w-12 h-1.5 bg-primary-dark/10 mb-4 group-hover:bg-primary-dark/30 transition-colors"></div>
+              <h2 class="text-[1.4rem] font-black text-primary-text mb-3 leading-tight tracking-tight uppercase group-hover:text-primary-dark transition-colors">
+                {article.title}
+              </h2>
+              <p class="text-secondary-text text-[0.95rem] leading-relaxed font-bold opacity-70">
+                {article.description}
+              </p>
+            </div>
+            <div class="mt-auto">
+              <span class="text-primary-dark font-black text-[0.75rem] uppercase tracking-widest border-b-2 border-primary-dark/10 group-hover:border-primary-dark transition-all inline-block pb-1">
+                Read Guide →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

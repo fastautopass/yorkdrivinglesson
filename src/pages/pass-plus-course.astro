@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PassPlus from '../components/pages/PassPlus';
+---
+
+<Layout 
+  title="Pass Plus Course in York | DVSA Post-Test Training"
+  description="Newly passed in York? Pass Plus covers motorways, night driving, and rural roads — and could reduce your first year's insurance. DVSA approved. Book today."
+>
+  <PassPlus client:load />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DrivingSchool",
+      "name": "York Driving Lesson",
+      "url": "https://yorkdrivinglesson.co.uk",
+      "image": "https://yorkdrivinglesson.co.uk/images/logo.png",
+      "description": "Official DVSA Pass Plus course in York. Build advanced road skills, motorway confidence, and rural road awareness with DVSA-approved tuition.",
+      "telephone": "+447763999317",
+      "email": "support@yorkdrivinglesson.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 2, Arabesque House, Monks Cross Drive",
+        "addressLocality": "York",
+        "addressRegion": "North Yorkshire",
+        "postalCode": "YO32 9GW",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.988,
+        "longitude": -1.0647
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "York"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "££"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yorkdrivinglesson.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pass Plus Course",
+          "item": "https://yorkdrivinglesson.co.uk/pass-plus-course/"
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Pass Plus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pass Plus is a nationally recognised DVSA training course for newly qualified drivers. It covers advanced road skills like motorway driving, rural roads, and night driving, which aren't typically covered in standard driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Pass Plus worth it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. It builds significant road confidence, fixes bad habits early, and makes you a much safer independent driver. Many learners consider it the 'finishing school' for advanced driving tuition York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Pass Plus reduce insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many insurance providers offer discounts to Pass Plus certificate holders. However, reductions are not guaranteed and vary by provider. We focus on building your advanced road awareness for long-term safety first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does Pass Plus take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The course consists of a minimum of 6 hours of practical training. It can be taken as a single intensive day or split into several sessions, fitting alongside our manual or automatic driving lessons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a Pass Plus test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, there is no formal test. Your DVSA-approved instructor assesses you throughout the course. Once you reach the required standard in all modules, you receive your certificate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover motorway driving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, motorway driving lessons York are a core module of Pass Plus York. We focus on lane discipline, safe overtaking, following distances, and high-speed hazard perception."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can nervous drivers take Pass Plus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Pass Plus is ideal for nervous driver lessons where students want instructor-led support while tackling motorways or country roads for the first time after passing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you use York roads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we focus on real-world York driving conditions, including the A64, York ring road, city centre junctions, and rural North Yorkshire paths where advanced road awareness is critical."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my own car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, provided your car is roadworthy and you have the correct insurance cover. Alternatively, you can use our dual-controlled manual or automatic instructor vehicles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What roads are covered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover town driving (York centre), all-weather driving, rural road driving (North York Moors), night driving, dual carriageway driving (A64), and motorway driving confidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Pass Plus DVSA approved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the Pass Plus York scheme is government-backed and designed by the Driver and Vehicle Standards Agency (DVSA) to improve post-test safety."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after completion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your instructor will send your training report to the DVSA, who will then issue your official Pass Plus certificate, proving your commitment to advanced driving tuition York."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Pass Plus improve confidence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Significantly. By facing challenging environments with a DVSA-approved instructor by your side, you develop the muscle memory and decision-making skills needed for safe independent driving and post-test driving confidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Pass Plus suitable after recently passing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is most effective when taken within the first year of passing, as this is when driving lessons York transition into genuine independent road safety skills."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>
