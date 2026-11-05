@@ -30,6 +30,8 @@ import {
 } from 'lucide-react';
 
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
+import { ADDRESS, MAP_URL, MAP_EMBED_URL } from '../../data/site';
 
 export default function Home() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
@@ -38,7 +40,7 @@ export default function Home() {
   const [currentTrustIndex, setCurrentTrustIndex] = useState(0);
   const [isTrustHovered, setIsTrustHovered] = useState(false);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg`, alt: `York driving test pass certificate ${i + 1} — York Driving Lesson` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg`, alt: `York driving test pass certificate ${i + 1} — York Driving Lesson` })).filter(p => p.id !== 4);
 
   const trustCards = [
     { 
@@ -140,11 +142,11 @@ export default function Home() {
   const faqs = [
     { 
       question: "Do you offer driving lessons across York?", 
-      answer: "Yes, York Driving Lesson offers driving lessons [across York](/york) and nearby areas. Lessons can include local residential roads, busier junctions, roundabouts, city routes, and common test-route areas." 
+      answer: "Yes, York Driving Lesson offers driving lessons [across York](/york/) and nearby areas. Lessons can include local residential roads, busier junctions, roundabouts, city routes, and common test-route areas." 
     },
     { 
       question: "Can I choose between automatic and manual lessons?", 
-      answer: "Yes, learners can choose [automatic lessons](/automatic-driving-lessons) or [manual lessons](/manual-driving-lessons) depending on what suits their confidence, goals, and learning style. If you are unsure, you can compare both options before deciding." 
+      answer: "Yes, learners can choose [automatic lessons](/automatic-driving-lessons/) or [manual lessons](/manual-driving-lessons/) depending on what suits their confidence, goals, and learning style. If you are unsure, you can compare both options before deciding." 
     },
     { 
       question: "Are lessons suitable for complete beginners?", 
@@ -152,11 +154,11 @@ export default function Home() {
     },
     { 
       question: "Can nervous learners take lessons?", 
-      answer: "Yes, nervous learners are welcome. Lessons can move at a calm pace, with time spent on the areas that feel more difficult, such as roundabouts, junctions, parking, or independent driving. [Refresher lessons](/refresher-lessons) are also available." 
+      answer: "Yes, nervous learners are welcome. Lessons can move at a calm pace, with time spent on the areas that feel more difficult, such as roundabouts, junctions, parking, or independent driving. [Refresher lessons](/refresher-lessons/) are also available." 
     },
     { 
       question: "Do you offer mock driving tests in York?", 
-      answer: "Yes, [mock driving tests](/mock-driving-tests) are available to help learners experience realistic test-style driving before the real thing. Sessions cover routes near [Monks Cross Driving Test Centre](/monks-cross-driving-test-centre), including independent driving, manoeuvres, junctions, roundabouts, and feedback afterwards."
+      answer: "Yes, [mock driving tests](/mock-driving-tests/) are available to help learners experience realistic test-style driving before the real thing. Sessions cover routes near [Monks Cross Driving Test Centre](/monks-cross-driving-test-centre/), including independent driving, manoeuvres, junctions, roundabouts, and feedback afterwards."
     },
     { 
       question: "Can I have lessons around university, work, or shift patterns?", 
@@ -164,27 +166,27 @@ export default function Home() {
     },
     { 
       question: "Do you cover York test routes?", 
-      answer: "Lessons can include roads and situations commonly found around [York test-route areas](/york), including near [Monks Cross Driving Test Centre](/monks-cross-driving-test-centre), such as roundabouts, residential streets, junctions, traffic lights, and busier city routes."
+      answer: "Lessons can include roads and situations commonly found around [York test-route areas](/york/), including near [Monks Cross Driving Test Centre](/monks-cross-driving-test-centre/), such as roundabouts, residential streets, junctions, traffic lights, and busier city routes."
     },
     { 
       question: "How do I know whether automatic or manual is better for me?", 
-      answer: "Automatic lessons can feel simpler because there are no gears or clutch control, while manual lessons give you experience with gear changes and clutch control. The right choice depends on your confidence, goals, and what type of licence you want. Learn more on our [automatic](/automatic-driving-lessons) and [manual](/manual-driving-lessons) service pages." 
+      answer: "Automatic lessons can feel simpler because there are no gears or clutch control, while manual lessons give you experience with gear changes and clutch control. The right choice depends on your confidence, goals, and what type of licence you want. Learn more on our [automatic](/automatic-driving-lessons/) and [manual](/manual-driving-lessons/) service pages." 
     },
     { 
       question: "Do you offer intensive driving courses in York?", 
-      answer: "Yes, [intensive courses](/intensive-driving-courses) may be available for learners who want more frequent lessons over a shorter period. Availability can depend on your current driving level and instructor schedule." 
+      answer: "Yes, [intensive courses](/intensive-driving-courses/) may be available for learners who want more frequent lessons over a shorter period. Availability can depend on your current driving level and instructor schedule." 
     },
     { 
       question: "Can I take refresher lessons if I already have a licence?", 
-      answer: "Yes, [refresher lessons](/refresher-lessons) are suitable for drivers who already have a licence but want to rebuild confidence, practise parking, get used to York roads, or return to driving after a break." 
+      answer: "Yes, [refresher lessons](/refresher-lessons/) are suitable for drivers who already have a licence but want to rebuild confidence, practise parking, get used to York roads, or return to driving after a break." 
     },
     { 
       question: "Do you offer motorway lessons?", 
-      answer: "Yes, [motorway lessons](/motorway-lessons) can help drivers build confidence with faster roads, lane changes, joining and leaving slip roads, and safer planning at higher speeds." 
+      answer: "Yes, [motorway lessons](/motorway-lessons/) can help drivers build confidence with faster roads, lane changes, joining and leaving slip roads, and safer planning at higher speeds." 
     },
     { 
       question: "What areas of York do you cover?", 
-      answer: "York Driving Lesson covers learners across York and surrounding areas, including popular local areas listed in our [York Location Hub](/york)." 
+      answer: "York Driving Lesson covers learners across York and surrounding areas, including popular local areas listed in our [York Location Hub](/york/)." 
     },
     { 
       question: "How do I get started with lessons?", 
@@ -197,13 +199,13 @@ export default function Home() {
   ];
 
   const services = [
-    { title: "Automatic Lessons", desc: "No gears, no stalling — just focus on the road. A popular choice for learners in York who want to keep things simple.", link: "/automatic-driving-lessons" },
-    { title: "Manual Lessons", desc: "Learn clutch control and gears on York's real roads. The most common licence type and the one that opens up more cars when you pass.", link: "/manual-driving-lessons" },
-    { title: "Intensive Courses", desc: "Want to pass sooner? Our intensive driving courses in York pack your lessons together so you make faster progress.", link: "/intensive-driving-courses" },
-    { title: "Refresher Lessons", desc: "Been off the road for a while? Get your confidence back with refresher driving lessons in York, at whatever pace suits you.", link: "/refresher-lessons" },
-    { title: "Motorway Lessons", desc: "Already passed? Get comfortable on faster roads, slip roads, and lane changes with motorway lessons near York.", link: "/motorway-lessons" },
-    { title: "Mock Driving Tests", desc: "Drive the real test routes in York before the big day. A mock test helps you know what to expect and go in feeling ready.", link: "/mock-driving-tests" },
-    { title: "Pass Plus Course", desc: "Freshly passed? The Pass Plus course covers motorways, rural roads, and night driving — and can help cut your insurance costs too.", link: "/pass-plus-course" }
+    { title: "Automatic Lessons", desc: "No gears, no stalling — just focus on the road. A popular choice for learners in York who want to keep things simple.", link: "/automatic-driving-lessons/" },
+    { title: "Manual Lessons", desc: "Learn clutch control and gears on York's real roads. The most common licence type and the one that opens up more cars when you pass.", link: "/manual-driving-lessons/" },
+    { title: "Intensive Courses", desc: "Want to pass sooner? Our intensive driving courses in York pack your lessons together so you make faster progress.", link: "/intensive-driving-courses/" },
+    { title: "Refresher Lessons", desc: "Been off the road for a while? Get your confidence back with refresher driving lessons in York, at whatever pace suits you.", link: "/refresher-lessons/" },
+    { title: "Motorway Lessons", desc: "Already passed? Get comfortable on faster roads, slip roads, and lane changes with motorway lessons near York.", link: "/motorway-lessons/" },
+    { title: "Mock Driving Tests", desc: "Drive the real test routes in York before the big day. A mock test helps you know what to expect and go in feeling ready.", link: "/mock-driving-tests/" },
+    { title: "Pass Plus Course", desc: "Freshly passed? The Pass Plus course covers motorways, rural roads, and night driving — and can help cut your insurance costs too.", link: "/pass-plus-course/" }
   ];
 
   return (
@@ -263,7 +265,7 @@ export default function Home() {
                     5-Star Rated
                   </div>
                   <p className="text-[0.65rem] text-white-text/50 font-bold uppercase tracking-[0.08em]">
-                    Top rated school
+                    5.0 on Google · 10 reviews
                   </p>
                 </div>
               </div>
@@ -274,7 +276,7 @@ export default function Home() {
                 {/* Decorative background element for the form */}
                 <div className="absolute -inset-6 bg-slate-navy/10 rounded-[40px] blur-3xl transform group-hover:scale-105 transition-transform duration-700 pointer-events-none"></div>
                 
-                <div id="enquiry-form" className="relative transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)]">
+                <div className="relative transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)]">
                   <EnquiryForm />
                 </div>
               </div>
@@ -296,7 +298,7 @@ export default function Home() {
               
               <div className="space-y-5 max-w-[580px]">
                 <p className="text-[1.05rem] md:text-[1.1rem] text-secondary-text leading-relaxed font-medium">
-                  Learning to drive should feel straightforward and manageable. At York Driving Lesson, we provide calm, structured <a href="/york" className="text-primary-dark font-bold hover:underline">lessons across York</a> designed to help you build confidence at a steady pace.
+                  Learning to drive should feel straightforward and manageable. At York Driving Lesson, we provide calm, structured <a href="/york/" className="text-primary-dark font-bold hover:underline">lessons across York</a> designed to help you build confidence at a steady pace.
                 </p>
                 <p className="text-[1.05rem] md:text-[1.1rem] text-secondary-text leading-relaxed font-medium">
                   Whether you’re learning around work, university, college, or everyday life, lessons are planned around your availability and experience level. Lessons cover local York roads, roundabouts, residential areas, and nearby test routes to help you gain real driving experience where it matters most.
@@ -418,7 +420,7 @@ export default function Home() {
               
               <div className="space-y-4 max-w-[500px] mb-8">
                 <p className="text-[1rem] md:text-[1.05rem] text-white-text/70 leading-relaxed font-medium">
-                  Mock driving tests help you experience realistic driving test conditions before the real test day. Sessions cover local York roads and common test-route areas near <a href="/monks-cross-driving-test-centre" className="text-white/90 underline hover:text-white">Monks Cross Driving Test Centre</a> to help you build confidence and prepare calmly.
+                  Mock driving tests help you experience realistic driving test conditions before the real test day. Sessions cover local York roads and common test-route areas near <a href="/monks-cross-driving-test-centre/" className="text-white/90 underline hover:text-white">Monks Cross Driving Test Centre</a> to help you build confidence and prepare calmly.
                 </p>
                 <p className="text-[1rem] md:text-[1.05rem] text-white-text/70 leading-relaxed font-medium">
                   You’ll practise manoeuvres, independent driving, roundabouts, junctions, and real-world road situations with clear feedback afterwards.
@@ -444,7 +446,7 @@ export default function Home() {
                 <p className="text-[0.72rem] font-bold text-white-text/30 uppercase tracking-widest">
                   Ready to try a realistic mock driving test?
                 </p>
-                <a href="/mock-driving-tests" className="inline-block bg-white text-primary-dark px-10 py-4 rounded-xl text-[0.7rem] font-black uppercase tracking-[0.2em] shadow-lg hover:bg-white-text/90 hover:-translate-y-1 transition-all duration-300">
+                <a href="/mock-driving-tests/" className="inline-block bg-white text-primary-dark px-10 py-4 rounded-xl text-[0.7rem] font-black uppercase tracking-[0.2em] shadow-lg hover:bg-white-text/90 hover:-translate-y-1 transition-all duration-300">
                   Mock Driving Tests
                 </a>
               </div>
@@ -500,7 +502,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 pt-5 border-t border-white/5">
-                  <a href="/mock-driving-tests" className="text-[0.7rem] font-bold text-white/30 uppercase tracking-[0.15em] no-underline hover:text-white transition-colors flex items-center gap-2 group/link">
+                  <a href="/mock-driving-tests/" className="text-[0.7rem] font-bold text-white/30 uppercase tracking-[0.15em] no-underline hover:text-white transition-colors flex items-center gap-2 group/link">
                     Mock test checklist <span className="transition-transform duration-300 group-hover/link:translate-x-1">→</span>
                   </a>
                 </div>
@@ -571,7 +573,7 @@ export default function Home() {
                     className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                   >
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt={pass.alt} className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt={pass.alt} className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -617,7 +619,7 @@ export default function Home() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners share their progress in confidence, from first lessons on quieter York roads through to mock test preparation and passing their test.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
                 View Google Reviews
               </a>
             </div>
@@ -734,7 +736,7 @@ export default function Home() {
               AUTOMATIC & MANUAL DRIVING LESSONS ACROSS <span className="text-secondary-text/40 font-extrabold italic">YORK</span>
             </h2>
             <p className="text-secondary-text text-[0.9rem] md:text-[0.95rem] leading-relaxed font-medium max-w-[580px] mx-auto">
-              Learning to drive in York means getting used to a mix of residential roads, busy junctions, roundabouts, and city traffic. At York Driving Lesson, <a href="/automatic-driving-lessons" className="font-bold text-primary-dark hover:underline">automatic</a> and <a href="/manual-driving-lessons" className="font-bold text-primary-dark hover:underline">manual</a> lessons are planned around your progress and the roads you’ll use most.
+              Learning to drive in York means getting used to a mix of residential roads, busy junctions, roundabouts, and city traffic. At York Driving Lesson, <a href="/automatic-driving-lessons/" className="font-bold text-primary-dark hover:underline">automatic</a> and <a href="/manual-driving-lessons/" className="font-bold text-primary-dark hover:underline">manual</a> lessons are planned around your progress and the roads you’ll use most.
             </p>
           </div>
 
@@ -788,7 +790,7 @@ export default function Home() {
 
           <div className="max-w-[700px] mx-auto">
             <p className="text-secondary-text text-[0.88rem] font-medium leading-relaxed mb-8">
-              Our instructors help you practise the roads and routines that matter most in everyday driving. Whether starting from scratch or building confidence, lessons are shaped around steady progress on <a href="/york" className="font-bold text-primary-dark hover:underline">York test-route areas</a>.
+              Our instructors help you practise the roads and routines that matter most in everyday driving. Whether starting from scratch or building confidence, lessons are shaped around steady progress on <a href="/york/" className="font-bold text-primary-dark hover:underline">York test-route areas</a>.
             </p>
             
             <div className="text-center">
@@ -819,6 +821,28 @@ export default function Home() {
 
       <YorkAreaFinder />
 
+      {/* FIND US */}
+      <section className="bg-white py-10 lg:py-14 px-6 sm:px-10 border-t border-border-main/10" id="find-us">
+        <div className="max-w-[1100px] mx-auto grid lg:grid-cols-2 gap-8 items-center text-left">
+          <div>
+            <h2 className="text-[1.8rem] md:text-[2.2rem] font-black text-primary-text mb-4 tracking-tighter uppercase leading-none">Find York Driving Lesson</h2>
+            <address className="not-italic text-[1rem] text-secondary-text font-medium leading-relaxed mb-5">
+              <span className="font-black text-primary-text">York Driving Lesson</span><br />
+              {ADDRESS.street}<br />{ADDRESS.locality}, {ADDRESS.postcode}<br />
+              <a href="tel:+447763999317" className="font-bold underline">07763 999317</a>
+            </address>
+            <p className="text-[0.95rem] text-secondary-text font-medium leading-relaxed mb-6">
+              We teach learners across every part of York. Lessons usually start from your home, work or college, and you can see the <a href="/york/" className="font-bold underline">areas we cover</a> or send an enquiry for availability.
+            </p>
+            <a href={MAP_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-primary-dark text-white px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline hover:bg-secondary-dark transition-colors">Get directions</a>
+          </div>
+          <div className="w-full h-[320px] bg-soft-bg rounded-[24px] border border-border-main/20 overflow-hidden shadow-inner">
+            <iframe title="York Driving Lesson location on Google Maps" src={MAP_EMBED_URL} width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <RelatedLinks path="/" kind="info" />
       <Footer />
     </div>
   );

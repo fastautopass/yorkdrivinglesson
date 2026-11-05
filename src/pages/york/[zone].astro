@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HubPage from '../../components/pages/HubPage';
+import { zones, areasInZone } from '../../data/site';
+import { areaGuides } from '../../data/areaGuides';
+import { areaBlurbs } from '../../data/blurbs';
+import { zoneCopy } from '../../data/zoneCopy';
+
+export function getStaticPaths() {
+  return zones.map((z) => ({ params: { zone: z.id }, props: { zoneId: z.id } }));
+}
+
+const { zoneId } = Astro.props;
+const zone = zones.find((z) => z.id === zoneId)!;
+const list = areasInZone(zone.id);
+const names = list.map((a) => a.name);
+const joined = names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0];
+const cards = list.map((a) => ({ name: a.name, path: a.path, meta: a.postcode, blurb: areaBlurbs[a.path]?.hero ?? `Driving lessons in ${a.name}, York ${a.postcode}.` }));
+const firstSentence = (t: string) => (t.match(/^.*?[.!?](\s|$)/)?.[0] ?? t).trim();
+const sections = [
+  {
+    heading: `Learning to drive in ${zone.name}`,
+    paragraphs: zoneCopy[zone.id].long,
+  },
+  {
+    heading: `${zone.name} area by area`,
+    items: list.map((a) => ({ title: `${a.name} ${a.postcode}`, text: firstSentence(areaGuides[a.path]?.guide ?? ''), href: a.path })),
+  },
+];
+---
+
+<Layout
+  title={list.length > 1 ? `Driving Lessons in ${zone.name} | ${list.length} Areas` : `Driving Lessons in ${zone.name} | City Centre`}
+  description={(list.length > 1 ? `Driving lessons in ${zone.name}: ${joined}. Choose your area and enquire today.` : `Driving lessons in York city centre: inner ring road, Gillygate, Lendal Bridge and narrow streets. Enquire about lessons today.`).slice(0, 158)}
+>
+  <HubPage
+    client:load
+    path={zone.path}
+    kind="info"
+    heading="Driving Lessons in"
+    accent={zone.name}
+    intro={`We cover ${joined}. Choose your area below to see local lesson information, nearby areas and how to enquire.`}
+    cardsTitle={`${zone.name} areas`}
+    cards={cards}
+    sections={sections}
+  />
+</Layout>

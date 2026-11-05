@@ -8,15 +8,15 @@ export default function AboutUs() {
   const faqItems = [
     {
       question: "What is York Driving Lesson?",
-      answer: "York Driving Lesson helps learners find driving lesson support in York. We cover a wide range of services including automatic driving lessons, manual driving lessons, refresher lessons, intensive driving courses, motorway lessons, mock driving tests, and Pass Plus options."
+      answer: "York Driving Lesson provides driving lessons in York. We cover a wide range of services including automatic driving lessons, manual driving lessons, refresher lessons, intensive driving courses, motorway lessons, mock driving tests, and Pass Plus options."
     },
     {
       question: "Do you offer automatic driving lessons in York?",
-      answer: "Yes, [automatic driving lessons](/automatic-driving-lessons) are available for learners who prefer a simpler driving experience without the need to manage a clutch and gear stick. You can ask about availability and lesson options before getting started."
+      answer: "Yes, [automatic driving lessons](/automatic-driving-lessons/) are available for learners who prefer a simpler driving experience without the need to manage a clutch and gear stick. You can ask about availability and lesson options before getting started."
     },
     {
       question: "Do you offer manual driving lessons in York?",
-      answer: "Yes, [manual driving lessons](/manual-driving-lessons) are available for those who want to learn full vehicle control, including clutch coordination and manual gear changes."
+      answer: "Yes, [manual driving lessons](/manual-driving-lessons/) are available for those who want to learn full vehicle control, including clutch coordination and manual gear changes."
     },
     {
       question: "Can nervous learners enquire?",
@@ -24,7 +24,7 @@ export default function AboutUs() {
     },
     {
       question: "What areas of York do you cover?",
-      answer: "We cover a wide range of [areas in York](/york) and surrounding locations including Acomb, Clifton, Fulford, Heworth, Haxby, Tang Hall, Rawcliffe, Bishopthorpe, and many others."
+      answer: "We cover a wide range of [areas in York](/york/) and surrounding locations including Acomb, Clifton, Fulford, Heworth, Haxby, Tang Hall, Rawcliffe, Bishopthorpe, and many others."
     },
     {
       question: "Do you help beginners?",
@@ -32,23 +32,23 @@ export default function AboutUs() {
     },
     {
       question: "Do you offer refresher lessons?",
-      answer: "Yes, [refresher lessons](/refresher-lessons) are a great way for licence holders to rebuild their confidence after a break from driving or to get used to new road conditions."
+      answer: "Yes, [refresher lessons](/refresher-lessons/) are a great way for licence holders to rebuild their confidence after a break from driving or to get used to new road conditions."
     },
     {
       question: "Do you offer intensive driving courses?",
-      answer: "Yes, [intensive driving courses](/intensive-driving-courses) may be an option for learners who want more focused lesson time over a shorter period, depending on instructor availability."
+      answer: "Yes, [intensive driving courses](/intensive-driving-courses/) may be an option for learners who want more focused lesson time over a shorter period, depending on instructor availability."
     },
     {
       question: "Do you offer mock driving tests?",
-      answer: "Yes, [mock driving tests](/mock-driving-tests) are designed to simulate real test conditions, helping you identify areas for improvement and reducing nerves for the actual day."
+      answer: "Yes, [mock driving tests](/mock-driving-tests/) are designed to simulate real test conditions, helping you identify areas for improvement and reducing nerves for the actual day."
     },
     {
       question: "Do you offer motorway lessons?",
-      answer: "Yes, [motorway lessons](/motorway-lessons) help qualified drivers or advanced learners build confidence with higher speeds, lane discipline, and the complexities of motorway junctions."
+      answer: "Yes, [motorway lessons](/motorway-lessons/) help qualified drivers or advanced learners build confidence with higher speeds, lane discipline, and the complexities of motorway junctions."
     },
     {
       question: "Do you offer Pass Plus?",
-      answer: "Yes, the [Pass Plus](/pass-plus-course) course is available for new drivers who want to gain extra experience."
+      answer: "Yes, the [Pass Plus](/pass-plus-course/) course is available for new drivers who want to gain extra experience."
     },
     {
       question: "How do I enquire about lessons?",
@@ -65,21 +65,21 @@ export default function AboutUs() {
   ];
 
   const lessonTypes = [
-    { name: "Automatic Driving Lessons", href: "/automatic-driving-lessons" },
-    { name: "Manual Driving Lessons", href: "/manual-driving-lessons" },
-    { name: "Intensive Courses", href: "/intensive-driving-courses" },
-    { name: "Refresher Lessons", href: "/refresher-lessons" },
-    { name: "Motorway Lessons", href: "/motorway-lessons" },
-    { name: "Mock Driving Tests", href: "/mock-driving-tests" },
-    { name: "Pass Plus Course", href: "/pass-plus-course" }
+    { name: "Automatic Driving Lessons", href: "/automatic-driving-lessons/" },
+    { name: "Manual Driving Lessons", href: "/manual-driving-lessons/" },
+    { name: "Intensive Courses", href: "/intensive-driving-courses/" },
+    { name: "Refresher Lessons", href: "/refresher-lessons/" },
+    { name: "Motorway Lessons", href: "/motorway-lessons/" },
+    { name: "Mock Driving Tests", href: "/mock-driving-tests/" },
+    { name: "Pass Plus Course", href: "/pass-plus-course/" }
   ];
 
   const learnerGuides = [
-    { name: "Automatic vs Manual Driving Lessons", href: "/articles/automatic-vs-manual-driving-lessons-york" },
-    { name: "How to Pass Your Driving Test First Time in York", href: "/articles/pass-driving-test-first-time-york" },
-    { name: "What Happens On The York Driving Test", href: "/articles/what-happens-on-the-york-driving-test" },
-    { name: "York Driving Test Routes & Common Mistakes", href: "/articles/york-driving-test-routes-common-mistakes" },
-    { name: "Driving Test Nerves: How To Stay Calm On Test Day", href: "/articles/driving-test-nerves-how-to-stay-calm" }
+    { name: "Automatic vs Manual Driving Lessons", href: "/articles/automatic-vs-manual-driving-lessons-york/" },
+    { name: "How to Pass Your Driving Test First Time in York", href: "/articles/pass-driving-test-first-time-york/" },
+    { name: "What Happens On The York Driving Test", href: "/articles/what-happens-on-the-york-driving-test/" },
+    { name: "York Driving Test Routes & Common Mistakes", href: "/articles/york-driving-test-routes-common-mistakes/" },
+    { name: "Driving Test Nerves: How To Stay Calm On Test Day", href: "/articles/driving-test-nerves-how-to-stay-calm/" }
   ];
 
   return (
@@ -151,7 +151,7 @@ export default function AboutUs() {
                 York’s roads come with a mix of busy roundabouts, residential streets, city-centre traffic, and complex junctions. Lessons are designed around real driving conditions, helping learners build confidence gradually on the types of roads they’ll actually use every day.
               </p>
               <p className="text-[1.05rem] text-secondary-text leading-relaxed font-medium">
-                Lessons take place across York, from local residential roads to busier test-route areas. You can also explore the different parts of York we cover through our <a href="/york" className="text-primary-dark font-bold hover:underline">York Location Hub</a>.
+                Lessons take place across York, from local residential roads to busier test-route areas. You can also explore the different parts of York we cover through our <a href="/york/" className="text-primary-dark font-bold hover:underline">York Location Hub</a>.
               </p>
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function AboutUs() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a 
-                href="/contact-us" 
+                href="/contact-us/" 
                 className="w-full sm:w-auto bg-[#FDFCF0] text-primary-dark px-7 py-3 rounded-full text-[0.8rem] font-black uppercase tracking-widest no-underline transition-all duration-300 hover:bg-white hover:scale-105 shadow-xl shadow-black/20"
               >
                 Enquire Now

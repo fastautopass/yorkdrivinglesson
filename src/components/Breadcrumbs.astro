@@ -1,0 +1,28 @@
+---
+import type { Crumb } from '../data/site';
+interface Props { crumbs: Crumb[] }
+const { crumbs } = Astro.props;
+---
+{crumbs.length > 1 && (
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <ol>
+      {crumbs.map((c, i) => (
+        <li>
+          {i < crumbs.length - 1
+            ? <a href={c.path}>{c.name}</a>
+            : <span aria-current="page">{c.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+<style is:global>
+  .breadcrumb-bar { position: absolute; top: 76px; left: 0; right: 0; z-index: 40; pointer-events: none; font-family: 'Montserrat', system-ui, sans-serif; }
+  .breadcrumb-bar ol { max-width: 1280px; margin: 0 auto; padding: 6px 24px; display: flex; flex-wrap: wrap; gap: 4px 0; list-style: none; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; }
+  @media (min-width: 640px) { .breadcrumb-bar ol { padding-left: 40px; padding-right: 40px; } }
+  .breadcrumb-bar li { display: flex; align-items: center; pointer-events: auto; }
+  .breadcrumb-bar li + li::before { content: '›'; margin: 0 8px; opacity: 0.45; }
+  .breadcrumb-bar a { color: inherit; text-decoration: none; opacity: 0.7; }
+  .breadcrumb-bar a:hover { opacity: 1; text-decoration: underline; }
+  .breadcrumb-bar [aria-current] { opacity: 1; }
+</style>

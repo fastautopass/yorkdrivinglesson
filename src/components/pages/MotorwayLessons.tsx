@@ -20,13 +20,14 @@ import Footer from '../Footer';
 import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
 
 export default function MotorwayLessons() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -58,23 +59,23 @@ export default function MotorwayLessons() {
   const faqs = [
     { 
       question: "Are motorway lessons worth it?", 
-      answer: "Absolutely. Motorways are the UK's safest but fastest roads. DVSA-qualified tuition helps you build confidence with high-speed observations, lane discipline, and safe merging—skills that significantly reduce stress and improve safety. Many students find this training a perfect stepping stone towards a full <a href='/pass-plus-course' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>Pass Plus course</a>."
+      answer: "Absolutely. Motorways are the UK's safest but fastest roads. DVSA-qualified tuition helps you build confidence with high-speed observations, lane discipline, and safe merging—skills that significantly reduce stress and improve safety. Many students find this training a perfect stepping stone towards a full <a href='/pass-plus-course/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>Pass Plus course</a>."
     },
     { 
       question: "Can newly passed drivers take motorway lessons?", 
-      answer: "Yes, we highly recommend it. Since the law changed, learners can drive on motorways with an instructor, but many wait until they pass. Taking lessons post-test helps you transition to independent high-speed driving safely. This is often the most effective form of <a href='/refresher-lessons' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>post-test refresher training</a> for new drivers." 
+      answer: "Yes, we highly recommend it. Since the law changed, learners can drive on motorways with an instructor, but many wait until they pass. Taking lessons post-test helps you transition to independent high-speed driving safely. This is often the most effective form of <a href='/refresher-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>post-test refresher training</a> for new drivers." 
     },
     { 
       question: "Are motorway lessons available in automatic cars?", 
-      answer: "Yes. We offer motorway tuition in both automatic and manual vehicles. Choosing our <a href='/automatic-driving-lessons' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>automatic driving lessons</a> can often make high-speed driving simpler as you can focus entirely on your positioning and observations without the distraction of gear changes on the A1(M)." 
+      answer: "Yes. We offer motorway tuition in both automatic and manual vehicles. Choosing our <a href='/automatic-driving-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>automatic driving lessons</a> can often make high-speed driving simpler as you can focus entirely on your positioning and observations without the distraction of gear changes on the A1(M)." 
     },
     { 
       question: "How many motorway lessons do I need?", 
-      answer: "Most drivers find that a single 2 or 3-hour session is enough to cover the essentials and build baseline confidence. For more anxious drivers, a short course of 2-3 sessions allows for more gradual exposure to the M62 or M1. If you're on a tight schedule, we can also integrate these into our <a href='/intensive-driving-courses' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>intensive driving courses</a>." 
+      answer: "Most drivers find that a single 2 or 3-hour session is enough to cover the essentials and build baseline confidence. For more anxious drivers, a short course of 2-3 sessions allows for more gradual exposure to the M62 or M1. If you're on a tight schedule, we can also integrate these into our <a href='/intensive-driving-courses/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>intensive driving courses</a>." 
     },
     { 
       question: "Can we focus on confidence only?", 
-      answer: "Yes. Motorway training is client-led. If you already have the technical skills but feel 'blocked' by anxiety, we focus on psychological reassurance, calm exposure, and confidence-building techniques. Our <a href='/refresher-lessons' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>nervous driver support</a> is ideal for those who have avoided high-speed roads for years." 
+      answer: "Yes. Motorway training is client-led. If you already have the technical skills but feel 'blocked' by anxiety, we focus on psychological reassurance, calm exposure, and confidence-building techniques. Our <a href='/refresher-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>nervous driver support</a> is ideal for those who have avoided high-speed roads for years." 
     },
     { 
       question: "Do you cover dual carriageways?", 
@@ -82,11 +83,11 @@ export default function MotorwayLessons() {
     },
     { 
       question: "Are motorway lessons good for nervous drivers?", 
-      answer: "They are specifically designed for nervous drivers. We use a patient, zero-judgment approach to help you overcome the physical and emotional barriers of high-speed travel in a safe, dual-controlled environment. This is a core part of our <a href='/refresher-lessons' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>dedicated refresher lessons</a> for those in York." 
+      answer: "They are specifically designed for nervous drivers. We use a patient, zero-judgment approach to help you overcome the physical and emotional barriers of high-speed travel in a safe, dual-controlled environment. This is a core part of our <a href='/refresher-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>dedicated refresher lessons</a> for those in York." 
     },
     { 
       question: "Can refresher learners take motorway lessons?", 
-      answer: "Yes. Many of our <a href='/refresher-lessons' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>refresher students</a> haven't driven for years and motorways are their biggest fear. We combine general refresher training with dedicated high-speed sessions on the A64 and M62 to rebuild complete independence." 
+      answer: "Yes. Many of our <a href='/refresher-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>refresher students</a> haven't driven for years and motorways are their biggest fear. We combine general refresher training with dedicated high-speed sessions on the A64 and M62 to rebuild complete independence." 
     },
     { 
       question: "Do you drive on real motorways?", 
@@ -98,7 +99,7 @@ export default function MotorwayLessons() {
     },
     { 
       question: "Are night motorway lessons available?", 
-      answer: "Yes. Night-time motorway driving presents unique challenges with visibility and glare. We can schedule sessions during evening hours to help you build confidence in these specific conditions, which is also a key component of the <a href='/pass-plus-course' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>Pass Plus curriculum</a>." 
+      answer: "Yes. Night-time motorway driving presents unique challenges with visibility and glare. We can schedule sessions during evening hours to help you build confidence in these specific conditions, which is also a key component of the <a href='/pass-plus-course/' className='text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>Pass Plus curriculum</a>." 
     },
     { 
       question: "Can I use my own car for motorway tuition?", 
@@ -167,7 +168,7 @@ export default function MotorwayLessons() {
           </div>
 
           <div className="flex justify-center w-full lg:justify-end">
-            <div id="enquiry-form" className="w-full max-w-[540px] relative z-10">
+            <div className="w-full max-w-[540px] relative z-10">
               <EnquiryForm />
             </div>
           </div>
@@ -191,7 +192,7 @@ export default function MotorwayLessons() {
                 Motorway driving is often the final confidence barrier for qualified drivers in York. The speed, traffic flow, and complex lane systems can feel overwhelming without structured support.
               </p>
               <p className="text-secondary-text text-[1rem] leading-[1.7] font-medium opacity-80">
-                We break it down step by step — joining fast-moving traffic on the A64, holding safe distances, and reading the flow of multi-lane systems. Your awareness builds gradually so you feel settled behind the wheel, whether you take <a href="/manual-driving-lessons" className="text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/40 hover:decoration-primary-dark transition-all duration-200 font-bold">manual driving lessons</a> or <a href="/automatic-driving-lessons" className="text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/40 hover:decoration-primary-dark transition-all duration-200 font-bold">automatic driving lessons</a>.
+                We break it down step by step — joining fast-moving traffic on the A64, holding safe distances, and reading the flow of multi-lane systems. Your awareness builds gradually so you feel settled behind the wheel, whether you take <a href="/manual-driving-lessons/" className="text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/40 hover:decoration-primary-dark transition-all duration-200 font-bold">manual driving lessons</a> or <a href="/automatic-driving-lessons/" className="text-primary-dark hover:text-primary-dark/80 underline underline-offset-4 decoration-primary-dark/40 hover:decoration-primary-dark transition-all duration-200 font-bold">automatic driving lessons</a>.
               </p>
             </div>
 
@@ -246,7 +247,7 @@ export default function MotorwayLessons() {
               { title: "Dual Carriageway Hesitancy", desc: "If joining fast roads like the York ring road makes you nervous, this is the perfect starting point." },
               { title: "Long-Distance Travel", desc: "Perfect if you have a new job or relocation requiring regular high-speed commuting on the M62 or M1." },
               { title: "Independent Confidence", desc: "Moving from following Sat-Nav to actually 'reading' the motorway flow and lane discipline independently." },
-              { title: "Returning Drivers", desc: "Licensed drivers getting back on the road after several years. See our <a href='/refresher-lessons' class='text-primary-dark underline hover:bg-primary-dark/5 rounded px-1 -mx-1 underline-offset-4 decoration-primary-dark/40 hover:decoration-primary-dark transition-all duration-200 font-bold'>refresher driving lessons York</a> options for more info." }
+              { title: "Returning Drivers", desc: "Licensed drivers getting back on the road after several years. See our <a href='/refresher-lessons/' class='text-primary-dark underline hover:bg-primary-dark/5 rounded px-1 -mx-1 underline-offset-4 decoration-primary-dark/40 hover:decoration-primary-dark transition-all duration-200 font-bold'>refresher driving lessons York</a> options for more info." }
             ].map((card, index) => (
               <div key={`motorway-ideal-${index}`} className="bg-white p-8 rounded-3xl border border-border-main/20 hover:border-primary-dark/20 transition-all duration-300 group hover:shadow-xl hover:shadow-primary-dark/5">
                 <div className="text-[1.1rem] font-black text-primary-text mb-4 tracking-tight uppercase leading-tight">{card.title}</div>
@@ -344,7 +345,7 @@ export default function MotorwayLessons() {
               
               <div className="space-y-6">
                 {[
-                  { title: "Calm, Patient Tuition", desc: "Our instructors are highly experienced with supporting <a href='/refresher-lessons' class='text-primary-dark underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>nervous drivers</a>. We create a relaxed, zero-pressure atmosphere where you set the speed and focus." },
+                  { title: "Calm, Patient Tuition", desc: "Our instructors are highly experienced with supporting <a href='/refresher-lessons/' class='text-primary-dark underline underline-offset-4 decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 font-bold'>nervous drivers</a>. We create a relaxed, zero-pressure atmosphere where you set the speed and focus." },
                   { title: "DVSA-Aligned Coaching", desc: "Our tuition complies with current high-speed vehicle control standards, helping you learn practical, safe habits." },
                   { title: "York-Specific Road Insights", desc: "We understand the precise challenges of local slip roads and major regional routes, from the Hopgrove roundabout to the A1(M) and A64 merging points." },
                   { title: "Modern Safety Tech", desc: "Learn in modern, high-spec vehicles equipped with the latest driver assistance and dual controls." }
@@ -419,7 +420,7 @@ export default function MotorwayLessons() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
                 View Google Reviews
               </a>
             </div>
@@ -494,7 +495,7 @@ export default function MotorwayLessons() {
                 {recentPasses.map((pass) => (
                   <div key={`motorway-pass-${pass.id}`} className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0">
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -530,9 +531,9 @@ export default function MotorwayLessons() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { title: "Pass Plus Course", desc: "Motorway driving is one of six Pass Plus modules. If you want a full post-test programme, Pass Plus in York covers everything in one course.", link: "/pass-plus-course" },
-              { title: "Refresher Driving Lessons", desc: "Been off the road for a while? Refresher lessons in York help you get back to a level where motorway driving feels manageable again.", link: "/refresher-lessons" },
-              { title: "Automatic Driving Lessons", desc: "Prefer to focus on the road rather than the gears? Automatic lessons in York let you build motorway awareness without the distraction of a clutch.", link: "/automatic-driving-lessons" }
+              { title: "Pass Plus Course", desc: "Motorway driving is one of six Pass Plus modules. If you want a full post-test programme, Pass Plus in York covers everything in one course.", link: "/pass-plus-course/" },
+              { title: "Refresher Driving Lessons", desc: "Been off the road for a while? Refresher lessons in York help you get back to a level where motorway driving feels manageable again.", link: "/refresher-lessons/" },
+              { title: "Automatic Driving Lessons", desc: "Prefer to focus on the road rather than the gears? Automatic lessons in York let you build motorway awareness without the distraction of a clutch.", link: "/automatic-driving-lessons/" }
             ].map((course, index) => (
               <a key={`motorway-other-${index}`} href={course.link} className="group p-8 bg-white border border-border-main/15 rounded-2xl no-underline transition-all duration-300 hover:border-primary-dark/20 hover:shadow-xl hover:shadow-primary-dark/5 flex flex-col h-full">
                 <div className="mb-4">
@@ -569,7 +570,7 @@ export default function MotorwayLessons() {
             Ready To Drive With <span className="italic font-extrabold text-white/40">Real Confidence?</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -581,6 +582,7 @@ export default function MotorwayLessons() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/motorway-lessons/" kind="service" />
       <Footer />
     </div>
   );

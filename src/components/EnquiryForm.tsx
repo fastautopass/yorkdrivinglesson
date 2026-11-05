@@ -111,7 +111,7 @@ export default function EnquiryForm() {
         });
       });
 
-      const res = await fetch('/api/enquiry', {
+      const res = await fetch('/api/enquiry/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -266,7 +266,7 @@ export default function EnquiryForm() {
           />
           <div>
             <label htmlFor="consent" className={`text-[0.7rem] sm:text-[0.78rem] leading-snug ${bodyColor} cursor-pointer font-medium`}>
-              I confirm that I have read and agree to the <a href="/terms-and-conditions" className="text-primary-dark font-bold hover:underline">Terms</a> and <a href="/privacy-policy" className="text-primary-dark font-bold hover:underline">Privacy Policy</a>, and consent to York Driving Lesson contacting me regarding my enquiry.
+              I confirm that I have read and agree to the <a href="/terms-and-conditions/" className="text-primary-dark font-bold hover:underline">Terms</a> and <a href="/privacy-policy/" className="text-primary-dark font-bold hover:underline">Privacy Policy</a>, and consent to York Driving Lesson contacting me regarding my enquiry.
             </label>
             {errors.consent && <p className={errorClass}>{errors.consent}</p>}
           </div>

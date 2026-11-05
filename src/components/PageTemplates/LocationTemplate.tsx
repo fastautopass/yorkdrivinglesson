@@ -5,6 +5,9 @@ import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import Header from '../Header';
 import Footer from '../Footer';
+import RelatedLinks from '../RelatedLinks';
+import LocalGuide from '../LocalGuide';
+import { areas } from '../../data/site';
 
 export interface LocationTemplateProps {
   locationName: string;
@@ -45,7 +48,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -186,6 +189,8 @@ export default function LocationTemplate(props: LocationTemplateProps) {
         </div>
       </section>
 
+      <LocalGuide path={(areas.find((x) => x.name === props.locationName)?.path) ?? ''} />
+
       {/* SECTION: BUILDING CONFIDENCE */}
       <section className="bg-soft-bg py-10 lg:py-14 px-6 sm:px-10 border-y border-border-main/20">
         <div className="max-w-[940px] mx-auto text-left md:text-center">
@@ -300,7 +305,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
                 {recentPasses.map((pass) => (
                   <div key={`template-pass-${pass.id}`} className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0">
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt={`York driving test pass certificate ${pass.id} — York Driving Lesson`} className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt={`York driving test pass certificate ${pass.id} — York Driving Lesson`} className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -367,7 +372,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
                 </div>
               ))}
             </div>
-            <a href="/mock-driving-tests" className="inline-block bg-primary-dark text-white px-5 py-3 md:px-8 md:py-3.5 rounded-full text-[0.7rem] xs:text-[0.74rem] md:text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 whitespace-nowrap">
+            <a href="/mock-driving-tests/" className="inline-block bg-primary-dark text-white px-5 py-3 md:px-8 md:py-3.5 rounded-full text-[0.7rem] xs:text-[0.74rem] md:text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 whitespace-nowrap">
               Explore Mock Test Preparation
             </a>
           </div>
@@ -400,7 +405,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">View Google Reviews</a>
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">View Google Reviews</a>
             </div>
             <div className="group bg-white p-6 lg:p-8 rounded-[32px] border border-border-main/20 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
               <div className="mb-4 flex items-center justify-center">
@@ -412,7 +417,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Independent feedback reflects our supportive learning environment and structured approach to both automatic and manual lessons, built around real learner experiences across York.
               </p>
-              <a href="https://uk.trustpilot.com/review/yorkdrivinglesson.co.uk" target="_blank" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-[#00b67a] hover:text-white hover:border-[#00b67a] shadow-sm">View Trustpilot Reviews</a>
+              <a href="https://uk.trustpilot.com/review/yorkdrivinglesson.co.uk" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-[#00b67a] hover:text-white hover:border-[#00b67a] shadow-sm">View Trustpilot Reviews</a>
             </div>
           </div>
         </div>
@@ -428,7 +433,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
             Our driving lessons cover {props.locationName} and surrounding York areas with routes designed around real local driving conditions.
           </p>
           <div className="w-full h-[350px] md:h-[450px] bg-soft-bg rounded-[32px] border border-border-main/20 mb-6 overflow-hidden relative shadow-inner">
-            <iframe src={props.mapEmbedUrl} width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[0.1] contrast-[1.05] brightness-[1.02]"></iframe>
+            <iframe title="Google Maps location" src={props.mapEmbedUrl} width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[0.1] contrast-[1.05] brightness-[1.02]"></iframe>
           </div>
         </div>
       </section>
@@ -452,7 +457,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
           <div className="flex flex-wrap justify-center gap-2.5">
             {props.nearbyAreas.map((area, index) => {
               const slug = area.toLowerCase().replace(/\s+/g, '-');
-              const href = `/driving-lessons-${slug}${slug.includes('york') ? '' : '-york'}`;
+              const href = `/driving-lessons-${slug}${slug.includes('york') ? '' : '-york'}/`;
               return (
                 <a 
                   key={`template-nearby-${index}`} 
@@ -474,7 +479,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
             Start Your Driving Journey <span className="italic font-extrabold text-white/40">in {props.locationName}.</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -486,6 +491,7 @@ export default function LocationTemplate(props: LocationTemplateProps) {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path={(areas.find((x) => x.name === props.locationName)?.path) ?? '/york/'} kind="area" />
       <Footer />
     </div>
   );

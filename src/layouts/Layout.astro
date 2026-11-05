@@ -2,6 +2,8 @@
 import '../index.css';
 import TrustBadges from '../components/TrustBadges';
 import FloatingContact from '../components/FloatingContact';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE_URL, BRAND, PHONE_HREF, EMAIL, ADDRESS, GEO, MAP_URL, breadcrumbsFor, serviceSchemaFor } from '../data/site';
 
 interface Props {
 	title: string;
@@ -13,11 +15,11 @@ const { title, description, noindex = false } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname;
 
 const utilityPages = [
-  '/privacy-policy',
-  '/terms-and-conditions',
-  '/cookie-policy',
-  '/sitemap',
-  '/thank-you'
+  '/privacy-policy/',
+  '/terms-and-conditions/',
+  '/cookie-policy/',
+  '/sitemap/',
+  '/thank-you/'
 ];
 
 const isUtilityPage = utilityPages.some(page => pathname === page || pathname === page + '/');
@@ -25,7 +27,59 @@ const showFloatingWidgets = !isUtilityPage;
 const shouldNoindex = noindex || isUtilityPage;
 
 const canonicalUrl = `https://yorkdrivinglesson.co.uk${pathname.endsWith('/') ? pathname : pathname + '/'}`;
-const fullTitle = `${title} | York Driving Lesson`;
+// Append the brand only when the whole title still fits in search results (~60 characters).
+const withBrand = `${title} | ${BRAND}`;
+const fullTitle = title.includes(BRAND) || withBrand.length > 62 ? title : withBrand;
+const crumbs = shouldNoindex ? [] : breadcrumbsFor(pathname);
+const canonicalPath = pathname.endsWith('/') ? pathname : pathname + '/';
+
+// One sitewide entity graph. Pages no longer repeat DrivingSchool/BreadcrumbList blocks.
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'DrivingSchool',
+    '@id': `${SITE_URL}/#organization`,
+    name: BRAND,
+    url: `${SITE_URL}/`,
+    logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/logo.png` },
+    image: `${SITE_URL}/images/og-image.jpg`,
+    description: 'DVSA-approved driving lessons across York: automatic, manual, intensive, refresher, motorway and Pass Plus.',
+    telephone: '+447763999317',
+    email: EMAIL,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: ADDRESS.street,
+      addressLocality: ADDRESS.locality,
+      addressRegion: ADDRESS.region,
+      postalCode: ADDRESS.postcode,
+      addressCountry: ADDRESS.country,
+    },
+    geo: { '@type': 'GeoCoordinates', latitude: GEO.latitude, longitude: GEO.longitude },
+    hasMap: MAP_URL,
+    areaServed: { '@type': 'City', name: 'York' },
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
+    ],
+    sameAs: ['https://share.google/9B75eIsjdJNEb4cRC', 'https://uk.trustpilot.com/review/yorkdrivinglesson.co.uk'],
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: `${SITE_URL}/`,
+    name: BRAND,
+    inLanguage: 'en-GB',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+  },
+];
+if (crumbs.length > 1) {
+  graph.push({
+    '@type': 'BreadcrumbList',
+    '@id': `${SITE_URL}${canonicalPath}#breadcrumb`,
+    itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${SITE_URL}${c.path}` })),
+  });
+}
+const svcSchema = shouldNoindex ? null : serviceSchemaFor(pathname);
+if (svcSchema) { const { ['@context']: _c, ...rest } = svcSchema; graph.push(rest); }
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 const ogImage = 'https://yorkdrivinglesson.co.uk/images/og-image.jpg';
 ---
 
@@ -61,6 +115,8 @@ const ogImage = 'https://yorkdrivinglesson.co.uk/images/og-image.jpg';
 		{description && <meta name="twitter:description" content={description} />}
 		<meta name="twitter:image" content={ogImage} />
 
+		<script type="application/ld+json" set:html={jsonLd} />
+
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,6 +126,7 @@ const ogImage = 'https://yorkdrivinglesson.co.uk/images/og-image.jpg';
 		<script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf9nSgtAAAAANY5Kd3NROwfbFEKP27NJx5xPPWL" async defer></script>
 	</head>
 	<body class={showFloatingWidgets ? "has-floating-widgets" : ""}>
+		<Breadcrumbs crumbs={crumbs} />
 		<slot />
     {showFloatingWidgets && <TrustBadges client:idle />}
     {showFloatingWidgets && <FloatingContact client:idle />}

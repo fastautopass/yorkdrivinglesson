@@ -6,13 +6,14 @@ import Footer from '../../Footer';
 import EnquiryForm from '../../EnquiryForm';
 import FAQ from '../../FAQ';
 import RelatedArticles from '../../RelatedArticles';
+import RelatedLinks from '../../RelatedLinks';
 
 export default function PassFirstTimeYork() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -44,7 +45,7 @@ export default function PassFirstTimeYork() {
   const faqs = [
     {
       question: "Where is the York driving test centre?",
-      answer: "The York Driving Test Centre is located on Monks Cross Drive in Huntington. It’s a busy area mixing retail traffic with complex junctions that we cover in our <a href='/monks-cross-driving-test-centre' class='text-primary-dark font-bold hover:underline'>York Driving Test Centre</a> guide."
+      answer: "The York Driving Test Centre is located on Monks Cross Drive in Huntington. It’s a busy area mixing retail traffic with complex junctions that we cover in our <a href='/monks-cross-driving-test-centre/' class='text-primary-dark font-bold hover:underline'>York Driving Test Centre</a> guide."
     },
     {
       question: "What is the most common reason learners fail in York?",
@@ -72,7 +73,7 @@ export default function PassFirstTimeYork() {
     },
     {
       question: "Will I have to follow a sat nav on my test?",
-      answer: "Most tests include 20 minutes of sat nav driving, while some use road signs. We practise both during our <a href='/mock-driving-tests' class='text-primary-dark font-bold hover:underline'>mock driving tests</a> so you're comfortable with either."
+      answer: "Most tests include 20 minutes of sat nav driving, while some use road signs. We practise both during our <a href='/mock-driving-tests/' class='text-primary-dark font-bold hover:underline'>mock driving tests</a> so you're comfortable with either."
     },
     {
       question: "What roads should I practise before my York test?",
@@ -80,23 +81,23 @@ export default function PassFirstTimeYork() {
     },
     {
       question: "Are roundabouts a big part of the York driving test?",
-      answer: "Yes, especially large ones like the Hopgrove roundabout. We'll get you confident with lane discipline on complex junctions during your <a href='/manual-driving-lessons' class='text-primary-dark font-bold hover:underline'>manual</a> or <a href='/automatic-driving-lessons' class='text-primary-dark font-bold hover:underline'>automatic lessons</a>."
+      answer: "Yes, especially large ones like the Hopgrove roundabout. We'll get you confident with lane discipline on complex junctions during your <a href='/manual-driving-lessons/' class='text-primary-dark font-bold hover:underline'>manual</a> or <a href='/automatic-driving-lessons/' class='text-primary-dark font-bold hover:underline'>automatic lessons</a>."
     },
     {
       question: "Can mock driving tests help me pass first time?",
-      answer: "Absolutely. A <a href='/mock-driving-tests' class='text-primary-dark font-bold hover:underline'>mock driving test in York</a> simulates the real pressure and silence of the official exam, helping you spot habits that might otherwise cause a fail."
+      answer: "Absolutely. A <a href='/mock-driving-tests/' class='text-primary-dark font-bold hover:underline'>mock driving test in York</a> simulates the real pressure and silence of the official exam, helping you spot habits that might otherwise cause a fail."
     },
     {
       question: "Are automatic lessons easier for nervous learners?",
-      answer: "Many find <a href='/automatic-driving-lessons' class='text-primary-dark font-bold hover:underline'>automatic lessons</a> easier because they can focus entirely on the road and observations without worrying about gear changes in York's busy traffic."
+      answer: "Many find <a href='/automatic-driving-lessons/' class='text-primary-dark font-bold hover:underline'>automatic lessons</a> easier because they can focus entirely on the road and observations without worrying about gear changes in York's busy traffic."
     },
     {
       question: "Should I take manual lessons if I want more control?",
-      answer: "Our <a href='/manual-driving-lessons' class='text-primary-dark font-bold hover:underline'>manual lessons</a> give you full control over the gears and are a great choice if you want the flexibility to drive any vehicle after passing your test."
+      answer: "Our <a href='/manual-driving-lessons/' class='text-primary-dark font-bold hover:underline'>manual lessons</a> give you full control over the gears and are a great choice if you want the flexibility to drive any vehicle after passing your test."
     },
     {
       question: "How can I prepare in the final week before my test?",
-      answer: "Focus on consistency. Review tricky junctions near Grimston Bar, get plenty of rest, and consider a final <a href='/refresher-lessons' class='text-primary-dark font-bold hover:underline'>refresher lesson</a> to keep your observations sharp."
+      answer: "Focus on consistency. Review tricky junctions near Grimston Bar, get plenty of rest, and consider a final <a href='/refresher-lessons/' class='text-primary-dark font-bold hover:underline'>refresher lesson</a> to keep your observations sharp."
     }
   ];
 
@@ -164,7 +165,7 @@ export default function PassFirstTimeYork() {
                 Many learners start their journey feeling a little overwhelmed by York’s busy outer ring road, multi-lane roundabouts, and the way traffic flow can shift so quickly. That is completely normal. Whether you are navigating the mini-roundabouts in Huntington or joining the faster A64 at Hopgrove, the goal is always to build your confidence gradually—one street at a time.
               </p>
               <p>
-                The driving test is not designed to trick you; it is there to verify that you can stay calm, make safe decisions, and handle real-world traffic around the Monks Cross Driving Test Centre. The DVSA examiners are looking for safe, consistent driving — not perfection. If you have been taking regular <a href="/automatic-driving-lessons" className="text-primary-dark font-bold hover:underline transition-all">automatic</a> or <a href="/manual-driving-lessons" className="text-primary-dark font-bold hover:underline transition-all">manual driving lessons in York</a> around Heworth, Fulford, Osbaldwick, Tang Hall, or <a href="/york" className="text-primary-dark font-bold hover:underline transition-all">other areas across York</a>, you will already be building the local familiarity needed for success on test day.
+                The driving test is not designed to trick you; it is there to verify that you can stay calm, make safe decisions, and handle real-world traffic around the Monks Cross Driving Test Centre. The DVSA examiners are looking for safe, consistent driving — not perfection. If you have been taking regular <a href="/automatic-driving-lessons/" className="text-primary-dark font-bold hover:underline transition-all">automatic</a> or <a href="/manual-driving-lessons/" className="text-primary-dark font-bold hover:underline transition-all">manual driving lessons in York</a> around Heworth, Fulford, Osbaldwick, Tang Hall, or <a href="/york/" className="text-primary-dark font-bold hover:underline transition-all">other areas across York</a>, you will already be building the local familiarity needed for success on test day.
               </p>
               <p>
                 As your test date approaches, the focus shifts naturally. It becomes less about being told what to do and more about you trusting your own eyes and judgement. We are here to help you stay calm, read the road ahead, and make those independent decisions while the examiner sits quietly beside you. It's about proving to yourself that you are ready for the road.
@@ -209,7 +210,7 @@ export default function PassFirstTimeYork() {
             
             <div className="space-y-4 max-w-[1050px] text-secondary-text text-[1.15rem] leading-[1.8] font-medium">
               <p>
-                Many learners find that moving from a regular lesson to the formal test environment can be a bit of a shock. <a href="/mock-driving-tests" className="text-primary-dark font-bold hover:underline transition-all">Mock driving tests in York</a> are a great way to get used to the real test environment before the big day. By using the same silence and marking standards as an official examiner, we help you understand exactly what to expect so nothing feels like a surprise.
+                Many learners find that moving from a regular lesson to the formal test environment can be a bit of a shock. <a href="/mock-driving-tests/" className="text-primary-dark font-bold hover:underline transition-all">Mock driving tests in York</a> are a great way to get used to the real test environment before the big day. By using the same silence and marking standards as an official examiner, we help you understand exactly what to expect so nothing feels like a surprise.
               </p>
 
               <div className="py-2 border-l-2 border-primary-dark/20 pl-6 mt-1 mb-1">
@@ -219,7 +220,7 @@ export default function PassFirstTimeYork() {
               </div>
 
               <p>
-                A mock test gives you a chance to experience the pressure before the real thing. We spend extra time practising the parts of the York test routes that learners usually find hardest, from the roundabouts around Monks Cross to the independent driving sections through Stockton Lane or Murton Way. Whether you start your lessons in Huntington or another <a href="/york" className="text-primary-dark font-bold hover:underline transition-all">area of York</a>, we'll make sure you're ready for whatever the examiner asks.
+                A mock test gives you a chance to experience the pressure before the real thing. We spend extra time practising the parts of the York test routes that learners usually find hardest, from the roundabouts around Monks Cross to the independent driving sections through Stockton Lane or Murton Way. Whether you start your lessons in Huntington or another <a href="/york/" className="text-primary-dark font-bold hover:underline transition-all">area of York</a>, we'll make sure you're ready for whatever the examiner asks.
               </p>
             </div>
           </div>
@@ -269,7 +270,7 @@ export default function PassFirstTimeYork() {
                 </div>
 
                 <p className="pt-2 pb-6">
-                  It's helpful to remember that these slips usually aren't about a lack of driving ability—they're just the result of test-day adrenaline clouding your judgement for a split second. We focus on building rhythms and habits that stay with you even when you're feeling the pressure. By facing these conditions in a realistic <a href="/mock-driving-tests" className="text-primary-dark font-bold hover:underline transition-all">mock driving test in York</a> first, you can get the jitters out of your system and prove to yourself that you're ready for the road.
+                  It's helpful to remember that these slips usually aren't about a lack of driving ability—they're just the result of test-day adrenaline clouding your judgement for a split second. We focus on building rhythms and habits that stay with you even when you're feeling the pressure. By facing these conditions in a realistic <a href="/mock-driving-tests/" className="text-primary-dark font-bold hover:underline transition-all">mock driving test in York</a> first, you can get the jitters out of your system and prove to yourself that you're ready for the road.
                 </p>
               </div>
             </div>
@@ -332,7 +333,7 @@ export default function PassFirstTimeYork() {
                       className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                     >
                       <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                        <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                       </div>
                     </div>
                   ))}
@@ -380,7 +381,7 @@ export default function PassFirstTimeYork() {
                   Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
                 </p>
                 <a 
-                  href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" 
+                  href="https://share.google/9B75eIsjdJNEb4cRC" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm"
@@ -492,10 +493,10 @@ export default function PassFirstTimeYork() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Automatic Lessons", desc: "Learn to drive without worrying about gear changes — ideal for York’s busy roads.", url: "/automatic-driving-lessons" },
-                { title: "Manual Lessons", desc: "Build confidence with full control of the car and better awareness on York’s busy roads.", url: "/manual-driving-lessons" },
-                { title: "Intensive Courses", desc: "Learn quickly and prepare for your driving test in less time.", url: "/intensive-driving-courses" },
-                { title: "Mock Exams", desc: "Practise realistic test routes and conditions around Monks Cross before test day.", url: "/mock-driving-tests" }
+                { title: "Automatic Lessons", desc: "Learn to drive without worrying about gear changes — ideal for York’s busy roads.", url: "/automatic-driving-lessons/" },
+                { title: "Manual Lessons", desc: "Build confidence with full control of the car and better awareness on York’s busy roads.", url: "/manual-driving-lessons/" },
+                { title: "Intensive Courses", desc: "Learn quickly and prepare for your driving test in less time.", url: "/intensive-driving-courses/" },
+                { title: "Mock Exams", desc: "Practise realistic test routes and conditions around Monks Cross before test day.", url: "/mock-driving-tests/" }
               ].map((service, index) => (
                 <a key={`first-time-service-${index}`} href={service.url} className="flex flex-col p-6 md:p-7 bg-soft-bg/50 border border-border-main/10 rounded-2xl no-underline group hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left h-full">
                   <div className="mb-4">
@@ -536,7 +537,7 @@ export default function PassFirstTimeYork() {
             Ready To Pass First Time? <span className="italic font-extrabold text-white/40">Start Your Lessons In York.</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -546,6 +547,7 @@ export default function PassFirstTimeYork() {
         </div>
       </section>
 
+      <RelatedLinks path="/articles/pass-driving-test-first-time-york/" kind="article" />
       <Footer />
     </div>
   );

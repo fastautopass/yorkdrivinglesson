@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HubPage from '../components/pages/HubPage';
+import { services } from '../data/site';
+import { serviceBlurbs } from '../data/blurbs';
+
+const cards = services.map((s) => ({ name: s.name, path: s.path, blurb: serviceBlurbs[s.path] ?? s.blurb }));
+
+const sections = [
+  {
+    heading: 'Which lesson is right for you?',
+    paragraphs: [
+      'The right lesson depends on where you are right now. A complete beginner usually starts with weekly manual or automatic lessons and builds up from quiet residential roads to busier junctions. Someone who passed years ago and lost confidence needs something different, and so does a learner whose test date is already booked.',
+    ],
+    items: [
+      { title: 'Brand new to driving', text: 'Choose manual lessons if you want a full licence, or automatic lessons if you want fewer controls to think about. Both start on quiet streets.', href: '/manual-driving-lessons/' },
+      { title: 'Short on time', text: 'Intensive courses put your lessons close together so skills stay fresh from one session to the next, and they can lead straight into a test date.', href: '/intensive-driving-courses/' },
+      { title: 'Test booked', text: 'A mock driving test uses York test-style routes and gives you honest feedback on what an examiner would mark, before the real day.', href: '/mock-driving-tests/' },
+      { title: 'Lost your confidence', text: 'Refresher lessons rebuild confidence at your own pace, whether you passed years ago or have just moved to York.', href: '/refresher-lessons/' },
+      { title: 'Just passed', text: 'Motorway lessons and the Pass Plus course add experience of fast roads, night driving and rural roads once you hold your licence.', href: '/pass-plus-course/' },
+      { title: 'Not sure yet', text: 'Read our comparison of automatic and manual lessons, or send an enquiry and tell us where you are starting from.', href: '/articles/automatic-vs-manual-driving-lessons-york/' },
+    ],
+  },
+  {
+    heading: 'What happens when you enquire',
+    paragraphs: [
+      'Fill in the short enquiry form with your name, mobile number, postcode and the lesson type you are interested in. We aim to reply within two hours with availability for your part of York. You can then talk through your experience, your goals and any test date you already have, before anything is booked.',
+      'Lessons run across every York area we cover, from the city centre to Haxby, Acomb, Fulford and the villages around the outer ring road. Use the area links below to see local roads and practice routes near you.',
+    ],
+  },
+];
+
+const faqs = [
+  { question: 'Do I need a provisional licence before my first lesson?', answer: 'Yes. In Great Britain you need a valid provisional driving licence to drive on public roads, including on lessons with an instructor. If you do not have one yet, you can apply for it through GOV.UK before your first lesson.' },
+  { question: 'How many lessons will I need?', answer: 'It varies a lot between learners. The DVSA figure often quoted is around 45 hours of professional lessons plus private practice, but people who already have some experience often need fewer. After your first lessons we give you an honest view of your progress.' },
+  { question: 'Can I switch from manual to automatic, or the other way round?', answer: 'Yes. Many learners start in one and move to the other. Remember that passing your test in an automatic gives you an automatic-only licence, so it is worth deciding early which licence you want.' },
+  { question: 'Do you cover my area of York?', answer: 'We cover the whole city, including all the areas linked on this page. If your road is on the edge of an area, send an enquiry and we will confirm.' },
+  { question: 'Can I take lessons if I am nervous?', answer: 'Yes. Many of our learners start nervous. Lessons begin on quiet roads and move on only when you are ready, and our guide to driving test nerves has practical tips.' },
+];
+---
+
+<Layout
+  title="Driving Lessons in York | Automatic, Manual & Intensive"
+  description="Browse every driving lesson option in York: automatic, manual, intensive courses, refresher lessons, motorway lessons, mock tests and Pass Plus. Enquire today."
+>
+  <HubPage
+    client:load
+    path="/driving-lessons/"
+    kind="info"
+    heading="Every Type of Driving Lesson in"
+    accent="York"
+    intro="Choose the type of driving lesson that suits you. Every option is available across York, from the city centre to Haxby, Acomb, Fulford and beyond. Send an enquiry and we will reply with availability."
+    cardsTitle="Choose your lesson type"
+    cards={cards}
+    sections={sections}
+    faqs={faqs}
+  />
+</Layout>

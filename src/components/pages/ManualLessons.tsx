@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
 
 export default function ManualLessons() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
@@ -13,7 +14,7 @@ export default function ManualLessons() {
   const passTrackRef = useRef<HTMLDivElement>(null);
   const [activeStage, setActiveStage] = useState(0);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -45,7 +46,7 @@ export default function ManualLessons() {
   const faqs = [
     {
       question: "Are manual driving lessons harder than automatic?",
-      answer: "Manual lessons require coordination between the clutch and gears, but most learners build confidence progressively with DVSA-qualified guidance. If you prefer a simpler start, our <a href='/automatic-driving-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic driving lessons in York</a> are a popular alternative for many city learners."
+      answer: "Manual lessons require coordination between the clutch and gears, but most learners build confidence progressively with DVSA-qualified guidance. If you prefer a simpler start, our <a href='/automatic-driving-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic driving lessons in York</a> are a popular alternative for many city learners."
     },
     {
       question: "How long will it take to get comfortable with the clutch?",
@@ -53,23 +54,23 @@ export default function ManualLessons() {
     },
     {
       question: "How many manual driving lessons will I need?",
-      answer: "The number of lessons varies depending on confidence and previous experience, though the DVSA average is around 45 hours. For those looking to progress faster, our <a href='/intensive-driving-courses' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>intensive driving courses</a> offer a condensed schedule to build skills rapidly."
+      answer: "The number of lessons varies depending on confidence and previous experience, though the DVSA average is around 45 hours. For those looking to progress faster, our <a href='/intensive-driving-courses/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>intensive driving courses</a> offer a condensed schedule to build skills rapidly."
     },
     {
       question: "Is learning manual worth it long term?",
-      answer: "Passing in a manual vehicle gives you the flexibility to drive both manual and automatic cars without restriction. We recommend checking our <a href='/articles/automatic-vs-manual-driving-lessons-york' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic vs manual guide</a> to help decide which path matches your technical goals."
+      answer: "Passing in a manual vehicle gives you the flexibility to drive both manual and automatic cars without restriction. We recommend checking our <a href='/articles/automatic-vs-manual-driving-lessons-york/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic vs manual guide</a> to help decide which path matches your technical goals."
     },
     {
       question: "What happens if I struggle with manual driving?",
-      answer: "We adapt every lesson to your individual pace. If gears feel challenging, we focus on technical coordination. Many students also find that a <a href='/mock-driving-tests' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving test</a> later in their training helps verify their vehicle control under real test conditions."
+      answer: "We adapt every lesson to your individual pace. If gears feel challenging, we focus on technical coordination. Many students also find that a <a href='/mock-driving-tests/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving test</a> later in their training helps verify their vehicle control under real test conditions."
     },
     {
       question: "Do you cover York driving test routes?",
-      answer: "Yes. We incorporate real <a href='/articles/york-driving-test-routes-common-mistakes' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>DVSA test routes</a> into your training so you are familiar with the specific junctions, hills, and roundabouts surrounding the <a href='/monks-cross-driving-test-centre' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Test Centre</a>."
+      answer: "Yes. We incorporate real <a href='/articles/york-driving-test-routes-common-mistakes/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>DVSA test routes</a> into your training so you are familiar with the specific junctions, hills, and roundabouts surrounding the <a href='/monks-cross-driving-test-centre/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Test Centre</a>."
     },
     {
       question: "Can I switch to automatic lessons later?",
-      answer: "Absolutely. If manual tuition no longer feels suitable for your goals, you can discuss transitioning to <a href='/automatic-driving-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic tuition</a> at any stage. Our priority is that you leave as a safe, competent driver."
+      answer: "Absolutely. If manual tuition no longer feels suitable for your goals, you can discuss transitioning to <a href='/automatic-driving-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic tuition</a> at any stage. Our priority is that you leave as a safe, competent driver."
     },
     {
       question: "Is the York driving test harder in a manual?",
@@ -81,23 +82,23 @@ export default function ManualLessons() {
     },
     {
       question: "What happens if I stall during my driving test?",
-      answer: "Stalling is common and often considered a minor fault unless it results in a hazard. To build your confidence, we offer <a href='/mock-driving-tests' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving tests</a> that replicate the pressure of test day, helping you learn to recover calmly and safely."
+      answer: "Stalling is common and often considered a minor fault unless it results in a hazard. To build your confidence, we offer <a href='/mock-driving-tests/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving tests</a> that replicate the pressure of test day, helping you learn to recover calmly and safely."
     },
     {
       question: "Do you offer manual refresher lessons for those with a licence?",
-      answer: "Yes. Our <a href='/refresher-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>refresher lessons</a> are perfect if you've had a break from driving or have recently moved to York and want to get accustomed to the local roads and busy junctions in a manual car."
+      answer: "Yes. Our <a href='/refresher-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>refresher lessons</a> are perfect if you've had a break from driving or have recently moved to York and want to get accustomed to the local roads and busy junctions in a manual car."
     },
     {
       question: "Can I learn motorway driving in a manual car?",
-      answer: "Once you have passed, or as part of post-test training, we provide <a href='/motorway-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>motorway driving lessons</a>. This builds your confidence in high-speed gear selection and lane discipline on the A1(M) and M62 corridors."
+      answer: "Once you have passed, or as part of post-test training, we provide <a href='/motorway-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>motorway driving lessons</a>. This builds your confidence in high-speed gear selection and lane discipline on the A1(M) and M62 corridors."
     },
     {
       question: "Is there a course for improving safety after passing?",
-      answer: "We highly recommend the <a href='/pass-plus-course' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>Pass Plus course</a>. It helps new manual drivers refine their skills in more challenging environments, such as night driving, extreme weather, and rural road systems."
+      answer: "We highly recommend the <a href='/pass-plus-course/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>Pass Plus course</a>. It helps new manual drivers refine their skills in more challenging environments, such as night driving, extreme weather, and rural road systems."
     },
     {
       question: "How do I book my first manual lesson?",
-      answer: "The easiest way is to fill out the form above. We'll check our current <a href='/york' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York location</a> coverage and availability, getting back to you within two hours to schedule your first session."
+      answer: "The easiest way is to fill out the form above. We'll check our current <a href='/york/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York location</a> coverage and availability, getting back to you within two hours to schedule your first session."
     }
   ];
 
@@ -172,7 +173,7 @@ export default function ManualLessons() {
           </div>
 
           <div className="flex justify-center w-full lg:justify-end">
-            <div id="enquiry-form" className="w-full max-w-[540px] relative z-10">
+            <div className="w-full max-w-[540px] relative z-10">
               <EnquiryForm />
             </div>
           </div>
@@ -191,7 +192,7 @@ export default function ManualLessons() {
               Our manual driving lessons in York follow a structured programme aligned with <span className="font-bold text-primary-text uppercase tracking-tighter">DVSA</span> national standards. From building clutch control to smooth gear transitions, each lesson builds progressively so skills are embedded correctly.
             </p>
             <p className="text-secondary-text text-[1.1rem] md:text-[1.15rem] leading-[1.8] font-medium max-w-[94%] mx-auto">
-              We focus on developing calm, regulated driving ability before introducing complex traffic situations on real <a href="/articles/york-driving-test-routes-common-mistakes" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">York test routes</a>. The result is not just test readiness, but long-term competence and the flexibility to drive manual vehicles across York and beyond.
+              We focus on developing calm, regulated driving ability before introducing complex traffic situations on <a href="/articles/york-driving-test-routes-common-mistakes/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">roads around the York test centre</a>. The result is not just test readiness, but long-term competence and the flexibility to drive manual vehicles across York and beyond.
             </p>
           </div>
         </div>
@@ -209,7 +210,7 @@ export default function ManualLessons() {
               Our manual driving lessons in York provide a clear, step-by-step approach to developing vehicle control. By focusing on coordination and timing from the start, we help you develop a natural feel for the car so you feel confident and capable in every driving situation.
             </p>
             <p className="text-[#4B5563] text-[#4B5563] text-[1.1rem] leading-relaxed font-medium">
-              Whether you're a complete beginner or looking to <a href="/refresher-lessons" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">refresh your skills</a>, our DVSA-qualified tuition is built around your individual pace. We combine traditional techniques with modern coaching methods to deliver a structured learning experience.
+              Whether you're a complete beginner or looking to <a href="/refresher-lessons/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">refresh your skills</a>, our DVSA-qualified tuition is built around your individual pace. We combine traditional techniques with modern coaching methods to deliver a structured learning experience.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
@@ -299,7 +300,7 @@ export default function ManualLessons() {
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
               <a 
-                href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" 
+                href="https://share.google/9B75eIsjdJNEb4cRC" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm"
@@ -392,7 +393,7 @@ export default function ManualLessons() {
                     className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                   >
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -717,7 +718,7 @@ export default function ManualLessons() {
             </p>
             <div className="flex justify-center">
               <a 
-                href="/articles/automatic-vs-manual-driving-lessons-york" 
+                href="/articles/automatic-vs-manual-driving-lessons-york/" 
                 className="inline-flex items-center justify-center bg-primary-dark text-white px-8 py-4.5 rounded-full text-[0.8rem] font-black uppercase tracking-[0.2em] transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-0.5"
               >
                 Compare Automatic vs Manual Lessons
@@ -743,7 +744,7 @@ export default function ManualLessons() {
           <div className="flex flex-wrap justify-center gap-6 lg:gap-8 mb-10">
             <div className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] p-8 bg-white border border-border-main/30 rounded-2xl transition-all duration-300 hover:border-primary-dark/20 hover:shadow-lg hover:shadow-primary-dark/5">
               <div className="text-[1.15rem] font-black text-primary-text mb-3 tracking-tight uppercase">Mock Driving Tests</div>
-              <p className="text-secondary-text text-[0.92rem] leading-relaxed font-medium">Full-length simulations assessed to DVSA standards to build confidence and identify areas for refinement in a calm environment. Explore our dedicated <a href="/mock-driving-tests" className="font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">mock driving test preparation</a> page for a more detailed breakdown.</p>
+              <p className="text-secondary-text text-[0.92rem] leading-relaxed font-medium">Full-length simulations assessed to DVSA standards to build confidence and identify areas for refinement in a calm environment. Explore our dedicated <a href="/mock-driving-tests/" className="font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">mock driving test preparation</a> page for a more detailed breakdown.</p>
             </div>
 
             <div className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] p-8 bg-white border border-border-main/30 rounded-2xl transition-all duration-300 hover:border-primary-dark/20 hover:shadow-lg hover:shadow-primary-dark/5">
@@ -784,17 +785,17 @@ export default function ManualLessons() {
               AREAS OF YORK WE COVER FOR <br className="hidden sm:block" /> <span className="text-primary-dark italic">MANUAL</span> DRIVING LESSONS
             </h2>
             <p className="text-secondary-text text-[0.95rem] leading-relaxed font-medium opacity-75 max-w-[700px] mx-auto">
-              Our manual driving tuition is available throughout the city and surrounding York suburbs. Our instructors are intimately familiar with local road systems, from quiet residential streets in <b>Holgate</b> and <b>Rawcliffe</b> to the busy multi-lane junctions found on <a href="/articles/york-driving-test-routes-common-mistakes" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">York test routes</a>.
+              Our manual driving tuition is available throughout the city and surrounding York suburbs. Our instructors are intimately familiar with local road systems, from quiet residential streets in <b>Holgate</b> and <b>Rawcliffe</b> to the busy multi-lane junctions found on <a href="/articles/york-driving-test-routes-common-mistakes/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">York test routes</a>.
             </p>
           </div>
  
           <div className="flex flex-wrap justify-center gap-3 lg:gap-4 mb-8 max-w-[1000px] mx-auto">
             {[
-              { name: "Holgate", url: "/driving-lessons-holgate-york" },
-              { name: "Layerthorpe", url: "/driving-lessons-layerthorpe-york" },
-              { name: "Osbaldwick", url: "/driving-lessons-osbaldwick-york" },
-              { name: "Haxby", url: "/driving-lessons-haxby-york" },
-              { name: "Rawcliffe", url: "/driving-lessons-rawcliffe-york" }
+              { name: "Holgate", url: "/driving-lessons-holgate-york/" },
+              { name: "Layerthorpe", url: "/driving-lessons-layerthorpe-york/" },
+              { name: "Osbaldwick", url: "/driving-lessons-osbaldwick-york/" },
+              { name: "Haxby", url: "/driving-lessons-haxby-york/" },
+              { name: "Rawcliffe", url: "/driving-lessons-rawcliffe-york/" }
             ].map((area) => (
               <a 
                 key={`manual-area-${area.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -808,7 +809,7 @@ export default function ManualLessons() {
           </div>
  
           <div className="flex justify-center pt-2">
-            <a href="/york" className="inline-flex items-center gap-3 text-primary-text hover:text-primary-dark font-black uppercase tracking-[0.2em] text-[0.72rem] transition-all no-underline group py-1 border-b-2 border-primary-dark/10 hover:border-primary-dark">
+            <a href="/york/" className="inline-flex items-center gap-3 text-primary-text hover:text-primary-dark font-black uppercase tracking-[0.2em] text-[0.72rem] transition-all no-underline group py-1 border-b-2 border-primary-dark/10 hover:border-primary-dark">
               EXPLORE ALL YORK LOCATIONS 
               <span className="group-hover:translate-x-1 transition-transform font-bold">→</span>
             </a>
@@ -834,17 +835,17 @@ export default function ManualLessons() {
               {
                 title: "Automatic Driving Lessons",
                 desc: "Struggling with the clutch or gear changes? Automatic lessons in York let you focus on the road without the added pressure.",
-                link: "/automatic-driving-lessons"
+                link: "/automatic-driving-lessons/"
               },
               {
                 title: "Intensive Driving Courses",
                 desc: "Want to pass sooner? Our intensive driving courses in York compress your manual lessons into a focused block of training.",
-                link: "/intensive-driving-courses"
+                link: "/intensive-driving-courses/"
               },
               {
                 title: "Mock Driving Tests",
                 desc: "Not sure you're ready yet? A mock driving test in York gives you a clear picture of where you are before the real test.",
-                link: "/mock-driving-tests"
+                link: "/mock-driving-tests/"
               }
             ].map((course) => (
               <a 
@@ -884,7 +885,7 @@ export default function ManualLessons() {
             Start Your Manual <span className="italic font-extrabold text-white/40">Driving Journey in York.</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -896,6 +897,7 @@ export default function ManualLessons() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/manual-driving-lessons/" kind="service" />
       <Footer />
     </div>
   );

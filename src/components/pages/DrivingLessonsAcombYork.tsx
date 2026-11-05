@@ -6,13 +6,15 @@ import FAQ from '../FAQ';
 import Header from '../Header';
 import Footer from '../Footer';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
+import LocalGuide from '../LocalGuide';
 
 export default function DrivingLessonsAcombYork() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -47,11 +49,11 @@ export default function DrivingLessonsAcombYork() {
     },
     { 
       question: "Can I learn in an automatic car in Acomb?", 
-      answer: "Yes, we offer [automatic driving lessons](/automatic-driving-lessons) in Acomb for those who prefer learning without a clutch and gear stick. This allows you to focus on your road awareness and navigation around York."
+      answer: "Yes, we offer [automatic driving lessons](/automatic-driving-lessons/) in Acomb for those who prefer learning without a clutch and gear stick. This allows you to focus on your road awareness and navigation around York."
     },
     { 
       question: "Do you offer manual driving lessons in Acomb?", 
-      answer: "We provide structured [manual driving lessons](/manual-driving-lessons) across Acomb, perfect for learners who want full control over their gear changes. We'll help you get the feel for the clutch in quieter spots near Holgate before moving to busier junctions."
+      answer: "We provide structured [manual driving lessons](/manual-driving-lessons/) across Acomb, perfect for learners who want full control over their gear changes. We'll help you get the feel for the clutch in quieter spots near Holgate before moving to busier junctions."
     },
     { 
       question: "Are lessons suitable for complete beginners?", 
@@ -67,11 +69,11 @@ export default function DrivingLessonsAcombYork() {
     },
     { 
       question: "Do you offer intensive driving courses in Acomb?", 
-      answer: "Yes, our [intensive driving courses](/intensive-driving-courses) are available for learners in Acomb who want to reach test standard more quickly. Each course is built around your current experience and goals."
+      answer: "Yes, our [intensive driving courses](/intensive-driving-courses/) are available for learners in Acomb who want to reach test standard more quickly. Each course is built around your current experience and goals."
     },
     { 
       question: "Can I take mock driving tests before my real test?", 
-      answer: "We highly recommend [mock driving tests](/mock-driving-tests). These sessions simulate real test conditions using local routes, helping you stay calm and focused while identifying any areas that need extra attention before the actual day." 
+      answer: "We highly recommend [mock driving tests](/mock-driving-tests/). These sessions simulate real test conditions using local routes, helping you stay calm and focused while identifying any areas that need extra attention before the actual day." 
     },
     { 
       question: "Can I choose between weekly and intensive lessons?", 
@@ -91,7 +93,7 @@ export default function DrivingLessonsAcombYork() {
     },
     { 
       question: "Do you offer refresher driving lessons in York?", 
-      answer: "If you already have your licence but haven't driven for a while, our [refresher lessons](/refresher-lessons) are ideal. We'll help you regain your confidence on local roads near Holgate and Acomb."
+      answer: "If you already have your licence but haven't driven for a while, our [refresher lessons](/refresher-lessons/) are ideal. We'll help you regain your confidence on local roads near Holgate and Acomb."
     },
     {
       question: "How can I book driving lessons in Acomb?",
@@ -167,10 +169,10 @@ export default function DrivingLessonsAcombYork() {
                   Learning to drive in <strong className="font-bold text-primary-text">Acomb</strong> gives learners a useful mix of real York driving conditions, from quieter residential streets and parked-car situations to busier commuter routes, school-run traffic, roundabouts, and roads leading towards <strong className="font-bold text-primary-text">York city centre</strong> and the <strong className="font-bold text-primary-text">outer ring road</strong>.
                 </p>
                 <p>
-                  Whether you choose <a href="/automatic-driving-lessons" className="text-primary-dark font-bold no-underline hover:opacity-70 transition-opacity">automatic driving lessons</a> or <a href="/manual-driving-lessons" className="text-primary-dark font-bold no-underline hover:opacity-70 transition-opacity">manual driving lessons</a>, lessons are built around confidence, observation, junction planning, lane positioning, speed control, and independent driving.
+                  Whether you choose <a href="/automatic-driving-lessons/" className="text-primary-dark font-bold no-underline hover:opacity-70 transition-opacity">automatic driving lessons</a> or <a href="/manual-driving-lessons/" className="text-primary-dark font-bold no-underline hover:opacity-70 transition-opacity">manual driving lessons</a>, lessons are built around confidence, observation, junction planning, lane positioning, speed control, and independent driving.
                 </p>
                 <p>
-                  For learners getting close to test standard, <a href="/mock-driving-tests" className="text-primary-dark font-bold no-underline hover:opacity-70 transition-opacity">mock driving test preparation</a> can help identify weak areas such as roundabouts, parking, manoeuvres, planning ahead, and staying calm under pressure. Practice is kept local and practical, with routes shaped around your pickup point, confidence level, and lesson type.
+                  For learners getting close to test standard, <a href="/mock-driving-tests/" className="text-primary-dark font-bold no-underline hover:opacity-70 transition-opacity">mock driving test preparation</a> can help identify weak areas such as roundabouts, parking, manoeuvres, planning ahead, and staying calm under pressure. Practice is kept local and practical, with routes shaped around your pickup point, confidence level, and lesson type.
                 </p>
               </div>
             </div>
@@ -206,6 +208,8 @@ export default function DrivingLessonsAcombYork() {
           </div>
         </div>
       </section>
+      <LocalGuide path="/driving-lessons-acomb-york/" />
+
 
       {/* SECTION: BUILDING CONFIDENCE ON ACOMB ROADS */}
       <section className="bg-soft-bg py-10 lg:py-14 px-6 sm:px-10 border-y border-border-main/20">
@@ -387,7 +391,7 @@ export default function DrivingLessonsAcombYork() {
                     className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                   >
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -424,10 +428,10 @@ export default function DrivingLessonsAcombYork() {
               
               <div className="space-y-6 text-hero-paragraph/90 text-[0.98rem] md:text-[1.05rem] leading-relaxed font-medium">
                 <p>
-                  Our <a href="/intensive-driving-courses" className="text-white font-black underline decoration-white/20 hover:decoration-white transition-all">intensive driving courses</a> in Acomb are designed for learners who want to progress at a faster pace while building real confidence in the <span className="text-white font-black">YO24</span> area. Lessons cover a mix of local Acomb streets, York city centre routes, busy roundabouts, and outer ring road approaches so you are prepared for realistic driving conditions.
+                  Our <a href="/intensive-driving-courses/" className="text-white font-black underline decoration-white/20 hover:decoration-white transition-all">intensive driving courses</a> in Acomb are designed for learners who want to progress at a faster pace while building real confidence in the <span className="text-white font-black">YO24</span> area. Lessons cover a mix of local Acomb streets, York city centre routes, busy roundabouts, and outer ring road approaches so you are prepared for realistic driving conditions.
                 </p>
                 <p>
-                  We also provide <a href="/mock-driving-tests" className="text-white font-black underline decoration-white/20 hover:decoration-white transition-all">mock driving tests</a> across York to help you experience test conditions before the big day. These sessions focus on independent driving, junction planning, and observations, helping you stay calm and focused while navigating familiar York test routes.
+                  We also provide <a href="/mock-driving-tests/" className="text-white font-black underline decoration-white/20 hover:decoration-white transition-all">mock driving tests</a> across York to help you experience test conditions before the big day. These sessions focus on independent driving, junction planning, and observations, helping you stay calm and focused while navigating familiar York test routes.
                 </p>
               </div>
             </div>
@@ -488,7 +492,7 @@ export default function DrivingLessonsAcombYork() {
               ))}
             </div>
 
-            <a href="/mock-driving-tests" className="inline-block bg-primary-dark text-white px-5 py-3 md:px-8 md:py-3.5 rounded-full text-[0.7rem] xs:text-[0.74rem] md:text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 whitespace-nowrap">
+            <a href="/mock-driving-tests/" className="inline-block bg-primary-dark text-white px-5 py-3 md:px-8 md:py-3.5 rounded-full text-[0.7rem] xs:text-[0.74rem] md:text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 whitespace-nowrap">
               Explore Mock Test Preparation
             </a>
           </div>
@@ -523,7 +527,7 @@ export default function DrivingLessonsAcombYork() {
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
               <a 
-                href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" 
+                href="https://share.google/9B75eIsjdJNEb4cRC" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm"
@@ -567,7 +571,7 @@ export default function DrivingLessonsAcombYork() {
           </p>
           
           <div className="w-full h-[350px] md:h-[450px] bg-soft-bg rounded-[32px] border border-border-main/20 mb-6 overflow-hidden relative shadow-inner">
-            <iframe 
+            <iframe title="Google Maps location" 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18833.376510793!2d-1.149176317765113!3d53.95115206263447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487930f305f6e80b%3A0xc346ec0373ab9357!2sAcomb%2C%20York!5e0!3m2!1sen!2suk!4v1715108000000!5m2!1sen!2suk" 
               width="100%" 
               height="100%" 
@@ -616,7 +620,7 @@ export default function DrivingLessonsAcombYork() {
           <div className="flex flex-wrap justify-center gap-2.5">
             {['Holgate', 'Dringhouses', 'Foxwood', 'Clifton', 'Rawcliffe', 'York City Centre'].map((area, index) => {
               const slug = area.toLowerCase().replace(/\s+/g, '-');
-              const href = `/driving-lessons-${slug}${slug.includes('york') ? '' : '-york'}`;
+              const href = `/driving-lessons-${slug}${slug.includes('york') ? '' : '-york'}/`;
               return (
                 <a 
                   key={`acomb-nearby-${index}`} 
@@ -638,7 +642,7 @@ export default function DrivingLessonsAcombYork() {
             Start Your Driving Journey <span className="italic font-extrabold text-white/40">in Acomb.</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -650,6 +654,7 @@ export default function DrivingLessonsAcombYork() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/driving-lessons-acomb-york/" kind="area" />
       <Footer />
     </div>
   );

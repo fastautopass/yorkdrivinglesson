@@ -25,7 +25,7 @@ import Layout from '../layouts/Layout.astro';
           Go to Homepage
         </a>
         <a
-          href="/contact-us"
+          href="/contact-us/"
           class="inline-block bg-white text-primary-dark border border-border-main px-8 py-4 rounded-xl font-black text-[0.8rem] uppercase tracking-[0.15em] no-underline hover:bg-soft-bg transition-colors"
         >
           Contact Us
@@ -34,12 +34,12 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-left">
         {[
-          { label: 'Automatic Lessons', href: '/automatic-driving-lessons' },
-          { label: 'Manual Lessons', href: '/manual-driving-lessons' },
-          { label: 'Intensive Courses', href: '/intensive-driving-courses' },
-          { label: 'Mock Driving Tests', href: '/mock-driving-tests' },
-          { label: 'Refresher Lessons', href: '/refresher-lessons' },
-          { label: 'York Areas', href: '/york' },
+          { label: 'Automatic Lessons', href: '/automatic-driving-lessons/' },
+          { label: 'Manual Lessons', href: '/manual-driving-lessons/' },
+          { label: 'Intensive Courses', href: '/intensive-driving-courses/' },
+          { label: 'Mock Driving Tests', href: '/mock-driving-tests/' },
+          { label: 'Refresher Lessons', href: '/refresher-lessons/' },
+          { label: 'York Areas', href: '/york/' },
         ].map(link => (
           <a
             href={link.href}

@@ -1,43 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { services, learnerHelp, articles, zones } from '../data/site';
 
-const navItems = [
+const navItems: { name: string; url?: string; dropdown?: { name: string; url: string }[] }[] = [
   { name: 'Home', url: '/' },
   {
     name: 'Driving Lessons',
     dropdown: [
-      { name: 'Automatic Driving Lessons', url: '/automatic-driving-lessons' },
-      { name: 'Manual Driving Lessons', url: '/manual-driving-lessons' },
-      { name: 'Intensive Driving Courses', url: '/intensive-driving-courses' },
-      { name: 'Refresher Lessons', url: '/refresher-lessons' },
-      { name: 'Mock Driving Tests', url: '/mock-driving-tests' },
-      { name: 'Motorway Lessons', url: '/motorway-lessons' },
-      { name: 'Pass Plus Course', url: '/pass-plus-course' },
+      { name: 'All Driving Lessons', url: '/driving-lessons/' },
+      ...services.map((x) => ({ name: x.name, url: x.path })),
     ]
   },
   {
     name: 'Learner Help',
     dropdown: [
-      { name: 'Monks Cross Test Centre', url: '/monks-cross-driving-test-centre' },
-      { name: 'How To Pass Your Driving Test First Time', url: '/articles/pass-driving-test-first-time-york' },
-      { name: 'Automatic vs Manual Driving Lessons', url: '/articles/automatic-vs-manual-driving-lessons-york' },
-      { name: 'Driving Test Nerves', url: '/articles/driving-test-nerves-how-to-stay-calm' },
-      { name: 'What Happens On The Driving Test?', url: '/articles/what-happens-on-the-york-driving-test' },
-      { name: 'York Driving Test Routes', url: '/articles/york-driving-test-routes-common-mistakes' },
+      { name: 'All Learner Help', url: '/articles/' },
+      ...learnerHelp.map((x) => ({ name: x.name, url: x.path })),
+      ...articles.map((x) => ({ name: x.name, url: x.path })),
     ]
   },
   {
     name: 'York Areas',
     dropdown: [
-      { name: 'West York Areas', url: '/york#west' },
-      { name: 'North York Areas', url: '/york#north' },
-      { name: 'East York Areas', url: '/york#east' },
-      { name: 'South York Areas', url: '/york#south' },
-      { name: 'Central York Areas', url: '/york#central' },
+      { name: 'All York Areas', url: '/york/' },
+      ...zones.map((z) => ({ name: `${z.name} Areas`, url: z.path })),
     ]
   },
-  { name: 'Contact Us', url: '/contact-us' }
+  { name: 'Contact Us', url: '/contact-us/' }
 ];
 
 export default function Header() {

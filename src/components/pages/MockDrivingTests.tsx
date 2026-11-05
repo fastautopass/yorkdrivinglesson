@@ -29,8 +29,10 @@ import Footer from '../Footer';
 import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
 
 interface ChecklistItemProps {
+  key?: string;
   title: string;
   items: string[];
   checkedItems: Record<string, boolean>;
@@ -138,7 +140,7 @@ export default function MockDrivingTests() {
     });
   };
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
   const prevPass = () => setCurrentPassIndex((prev) => (prev - 1 + recentPasses.length) % recentPasses.length);
@@ -165,31 +167,31 @@ export default function MockDrivingTests() {
   const faqs = [
     { 
       question: "What happens during a mock driving test in York?", 
-      answer: "A mock test simulates the exact DVSA exam format. You'll perform an eyesight check, answer 'Show Me, Tell Me' questions, and complete a 40-minute driving route featuring various <a href='/articles/york-driving-test-routes-common-mistakes' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>York test scenarios</a>—all under silent, examiner-style conditions to prepare you for Monks Cross Driving Test Centre."
+      answer: "A mock test simulates the exact DVSA exam format. You'll perform an eyesight check, answer 'Show Me, Tell Me' questions, and complete a 40-minute driving route featuring various <a href='/articles/york-driving-test-routes-common-mistakes/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>York test scenarios</a>—all under silent, examiner-style conditions to prepare you for Monks Cross Driving Test Centre."
     },
     { 
       question: "Is a mock test marked like the real DVSA test?", 
-      answer: "Yes, exactly. We use the standard DL25 appraisal form used by the DVSA. Every fault is categorised as minor (driving), serious, or dangerous, providing a direct measurement of your current test-readiness for both <a href='/manual-driving-lessons' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>manual driving lessons</a> and <a href='/automatic-driving-lessons' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>automatic driving lessons</a> learners." 
+      answer: "Yes, exactly. We use the standard DL25 appraisal form used by the DVSA. Every fault is categorised as minor (driving), serious, or dangerous, providing a direct measurement of your current test-readiness for both <a href='/manual-driving-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>manual driving lessons</a> and <a href='/automatic-driving-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>automatic driving lessons</a> learners." 
     },
     { 
       question: "How long does a mock driving test take?", 
-      answer: "A standard session is approximately 90 minutes. This allows time for the pre-test briefing, the 40-minute exam simulation, and a detailed 20-30 minute debrief. This format is often a core part of our <a href='/intensive-driving-courses' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>intensive driving courses</a> so students are performing at their peak before test day."
+      answer: "A standard session is approximately 90 minutes. This allows time for the pre-test briefing, the 40-minute exam simulation, and a detailed 20-30 minute debrief. This format is often a core part of our <a href='/intensive-driving-courses/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>intensive driving courses</a> so students are performing at their peak before test day."
     },
     { 
       question: "Will we drive on real York test routes?", 
-      answer: "We use routes that incorporate common <a href='/monks-cross-driving-test-centre' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>York test route elements</a>, including high-pressure junctions, busy roundabouts like Clifton Moor, and varied road types used by the Monks Cross Driving Test Centre examiners." 
+      answer: "We use routes that incorporate common <a href='/monks-cross-driving-test-centre/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>York test route elements</a>, including high-pressure junctions, busy roundabouts like Clifton Moor, and varied road types used by the Monks Cross Driving Test Centre examiners." 
     },
     { 
       question: "Can mock tests reduce driving test anxiety?", 
-      answer: "Absolutely. Most anxiety comes from the unknown. By experiencing the silent, high-pressure environment of a mock test in a safe setting, you 'desensitise' yourself to the nerves. Many <a href='/refresher-lessons' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>nervous drivers</a> find this simulation is the final hurdle to building genuine independence." 
+      answer: "Absolutely. Most anxiety comes from the unknown. By experiencing the silent, high-pressure environment of a mock test in a safe setting, you 'desensitise' yourself to the nerves. Many <a href='/refresher-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>nervous drivers</a> find this simulation is the final hurdle to building genuine independence." 
     },
     { 
       question: "How many mock driving tests should I take?", 
-      answer: "While one test is incredibly valuable, many learners find two tests ideal: one to identify initial weaknesses and a second to confirm that corrective improvements have become permanent habits. This structured approach is especially recommended for those on <a href='/intensive-driving-courses' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>intensive driving courses</a>."
+      answer: "While one test is incredibly valuable, many learners find two tests ideal: one to identify initial weaknesses and a second to confirm that corrective improvements have become permanent habits. This structured approach is especially recommended for those on <a href='/intensive-driving-courses/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>intensive driving courses</a>."
     },
     { 
       question: "Do mock tests include independent driving?", 
-      answer: "Yes. Every mock test includes a 20-minute section of independent driving, typically using a Sat Nav (TomTom) or road signs. We often practise these routes around <a href='/driving-lessons-fulford-york' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>Fulford</a> and <a href='/driving-lessons-acomb-york' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>Acomb</a> to mirror exactly what you will find in 4 out of 5 real DVSA tests." 
+      answer: "Yes. Every mock test includes a 20-minute section of independent driving, typically using a Sat Nav (TomTom) or road signs. We often practise these routes around <a href='/driving-lessons-fulford-york/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>Fulford</a> and <a href='/driving-lessons-acomb-york/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>Acomb</a> to mirror exactly what you will find in 4 out of 5 real DVSA tests." 
     },
     { 
       question: "Can I take a mock test before booking my practical test?", 
@@ -197,15 +199,15 @@ export default function MockDrivingTests() {
     },
     { 
       question: "Are mock tests suitable after failing a test?", 
-      answer: "They are perfect for post-fail analysis. We help you dissect the failure reason and simulate the exact conditions that led to the fault. Our instructors are experienced in <a href='/refresher-lessons' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>confidence rebuilding</a>, working to put a robust technical and emotional fix in place before your next attempt."
+      answer: "They are perfect for post-fail analysis. We help you dissect the failure reason and simulate the exact conditions that led to the fault. Our instructors are experienced in <a href='/refresher-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>confidence rebuilding</a>, working to put a robust technical and emotional fix in place before your next attempt."
     },
     { 
       question: "What faults are assessed during a mock test?", 
-      answer: "We assess everything: observations, signals, clearance, speed management, junctions, manoeuvres, and control. Our goal is to find the subtle patterns that lead to serious faults before a real examiner does. This is also how we refine skills during <a href='/pass-plus-course' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>Pass Plus</a> or motorway training." 
+      answer: "We assess everything: observations, signals, clearance, speed management, junctions, manoeuvres, and control. Our goal is to find the subtle patterns that lead to serious faults before a real examiner does. This is also how we refine skills during <a href='/pass-plus-course/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>Pass Plus</a> or motorway training." 
     },
     { 
       question: "Will I receive feedback afterwards?", 
-      answer: "Yes, you receive a detailed verbal debrief and a copy of your DL25 marking sheet. We prioritise the 'critical' areas first so you can approach your remaining <a href='/driving-lessons-york-city-centre' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>driving lessons in York</a> with clear, performance-based objectives." 
+      answer: "Yes, you receive a detailed verbal debrief and a copy of your DL25 marking sheet. We prioritise the 'critical' areas first so you can approach your remaining <a href='/driving-lessons-york-city-centre/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>driving lessons in York</a> with clear, performance-based objectives." 
     },
     { 
       question: "Can mock tests help with roundabout confidence?", 
@@ -213,11 +215,11 @@ export default function MockDrivingTests() {
     },
     { 
       question: "Do you offer automatic mock driving tests in York?", 
-      answer: "Yes, we provide mock tests for both <a href='/manual-driving-lessons' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>manual driving lessons</a> and <a href='/automatic-driving-lessons' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>automatic driving lessons</a>. The marking criteria remain identical, focusing on the quality of your roadcraft and safety standards regardless of the vehicle type." 
+      answer: "Yes, we provide mock tests for both <a href='/manual-driving-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>manual driving lessons</a> and <a href='/automatic-driving-lessons/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>automatic driving lessons</a>. The marking criteria remain identical, focusing on the quality of your roadcraft and safety standards regardless of the vehicle type." 
     },
     { 
       question: "What should I bring to my mock driving test?", 
-      answer: "Bring your provisional licence and have your theory test score in mind. Treat it exactly like the real day—arrive with a focused mindset and the shoes you intend to wear. If you are preparing via an <a href='/intensive-driving-courses' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>intensive driving course</a>, your instructor will go through everything you need before you start."
+      answer: "Bring your provisional licence and have your theory test score in mind. Treat it exactly like the real day—arrive with a focused mindset and the shoes you intend to wear. If you are preparing via an <a href='/intensive-driving-courses/' className='text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark font-extrabold transition-all duration-200 underline-offset-4'>intensive driving course</a>, your instructor will go through everything you need before you start."
     }
   ];
 
@@ -278,7 +280,7 @@ export default function MockDrivingTests() {
           </div>
 
           <div className="flex justify-center w-full lg:justify-end">
-            <div id="enquiry-form" className="w-full max-w-[540px] relative z-10">
+            <div className="w-full max-w-[540px] relative z-10">
               <EnquiryForm />
             </div>
           </div>
@@ -397,7 +399,7 @@ export default function MockDrivingTests() {
                 Driving test failure is often caused by psychological pressure rather than a lack of skill.
               </p>
               <p className="text-secondary-text text-[1rem] leading-[1.7] font-medium opacity-80">
-                A mock test bridges the gap between learning and performing. Whether you are taking <a href="/manual-driving-lessons" className="text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4 font-extrabold">manual driving lessons</a> or <a href="/automatic-driving-lessons" className="text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4 font-extrabold">automatic driving lessons</a>, we help you experience the unique atmosphere of the real exam—the silent examiner, the independent navigation, and the strict adherence to marking criteria. By identifying where your standard falls short now, we eliminate the surprises that cause candidates to fail on the day.
+                A mock test bridges the gap between learning and performing. Whether you are taking <a href="/manual-driving-lessons/" className="text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4 font-extrabold">manual driving lessons</a> or <a href="/automatic-driving-lessons/" className="text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4 font-extrabold">automatic driving lessons</a>, we help you experience the unique atmosphere of the real exam—the silent examiner, the independent navigation, and the strict adherence to marking criteria. By identifying where your standard falls short now, we eliminate the surprises that cause candidates to fail on the day.
               </p>
             </div>
 
@@ -577,7 +579,7 @@ export default function MockDrivingTests() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
                 View Google Reviews
               </a>
             </div>
@@ -652,7 +654,7 @@ export default function MockDrivingTests() {
                 {recentPasses.map((pass) => (
                   <div key={`mock-pass-${pass.id}`} className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0">
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -691,18 +693,18 @@ export default function MockDrivingTests() {
                   The Monks Cross Driving Test Centre covers a diverse range of complex road systems.
                 </p>
                 <p className="text-secondary-text text-[0.95rem] leading-[1.7] font-medium opacity-80">
-                   Our mock tests specifically target common examiner areas across York including <a href="/driving-lessons-clifton-york" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Clifton Moor</a> roundabouts, the high-speed dual carriageways of the A64, and the complex inner-city junctions of <a href="/driving-lessons-acomb-york" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Acomb</a>, <a href="/driving-lessons-heworth-york" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Heworth</a>, and <a href="/driving-lessons-fulford-york" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Fulford</a>. We help you navigate the tricky ring road junctions and independent driving routes that determine pass or fail status — the same approach used on our <a href="/intensive-driving-courses" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">intensive driving courses</a>.
+                   Our mock tests specifically target common examiner areas across York including <a href="/driving-lessons-clifton-york/" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Clifton Moor</a> roundabouts, the high-speed dual carriageways of the A64, and the complex inner-city junctions of <a href="/driving-lessons-acomb-york/" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Acomb</a>, <a href="/driving-lessons-heworth-york/" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Heworth</a>, and <a href="/driving-lessons-fulford-york/" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">Fulford</a>. We help you navigate the tricky ring road junctions and independent driving routes that determine pass or fail status — the same approach used on our <a href="/intensive-driving-courses/" className="font-extrabold text-primary-dark hover:text-primary-dark/80 underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all duration-200 underline-offset-4">intensive driving courses</a>.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-3 mt-6 border-t border-border-main/10 pt-4">
                  {[
-                   { name: 'Clifton Moor', link: '/driving-lessons-clifton-york' },
-                   { name: 'Fulford Road', link: '/driving-lessons-fulford-york' },
-                   { name: 'A64 Ring Road', link: '/monks-cross-driving-test-centre' },
-                   { name: 'Acomb Area', link: '/driving-lessons-acomb-york' },
-                   { name: 'Heworth', link: '/driving-lessons-heworth-york' },
-                   { name: 'City Centre', link: '/driving-lessons-york-city-centre' }
+                   { name: 'Clifton Moor', link: '/driving-lessons-clifton-york/' },
+                   { name: 'Fulford Road', link: '/driving-lessons-fulford-york/' },
+                   { name: 'A64 Ring Road', link: '/monks-cross-driving-test-centre/' },
+                   { name: 'Acomb Area', link: '/driving-lessons-acomb-york/' },
+                   { name: 'Heworth', link: '/driving-lessons-heworth-york/' },
+                   { name: 'City Centre', link: '/driving-lessons-york-city-centre/' }
                  ].map((area, index) => (
                    <a 
                      key={`mock-area-${index}`} 
@@ -753,9 +755,9 @@ export default function MockDrivingTests() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { title: "Intensive Driving Courses", desc: "Need to get test-ready quickly in York? An intensive course gets you through your lessons and to test day in a shorter time frame.", link: "/intensive-driving-courses" },
-              { title: "Manual Driving Lessons", desc: "Still building the foundations? Weekly manual driving lessons in York give you time to develop at a steady, consistent pace before your test.", link: "/manual-driving-lessons" },
-              { title: "Automatic Driving Lessons", desc: "Prefer to focus on the road rather than the gears? Automatic lessons in York remove the clutch so you can concentrate on passing.", link: "/automatic-driving-lessons" }
+              { title: "Intensive Driving Courses", desc: "Need to get test-ready quickly in York? An intensive course gets you through your lessons and to test day in a shorter time frame.", link: "/intensive-driving-courses/" },
+              { title: "Manual Driving Lessons", desc: "Still building the foundations? Weekly manual driving lessons in York give you time to develop at a steady, consistent pace before your test.", link: "/manual-driving-lessons/" },
+              { title: "Automatic Driving Lessons", desc: "Prefer to focus on the road rather than the gears? Automatic lessons in York remove the clutch so you can concentrate on passing.", link: "/automatic-driving-lessons/" }
             ].map((course, index) => (
               <a key={`mock-other-${index}`} href={course.link} className="group p-8 bg-soft-bg border border-border-main/15 rounded-2xl no-underline transition-all duration-300 hover:border-primary-dark/20 hover:shadow-xl hover:shadow-primary-dark/5 flex flex-col h-full">
                 <div className="mb-4">
@@ -792,7 +794,7 @@ export default function MockDrivingTests() {
             Ready To Face <span className="italic font-extrabold text-white/40">The Test With Clarity?</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -804,6 +806,7 @@ export default function MockDrivingTests() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/mock-driving-tests/" kind="service" />
       <Footer />
     </div>
   );

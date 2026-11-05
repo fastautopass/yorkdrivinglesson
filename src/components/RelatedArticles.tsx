@@ -4,31 +4,31 @@ const ALL_ARTICLES = [
   {
     slug: 'pass-driving-test-first-time-york',
     title: 'Pass Your Test First Time',
-    href: '/articles/pass-driving-test-first-time-york',
+    href: '/articles/pass-driving-test-first-time-york/',
     desc: 'What to expect and how to prepare for the Monks Cross test.',
   },
   {
     slug: 'automatic-vs-manual-driving-lessons-york',
     title: 'Automatic vs Manual Lessons',
-    href: '/articles/automatic-vs-manual-driving-lessons-york',
+    href: '/articles/automatic-vs-manual-driving-lessons-york/',
     desc: 'Which type of lesson is right for you in York?',
   },
   {
     slug: 'york-driving-test-routes-common-mistakes',
     title: 'York Test Routes & Mistakes',
-    href: '/articles/york-driving-test-routes-common-mistakes',
+    href: '/articles/york-driving-test-routes-common-mistakes/',
     desc: 'Common faults and how to avoid them on real York routes.',
   },
   {
     slug: 'driving-test-nerves-how-to-stay-calm',
     title: 'Driving Test Nerves',
-    href: '/articles/driving-test-nerves-how-to-stay-calm',
+    href: '/articles/driving-test-nerves-how-to-stay-calm/',
     desc: 'Practical ways to stay calm and focused on test day.',
   },
   {
     slug: 'what-happens-on-the-york-driving-test',
     title: 'What Happens on the Test?',
-    href: '/articles/what-happens-on-the-york-driving-test',
+    href: '/articles/what-happens-on-the-york-driving-test/',
     desc: 'A full walkthrough of the York driving test from start to finish.',
   },
 ];

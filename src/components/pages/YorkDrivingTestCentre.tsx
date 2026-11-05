@@ -6,6 +6,7 @@ import FAQ from '../FAQ';
 import Header from '../Header';
 import Footer from '../Footer';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
 
 export default function YorkDrivingTestCentre() {
   const difficulties = [
@@ -30,7 +31,7 @@ export default function YorkDrivingTestCentre() {
           </h1>
           
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6">
-            <a href="/contact-us" className="bg-white text-primary-dark px-10 py-4.5 rounded-full text-[0.85rem] font-black uppercase tracking-widest no-underline shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-center min-w-max">
+            <a href="/contact-us/" className="bg-white text-primary-dark px-10 py-4.5 rounded-full text-[0.85rem] font-black uppercase tracking-widest no-underline shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-center min-w-max">
               Enquire Now
             </a>
             <a href="tel:+447763999317" className="bg-transparent text-white border-2 border-white/20 px-10 py-4.5 rounded-full text-[0.85rem] font-black uppercase tracking-widest no-underline transition-all duration-300 hover:border-white/80 hover:bg-white/5 text-center min-w-max">
@@ -63,7 +64,7 @@ export default function YorkDrivingTestCentre() {
           <div className="max-w-[1100px] relative pl-12">
             <div className="absolute left-0 top-1 bottom-1 w-[3px] bg-primary-dark/30"></div>
             <p className="text-secondary-text text-[0.98rem] leading-[1.6] font-medium opacity-90">
-              Preparing for your York test involves navigating road layouts around Monks Cross Drive, the A64, and Hopgrove. We help you adjust to local routines and changing speed limits with both <a href="/automatic-driving-lessons" className="text-primary-dark font-bold underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all">automatic</a> and <a href="/manual-driving-lessons" className="text-primary-dark font-bold underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all">manual driving lessons</a>, making the routes feel like a natural part of your training.
+              Preparing for your York test involves navigating road layouts around Monks Cross Drive, the A64, and Hopgrove. We help you adjust to local routines and changing speed limits with both <a href="/automatic-driving-lessons/" className="text-primary-dark font-bold underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all">automatic</a> and <a href="/manual-driving-lessons/" className="text-primary-dark font-bold underline decoration-primary-dark/30 hover:decoration-primary-dark transition-all">manual driving lessons</a>, making the routes feel like a natural part of your training.
             </p>
           </div>
         </div>
@@ -81,7 +82,7 @@ export default function YorkDrivingTestCentre() {
                 Located at Monks Cross, Huntington, the Monks Cross driving test centre combines quieter residential roads with busier multi-lane routes around the A1079 Hull Road, Grimston Bar, and nearby ring road sections. Test routes across York often include a mix of changing speed limits, busy junctions, residential streets, and larger roundabouts that require steady planning and good lane discipline throughout the drive.
               </p>
               <p>
-                Many learners find the faster-moving traffic around Monks Cross and the surrounding retail routes more demanding during busy periods, especially when moving between residential roads and dual carriageways. Whether you’re learning gradually or taking an <a href="/intensive-driving-courses" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">intensive driving course</a>, we help you become more familiar with the same local roads, junctions, and traffic conditions commonly experienced during real York driving tests.
+                Many learners find the faster-moving traffic around Monks Cross and the surrounding retail routes more demanding during busy periods, especially when moving between residential roads and dual carriageways. Whether you’re learning gradually or taking an <a href="/intensive-driving-courses/" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">intensive driving course</a>, we help you become more familiar with the same local roads, junctions, and traffic conditions commonly experienced during real York driving tests.
               </p>
             </div>
           </div>
@@ -101,7 +102,7 @@ export default function YorkDrivingTestCentre() {
               <p className="text-secondary-text text-[0.9rem] leading-relaxed font-medium opacity-80 mb-6 flex-grow">
                 Focus on the road without worrying about gear changes. Great for managing busy York junctions and roundabouts with less stress.
               </p>
-              <a href="/automatic-driving-lessons" className="text-primary-dark font-black text-[0.75rem] uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all no-underline border-b-2 border-primary-dark/10 hover:border-primary-dark pb-1">
+              <a href="/automatic-driving-lessons/" className="text-primary-dark font-black text-[0.75rem] uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all no-underline border-b-2 border-primary-dark/10 hover:border-primary-dark pb-1">
                 Learn More <Navigation size={14} className="rotate-90" />
               </a>
             </div>
@@ -112,7 +113,7 @@ export default function YorkDrivingTestCentre() {
               <p className="text-secondary-text text-[0.9rem] leading-relaxed font-medium opacity-80 mb-6 flex-grow">
                 Gear changes and clutch control built up gradually so you can drive any car with confidence on every type of local road.
               </p>
-              <a href="/manual-driving-lessons" className="text-primary-dark font-black text-[0.75rem] uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all no-underline border-b-2 border-primary-dark/10 hover:border-primary-dark pb-1">
+              <a href="/manual-driving-lessons/" className="text-primary-dark font-black text-[0.75rem] uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all no-underline border-b-2 border-primary-dark/10 hover:border-primary-dark pb-1">
                 Learn More <Navigation size={14} className="rotate-90" />
               </a>
             </div>
@@ -123,7 +124,7 @@ export default function YorkDrivingTestCentre() {
               <p className="text-secondary-text text-[0.9rem] leading-relaxed font-medium opacity-80 mb-6 flex-grow">
                 Practise under real test conditions at the Monks Cross test centre. We'll help you find and fix any weak spots so you feel ready for test day.
               </p>
-              <a href="/mock-driving-tests" className="text-primary-dark font-black text-[0.75rem] uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all no-underline border-b-2 border-primary-dark/10 hover:border-primary-dark pb-1">
+              <a href="/mock-driving-tests/" className="text-primary-dark font-black text-[0.75rem] uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all no-underline border-b-2 border-primary-dark/10 hover:border-primary-dark pb-1">
                 Learn More <Navigation size={14} className="rotate-90" />
               </a>
             </div>
@@ -143,7 +144,7 @@ export default function YorkDrivingTestCentre() {
                 We focus heavily on roads around the Monks Cross centre, including lane discipline at interchanges like Hopgrove and Grimston Bar. You'll gain confidence handling the faster flow on Hull Road and merging onto the A64, so you're ready for the technical sections of the York routes.
               </p>
               <p>
-                We also navigate residential streets in <a href="/driving-lessons-heworth-york" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">Heworth</a>, <a href="/driving-lessons-tang-hall-york" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">Tang Hall</a>, and <a href="/driving-lessons-osbaldwick-york" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">Osbaldwick</a>. Areas like Stockton Lane and Monks Cross Drive are ideal for practising meeting traffic and speed limit changes, helping you feel at home with the conditions you'll face on the day.
+                We also navigate residential streets in <a href="/driving-lessons-heworth-york/" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">Heworth</a>, <a href="/driving-lessons-tang-hall-york/" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">Tang Hall</a>, and <a href="/driving-lessons-osbaldwick-york/" className="text-primary-dark font-bold underline decoration-primary-dark/20 hover:decoration-primary-dark transition-all">Osbaldwick</a>. Areas like Stockton Lane and Monks Cross Drive are ideal for practising meeting traffic and speed limit changes, helping you feel at home with the conditions you'll face on the day.
               </p>
             </div>
           </div>
@@ -160,10 +161,10 @@ export default function YorkDrivingTestCentre() {
             </h2>
             <div className="space-y-4 text-white/80 text-[0.92rem] md:text-[0.98rem] leading-[1.5] font-medium">
               <p>
-                Faults on York test routes often come from handling busy junctions around the Monks Cross centre and the A1079. Many learners struggle with lane choice at Hopgrove Roundabout or Grimston Bar, usually when rushing decisions. Hesitation when joining the A64 is another frequent challenge where timing is key. A <a href="/mock-driving-tests" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">mock driving test</a> is a practical way to build confidence for these faster roads.
+                Faults on York test routes often come from handling busy junctions around the Monks Cross centre and the A1079. Many learners struggle with lane choice at Hopgrove Roundabout or Grimston Bar, usually when rushing decisions. Hesitation when joining the A64 is another frequent challenge where timing is key. A <a href="/mock-driving-tests/" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">mock driving test</a> is a practical way to build confidence for these faster roads.
               </p>
               <p>
-                In residential areas like <a href="/driving-lessons-heworth-york" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">Heworth</a>, <a href="/driving-lessons-tang-hall-york" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">Tang Hall</a>, and <a href="/driving-lessons-osbaldwick-york" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">Osbaldwick</a>, issues often involve meeting traffic and positioning around parked cars. It's also easy to miss subtle speed changes without proactive observation. Focusing on these local bottlenecks helps you stay calm and maintain a safe position on test day.
+                In residential areas like <a href="/driving-lessons-heworth-york/" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">Heworth</a>, <a href="/driving-lessons-tang-hall-york/" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">Tang Hall</a>, and <a href="/driving-lessons-osbaldwick-york/" className="text-white font-bold underline decoration-white/30 hover:decoration-white transition-all">Osbaldwick</a>, issues often involve meeting traffic and positioning around parked cars. It's also easy to miss subtle speed changes without proactive observation. Focusing on these local bottlenecks helps you stay calm and maintain a safe position on test day.
               </p>
             </div>
           </div>
@@ -219,12 +220,12 @@ export default function YorkDrivingTestCentre() {
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {[
-              { name: 'Heworth', url: '/driving-lessons-heworth-york' },
-              { name: 'Tang Hall', url: '/driving-lessons-tang-hall-york' },
-              { name: 'Osbaldwick', url: '/driving-lessons-osbaldwick-york' },
-              { name: 'Huntington', url: '/driving-lessons-huntington-york' },
-              { name: 'Haxby', url: '/driving-lessons-haxby-york' },
-              { name: 'Fulford', url: '/driving-lessons-fulford-york' }
+              { name: 'Heworth', url: '/driving-lessons-heworth-york/' },
+              { name: 'Tang Hall', url: '/driving-lessons-tang-hall-york/' },
+              { name: 'Osbaldwick', url: '/driving-lessons-osbaldwick-york/' },
+              { name: 'Huntington', url: '/driving-lessons-huntington-york/' },
+              { name: 'Haxby', url: '/driving-lessons-haxby-york/' },
+              { name: 'Fulford', url: '/driving-lessons-fulford-york/' }
             ].map((area, index) => (
               <a
                 key={`test-centre-area-${index}`}
@@ -236,7 +237,7 @@ export default function YorkDrivingTestCentre() {
             ))}
           </div>
 
-          <a href="/york" className="inline-flex items-center gap-2 text-primary-dark font-black uppercase tracking-[0.2em] text-[0.7rem] border-b-2 border-primary-dark/20 hover:border-primary-dark transition-all pb-1 no-underline">
+          <a href="/york/" className="inline-flex items-center gap-2 text-primary-dark font-black uppercase tracking-[0.2em] text-[0.7rem] border-b-2 border-primary-dark/20 hover:border-primary-dark transition-all pb-1 no-underline">
             View All York Areas <Map size={14} />
           </a>
         </div>
@@ -251,7 +252,7 @@ export default function YorkDrivingTestCentre() {
             </h2>
             
             <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-[32px] overflow-hidden border border-border-main/10 shadow-lg group relative">
-              <iframe 
+              <iframe title="Google Maps location" 
                 src="https://maps.google.com/maps?q=York+Driving+Test+Centre,+Monks+Cross+Drive,+Huntington,+York&t=&z=16&ie=UTF8&iwloc=B&output=embed"
                 width="100%" 
                 height="100%" 
@@ -313,7 +314,7 @@ export default function YorkDrivingTestCentre() {
             },
             {
               question: "How should I handle roundabouts on my test day?",
-              answer: "Focus on early planning and clear mirror routines. Whether it's a small mini-roundabout or a large interchange, consistent observation of other road users is what examiners look for during [Manual Driving Lessons](/manual-driving-lessons)."
+              answer: "Focus on early planning and clear mirror routines. Whether it's a small mini-roundabout or a large interchange, consistent observation of other road users is what examiners look for during [Manual Driving Lessons](/manual-driving-lessons/)."
             },
             {
               question: "What are the most common mistakes on the York test?",
@@ -321,19 +322,19 @@ export default function YorkDrivingTestCentre() {
             },
             {
               question: "How should I prepare for my York driving test?",
-              answer: "The best preparation is regular practice on local roads. Focus on building instinctive routines for observation and planning, perhaps starting with [Automatic Driving Lessons](/automatic-driving-lessons) to simplify the learning process."
+              answer: "The best preparation is regular practice on local roads. Focus on building instinctive routines for observation and planning, perhaps starting with [Automatic Driving Lessons](/automatic-driving-lessons/) to simplify the learning process."
             },
             {
               question: "Do you offer mock driving tests near the Monks Cross test centre?",
-              answer: "We highly recommend [Mock Driving Tests](/mock-driving-tests). It replicates real examiner marking and allows you to practise independent driving around Monks Cross to build your confidence before the real exam."
+              answer: "We highly recommend [Mock Driving Tests](/mock-driving-tests/). It replicates real examiner marking and allows you to practise independent driving around Monks Cross to build your confidence before the real exam."
             },
             {
               question: "What areas are commonly used on York driving test routes?",
-              answer: "Test routes often pass through [Heworth](/driving-lessons-heworth-york), [Tang Hall](/driving-lessons-tang-hall-york), and [Osbaldwick](/driving-lessons-osbaldwick-york). You might also head towards [Haxby](/driving-lessons-haxby-york) or [Huntington](/driving-lessons-huntington-york), covering a mix of narrow streets and wider link roads."
+              answer: "Test routes often pass through [Heworth](/driving-lessons-heworth-york/), [Tang Hall](/driving-lessons-tang-hall-york/), and [Osbaldwick](/driving-lessons-osbaldwick-york/). You might also head towards [Haxby](/driving-lessons-haxby-york/) or [Huntington](/driving-lessons-huntington-york/), covering a mix of narrow streets and wider link roads."
             },
             {
               question: "Are the Monks Cross roundabouts difficult?",
-              answer: "The roundabouts near the test centre are busy but well-organised. Staying calm and planning your exit early is essential, skills we focus on during our [Intensive Driving Courses](/intensive-driving-courses)."
+              answer: "The roundabouts near the test centre are busy but well-organised. Staying calm and planning your exit early is essential, skills we focus on during our [Intensive Driving Courses](/intensive-driving-courses/)."
             }
           ]} />
         </div>
@@ -341,6 +342,7 @@ export default function YorkDrivingTestCentre() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/monks-cross-driving-test-centre/" kind="info" />
       <Footer />
     </div>
   );

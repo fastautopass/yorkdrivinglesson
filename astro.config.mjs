@@ -7,6 +7,7 @@ import node from '@astrojs/node';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://yorkdrivinglesson.co.uk',
+  trailingSlash: 'always',
   output: 'static',
   adapter: node({ mode: 'standalone' }),
   integrations: [

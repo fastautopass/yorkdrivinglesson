@@ -6,13 +6,14 @@ import Footer from '../../Footer';
 import EnquiryForm from '../../EnquiryForm';
 import FAQ from '../../FAQ';
 import RelatedArticles from '../../RelatedArticles';
+import RelatedLinks from '../../RelatedLinks';
 
 export default function YorkDrivingTestExplained() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -44,7 +45,7 @@ export default function YorkDrivingTestExplained() {
   const faqs = [
     {
       question: "What documents do I genuinely need to bring to Monks Cross?",
-      answer: "The most critical item is your UK driving photocard licence. If you have an old-style paper licence, you must also bring a valid passport when visiting the [York Driving Test Centre](/monks-cross-driving-test-centre). While your theory test certificate and booking confirmation are helpful for your own peace of mind, the examiner will primarily verify your identity through your photocard."
+      answer: "The most critical item is your UK driving photocard licence. If you have an old-style paper licence, you must also bring a valid passport when visiting the [York Driving Test Centre](/monks-cross-driving-test-centre/). While your theory test certificate and booking confirmation are helpful for your own peace of mind, the examiner will primarily verify your identity through your photocard."
     },
     {
       question: "How long does the practical driving test in York actually last?",
@@ -52,7 +53,7 @@ export default function YorkDrivingTestExplained() {
     },
     {
       question: "How does the sat nav section work on York test routes?",
-      answer: "For most learners (4 out of 5), the independent driving section involves following a sat nav provided by the examiner. They will set the route—often heading toward residential areas like Huntington or Haxby. Understanding [York driving test routes & common mistakes](/articles/york-driving-test-routes-common-mistakes) can make these sections feel far more predictable. If you take a wrong turn, don't panic. As long as you stay safe and follow the road markings, the examiner will simply help you get back on track."
+      answer: "For most learners (4 out of 5), the independent driving section involves following a sat nav provided by the examiner. They will set the route—often heading toward residential areas like Huntington or Haxby. Understanding [York driving test routes & common mistakes](/articles/york-driving-test-routes-common-mistakes/) can make these sections feel far more predictable. If you take a wrong turn, don't panic. As long as you stay safe and follow the road markings, the examiner will simply help you get back on track."
     },
     {
       question: "Will I definitely be asked to perform an emergency stop?",
@@ -60,15 +61,15 @@ export default function YorkDrivingTestExplained() {
     },
     {
       question: "Where do the manoeuvres usually happen in York?",
-      answer: "In York, manoeuvres typically take place in quiet residential streets across the [York location hub](/york), around New Earswick, Heworth, Acomb, or Tang Hall. You might also be asked to perform a forward or reverse bay park in the Monks Cross test centre car park itself. The focus is always on your observation and total control, rather than how fast you can complete the move."
+      answer: "In York, manoeuvres typically take place in quiet residential streets across the [York location hub](/york/), around New Earswick, Heworth, Acomb, or Tang Hall. You might also be asked to perform a forward or reverse bay park in the Monks Cross test centre car park itself. The focus is always on your observation and total control, rather than how fast you can complete the move."
     },
     {
       question: "Are the roundabouts in York particularly difficult on the test?",
-      answer: "York has some challenging roundabouts, such as the Hopgrove roundabout or the junctions on the A1237. These require good lane discipline and early planning. We work through these pressure points during our structured coaching or dedicated [mock driving tests](/mock-driving-tests) so you arrive feeling steady and prepared when you meet them on test day."
+      answer: "York has some challenging roundabouts, such as the Hopgrove roundabout or the junctions on the A1237. These require good lane discipline and early planning. We work through these pressure points during our structured coaching or dedicated [mock driving tests](/mock-driving-tests/) so you arrive feeling steady and prepared when you meet them on test day."
     },
     {
       question: "Does the York test always involve the A64 or dual carriageways?",
-      answer: "Not every route includes the A64, but many do include sections of the A1237 ring road or the Hull Road dual carriageway. Whether you are doing weekly lessons or [intensive driving courses](/intensive-driving-courses), the examiner wants to see that you can join high-speed roads safely, maintain a consistent speed, and move back into the left-hand lane when it is clear to do so."
+      answer: "Not every route includes the A64, but many do include sections of the A1237 ring road or the Hull Road dual carriageway. Whether you are doing weekly lessons or [intensive driving courses](/intensive-driving-courses/), the examiner wants to see that you can join high-speed roads safely, maintain a consistent speed, and move back into the left-hand lane when it is clear to do so."
     },
     {
       question: "What is the most common reason for failing a driving test in York?",
@@ -76,11 +77,11 @@ export default function YorkDrivingTestExplained() {
     },
     {
       question: "How many minor faults am I allowed in the York test?",
-      answer: "You can have up to 15 'driving' faults (minors) and still pass your test. Whether you choose [automatic driving lessons](/automatic-driving-lessons) or [manual driving lessons](/manual-driving-lessons), if you commit the same minor fault multiple times, the examiner may deem it a repetitive habit and upgrade it to a 'serious' fault, resulting in a fail. A single serious or dangerous fault results in an immediate fail."
+      answer: "You can have up to 15 'driving' faults (minors) and still pass your test. Whether you choose [automatic driving lessons](/automatic-driving-lessons/) or [manual driving lessons](/manual-driving-lessons/), if you commit the same minor fault multiple times, the examiner may deem it a repetitive habit and upgrade it to a 'serious' fault, resulting in a fail. A single serious or dangerous fault results in an immediate fail."
     },
     {
       question: "What happens if I feel too nervous to start the test?",
-      answer: "Nerves are completely normal. Our detailed guide on [driving test nerves & staying calm](/articles/driving-test-nerves-how-to-stay-calm) lists practical techniques to help manage anxiety. Many learners find that managing test nerves begins with a good night's sleep and a final hour of calm practice before the test. Examiners at the York centre are very experienced and used to nervous learners; they will do their best to put you at ease."
+      answer: "Nerves are completely normal. Our detailed guide on [driving test nerves & staying calm](/articles/driving-test-nerves-how-to-stay-calm/) lists practical techniques to help manage anxiety. Many learners find that managing test nerves begins with a good night's sleep and a final hour of calm practice before the test. Examiners at the York centre are very experienced and used to nervous learners; they will do their best to put you at ease."
     },
     {
       question: "Do I have to bring my own car for the test at Monks Cross?",
@@ -206,7 +207,7 @@ export default function YorkDrivingTestExplained() {
                   The first 'technical' part of the test is the 20-metre eyesight check. You'll be asked to read a number plate from a stationary vehicle. It sounds simple, but it represents the first small win of the test. 
                 </p>
                 <p>
-                  Next comes the 'Tell Me' question. This usually involves explaining how you'd check a certain aspect of the car's safety, such as the brake lights or the engine oil. Because we practise these on every <a href="/york" className="text-primary-dark font-bold hover:underline">location lesson across York</a>, these answers should feel like second nature before you even start the engine.
+                  Next comes the 'Tell Me' question. This usually involves explaining how you'd check a certain aspect of the car's safety, such as the brake lights or the engine oil. Because we practise these on every <a href="/york/" className="text-primary-dark font-bold hover:underline">location lesson across York</a>, these answers should feel like second nature before you even start the engine.
                 </p>
               </div>
             </div>
@@ -275,7 +276,7 @@ export default function YorkDrivingTestExplained() {
                   You will be asked to perform one manoeuvre: a parallel park, a bay park (forward or reverse), or pulling up on the right. The biggest mistake learners make is rushing. In York's residential areas, the examiner is watching your mirrors and your blind spots as much as the car's position.
                 </p>
                 <p>
-                  As you pull back into Monks Cross Drive, the test isn't over until the handbrake is on and the engine is off. The examiner will then provide your result. If you've been practising with <a href="/mock-driving-tests" className="text-primary-dark font-bold hover:underline">realistic mock driving tests</a>, this final feedback session will feel like a conversation you've already had.
+                  As you pull back into Monks Cross Drive, the test isn't over until the handbrake is on and the engine is off. The examiner will then provide your result. If you've been practising with <a href="/mock-driving-tests/" className="text-primary-dark font-bold hover:underline">realistic mock driving tests</a>, this final feedback session will feel like a conversation you've already had.
                 </p>
                 <p>
                   Whether your certificate arrives today or in a few weeks' time, the experience shifts you from being a 'learner' to being a 'driver'. It's about more than a licence; it's about your safety on York's unique roads for years to come.
@@ -302,10 +303,10 @@ export default function YorkDrivingTestExplained() {
                 Knowing how to operate the controls is only half the battle at the Monks Cross test centre. The real challenge for many learners is managing the sudden shift from a supportive instructor to the quiet, formal presence of an examiner. This transition is less about driving skill and more about your ability to regulate your focus under pressure.
               </p>
               <p>
-                We don't just teach you the <a href="/articles/york-driving-test-routes-common-mistakes" className="text-primary-dark font-bold hover:underline">York driving test routes</a>; we teach you how to remain a calm decision-maker. Whether you're navigating the busy approaches to the ring road or handling tight residential streets in Huntington, our lessons are designed to build a psychological "muscle memory."
+                We don't just teach you the <a href="/articles/york-driving-test-routes-common-mistakes/" className="text-primary-dark font-bold hover:underline">York driving test routes</a>; we teach you how to remain a calm decision-maker. Whether you're navigating the busy approaches to the ring road or handling tight residential streets in Huntington, our lessons are designed to build a psychological "muscle memory."
               </p>
               <p>
-                By the time you meet your examiner, you aren't just hoping for a pass—you are expecting to drive safely because we have already simulated the pressure of York's high-traffic zones. Confidence isn't born; it's built through realistic exposure and genuine <a href="/york" className="text-primary-dark font-bold hover:underline">local knowledge</a>.
+                By the time you meet your examiner, you aren't just hoping for a pass—you are expecting to drive safely because we have already simulated the pressure of York's high-traffic zones. Confidence isn't born; it's built through realistic exposure and genuine <a href="/york/" className="text-primary-dark font-bold hover:underline">local knowledge</a>.
               </p>
             </div>
           </div>
@@ -327,15 +328,15 @@ export default function YorkDrivingTestExplained() {
                   There is a significant difference between "knowing how to drive" and being "test-ready." Many learners feel ready after they've gained confidence in basic manoeuvres, but true readiness in York is defined by your ability to handle the unpredictable. 
                 </p>
                 <p>
-                  A <a href="/york" className="text-primary-dark font-bold hover:underline">York driving instructor</a> from our school evaluates more than just your mechanical skill. We look for your "hazard eyes"—the ability to spot the school run congestion in New Earswick or the lane-merging hesitation of other drivers on the A1237 before it results in a fault.
+                  A <a href="/york/" className="text-primary-dark font-bold hover:underline">York driving instructor</a> from our school evaluates more than just your mechanical skill. We look for your "hazard eyes"—the ability to spot the school run congestion in New Earswick or the lane-merging hesitation of other drivers on the A1237 before it results in a fault.
                 </p>
               </div>
               <div className="space-y-6 text-secondary-text text-[1.125rem] leading-[1.8] font-medium border-l border-border-main/10 pl-0 md:pl-12">
                 <p>
-                  Test readiness is the point where you no longer need to be prompted. If you can perform a <a href="/mock-driving-tests" className="text-primary-dark font-bold hover:underline">mock driving test in York</a> with zero serious faults, you have crossed the bridge from learning to competence.
+                  Test readiness is the point where you no longer need to be prompted. If you can perform a <a href="/mock-driving-tests/" className="text-primary-dark font-bold hover:underline">mock driving test in York</a> with zero serious faults, you have crossed the bridge from learning to competence.
                 </p>
                 <p>
-                  We focus on these final refinements—the small observations and lane discipline choices—that separate a near-miss from a first-time pass. Our local training across both <a href="/manual-driving-lessons" className="text-primary-dark font-bold hover:underline">manual</a> and <a href="/automatic-driving-lessons" className="text-primary-dark font-bold hover:underline">automatic lessons</a> is built on this commitment to genuine readiness.
+                  We focus on these final refinements—the small observations and lane discipline choices—that separate a near-miss from a first-time pass. Our local training across both <a href="/manual-driving-lessons/" className="text-primary-dark font-bold hover:underline">manual</a> and <a href="/automatic-driving-lessons/" className="text-primary-dark font-bold hover:underline">automatic lessons</a> is built on this commitment to genuine readiness.
                 </p>
               </div>
             </div>
@@ -370,7 +371,7 @@ export default function YorkDrivingTestExplained() {
                   Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
                 </p>
                 <a 
-                  href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" 
+                  href="https://share.google/9B75eIsjdJNEb4cRC" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm text-center no-underline cursor-pointer"
@@ -459,7 +460,7 @@ export default function YorkDrivingTestExplained() {
                       className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                     >
                       <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                        <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                       </div>
                     </div>
                   ))}
@@ -493,22 +494,22 @@ export default function YorkDrivingTestExplained() {
               { 
                 title: "Mock Test Practice", 
                 desc: "The only way to truly understand the pressure of the Monks Cross centre is to simulate it under real test conditions.", 
-                url: "/mock-driving-tests" 
+                url: "/mock-driving-tests/" 
               },
               { 
                 title: "York Test Routes", 
                 desc: "We don't just teach the routes; we teach the logic behind the junctions and roundabouts that often catch learners out.", 
-                url: "/articles/york-driving-test-routes-common-mistakes" 
+                url: "/articles/york-driving-test-routes-common-mistakes/" 
               },
               { 
                 title: "Nervous Driver Support", 
                 desc: "If high-pressure situations feel overwhelming, we offer specific techniques to keep you calm and focused.", 
-                url: "/refresher-lessons" 
+                url: "/refresher-lessons/" 
               },
               { 
                 title: "Automatic Driving Confidence", 
                 desc: "Remove the stress of gear changes and focus entirely on your observation and planning around busy York junctions.", 
-                url: "/automatic-driving-lessons" 
+                url: "/automatic-driving-lessons/" 
               }
             ].map((item, idx) => (
               <a key={`pass-item-${idx}`} href={item.url} className="bg-white p-8 rounded-[2rem] border border-border-main/5 no-underline group hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 h-full flex flex-col">
@@ -548,7 +549,7 @@ export default function YorkDrivingTestExplained() {
             Know What To Expect. <span className="italic font-extrabold text-white/40">Now Get Behind The Wheel In York.</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -558,6 +559,7 @@ export default function YorkDrivingTestExplained() {
         </div>
       </section>
 
+      <RelatedLinks path="/articles/what-happens-on-the-york-driving-test/" kind="article" />
       <Footer />
     </div>
   );

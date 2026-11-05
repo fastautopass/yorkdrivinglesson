@@ -13,7 +13,7 @@ export default function YorkTestRoutesMistakes() {
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -83,7 +83,7 @@ export default function YorkTestRoutesMistakes() {
   const faqs = [
     {
       question: "What are the York driving test routes like?",
-      answer: "The York driving test routes cover a wide range of environments designed to test every aspect of your driving. You will encounter fast-flowing sections on the A64 and A1237 York Ring Road, busy multi-lane roundabouts at Grimston Bar and Hopgrove, narrow residential lanes around Heworth and Tang Hall, and the retail park corridors near Monks Cross Driving Test Centre. Build familiarity with these roads through our **[automatic driving lessons in York](/automatic-driving-lessons)** or our **[manual driving lessons in York](/manual-driving-lessons)**."
+      answer: "The York driving test routes cover a wide range of environments designed to test every aspect of your driving. You will encounter fast-flowing sections on the A64 and A1237 York Ring Road, busy multi-lane roundabouts at Grimston Bar and Hopgrove, narrow residential lanes around Heworth and Tang Hall, and the retail park corridors near Monks Cross Driving Test Centre. Build familiarity with these roads through our **[automatic driving lessons in York](/automatic-driving-lessons/)** or our **[manual driving lessons in York](/manual-driving-lessons/)**."
     },
     {
       question: "Do I need to memorise York test routes?",
@@ -91,7 +91,7 @@ export default function YorkTestRoutesMistakes() {
     },
     {
       question: "Where does the York driving test usually start?",
-      answer: "All practical tests in York start at the **[York Driving Test Centre](/monks-cross-driving-test-centre)**, located at Unit 2, Arabesque House, Monks Cross Drive, Huntington, York, YO32 9GW. Because of this, your test will start and end in a busy commercial environment with high traffic density, pedestrian crossings, and frequent speed zone changes."
+      answer: "All practical tests in York start at the **[York Driving Test Centre](/monks-cross-driving-test-centre/)**, located at Unit 2, Arabesque House, Monks Cross Drive, Huntington, York, YO32 9GW. Because of this, your test will start and end in a busy commercial environment with high traffic density, pedestrian crossings, and frequent speed zone changes."
     },
     {
       question: "Does the York test include Monks Cross?",
@@ -111,7 +111,7 @@ export default function YorkTestRoutesMistakes() {
     },
     {
       question: "What are the most common driving test mistakes in York?",
-      answer: "The most common driving test mistakes in York include inadequate junction observations, failing to check mirrors before changing speed or direction, wrong roundabout lane alignment, and holding back traffic unnecessarily (hesitation). You can prepare specifically to avoid these via our realistic **[mock driving tests in York](/mock-driving-tests)**."
+      answer: "The most common driving test mistakes in York include inadequate junction observations, failing to check mirrors before changing speed or direction, wrong roundabout lane alignment, and holding back traffic unnecessarily (hesitation). You can prepare specifically to avoid these via our realistic **[mock driving tests in York](/mock-driving-tests/)**."
     },
     {
       question: "What causes most serious faults on a driving test?",
@@ -119,11 +119,11 @@ export default function YorkTestRoutesMistakes() {
     },
     {
       question: "How can I avoid failing for observations?",
-      answer: "The easiest way to avoid observation faults is to make scanning a deliberate, physical habit, which we train on every location-specific **[driving lesson in York](/york)**. Turn your head clearly to look into mirrors, pause at junctions to check both left and right thoroughly, and conduct a physical blind-spot check before moving away."
+      answer: "The easiest way to avoid observation faults is to make scanning a deliberate, physical habit, which we train on every location-specific **[driving lesson in York](/york/)**. Turn your head clearly to look into mirrors, pause at junctions to check both left and right thoroughly, and conduct a physical blind-spot check before moving away."
     },
     {
       question: "Is the independent driving section difficult?",
-      answer: "The independent driving section is not designed to trick you. It simply tests whether you can maintain standard safety rules while handling navigation. For 20 minutes, you will follow a sat-nav or road signs. Our guide on **[what happens on the York driving test](/articles/what-happens-on-the-york-driving-test)** explains the process in detail."
+      answer: "The independent driving section is not designed to trick you. It simply tests whether you can maintain standard safety rules while handling navigation. For 20 minutes, you will follow a sat-nav or road signs. Our guide on **[what happens on the York driving test](/articles/what-happens-on-the-york-driving-test/)** explains the process in detail."
     },
     {
       question: "Can a wrong turn fail my driving test?",
@@ -131,16 +131,16 @@ export default function YorkTestRoutesMistakes() {
     },
     {
       question: "Do mock driving tests help with York routes?",
-      answer: "Yes, highly targeted **[mock driving tests in York](/mock-driving-tests)** are incredibly beneficial. They simulate the exact pressure of the real exam, allow you to practise under real DVSA scoring conditions, and expose you to the exact routes and pressure points around Huntington, Heworth, and Clifton."
+      answer: "Yes, highly targeted **[mock driving tests in York](/mock-driving-tests/)** are incredibly beneficial. They simulate the exact pressure of the real exam, allow you to practise under real DVSA scoring conditions, and expose you to the exact routes and pressure points around Huntington, Heworth, and Clifton."
     },
     {
       question: "How do I know when I’m ready for the York driving test?",
-      answer: "You are ready for your test when you can drive consistently for a full lesson without your instructor needing to intervene (either physically or verbally). Practising until you pass a realistic mock driving test and feel comfortable managing **[driving test nerves in York](/articles/driving-test-nerves-how-to-stay-calm)** is a great indicator."
+      answer: "You are ready for your test when you can drive consistently for a full lesson without your instructor needing to intervene (either physically or verbally). Practising until you pass a realistic mock driving test and feel comfortable managing **[driving test nerves in York](/articles/driving-test-nerves-how-to-stay-calm/)** is a great indicator."
     }
   ];
 
   return (
-    <ArticleLayout 
+    <ArticleLayout path="/articles/york-driving-test-routes-common-mistakes/" 
       title={<>York Driving <span className="italic font-extrabold text-white/50">Test Routes</span> & Mistakes</>}
       intro="Preparing for York driving test routes isn't about memorising fixed turns. It's about building the calm, versatile decision-making skills needed to handle any layout. From complex ring roads to narrow residential lanes, here is your direct guide to passing first time."
       faqs={faqs}
@@ -165,13 +165,13 @@ export default function YorkTestRoutesMistakes() {
           <div className="w-16 h-1.5 bg-primary-dark/10 mb-8 mx-auto"></div>
           <div className="space-y-6 max-w-[800px] mx-auto text-secondary-text text-[0.95rem] md:text-[1.02rem] leading-relaxed font-semibold">
             <p>
-              One of the most common anxieties for local learners is the desire to memorise every possible turn of the York driving test routes. However, the DVSA examiners are not testing your memory—they are assessing your ability to make safe, independent decisions in real time. Starting with our detailed guide on <strong><a href="/articles/what-happens-on-the-york-driving-test" className="text-primary-dark font-bold hover:underline">what happens on the York driving test</a></strong> can help contextualise this entire process.
+              One of the most common anxieties for local learners is the desire to memorise every possible turn of the York driving test routes. However, the DVSA examiners are not testing your memory—they are assessing your ability to make safe, independent decisions in real time. Starting with our detailed guide on <strong><a href="/articles/what-happens-on-the-york-driving-test/" className="text-primary-dark font-bold hover:underline">what happens on the York driving test</a></strong> can help contextualise this entire process.
             </p>
             <p>
-              Your test, starting from the busy hub at <strong className="text-primary-text font-semibold">Monks Cross Drive</strong>, will navigate a diverse mix of environments. You'll move from the bustling retail park traffic in <strong className="text-primary-text font-semibold">Huntington</strong> to the narrow, historic residential streets of <strong className="text-primary-text font-semibold">Heworth</strong>, <strong className="text-primary-text font-semibold">Tang Hall</strong>, and <strong className="text-primary-text font-semibold">Clifton</strong>. We cover all of these road types on every <strong><a href="/york" className="text-primary-dark font-bold hover:underline">driving lesson in York</a></strong>. You will also encounter high-speed multi-lane configurations on the <strong className="text-primary-text font-semibold">A64</strong> or parts of the <strong className="text-primary-text font-semibold">A1237 ring road</strong>, as well as complex urban roundabouts and busier city approaches. 
+              Your test, starting from the busy hub at <strong className="text-primary-text font-semibold">Monks Cross Drive</strong>, will navigate a diverse mix of environments. You'll move from the bustling retail park traffic in <strong className="text-primary-text font-semibold">Huntington</strong> to the narrow, historic residential streets of <strong className="text-primary-text font-semibold">Heworth</strong>, <strong className="text-primary-text font-semibold">Tang Hall</strong>, and <strong className="text-primary-text font-semibold">Clifton</strong>. We cover all of these road types on every <strong><a href="/york/" className="text-primary-dark font-bold hover:underline">driving lesson in York</a></strong>. You will also encounter high-speed multi-lane configurations on the <strong className="text-primary-text font-semibold">A64</strong> or parts of the <strong className="text-primary-text font-semibold">A1237 ring road</strong>, as well as complex urban roundabouts and busier city approaches. 
             </p>
             <p>
-              By understanding the types of roads and decisions you'll encounter, rather than trying to memorise fixed paths, you'll build the calm, analytical mindset needed to navigate any route with absolute confidence. Check where you stand with our realistic <strong><a href="/mock-driving-tests" className="text-primary-dark font-bold hover:underline">mock driving tests in York</a></strong> before your actual test date.
+              By understanding the types of roads and decisions you'll encounter, rather than trying to memorise fixed paths, you'll build the calm, analytical mindset needed to navigate any route with absolute confidence. Check where you stand with our realistic <strong><a href="/mock-driving-tests/" className="text-primary-dark font-bold hover:underline">mock driving tests in York</a></strong> before your actual test date.
             </p>
           </div>
         </div>
@@ -498,10 +498,10 @@ export default function YorkTestRoutesMistakes() {
                 Our lessons are not based on boring rote memorization of a rigid 40-minute line. Instead, we teach you how to make solid decisions dynamically across York’s main test arterial zones. By building confidence in real-world environments, you will satisfy any DVSA examiner.
               </p>
               <p className="text-secondary-text text-[0.92rem] md:text-[0.98rem] leading-relaxed mb-6 font-semibold">
-                Our structured training includes regular <a href="/mock-driving-tests" className="text-primary-dark underline font-bold hover:text-black">mock driving tests</a> that put you under real examination conditions, so test-day itself feels like a familiar routine.
+                Our structured training includes regular <a href="/mock-driving-tests/" className="text-primary-dark underline font-bold hover:text-black">mock driving tests</a> that put you under real examination conditions, so test-day itself feels like a familiar routine.
               </p>
               <p className="text-secondary-text text-[0.92rem] md:text-[0.98rem] leading-relaxed mb-6 font-semibold">
-                We also understand that mindset is critical. If you suffer from pre-test anxiety, our guide on how to manage <a href="/articles/driving-test-nerves-how-to-stay-calm" className="text-primary-dark underline font-bold hover:text-black">driving test nerves York</a> provides verified psychological tools to keep you focused. You can also read our guide on <a href="/articles/what-happens-on-the-york-driving-test" className="text-primary-dark underline font-bold hover:text-black">what happens on the York driving test</a> to understand the examiner's step-by-step test blueprint.
+                We also understand that mindset is critical. If you suffer from pre-test anxiety, our guide on how to manage <a href="/articles/driving-test-nerves-how-to-stay-calm/" className="text-primary-dark underline font-bold hover:text-black">driving test nerves York</a> provides verified psychological tools to keep you focused. You can also read our guide on <a href="/articles/what-happens-on-the-york-driving-test/" className="text-primary-dark underline font-bold hover:text-black">what happens on the York driving test</a> to understand the examiner's step-by-step test blueprint.
               </p>
             </div>
 
@@ -510,7 +510,7 @@ export default function YorkTestRoutesMistakes() {
                 { 
                   title: "Mock Driving Tests", 
                   desc: "Rehearse realistic marking schemes under DVSA rules on the actual routes around Monks Cross.",
-                  url: "/mock-driving-tests",
+                  url: "/mock-driving-tests/",
                   hasLink: true
                 },
                 {
@@ -531,13 +531,13 @@ export default function YorkTestRoutesMistakes() {
                 { 
                   title: "Independent Practice", 
                   desc: "Get comfortable following sat-nav commands and physical road direction signs during your DVSA test routes York independent driving section.",
-                  url: "/mock-driving-tests",
+                  url: "/mock-driving-tests/",
                   hasLink: true
                 },
                 { 
                   title: "Nervous Driver Support", 
                   desc: "Patient, supportive instructors specifically trained to calm anxious candidates.",
-                  url: "/articles/driving-test-nerves-how-to-stay-calm",
+                  url: "/articles/driving-test-nerves-how-to-stay-calm/",
                   hasLink: true
                 }
               ].map((item, idx) => (
@@ -579,7 +579,7 @@ export default function YorkTestRoutesMistakes() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
                 View Google Reviews
               </a>
             </div>
@@ -662,7 +662,7 @@ export default function YorkTestRoutesMistakes() {
                     className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                   >
                     <div className="aspect-[4/3] bg-soft-bg rounded-[2rem] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-md transition-all duration-300">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -700,22 +700,22 @@ export default function YorkTestRoutesMistakes() {
             { 
               title: "Automatic Driving Lessons", 
               desc: "Learn to drive in York with our patient automatic driving instructors. No gears or clutch stalling.", 
-              url: "/automatic-driving-lessons" 
+              url: "/automatic-driving-lessons/" 
             },
             { 
               title: "Manual Driving Lessons", 
               desc: "Gain maximum licence flexibility and control with our highly active manual driving instructor York sessions.", 
-              url: "/manual-driving-lessons" 
+              url: "/manual-driving-lessons/" 
             },
             { 
               title: "Intensive Driving Courses", 
               desc: "Build test-standard skills quickly with high-intensity training schedules that compress weeks of lessons into days.",
-              url: "/intensive-driving-courses" 
+              url: "/intensive-driving-courses/" 
             },
             { 
               title: "Mock Driving Tests", 
               desc: "Simulate exact test-day pressure and eliminate errors on real Monks Cross test paths.", 
-              url: "/mock-driving-tests" 
+              url: "/mock-driving-tests/" 
             }
           ].map((item, idx) => (
             <a key={`pass-item-${idx}`} href={item.url} className="bg-white p-6 sm:p-8 rounded-[2rem] border border-border-main/5 no-underline group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between">

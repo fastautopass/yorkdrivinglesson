@@ -6,13 +6,14 @@ import Footer from '../Footer';
 import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
 
 export default function RefresherLessons() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -44,11 +45,11 @@ export default function RefresherLessons() {
   const faqs = [
     { 
       question: "How many refresher lessons will I need?", 
-      answer: "Every driver is different. Some find that just 2-4 hours are enough to rebuild their confidence, while others prefer a longer course if they haven't driven for many years. We start with an assessment session to determine if you'd benefit most from [manual](/manual-driving-lessons) or [automatic refresher lessons](/automatic-driving-lessons), then suggest a plan that matches your pace and what you actually need to work on."
+      answer: "Every driver is different. Some find that just 2-4 hours are enough to rebuild their confidence, while others prefer a longer course if they haven't driven for many years. We start with an assessment session to determine if you'd benefit most from [manual](/manual-driving-lessons/) or [automatic refresher lessons](/automatic-driving-lessons/), then suggest a plan that matches your pace and what you actually need to work on."
     },
     { 
       question: "Can I take just one refresher lesson?", 
-      answer: "Absolutely. If you just want to focus on a specific skill like reverse parking or navigating a particular junction like the Hopgrove roundabout in [York](/york), a single 2-hour session might be all you need to feel confident again. We provide targeted support for any specific area of [York city driving](/york) you find challenging."
+      answer: "Absolutely. If you just want to focus on a specific skill like reverse parking or navigating a particular junction like the Hopgrove roundabout in [York](/york/), a single 2-hour session might be all you need to feel confident again. We provide targeted support for any specific area of [York city driving](/york/) you find challenging."
     },
     { 
       question: "Are refresher lessons good for nervous drivers?", 
@@ -56,11 +57,11 @@ export default function RefresherLessons() {
     },
     { 
       question: "Do you offer automatic refresher lessons?", 
-      answer: "Yes, we provide refresher lessons in both manual and automatic vehicles. Many drivers switching to [automatic driving lessons](/automatic-driving-lessons) find a refresher session helpful to get used to the different vehicle dynamics, especially when navigating stop-start traffic on York's inner ring road."
+      answer: "Yes, we provide refresher lessons in both manual and automatic vehicles. Many drivers switching to [automatic driving lessons](/automatic-driving-lessons/) find a refresher session helpful to get used to the different vehicle dynamics, especially when navigating stop-start traffic on York's inner ring road."
     },
     { 
       question: "Can refresher lessons help with motorway confidence?", 
-      answer: "Yes. [Motorway training](/motorway-lessons) is one of the most common things people come back for. We cover high-speed merging, lane discipline, and overtaking on the A64, A1(M), and M62 in a dual-controlled car so you're never on your own."
+      answer: "Yes. [Motorway training](/motorway-lessons/) is one of the most common things people come back for. We cover high-speed merging, lane discipline, and overtaking on the A64, A1(M), and M62 in a dual-controlled car so you're never on your own."
     },
     { 
       question: "Are refresher lessons suitable after an accident?", 
@@ -76,11 +77,11 @@ export default function RefresherLessons() {
     },
     { 
       question: "Can you help me drive again after years off the road?", 
-      answer: "We regularly help drivers who haven't been behind the wheel for 5, 10, or even 20 years. We start in quiet residential areas and gradually reintroduce more complex York road systems as your skills and confidence return. For those wanting a quicker return, we can also discuss [intensive driving course](/intensive-driving-courses) structures."
+      answer: "We regularly help drivers who haven't been behind the wheel for 5, 10, or even 20 years. We start in quiet residential areas and gradually reintroduce more complex York road systems as your skills and confidence return. For those wanting a quicker return, we can also discuss [intensive driving course](/intensive-driving-courses/) structures."
     },
     { 
       question: "Do you offer manual refresher lessons?", 
-      answer: "Yes. We offer [manual refresher lessons](/manual-driving-lessons) for drivers who want to get back into gear changes, hill starts, and clutch control. All sessions take place on real York roads so you're practising in the environment you'll actually be driving in."
+      answer: "Yes. We offer [manual refresher lessons](/manual-driving-lessons/) for drivers who want to get back into gear changes, hill starts, and clutch control. All sessions take place on real York roads so you're practising in the environment you'll actually be driving in."
     },
     { 
       question: "Are refresher lessons suitable for elderly drivers?", 
@@ -96,7 +97,7 @@ export default function RefresherLessons() {
     },
     { 
       question: "Do refresher lessons include dual carriageways?", 
-      answer: "Yes. We include the A64 and other York dual carriageways in refresher sessions where it's relevant. If you want to go further after your refresher, a [Pass Plus course](/pass-plus-course) covers motorways, rural roads, and night driving in one block."
+      answer: "Yes. We include the A64 and other York dual carriageways in refresher sessions where it's relevant. If you want to go further after your refresher, a [Pass Plus course](/pass-plus-course/) covers motorways, rural roads, and night driving in one block."
     }
   ];
 
@@ -142,7 +143,7 @@ export default function RefresherLessons() {
           </div>
 
           <div className="flex justify-center w-full lg:justify-end">
-            <div id="enquiry-form" className="w-full max-w-[540px] relative z-10">
+            <div className="w-full max-w-[540px] relative z-10">
               <EnquiryForm />
             </div>
           </div>
@@ -161,7 +162,7 @@ export default function RefresherLessons() {
               Our refresher driving lessons in York are designed for qualified drivers who want to rebuild confidence, sharpen specific skills, or return to the road after a break.
             </p>
             <p className="text-secondary-text text-[1.05rem] leading-[1.8] font-semibold font-medium opacity-80">
-              Whether it's been a few months or many years, our sessions provide a patient, pressure-free environment built around what you need. We focus on modern road systems, <a href="/motorway-lessons" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">motorway confidence</a>, dual carriageway navigation, and parking support. Our goal is to help you overcome anxiety through gradual progression so you feel calm and truly in control on York's inner ring road and surrounding suburbs.
+              Whether it's been a few months or many years, our sessions provide a patient, pressure-free environment built around what you need. We focus on modern road systems, <a href="/motorway-lessons/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">motorway confidence</a>, dual carriageway navigation, and parking support. Our goal is to help you overcome anxiety through gradual progression so you feel calm and truly in control on York's inner ring road and surrounding suburbs.
             </p>
           </div>
         </div>
@@ -183,7 +184,7 @@ export default function RefresherLessons() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               { title: "Drivers Returning After A Long Break", desc: "If you haven't driven for several years, we help you bridge the gap safely and re-familiarise yourself with controls in a supportive environment." },
-              { title: "Nervous Motorway Drivers", desc: "Build high-speed confidence with calm, guided exposure to York's dual carriageways and the wider <a href='/motorway-lessons' class='font-bold text-primary-text hover:underline'>motorway corridors</a>." },
+              { title: "Nervous Motorway Drivers", desc: "Build high-speed confidence with calm, guided exposure to York's dual carriageways and the wider <a href='/motorway-lessons/' class='font-bold text-primary-text hover:underline'>motorway corridors</a>." },
               { title: "Overseas Licence Holders", desc: "Adjusting to left-hand driving and UK regulations is easier with calm, supportive guidance on local York road systems." },
               { title: "Confidence After An Incident", desc: "A patient environment to help you move past minor collisions or knock-on effects after a near-miss with no-pressure tuition." },
               { title: "Drivers Returning After Anxiety", desc: "We focus on emotional safety, helping you regain control over driving-related stress in a calm and judgment-free setting." },
@@ -260,7 +261,7 @@ export default function RefresherLessons() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
                 View Google Reviews
               </a>
             </div>
@@ -335,7 +336,7 @@ export default function RefresherLessons() {
                 {recentPasses.map((pass) => (
                   <div key={`refresher-pass-${pass.id}`} className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0">
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -371,9 +372,9 @@ export default function RefresherLessons() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { title: "Motorway Driving Lessons", desc: "Many drivers returning to the road avoid motorways. Our motorway lessons in York ease you back onto faster roads at a pace that suits you.", link: "/motorway-lessons" },
-              { title: "Automatic Driving Lessons", desc: "Switching to automatic after a break can make returning to driving much less stressful. We offer automatic lessons across York.", link: "/automatic-driving-lessons" },
-              { title: "Pass Plus Course", desc: "Once you've refreshed the basics, Pass Plus in York takes you further — covering rural roads, dual carriageways, and night driving.", link: "/pass-plus-course" }
+              { title: "Motorway Driving Lessons", desc: "Many drivers returning to the road avoid motorways. Our motorway lessons in York ease you back onto faster roads at a pace that suits you.", link: "/motorway-lessons/" },
+              { title: "Automatic Driving Lessons", desc: "Switching to automatic after a break can make returning to driving much less stressful. We offer automatic lessons across York.", link: "/automatic-driving-lessons/" },
+              { title: "Pass Plus Course", desc: "Once you've refreshed the basics, Pass Plus in York takes you further — covering rural roads, dual carriageways, and night driving.", link: "/pass-plus-course/" }
             ].map((course, index) => (
               <a key={`refresher-other-${index}`} href={course.link} className="group p-8 bg-white border border-border-main/15 rounded-2xl no-underline transition-all duration-300 hover:border-primary-dark/20 hover:shadow-xl hover:shadow-primary-dark/5 flex flex-col h-full">
                 <div className="mb-4">
@@ -410,7 +411,7 @@ export default function RefresherLessons() {
             Ready To Get <span className="italic font-extrabold text-white/40">Back On The Road?</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -422,6 +423,7 @@ export default function RefresherLessons() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/refresher-lessons/" kind="service" />
       <Footer />
     </div>
   );

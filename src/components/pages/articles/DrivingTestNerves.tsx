@@ -4,6 +4,7 @@ import Header from '../../Header';
 import Footer from '../../Footer';
 import EnquiryForm from '../../EnquiryForm';
 import RelatedArticles from '../../RelatedArticles';
+import RelatedLinks from '../../RelatedLinks';
 import { 
   Check, 
   ChevronRight, 
@@ -35,7 +36,7 @@ export default function DrivingTestNerves() {
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -140,7 +141,7 @@ export default function DrivingTestNerves() {
     {
       title: "Failing in Front of People",
       fear: "Having to tell family, friends, or colleagues that you didn't pass.",
-      reality: "Over 50% of candidates nationally do not pass on their first try. It is a completely routine step on the road to becoming a highly competent driver.",
+      reality: "Many candidates do not pass on their first attempt. It is a completely routine step on the road to becoming a highly competent driver.",
       tip: "Keep your test date completely private. Tell only your instructor. Removing external performance reviews eliminates immense subconscious pressure."
     },
     {
@@ -167,7 +168,7 @@ export default function DrivingTestNerves() {
   const faqs = [
     {
       question: "Is it normal to have driving test anxiety in York?",
-      answer: "Absolutely. York's unique historical layout, narrow medieval walls, and busy dual bypass lanes create an environment that naturally raises anxiety. Most candidates report feeling anxious or experiencing physical butterflies before setting off from the **[York Driving Test Centre](/monks-cross-driving-test-centre)**. The good news is that anxiety drops significantly with realistic practice on the actual routes."
+      answer: "Absolutely. York's unique historical layout, narrow medieval walls, and busy dual bypass lanes create an environment that naturally raises anxiety. Most candidates report feeling anxious or experiencing physical butterflies before setting off from the **[York Driving Test Centre](/monks-cross-driving-test-centre/)**. The good news is that anxiety drops significantly with realistic practice on the actual routes."
     },
     {
       question: "What are the best ways to stop a trembling leg during my test?",
@@ -175,11 +176,11 @@ export default function DrivingTestNerves() {
     },
     {
       question: "Should I tell the driving examiner at Monks Cross that I'm nervous?",
-      answer: "Yes, you absolutely can. Examiners meet highly nervous learners every single day. Letting them know takes the secrecy out of your anxiety, and they are trained to use a calm, measured tone to put you at ease — similar to the approach we take on our location-specific **[driving lessons in York](/york)**."
+      answer: "Yes, you absolutely can. Examiners meet highly nervous learners every single day. Letting them know takes the secrecy out of your anxiety, and they are trained to use a calm, measured tone to put you at ease — similar to the approach we take on our location-specific **[driving lessons in York](/york/)**."
     },
     {
       question: "Does Rescue Remedy actually help with driving test nerves?",
-      answer: "Many candidates find natural over-the-counter soothing drops like Rescue Remedy or lavender oils helpful as a comforting ritual. However, the true foundation for confidence is deep, solid technical preparation on real **[York driving test routes](/articles/york-driving-test-routes-common-mistakes)** and building a highly reliable physical driving habit."
+      answer: "Many candidates find natural over-the-counter soothing drops like Rescue Remedy or lavender oils helpful as a comforting ritual. However, the true foundation for confidence is deep, solid technical preparation on real **[York driving test routes](/articles/york-driving-test-routes-common-mistakes/)** and building a highly reliable physical driving habit."
     },
     {
       question: "What happens if I have a panic attack during my driving test in York?",
@@ -195,11 +196,11 @@ export default function DrivingTestNerves() {
     },
     {
       question: "Why is stall prevention such a major source of anxiety, and how do we fix it?",
-      answer: "Stalling is a major stressor because we fear blocking traffic and being judged. To make stalling a minor issue, practice safe recovery habits. If you stall on a manual test, secure the car and restart. Alternatively, many nervous candidates find that switching to **[automatic driving lessons](/automatic-driving-lessons)** completely removes this source of test anxiety."
+      answer: "Stalling is a major stressor because we fear blocking traffic and being judged. To make stalling a minor issue, practice safe recovery habits. If you stall on a manual test, secure the car and restart. Alternatively, many nervous candidates find that switching to **[automatic driving lessons](/automatic-driving-lessons/)** completely removes this source of test anxiety."
     },
     {
       question: "Is early morning or midday better for a nervous driver's test time?",
-      answer: "If you get anxious about waiting, an early morning test (around 8:10 AM) is excellent as you get it out of the way quickly. However, mid-morning (around 10:14 AM) offers quieter roads, less rush-hour congestion around central York walls, making it ideal for those taking **[intensive driving courses](/intensive-driving-courses)**."
+      answer: "If you get anxious about waiting, an early morning test (around 8:10 AM) is excellent as you get it out of the way quickly. However, mid-morning (around 10:14 AM) offers quieter roads, less rush-hour congestion around central York walls, making it ideal for those taking **[intensive driving courses](/intensive-driving-courses/)**."
     },
     {
       question: "What happens if I make an route mistake on a York test route like Gillygate?",
@@ -207,7 +208,7 @@ export default function DrivingTestNerves() {
     },
     {
       question: "How do mock driving tests York help treat exam nerves?",
-      answer: "By replicating the exact marking protocols, examiner feedback styles, and routes of the official DVSA exam with realistic **[mock driving tests in York](/mock-driving-tests)**, your brain gets acclimated to the pressure. This makes the real test feel like a routine mock run."
+      answer: "By replicating the exact marking protocols, examiner feedback styles, and routes of the official DVSA exam with realistic **[mock driving tests in York](/mock-driving-tests/)**, your brain gets acclimated to the pressure. This makes the real test feel like a routine mock run."
     },
     {
       question: "How does the examiner assess safety if I'm obviously anxious?",
@@ -215,11 +216,11 @@ export default function DrivingTestNerves() {
     },
     {
       question: "If I fail, how long do I have to wait before retaking my test at Monks Cross?",
-      answer: "Under current DVSA rules, you must wait at least 10 working days before you can take another practical test. We recommend using this time to review **[how to pass your driving test first time in York](/articles/pass-driving-test-first-time-york)** and fine-tune your driving skills."
+      answer: "Under current DVSA rules, you must wait at least 10 working days before you can take another practical test. We recommend using this time to review **[how to pass your driving test first time in York](/articles/pass-driving-test-first-time-york/)** and fine-tune your driving skills."
     },
     {
       question: "Does learning to drive in an automatic reduce test nerves compared to a manual?",
-      answer: "For many nervous learners, yes. An automatic completely removes clutch control, hill-start rollback risks, and constant gear-changing, which is why **[automatic driving lessons in York](/automatic-driving-lessons)** free up approximately 50% of your cognitive capacity, allowing you to focus purely on observation and hazard anticipation in busy York traffic."
+      answer: "For many nervous learners, yes. An automatic completely removes clutch control, hill-start rollback risks, and constant gear-changing, which is why **[automatic driving lessons in York](/automatic-driving-lessons/)** free up approximately 50% of your cognitive capacity, allowing you to focus purely on observation and hazard anticipation in busy York traffic."
     }
   ];
 
@@ -458,7 +459,7 @@ export default function DrivingTestNerves() {
                     <div className="flex items-center gap-2"><MapPin className="w-3.5 h-3.5 text-blue-500" /> Fast-flowing A64 Merge Tracks</div>
                   </div>
                   <p className="mt-3">
-                    By making these roundabouts a habitual, predictable part of your routine on your <a href="/york" className="text-primary-dark font-bold hover:underline">driving lessons York</a>, they stop being scary exam hurdles. They simply become roads you already know how to drive confidently on.
+                    By making these roundabouts a habitual, predictable part of your routine on your <a href="/york/" className="text-primary-dark font-bold hover:underline">driving lessons York</a>, they stop being scary exam hurdles. They simply become roads you already know how to drive confidently on.
                   </p>
                 </div>
               </div>
@@ -647,7 +648,7 @@ export default function DrivingTestNerves() {
                     Nerves require surprise and uncertainty to thrive. If you do not know what standard procedures are checked during the eyesight test, what marking codes look like, or how silent the test car gets during the drive, you are highly likely to panic when facing them.
                   </p>
                   <p>
-                    A well-run <a href="/mock-driving-tests" className="text-primary-dark font-bold hover:underline">mock driving test York</a> targets and eliminates every single one of these variable elements beforehand:
+                    A well-run <a href="/mock-driving-tests/" className="text-primary-dark font-bold hover:underline">mock driving test York</a> targets and eliminates every single one of these variable elements beforehand:
                   </p>
                   <ul className="space-y-4 text-[0.88rem] text-secondary-text pl-1">
                     <li className="flex items-start gap-3">
@@ -723,7 +724,7 @@ export default function DrivingTestNerves() {
                 <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                   Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
                 </p>
-                <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
+                <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
                   View Google Reviews
                 </a>
               </div>
@@ -806,7 +807,7 @@ export default function DrivingTestNerves() {
                       className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                     >
                       <div className="aspect-[4/3] bg-white rounded-[2rem] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                       </div>
                     </div>
                   ))}
@@ -844,22 +845,22 @@ export default function DrivingTestNerves() {
               { 
                 title: "Automatic Driving Lessons", 
                 desc: "Learn to drive in York with our patient automatic driving instructors. No gears or clutch stalling.", 
-                url: "/automatic-driving-lessons" 
+                url: "/automatic-driving-lessons/" 
               },
               { 
                 title: "Manual Driving Lessons", 
                 desc: "Gain maximum licence flexibility and control with our highly active manual driving instructor York sessions.", 
-                url: "/manual-driving-lessons" 
+                url: "/manual-driving-lessons/" 
               },
               {
                 title: "Intensive Driving Courses",
                 desc: "Build test-standard skills quickly with high-intensity training schedules and get on the road sooner.",
-                url: "/intensive-driving-courses"
+                url: "/intensive-driving-courses/"
               },
               { 
                 title: "Mock Driving Tests", 
                 desc: "Simulate exact test-day pressure and eliminate errors on real Monks Cross test paths.", 
-                url: "/mock-driving-tests" 
+                url: "/mock-driving-tests/" 
               }
             ].map((item, idx) => (
               <a key={`pass-item-${idx}`} href={item.url} className="bg-soft-bg p-6 sm:p-8 rounded-[2rem] border border-border-main/5 no-underline group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between">
@@ -946,7 +947,7 @@ export default function DrivingTestNerves() {
             Ready To Feel Confident? <span className="italic font-extrabold text-white/40">Book Your First Lesson In York.</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -956,6 +957,7 @@ export default function DrivingTestNerves() {
         </div>
       </section>
 
+      <RelatedLinks path="/articles/driving-test-nerves-how-to-stay-calm/" kind="article" />
       <Footer />
     </div>
   );

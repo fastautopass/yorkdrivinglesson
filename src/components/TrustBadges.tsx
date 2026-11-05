@@ -55,9 +55,7 @@ export default function TrustBadges() {
         animate={{ opacity: 1, scale: 1, x: 0 }}
         className={cardClasses}
         onClick={() => {
-          const hero = document.getElementById('hero') || document.querySelector('section');
-          if (hero) hero.scrollIntoView({ behavior: 'smooth' });
-          else window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.open("https://share.google/9B75eIsjdJNEb4cRC", "_blank", "noopener,noreferrer");
         }}
       >
         <div className="flex-shrink-0 flex items-center justify-center w-6 h-6 md:w-5.5 md:h-5.5">

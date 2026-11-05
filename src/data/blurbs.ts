@@ -1,0 +1,44 @@
+// Short, page-specific summaries reused on hub pages. Each line is taken from that page's own hero text or meta description,
+// so hub pages carry real per-page information instead of repeating one template.
+export const areaBlurbs: Record<string, { hero: string; roads: string[] }> = {
+  "/driving-lessons-acomb-york/": { hero: "Wide residential loops around Acomb are perfect for your first lessons before you move onto the busier commuter routes heading towards the city centre.", roads: [] },
+  "/driving-lessons-badger-hill-york/": { hero: "Field Lane’s quiet residential loops offer a relaxed space for your first lessons before you move onto the multi-lane stretches of Hull Road.", roads: [] },
+  "/driving-lessons-bishopthorpe-york/": { hero: "Sim Balk Lane’s wider loops provide a steady start before you navigate the narrow corners and parked cars of the Bishopthorpe village core.", roads: ["Village Core Practice", "Askham Bar Links", "Rural Lane Awareness"] },
+  "/driving-lessons-bootham-york/": { hero: "Tree-lined streets and historic city gateways in Bootham provide a varied training ground, leading from quiet residential pockets to busy urban junctions.", roads: ["City Centre Approaches", "Quiet Loops near the Stray", "Wigginton Road Outbound"] },
+  "/driving-lessons-clifton-york/": { hero: "Shipton Road’s multi-lane flow and the busy junctions at Clifton Green help you develop the planning skills needed for navigating larger urban routes.", roads: ["Clifton Green Hub", "Shipton Road (A19)", "Water End Residential"] },
+  "/driving-lessons-copmanthorpe-york/": { hero: "Horseman Lane’s residential loops are perfect for your early lessons before you start practising the high-speed merges onto the A64 flyovers.", roads: ["Village Junction Loops", "Tadcaster Road Approach", "Flyover & Merge Practice"] },
+  "/driving-lessons-dringhouses-york/": { hero: "The Chalfonts offer a steady starting ground, allowing you to settle your steering before you join the busier commuter flow on Tadcaster Road.", roads: ["The Chalfonts Residential", "Tadcaster Road Corridor", "Askham Bar Interchanges"] },
+  "/driving-lessons-foxwood-york/": { hero: "Curved residential streets in Foxwood provide a calm environment for building your car control before exploring the busier local mini-roundabouts.", roads: ["Foxwood Lane Core", "Thanet Road Outbound", "Bellhouse Way Estates"] },
+  "/driving-lessons-fulford-york/": { hero: "Historic Main Street and the Designer Outlet junctions around Fulford offer a mix of technical village driving and busier multi-lane roundabouts.", roads: ["Main Street Transitions", "A19 City Inbound", "Interchange Practice"] },
+  "/driving-lessons-haxby-york/": { hero: "Village roundabouts and A1237 approaches around Haxby give you a solid mix of technical junctions and faster road experience.", roads: ["Haxby Shopping Core", "York Road Approaches", "Village-to-Village Loop"] },
+  "/driving-lessons-heslington-york/": { hero: "Campus roads and 20mph zones through Heslington require sharp observation and give you plenty of experience sharing the road with cyclists.", roads: ["Heslington Village Core", "University Shared Routes", "Heslington Lane outbound"] },
+  "/driving-lessons-heworth-york/": { hero: "Leafy village streets and the busy flow of Malton Road provide the perfect balance between quiet technical practice and busier city-bound traffic.", roads: ["Heworth Village Streets", "Malton Road Approach", "Quiet Loops near East Parade"] },
+  "/driving-lessons-holgate-york/": { hero: "Historic streets near the windmill offer the ideal place to perfect your hill starts before you tackle the busier A59 junctions and city approaches.", roads: ["Hamilton Drive Grid", "A59 City-Bound Loop", "Windmill Hill Starts"] },
+  "/driving-lessons-huntington-york/": { hero: "Huntington is home to the Monks Cross Driving Test Centre. The retail junctions and residential roads nearby offer the perfect training ground for your practical test.", roads: ["Monks Cross Retail Loop", "Haxby Road Flow", "Estates near New Lane"] },
+  "/driving-lessons-layerthorpe-york/": { hero: "Foss Islands retail traffic and the quiet streets off Hallfield Road provide a diverse range of road types for developing your urban planning.", roads: ["Foss Islands Retail Run", "City Wall Approaches", "Side Streets near Hallfield Road"] },
+  "/driving-lessons-murton-york/": { hero: "Narrow village lanes in Murton are excellent for practising space management before you build confidence on the higher-speed interchanges nearby.", roads: ["Murton Village Lanes", "Grimston Bar Junctions", "Semirural Transitions"] },
+  "/driving-lessons-osbaldwick-york/": { hero: "Tranby Avenue’s quiet loops serve as a calm starting point before you move onto the busier multi-lane roundabouts at Grimston Bar.", roads: ["Village Green Junctions", "Hull Road Approaches", "Monks Cross Speed Preparation"] },
+  "/driving-lessons-poppleton-york/": { hero: "Poppleton Bar’s busy interchanges and the station-side streets provide a varied environment for building confidence on both local and arterial routes.", roads: ["Station Road Loop", "A59 City Link", "Interchange Junctions"] },
+  "/driving-lessons-rawcliffe-york/": { hero: "Steady practice on the residential loops off Rawcliffe Lane helps you build the basics before you encounter the busier A19 and ring road interchanges.", roads: ["Rawcliffe Bar Interchanges", "Shipton Road Flow", "Residential Control Loops"] },
+  "/driving-lessons-tang-hall-york/": { hero: "Tang Hall Lane’s commuter flow and local mini-roundabouts are ideal for building your timing and observation in a busy urban setting.", roads: ["Tang Hall Lane Run", "Melrosegate Focus", "Residential Control Loops"] },
+  "/driving-lessons-wigginton-york/": { hero: "Quiet side-streets off Mill Lane allow for focused early practice before you progress to the busier Wigginton Road and nearby ring road links.", roads: ["Mill Lane Estates", "Wigginton Road Flow", "Ring Road Interchanges"] },
+  "/driving-lessons-woodthorpe-york/": { hero: "Woodthorpe’s characteristic inclines and residential grids are great for sharpening your clutch control as you prepare for the varied terrain around York.", roads: ["Moor Lane Transitions", "Woodthorpe Hill Loops", "Foxwood Residential Link"] },
+};
+
+export const serviceBlurbs: Record<string, string> = {
+  "/motorway-lessons/": "Passed but never driven on a motorway? Our lessons near York take you through slip roads, lane changes, and real A1(M) driving — step by step. Book today.",
+  "/automatic-driving-lessons/": "Automatic driving lessons in York for beginners, nervous drivers and returners. No clutch, less stress. Covering every York area. Enquire today for availability.",
+  "/mock-driving-tests/": "Drive the actual York test routes before your real test. Get honest examiner-standard feedback on where you stand — so test day holds no surprises. Book today.",
+  "/pass-plus-course/": "Newly passed in York? Pass Plus covers motorways, night driving, and rural roads — and could reduce your first year's insurance. DVSA approved. Book today.",
+  "/refresher-lessons/": "Not driven in years? Our refresher driving lessons in York help you get back on the road — no judgment, just patient support on real York streets. Enquire now.",
+  "/manual-driving-lessons/": "Manual driving lessons in York covering clutch control, gear changes, and real test routes. DVSA-approved tuition for beginners and returners. Book today.",
+  "/intensive-driving-courses/": "Want to pass your driving test in York quickly? Our intensive courses pack lessons together so you build skills fast — assessment lesson included. Book today."
+};
+
+export const articleBlurbs: Record<string, string> = {
+  "/articles/pass-driving-test-first-time-york/": "Everything you need to know before your York driving test. How Monks Cross test works, common mistakes to avoid, and how to stay calm on the day. Read now.",
+  "/articles/what-happens-on-the-york-driving-test/": "A step-by-step guide to the York driving test at Monks Cross. What the examiner checks, how independent driving works, and what to expect on the day. Read now.",
+  "/articles/driving-test-nerves-how-to-stay-calm/": "Nervous about your York driving test? Practical ways to manage anxiety before and during the test, including what to do if nerves hit mid-route. Read now.",
+  "/articles/automatic-vs-manual-driving-lessons-york/": "Automatic or manual in York? We compare cost, licence restrictions, which is easier for nervous learners, and which gets you on the road faster. Read now.",
+  "/articles/york-driving-test-routes-common-mistakes/": "The York test routes explained. Which roundabouts catch learners out, where people fail near Monks Cross, and the mistakes to avoid on the day. Read now."
+};

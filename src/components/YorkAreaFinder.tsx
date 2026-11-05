@@ -4,29 +4,29 @@ import { Search } from 'lucide-react';
 
 export default function YorkAreaFinder() {
   const allLocations = [
-    { name: "Acomb", path: "/driving-lessons-acomb-york", postcodes: ["yo24"] },
-    { name: "Badger Hill", path: "/driving-lessons-badger-hill-york", postcodes: ["yo10"] },
-    { name: "Bishopthorpe", path: "/driving-lessons-bishopthorpe-york", postcodes: ["yo23"] },
-    { name: "Bootham", path: "/driving-lessons-bootham-york", postcodes: ["yo30", "yo31"] },
-    { name: "Clifton", path: "/driving-lessons-clifton-york", postcodes: ["yo30"] },
-    { name: "Copmanthorpe", path: "/driving-lessons-copmanthorpe-york", postcodes: ["yo23"] },
-    { name: "Dringhouses", path: "/driving-lessons-dringhouses-york", postcodes: ["yo24"] },
-    { name: "Foxwood", path: "/driving-lessons-foxwood-york", postcodes: ["yo24"] },
-    { name: "Fulford", path: "/driving-lessons-fulford-york", postcodes: ["yo10"] },
-    { name: "Haxby", path: "/driving-lessons-haxby-york", postcodes: ["yo32"] },
-    { name: "Heslington", path: "/driving-lessons-heslington-york", postcodes: ["yo10"] },
-    { name: "Heworth", path: "/driving-lessons-heworth-york", postcodes: ["yo31"] },
-    { name: "Holgate", path: "/driving-lessons-holgate-york", postcodes: ["yo24"] },
-    { name: "Huntington", path: "/driving-lessons-huntington-york", postcodes: ["yo32"] },
-    { name: "Layerthorpe", path: "/driving-lessons-layerthorpe-york", postcodes: ["yo31"] },
-    { name: "Murton", path: "/driving-lessons-murton-york", postcodes: ["yo19", "yo10"] },
-    { name: "Osbaldwick", path: "/driving-lessons-osbaldwick-york", postcodes: ["yo10"] },
-    { name: "Poppleton", path: "/driving-lessons-poppleton-york", postcodes: ["yo26"] },
-    { name: "Rawcliffe", path: "/driving-lessons-rawcliffe-york", postcodes: ["yo30"] },
-    { name: "Tang Hall", path: "/driving-lessons-tang-hall-york", postcodes: ["yo10", "yo31"] },
-    { name: "Wigginton", path: "/driving-lessons-wigginton-york", postcodes: ["yo32"] },
-    { name: "Woodthorpe", path: "/driving-lessons-woodthorpe-york", postcodes: ["yo24"] },
-    { name: "York City Centre", path: "/driving-lessons-york-city-centre", postcodes: ["yo1"] }
+    { name: "Acomb", path: "/driving-lessons-acomb-york/", postcodes: ["yo24"] },
+    { name: "Badger Hill", path: "/driving-lessons-badger-hill-york/", postcodes: ["yo10"] },
+    { name: "Bishopthorpe", path: "/driving-lessons-bishopthorpe-york/", postcodes: ["yo23"] },
+    { name: "Bootham", path: "/driving-lessons-bootham-york/", postcodes: ["yo30", "yo31"] },
+    { name: "Clifton", path: "/driving-lessons-clifton-york/", postcodes: ["yo30"] },
+    { name: "Copmanthorpe", path: "/driving-lessons-copmanthorpe-york/", postcodes: ["yo23"] },
+    { name: "Dringhouses", path: "/driving-lessons-dringhouses-york/", postcodes: ["yo24"] },
+    { name: "Foxwood", path: "/driving-lessons-foxwood-york/", postcodes: ["yo24"] },
+    { name: "Fulford", path: "/driving-lessons-fulford-york/", postcodes: ["yo10"] },
+    { name: "Haxby", path: "/driving-lessons-haxby-york/", postcodes: ["yo32"] },
+    { name: "Heslington", path: "/driving-lessons-heslington-york/", postcodes: ["yo10"] },
+    { name: "Heworth", path: "/driving-lessons-heworth-york/", postcodes: ["yo31"] },
+    { name: "Holgate", path: "/driving-lessons-holgate-york/", postcodes: ["yo24"] },
+    { name: "Huntington", path: "/driving-lessons-huntington-york/", postcodes: ["yo32"] },
+    { name: "Layerthorpe", path: "/driving-lessons-layerthorpe-york/", postcodes: ["yo31"] },
+    { name: "Murton", path: "/driving-lessons-murton-york/", postcodes: ["yo19", "yo10"] },
+    { name: "Osbaldwick", path: "/driving-lessons-osbaldwick-york/", postcodes: ["yo10"] },
+    { name: "Poppleton", path: "/driving-lessons-poppleton-york/", postcodes: ["yo26"] },
+    { name: "Rawcliffe", path: "/driving-lessons-rawcliffe-york/", postcodes: ["yo30"] },
+    { name: "Tang Hall", path: "/driving-lessons-tang-hall-york/", postcodes: ["yo10", "yo31"] },
+    { name: "Wigginton", path: "/driving-lessons-wigginton-york/", postcodes: ["yo32"] },
+    { name: "Woodthorpe", path: "/driving-lessons-woodthorpe-york/", postcodes: ["yo24"] },
+    { name: "York City Centre", path: "/driving-lessons-york-city-centre/", postcodes: ["yo1"] }
   ];
 
   const featuredNames = ["Acomb", "Clifton", "Fulford", "Heworth", "Rawcliffe", "Tang Hall", "Haxby", "Huntington", "York City Centre", "Bishopthorpe"];
@@ -106,7 +106,7 @@ export default function YorkAreaFinder() {
         </div>
 
         <div className="pt-4">
-          <a href="/york" className="group inline-flex items-center gap-2 text-[0.75rem] font-bold text-white/30 hover:text-white transition-colors no-underline uppercase tracking-widest">
+          <a href="/york/" className="group inline-flex items-center gap-2 text-[0.75rem] font-bold text-white/30 hover:text-white transition-colors no-underline uppercase tracking-widest">
             View all York areas <span className="text-[1rem] transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>

@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
 
 export default function IntensiveCourses() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
@@ -13,7 +14,7 @@ export default function IntensiveCourses() {
   const passTrackRef = useRef<HTMLDivElement>(null);
   const [activeStage, setActiveStage] = useState(0);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -45,11 +46,11 @@ export default function IntensiveCourses() {
   const faqs = [
     { 
       question: "How long does an intensive driving course in York take?", 
-      answer: "In general, an intensive course can be completed in anywhere from 1 to 4 weeks depending on your current experience and availability. We don't cram too much into one day — fatigue slows learning. We keep sessions at 2-4 hours of focused driving, often following the local <a href='/articles/york-driving-test-routes-common-mistakes' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York test routes</a> to build familiarity."
+      answer: "In general, an intensive course can be completed in anywhere from 1 to 4 weeks depending on your current experience and availability. We don't cram too much into one day — fatigue slows learning. We keep sessions at 2-4 hours of focused driving, often following the local <a href='/articles/york-driving-test-routes-common-mistakes/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York test routes</a> to build familiarity."
     },
     { 
       question: "How many hours do I need for a crash driving course in York?", 
-      answer: "This varies per student. Beginners usually require around 35-45 hours, while those with some experience might only need 15-20 hours. We recommend starting with a 2-hour assessment to determine which of our <a href='/manual-driving-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>manual driving lessons</a> or <a href='/automatic-driving-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic packages</a> best fits your needs." 
+      answer: "This varies per student. Beginners usually require around 35-45 hours, while those with some experience might only need 15-20 hours. We recommend starting with a 2-hour assessment to determine which of our <a href='/manual-driving-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>manual driving lessons</a> or <a href='/automatic-driving-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic packages</a> best fits your needs." 
     },
     { 
       question: "What is an assessment lesson and why do I need one?",
@@ -57,7 +58,7 @@ export default function IntensiveCourses() {
     },
     { 
       question: "Can I take my driving test immediately after the course?", 
-      answer: "Yes, the goal of an intensive course is to lead directly into your practical test. However, this is subject to DVSA test availability. We recommend having your theory test passed before starting so we can help you coordinate a booking at the <a href='/monks-cross-driving-test-centre' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Test Centre</a> for the final day of your course." 
+      answer: "Yes, the goal of an intensive course is to lead directly into your practical test. However, this is subject to DVSA test availability. We recommend having your theory test passed before starting so we can help you coordinate a booking at the <a href='/monks-cross-driving-test-centre/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Test Centre</a> for the final day of your course." 
     },
     { 
       question: "Do you provide the test booking service in York?", 
@@ -77,7 +78,7 @@ export default function IntensiveCourses() {
     },
     { 
       question: "How do you handle mock tests during an intensive course?",
-      answer: "Mock tests are a critical part of our intensive process. We conduct them on real <a href='/articles/york-driving-test-routes-common-mistakes' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York test routes</a> so you're familiar with the specific expectations of the Monks Cross examiners. This builds the composure needed for the real thing."
+      answer: "Mock tests are a critical part of our intensive process. We conduct them on <a href='/articles/york-driving-test-routes-common-mistakes/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>roads around the York test centre</a> so you're familiar with the specific expectations of the Monks Cross examiners. This builds the composure needed for the real thing."
     },
     { 
       question: "What happens if I fail my test after an intensive course?", 
@@ -85,11 +86,11 @@ export default function IntensiveCourses() {
     },
     { 
       question: "Are automatic intensive driving lessons available in York?", 
-      answer: "Yes, we offer both manual and <a href='/automatic-driving-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic intensive courses</a> across York. Automatic is often preferred for intensive training because it removes the time needed to handle clutch control and gear changes, letting you focus entirely on navigating busy areas like Gillygate and Clifton Moor safely."
+      answer: "Yes, we offer both manual and <a href='/automatic-driving-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic intensive courses</a> across York. Automatic is often preferred for intensive training because it removes the time needed to handle clutch control and gear changes, letting you focus entirely on navigating busy areas like Gillygate and Clifton Moor safely."
     },
     { 
       question: "Which York test centre routes do you cover?",
-      answer: "We cover all major routes used by the <a href='/monks-cross-driving-test-centre' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>Monks Cross driving test centre</a>. This includes practising on high-speed dual carriageways like the A1237 ring road, as well as complex urban junctions around Clifton Moor, Acomb, and the historic city walls."
+      answer: "We cover all major routes used by the <a href='/monks-cross-driving-test-centre/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>Monks Cross driving test centre</a>. This includes practising on high-speed dual carriageways like the A1237 ring road, as well as complex urban junctions around Clifton Moor, Acomb, and the historic city walls."
     },
     { 
       question: "Can I start an intensive course in York next week?",
@@ -97,7 +98,7 @@ export default function IntensiveCourses() {
     },
     { 
       question: "How much does an intensive driving course in York cost?", 
-      answer: "Costs depend on the number of hours required. The concentrated nature of intensive lessons often means fewer total hours compared to weekly lessons spread over months. We also recommend booking a <a href='/mock-driving-tests' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving test</a> towards the end, which can save you the cost of a retest."
+      answer: "Costs depend on the number of hours required. The concentrated nature of intensive lessons often means fewer total hours compared to weekly lessons spread over months. We also recommend booking a <a href='/mock-driving-tests/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving test</a> towards the end, which can save you the cost of a retest."
     }
   ];
 
@@ -146,7 +147,7 @@ export default function IntensiveCourses() {
               Intensive <span className="italic font-extrabold text-white/50">Driving</span> Courses in York
             </h1>
             <p className="text-[1.1rem] sm:text-[1.25rem] text-hero-paragraph leading-relaxed mb-10 max-w-[580px] font-medium opacity-80">
-              Want to pass in weeks rather than months? Our intensive driving courses in York pack your lessons together so you build skills without losing momentum between sessions — available in <a href="/manual-driving-lessons" className="text-white hover:underline underline-offset-4 decoration-white/30 transition-all">manual</a> or <a href="/automatic-driving-lessons" className="text-white hover:underline underline-offset-4 decoration-white/30 transition-all">automatic</a>.
+              Want to pass in weeks rather than months? Our intensive driving courses in York pack your lessons together so you build skills without losing momentum between sessions — available in <a href="/manual-driving-lessons/" className="text-white hover:underline underline-offset-4 decoration-white/30 transition-all">manual</a> or <a href="/automatic-driving-lessons/" className="text-white hover:underline underline-offset-4 decoration-white/30 transition-all">automatic</a>.
             </p>
             
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
@@ -172,7 +173,7 @@ export default function IntensiveCourses() {
           </div>
 
           <div className="flex justify-center w-full lg:justify-end">
-            <div id="enquiry-form" className="w-full max-w-[540px] relative z-10">
+            <div className="w-full max-w-[540px] relative z-10">
               <EnquiryForm />
             </div>
           </div>
@@ -301,7 +302,7 @@ export default function IntensiveCourses() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
                 View Google Reviews
               </a>
             </div>
@@ -376,7 +377,7 @@ export default function IntensiveCourses() {
                 {recentPasses.map((pass) => (
                   <div key={`intensive-pass-${pass.id}`} className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0">
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -422,7 +423,7 @@ export default function IntensiveCourses() {
             {[
               { title: "Learners With A Deadline", desc: "If you need to pass by a specific date for a job or personal reason, an intensive course in York gives you the focused hours to get there." },
               { title: "University Students Returning Home", desc: "University of York and York St John students often use holiday breaks to get their licence — intensive courses fit well around term dates." },
-              { title: "Job or Career Requirements", desc: "Many roles require a full licence. We help you secure yours quickly, including optional <a href='/motorway-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>motorway training</a> so you're ready for any commute." }
+              { title: "Job or Career Requirements", desc: "Many roles require a full licence. We help you secure yours quickly, including optional <a href='/motorway-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>motorway training</a> so you're ready for any commute." }
             ].map((feature, index) => (
               <div key={`intensive-ideal-${index}`} className="relative p-8 pt-10 pb-10 pl-10 group cursor-default">
                 <svg className="absolute top-0 left-0 w-24 h-24 pointer-events-none" viewBox="0 0 100 100" fill="none">
@@ -509,7 +510,7 @@ export default function IntensiveCourses() {
                   Instructor Perspective
                 </div>
                 <p className="text-[#4B5563] text-[0.96rem] leading-relaxed font-semibold font-medium italic">
-                  "Intensive courses are excellent for developing muscle memory on complex <a href='/articles/york-driving-test-routes-common-mistakes' className='font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York test routes</a>. My advice? Don't treat it as a 'crash course'. Treat it as an immersion into safe driving. Focus on the learning, not just the date of the test."
+                  "Intensive courses are excellent for developing muscle memory on complex <a href='/articles/york-driving-test-routes-common-mistakes/' className='font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York test routes</a>. My advice? Don't treat it as a 'crash course'. Treat it as an immersion into safe driving. Focus on the learning, not just the date of the test."
                 </p>
               </div>
               <div className="flex items-center gap-4 border-t md:border-t-0 md:border-l border-border-main/10 pt-4 md:pt-0 md:pl-6 shrink-0 min-w-[220px]">
@@ -689,17 +690,17 @@ export default function IntensiveCourses() {
               {
                 title: "Automatic Driving Lessons",
                 desc: "Doing your intensive course in an automatic? Removing the gears lets you focus purely on passing in York's test routes.",
-                link: "/automatic-driving-lessons"
+                link: "/automatic-driving-lessons/"
               },
               {
                 title: "Manual Driving Lessons",
                 desc: "Prefer a weekly pace? Manual driving lessons in York let you build up gradually without the commitment of a full intensive block.",
-                link: "/manual-driving-lessons"
+                link: "/manual-driving-lessons/"
               },
               {
                 title: "Mock Driving Tests",
                 desc: "Near the end of your intensive course? A mock test in York confirms you're ready before you sit the real DVSA test.",
-                link: "/mock-driving-tests"
+                link: "/mock-driving-tests/"
               }
             ].map((course, index) => (
               <a 
@@ -739,7 +740,7 @@ export default function IntensiveCourses() {
             Start Your Intensive <span className="italic font-extrabold text-white/40">Driving Journey in York.</span>
           </h2>
           <div className="flex items-center gap-3 shrink-0">
-            <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+            <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
               York
             </a>
             <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -751,6 +752,7 @@ export default function IntensiveCourses() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/intensive-driving-courses/" kind="service" />
       <Footer />
     </div>
   );

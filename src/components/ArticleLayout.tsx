@@ -3,6 +3,7 @@ import EnquiryForm from './EnquiryForm';
 import FAQ from './FAQ';
 import Header from './Header';
 import Footer from './Footer';
+import RelatedLinks from './RelatedLinks';
 import YorkAreaFinder from './YorkAreaFinder';
 import RelatedArticles from './RelatedArticles';
 
@@ -17,6 +18,7 @@ interface Props {
   faqTitle?: React.ReactNode;
   faqSubtitle?: string;
   hideFooterCta?: boolean;
+  path?: string;
   ctaText?: string;
   ctaItalic?: string;
   currentSlug?: string;
@@ -34,6 +36,7 @@ export default function ArticleLayout({
   faqTitle,
   faqSubtitle,
   hideFooterCta = false,
+  path,
   ctaText,
   ctaItalic,
   currentSlug = '',
@@ -124,7 +127,7 @@ export default function ArticleLayout({
                 {ctaText}{ctaItalic && <> <span className="italic font-extrabold text-white/40">{ctaItalic}</span></>}
               </h2>
               <div className="flex items-center gap-3 shrink-0">
-                <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">York</a>
+                <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">York</a>
                 <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">Enquire Today</a>
               </div>
             </div>
@@ -170,6 +173,7 @@ export default function ArticleLayout({
 
       {!hideFooterCta && <YorkAreaFinder />}
 
+      {path && <RelatedLinks path={path} kind="article" />}
       <Footer />
     </div>
   );

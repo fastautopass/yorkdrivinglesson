@@ -2,32 +2,33 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import RelatedLinks from '../../components/RelatedLinks';
 
 const articles = [
   { 
     title: 'How to Pass Your Driving Test First Time in York', 
     description: 'Practical tips and local York road knowledge to help you secure a first-time pass at the Monks Cross test centre.',
-    url: '/articles/pass-driving-test-first-time-york' 
+    url: '/articles/pass-driving-test-first-time-york/' 
   },
   { 
     title: 'Automatic vs Manual Driving Lessons: Which is Best?', 
     description: 'A complete comparison to help you decide between manual and automatic driving lessons on York\'s busy roads.',
-    url: '/articles/automatic-vs-manual-driving-lessons-york' 
+    url: '/articles/automatic-vs-manual-driving-lessons-york/' 
   },
   { 
     title: 'Driving Test Nerves: How to Stay Calm', 
     description: 'Practical strategies to manage test-day anxiety and perform at your best during your York driving test.',
-    url: '/articles/driving-test-nerves-how-to-stay-calm' 
+    url: '/articles/driving-test-nerves-how-to-stay-calm/' 
   },
   { 
     title: 'York Driving Test Routes & Common Mistakes', 
     description: 'Identify the common pressure points on York test routes and learn how to avoid avoidable faults.',
-    url: '/articles/york-driving-test-routes-common-mistakes' 
+    url: '/articles/york-driving-test-routes-common-mistakes/' 
   },
   { 
     title: 'What Happens On The York Driving Test?', 
     description: 'A step-by-step walkthrough of the official driving test process at the York (Monks Cross) test centre.',
-    url: '/articles/what-happens-on-the-york-driving-test' 
+    url: '/articles/what-happens-on-the-york-driving-test/' 
   },
 ];
 ---
@@ -45,6 +46,7 @@ const articles = [
       "url": "https://yorkdrivinglesson.co.uk/articles/",
       "publisher": {
         "@type": "Organization",
+        "@id": "https://yorkdrivinglesson.co.uk/#organization",
         "name": "York Driving Lesson",
         "url": "https://yorkdrivinglesson.co.uk"
       },
@@ -58,26 +60,6 @@ const articles = [
     }
   </script>
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://yorkdrivinglesson.co.uk/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "York Driving Guides",
-          "item": "https://yorkdrivinglesson.co.uk/articles/"
-        }
-      ]
-    }
-  </script>
   <Header client:visible />
   
   <main class="pt-28 pb-20 px-6 sm:px-10 bg-soft-bg min-h-screen font-sans">
@@ -116,8 +98,26 @@ const articles = [
           </a>
         ))}
       </div>
+
+      {/* WHERE TO START */}
+      <section class="mt-14 max-w-[900px]">
+        <h2 class="text-[1.6rem] md:text-[2rem] font-black text-primary-text mb-4 tracking-tighter uppercase leading-none">Where to start</h2>
+        <p class="text-secondary-text text-[1rem] leading-relaxed font-medium mb-4">
+          If you are still deciding how to learn, begin with the comparison of <a href="/articles/automatic-vs-manual-driving-lessons-york/" class="font-bold underline">automatic and manual driving lessons in York</a>. It explains the licence restriction that comes with passing in an automatic, and who each option tends to suit.
+        </p>
+        <p class="text-secondary-text text-[1rem] leading-relaxed font-medium mb-4">
+          If your test is booked, read <a href="/articles/what-happens-on-the-york-driving-test/" class="font-bold underline">what happens on the York driving test</a> first. It walks through the eyesight check, the show-me tell-me questions and independent driving. Then move on to <a href="/articles/york-driving-test-routes-common-mistakes/" class="font-bold underline">York test routes and common mistakes</a> for the junctions and roundabouts that catch learners out near Monks Cross.
+        </p>
+        <p class="text-secondary-text text-[1rem] leading-relaxed font-medium mb-4">
+          If nerves are the problem, our guide to <a href="/articles/driving-test-nerves-how-to-stay-calm/" class="font-bold underline">staying calm on test day</a> gives practical steps for before and during the test, and <a href="/articles/pass-driving-test-first-time-york/" class="font-bold underline">passing first time in York</a> pulls the preparation advice together.
+        </p>
+        <p class="text-secondary-text text-[1rem] leading-relaxed font-medium">
+          Ready for lessons? Browse <a href="/driving-lessons/" class="font-bold underline">all driving lesson types</a> or find <a href="/york/" class="font-bold underline">lessons in your part of York</a>, then send an enquiry.
+        </p>
+      </section>
     </div>
   </main>
 
+  <RelatedLinks client:visible path="/articles/" kind="info" />
   <Footer />
 </Layout>

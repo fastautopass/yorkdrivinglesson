@@ -13,9 +13,9 @@ export default function CookiePolicy() {
           <div className="absolute -top-12 -right-12 w-64 h-64 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
           
           <div className="max-w-[1280px] mx-auto relative z-10 flex flex-col items-center">
-            <h1 className="text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] font-black text-white tracking-tighter uppercase leading-[0.9] mb-6">
+            <p className="text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] font-black text-white tracking-tighter uppercase leading-[0.9] mb-6">
               Cookies Policy
-            </h1>
+            </p>
             <p className="max-w-[800px] text-[1rem] sm:text-[1.1rem] text-hero-paragraph leading-relaxed font-medium opacity-90 mx-auto">
               This Cookies Policy explains how York Driving Lesson uses cookies and similar technologies when you visit our website.
             </p>
@@ -32,8 +32,8 @@ export default function CookiePolicy() {
                 <section>
                   <h2 className="text-[1.4rem] font-black text-primary-text uppercase tracking-tight mb-6">1. Introduction</h2>
                   <div className="space-y-4 text-secondary-text leading-relaxed font-medium opacity-90">
-                    <p>This Cookies Policy explains how York Driving Lesson uses cookies and similar technologies when you visit <a href="https://yorkdrivinglesson.co.uk" className="text-primary-dark hover:underline font-bold">yorkdrivinglesson.co.uk</a>.</p>
-                    <p>This policy should be read alongside our <a href="/privacy-policy" className="text-primary-dark hover:underline font-bold">Privacy Policy</a> and <a href="/terms-and-conditions" className="text-primary-dark hover:underline font-bold">Terms & Conditions</a>.</p>
+                    <p>This Cookies Policy explains how York Driving Lesson uses cookies and similar technologies when you visit <a href="/" className="text-primary-dark hover:underline font-bold">yorkdrivinglesson.co.uk</a>.</p>
+                    <p>This policy should be read alongside our <a href="/privacy-policy/" className="text-primary-dark hover:underline font-bold">Privacy Policy</a> and <a href="/terms-and-conditions/" className="text-primary-dark hover:underline font-bold">Terms & Conditions</a>.</p>
                     <p>By continuing to use our website, you acknowledge that cookies may be used in the ways described in this policy, subject to your browser settings and any cookie preferences you choose.</p>
                     <p>Where legally required, we may ask for your consent before placing non-essential cookies on your device.</p>
                   </div>
@@ -128,7 +128,7 @@ export default function CookiePolicy() {
                   <h2 className="text-[1.4rem] font-black text-primary-text uppercase tracking-tight mb-6">7. Cookies and Personal Data</h2>
                   <div className="space-y-4 text-secondary-text leading-relaxed font-medium opacity-90">
                     <p>Some cookies may collect information that is considered personal data, such as an IP address, device information, browser details, or browsing activity.</p>
-                    <p>Where this happens, we handle that information in line with our <a href="/privacy-policy" className="text-primary-dark hover:underline font-bold">Privacy Policy</a> and applicable UK data protection laws, including UK GDPR and the Data Protection Act 2018.</p>
+                    <p>Where this happens, we handle that information in line with our <a href="/privacy-policy/" className="text-primary-dark hover:underline font-bold">Privacy Policy</a> and applicable UK data protection laws, including UK GDPR and the Data Protection Act 2018.</p>
                   </div>
                 </section>
 
@@ -155,8 +155,8 @@ export default function CookiePolicy() {
                   <div className="space-y-4 text-secondary-text leading-relaxed font-medium opacity-90">
                     <p>For more information on how we handle personal data, website use, and your rights, please review our:</p>
                     <ul className="list-disc pl-5 space-y-2">
-                      <li><a href="/privacy-policy" className="text-primary-dark hover:underline font-bold">Privacy Policy</a></li>
-                      <li><a href="/terms-and-conditions" className="text-primary-dark hover:underline font-bold">Terms & Conditions</a></li>
+                      <li><a href="/privacy-policy/" className="text-primary-dark hover:underline font-bold">Privacy Policy</a></li>
+                      <li><a href="/terms-and-conditions/" className="text-primary-dark hover:underline font-bold">Terms & Conditions</a></li>
                     </ul>
                   </div>
                 </section>
@@ -176,7 +176,7 @@ export default function CookiePolicy() {
                       </div>
                       <div className="flex flex-col gap-1">
                         <span className="text-[0.65rem] font-black text-primary-dark/40 tracking-widest uppercase">Website</span>
-                        <a href="https://yorkdrivinglesson.co.uk" className="text-primary-text hover:text-primary-dark transition-colors no-underline font-bold">yorkdrivinglesson.co.uk</a>
+                        <a href="/" className="text-primary-text hover:text-primary-dark transition-colors no-underline font-bold">yorkdrivinglesson.co.uk</a>
                       </div>
                     </div>
                   </div>

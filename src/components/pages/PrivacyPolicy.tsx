@@ -13,9 +13,9 @@ export default function PrivacyPolicy() {
           <div className="absolute -top-12 -right-12 w-64 h-64 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
           
           <div className="max-w-[1280px] mx-auto relative z-10 flex flex-col items-center">
-            <h1 className="text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] font-black text-white tracking-tighter uppercase leading-[0.9] mb-6">
+            <p className="text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] font-black text-white tracking-tighter uppercase leading-[0.9] mb-6">
               Privacy Policy
-            </h1>
+            </p>
             <p className="max-w-[800px] text-[1rem] sm:text-[1.1rem] text-hero-paragraph leading-relaxed font-medium opacity-90 mx-auto">
               We respect your privacy and are committed to protecting your personal information in line with UK GDPR regulations.
             </p>
@@ -237,7 +237,7 @@ export default function PrivacyPolicy() {
                       </div>
                       <div className="flex flex-col gap-1">
                         <span className="text-[0.65rem] font-black text-primary-dark/40 tracking-widest uppercase">Website</span>
-                        <a href="https://yorkdrivinglesson.co.uk" className="text-primary-text hover:text-primary-dark transition-colors no-underline font-bold">yorkdrivinglesson.co.uk</a>
+                        <a href="/" className="text-primary-text hover:text-primary-dark transition-colors no-underline font-bold">yorkdrivinglesson.co.uk</a>
                       </div>
                     </div>
                   </div>

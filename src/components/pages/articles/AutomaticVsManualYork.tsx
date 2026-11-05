@@ -24,7 +24,7 @@ export default function AutomaticVsManualYork() {
   const passTrackRef = useRef<HTMLDivElement>(null);
   const [selectedLifeScenario, setSelectedLifeScenario] = useState(0);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -68,7 +68,7 @@ export default function AutomaticVsManualYork() {
       recommendation: "Automatic Lessons",
       reason: "Eliminating the risk of stalling at busy junctions and the stress of continuous physical gear changes drastically lowers cognitive load in rush hour flows.",
       badgeColor: "bg-primary-dark/15 text-primary-dark",
-      highlightMetric: "Focus 100% on safety & observation",
+      highlightMetric: "More focus on safety & observation",
     },
     {
       title: "Drive Work Vans & Fleet",
@@ -91,19 +91,19 @@ export default function AutomaticVsManualYork() {
   const faqs = [
     {
       question: "Is it really easier to learn in an automatic in York?",
-      answer: "Generally, yes. York's stop-start traffic, especially around the busy city walls and the Barbican, can be highly taxing in a manual. Choosing **[automatic driving lessons in York](/automatic-driving-lessons)** completely removes the need for constant clutch control, allowing you to focus on the busy surroundings."
+      answer: "Generally, yes. York's stop-start traffic, especially around the busy city walls and the Barbican, can be highly taxing in a manual. Choosing **[automatic driving lessons in York](/automatic-driving-lessons/)** completely removes the need for constant clutch control, allowing you to focus on the busy surroundings."
     },
     {
       question: "Can I drive a manual car if I pass in an automatic?",
-      answer: "No. If you pass your test in an automatic, your licence will be restricted to automatic vehicles only. If you want to drive a manual later, you'll need to take another practical test after preparing with a **[manual driving instructor in York](/manual-driving-lessons)**."
+      answer: "No. If you pass your test in an automatic, your licence will be restricted to automatic vehicles only. If you want to drive a manual later, you'll need to take another practical test after preparing with a **[manual driving instructor in York](/manual-driving-lessons/)**."
     },
     {
       question: "Are automatic lessons more expensive in York?",
-      answer: "Slightly. Automatic cars are generally more expensive to buy and maintain, which is reflected in the hourly rate. However, many students find they need far fewer lessons to reach test standard, which can actually reduce the total cost of passing your **[driving test first time in York](/articles/pass-driving-test-first-time-york)**."
+      answer: "Slightly. Automatic cars are generally more expensive to buy and maintain, which is reflected in the hourly rate. However, many students find they need far fewer lessons to reach test standard, which can actually reduce the total cost of passing your **[driving test first time in York](/articles/pass-driving-test-first-time-york/)**."
     },
     {
       question: "Which is better for a nervous learner?",
-      answer: "Automatic is typically the preferred choice for those who feel anxious about driving. Removing the risk of stalling and the complexity of gear changes significantly reduces the 'mental load' when learning on busy roads like Gillygate, helping you overcome **[driving test nerves](/articles/driving-test-nerves-how-to-stay-calm)**."
+      answer: "Automatic is typically the preferred choice for those who feel anxious about driving. Removing the risk of stalling and the complexity of gear changes significantly reduces the 'mental load' when learning on busy roads like Gillygate, helping you overcome **[driving test nerves](/articles/driving-test-nerves-how-to-stay-calm/)**."
     },
     {
       question: "Will I find it hard to buy an automatic car in York?",
@@ -123,11 +123,11 @@ export default function AutomaticVsManualYork() {
     },
     {
       question: "How long does it take to learn the gears in a manual?",
-      answer: "It varies, but it usually takes several hours of dedicated practice to get the 'feel' for the clutch on your **[manual driving lessons in York](/manual-driving-lessons)**. In an automatic, you can usually get comfortable with the basic controls in the first 20 minutes."
+      answer: "It varies, but it usually takes several hours of dedicated practice to get the 'feel' for the clutch on your **[manual driving lessons in York](/manual-driving-lessons/)**. In an automatic, you can usually get comfortable with the basic controls in the first 20 minutes."
     },
     {
       question: "Are automatic cars less safe on the York bypass?",
-      answer: "No, they are just as safe. In fact, many people feel safer because they don't have to worry about being in the wrong gear when merging onto fast-moving roads, which is a key part of preparing for **[York driving test routes](/articles/york-driving-test-routes-common-mistakes)**."
+      answer: "No, they are just as safe. In fact, many people feel safer because they don't have to worry about being in the wrong gear when merging onto fast-moving roads, which is a key part of preparing for **[York driving test routes](/articles/york-driving-test-routes-common-mistakes/)**."
     },
     {
       question: "Is fuel consumption different between automatic and manual?",
@@ -135,11 +135,11 @@ export default function AutomaticVsManualYork() {
     },
     {
       question: "Do you offer intensive courses for both?",
-      answer: "Yes, we do. Whether you choose automatic or manual, our **[intensive driving courses in York](/intensive-driving-courses)** are designed to help you progress quickly and get to that test-ready standard in a shorter timeframe."
+      answer: "Yes, we do. Whether you choose automatic or manual, our **[intensive driving courses in York](/intensive-driving-courses/)** are designed to help you progress quickly and get to that test-ready standard in a shorter timeframe."
     },
     {
       question: "What if I change my mind after my first lesson?",
-      answer: "That's why we recommend a standard first lesson to see how you feel. We'll give you honest feedback on which path we think would suit your learning style and goals best, and we can also prepare **[mock driving tests in York](/mock-driving-tests)** once you reach standard."
+      answer: "That's why we recommend a standard first lesson to see how you feel. We'll give you honest feedback on which path we think would suit your learning style and goals best, and we can also prepare **[mock driving tests in York](/mock-driving-tests/)** once you reach standard."
     },
     {
       question: "Are electric cars always automatic?",
@@ -148,7 +148,7 @@ export default function AutomaticVsManualYork() {
   ];
 
   return (
-    <ArticleLayout 
+    <ArticleLayout path="/articles/automatic-vs-manual-driving-lessons-york/" 
       title={<>Automatic vs <span className="italic font-extrabold">Manual</span> Lessons In York</>}
       intro="Choosing between automatic and manual driving lessons in York is your first key step toward independence. From historic stop-start city walls to the fast lanes of the A64 and York Ring Road, we help you find the right route for your confidence and long-term goals."
       faqs={faqs}
@@ -220,7 +220,7 @@ export default function AutomaticVsManualYork() {
               {
                 category: "Lesson Efficiency",
                 manual: "Moderate. A notable portion of early lessons must focus specifically on physical clutch mechanics and gear selection.",
-                automatic: "Outstanding. 100% of lesson time goes to real road skills, observation, and direct driving test preparation York.",
+                automatic: "Outstanding. More of your lesson time goes to real road skills, observation, and direct driving test preparation York.",
                 winner: "Automatic"
               }
             ].map((row, idx) => (
@@ -275,7 +275,7 @@ export default function AutomaticVsManualYork() {
                 <p className="text-[0.78rem] font-black text-primary-text uppercase mb-1">Best Fit: <span className="text-primary-dark">Automatic Driving Lessons York</span></p>
                 <div className="flex gap-2 items-start mt-2">
                   <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                  <p className="text-secondary-text text-[0.82rem] font-medium italic">Allows 100% of your cognitive capacity to stay locked on basic observation and speed control under patient <a href="/york" className="text-primary-dark font-bold hover:underline">driving instructor York</a> mentorship.</p>
+                  <p className="text-secondary-text text-[0.82rem] font-medium italic">Frees up more of your attention to stay locked on basic observation and speed control under patient <a href="/york/" className="text-primary-dark font-bold hover:underline">driving instructor York</a> mentorship.</p>
                 </div>
               </div>
             </div>
@@ -590,7 +590,7 @@ export default function AutomaticVsManualYork() {
                   </span>
                 </div>
                 <a
-                  href="#enquiry"
+                  href="#enquiry-form"
                   className="bg-primary-dark text-white hover:text-blue-400 hover:bg-[#1E293B] px-6 py-2.5 rounded-lg text-[0.7rem] font-black uppercase tracking-widest transition-all text-center no-underline cursor-pointer"
                 >
                   Start Your Enquiry
@@ -658,13 +658,13 @@ export default function AutomaticVsManualYork() {
                 <h3 className="font-extrabold text-primary-text text-[0.92rem] uppercase tracking-wider">Monks Cross Test Routes</h3>
               </div>
               <p className="text-secondary-text text-[0.82rem] leading-relaxed mb-4">
-                During your practical <strong><a href="/articles/what-happens-on-the-york-driving-test" className="text-primary-dark font-bold hover:underline">driving test preparation in York</a></strong> at the Monks Cross centre, physical errors can trigger instant test failure.
+                During your practical <strong><a href="/articles/what-happens-on-the-york-driving-test/" className="text-primary-dark font-bold hover:underline">driving test preparation in York</a></strong> at the Monks Cross centre, physical errors can trigger instant test failure.
               </p>
               <div className="space-y-1.5 text-[0.75rem] border-t border-border-main/5 pt-3">
                 <div className="text-primary-dark font-black uppercase">Automatic Experience:</div>
-                <p className="text-blue-600 font-extrabold italic">✔ A strong test safeguard. Stalling is physically impossible, removing a major failure risk — which is why many York learners choose our <strong><a href="/automatic-driving-lessons" className="text-blue-700 font-black hover:underline underline-offset-4">automatic driving lessons</a></strong>.</p>
+                <p className="text-blue-600 font-extrabold italic">✔ A strong test safeguard. Stalling is physically impossible, removing a major failure risk — which is why many York learners choose our <strong><a href="/automatic-driving-lessons/" className="text-blue-700 font-black hover:underline underline-offset-4">automatic driving lessons</a></strong>.</p>
                 <div className="text-primary-text/60 font-black uppercase mt-2">Manual Experience:</div>
-                <p className="text-secondary-text italic">✔ Retain engine braking controls. Highly valued by traditional purists who prefer exact mechanics of our <strong><a href="/manual-driving-lessons" className="text-primary-dark font-black hover:underline underline-offset-4">manual driving lessons</a></strong>.</p>
+                <p className="text-secondary-text italic">✔ Retain engine braking controls. Highly valued by traditional purists who prefer exact mechanics of our <strong><a href="/manual-driving-lessons/" className="text-primary-dark font-black hover:underline underline-offset-4">manual driving lessons</a></strong>.</p>
               </div>
             </div>
           </div>
@@ -696,7 +696,7 @@ export default function AutomaticVsManualYork() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm no-underline">
                 View Google Reviews
               </a>
             </div>
@@ -779,7 +779,7 @@ export default function AutomaticVsManualYork() {
                     className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                   >
                     <div className="aspect-[4/3] bg-white rounded-[2rem] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-md transition-all duration-300">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -817,22 +817,22 @@ export default function AutomaticVsManualYork() {
             { 
               title: "Automatic Driving Lessons", 
               desc: "Learn to drive in York with our patient automatic driving instructors. No gears or clutch stalling.", 
-              url: "/automatic-driving-lessons" 
+              url: "/automatic-driving-lessons/" 
             },
             { 
               title: "Manual Driving Lessons", 
               desc: "Gain maximum licence flexibility and drive any vehicle with our manual driving lessons in York — covering routes across Acomb, Clifton, and Fulford.",
-              url: "/manual-driving-lessons" 
+              url: "/manual-driving-lessons/" 
             },
             { 
               title: "Intensive Driving Courses", 
               desc: "Build test-ready skills quickly in York with focused, high-frequency training across Acomb, Fulford, and Heworth routes.",
-              url: "/intensive-driving-courses" 
+              url: "/intensive-driving-courses/" 
             },
             { 
               title: "Mock Driving Tests", 
               desc: "Simulate exact test-day pressure and eliminate errors on real Monks Cross test paths.", 
-              url: "/mock-driving-tests" 
+              url: "/mock-driving-tests/" 
             }
           ].map((item, idx) => (
             <a key={`pass-item-${idx}`} href={item.url} className="bg-soft-bg p-6 sm:p-8 rounded-[2rem] border border-border-main/5 no-underline group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between">

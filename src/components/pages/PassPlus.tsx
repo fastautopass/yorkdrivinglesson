@@ -30,13 +30,14 @@ import Footer from '../Footer';
 import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
 
 export default function PassPlus() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
   const [passOffset, setPassOffset] = useState(0);
   const passTrackRef = useRef<HTMLDivElement>(null);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
   const prevPass = () => setCurrentPassIndex((prev) => (prev - 1 + recentPasses.length) % recentPasses.length);
@@ -63,7 +64,7 @@ export default function PassPlus() {
   const faqs = [
     {
       question: "What is Pass Plus?",
-      answer: "Pass Plus is a DVSA training course for [newly qualified drivers](/refresher-lessons). It covers roads and situations not included in standard lessons — [motorway driving](/motorway-lessons), rural roads, night driving, and dual carriageways."
+      answer: "Pass Plus is a DVSA training course for [newly qualified drivers](/refresher-lessons/). It covers roads and situations not included in standard lessons — [motorway driving](/motorway-lessons/), rural roads, night driving, and dual carriageways."
     },
     {
       question: "Is Pass Plus worth it?",
@@ -75,7 +76,7 @@ export default function PassPlus() {
     },
     {
       question: "How long does Pass Plus take?",
-      answer: "A minimum of 6 hours of practical driving. This can be done as a full day or spread across a few sessions — whatever works for your schedule alongside any [manual](/manual-driving-lessons) or [automatic driving lessons](/automatic-driving-lessons) you're doing."
+      answer: "A minimum of 6 hours of practical driving. This can be done as a full day or spread across a few sessions — whatever works for your schedule alongside any [manual](/manual-driving-lessons/) or [automatic driving lessons](/automatic-driving-lessons/) you're doing."
     },
     {
       question: "Is there a Pass Plus test?",
@@ -83,11 +84,11 @@ export default function PassPlus() {
     },
     {
       question: "Do you cover motorway driving?",
-      answer: "Yes. [Motorway driving in York](/motorway-lessons) is a core part of Pass Plus. We cover lane discipline, following distances, joining and leaving at speed, and how to stay safe on longer journeys."
+      answer: "Yes. [Motorway driving in York](/motorway-lessons/) is a core part of Pass Plus. We cover lane discipline, following distances, joining and leaving at speed, and how to stay safe on longer journeys."
     },
     {
       question: "Can nervous drivers take Pass Plus?",
-      answer: "Absolutely. Pass Plus works well for drivers who feel anxious about [driving after passing](/refresher-lessons) — particularly on faster roads. We go at your pace and don't push you onto motorways before you're ready."
+      answer: "Absolutely. Pass Plus works well for drivers who feel anxious about [driving after passing](/refresher-lessons/) — particularly on faster roads. We go at your pace and don't push you onto motorways before you're ready."
     },
     {
       question: "Do you use York roads?",
@@ -95,7 +96,7 @@ export default function PassPlus() {
     },
     {
       question: "Can I use my own car?",
-      answer: "Yes, as long as it's roadworthy and you have the right insurance. If not, you can use our dual-controlled [manual](/manual-driving-lessons) or [automatic](/automatic-driving-lessons) vehicle."
+      answer: "Yes, as long as it's roadworthy and you have the right insurance. If not, you can use our dual-controlled [manual](/manual-driving-lessons/) or [automatic](/automatic-driving-lessons/) vehicle."
     },
     {
       question: "What roads are covered?",
@@ -162,7 +163,7 @@ export default function PassPlus() {
             </div>
 
             <div className="flex justify-center w-full lg:justify-end">
-              <div id="enquiry-form" className="w-full max-w-[540px] relative z-10">
+              <div className="w-full max-w-[540px] relative z-10">
                 <EnquiryForm />
               </div>
             </div>
@@ -258,13 +259,13 @@ export default function PassPlus() {
                 <div className="text-[1.3rem] font-[900] text-primary-text mb-6 uppercase tracking-tight leading-none italic opacity-90 underline decoration-primary-dark/10 underline-offset-8">We Teach, Not Tick Boxes.</div>
                 <div className="space-y-5 text-secondary-text text-[1.05rem] leading-relaxed font-medium opacity-80">
                   <p>Pass Plus in York is not a box to tick. We work through each module properly — stopping, explaining, and going again until it clicks. You drive the real roads, not a pre-planned route designed to rush through hours.</p>
-                  <p>Whether you're confident or coming to us as a <a href="/refresher-lessons" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">nervous driver</a>, we adjust how we communicate so the session actually helps you — not just ticks off the hours.</p>
+                  <p>Whether you're confident or coming to us as a <a href="/refresher-lessons/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">nervous driver</a>, we adjust how we communicate so the session actually helps you — not just ticks off the hours.</p>
                 </div>
               </div>
               <div>
                 <div className="text-[1.3rem] font-[900] text-primary-text mb-6 uppercase tracking-tight leading-none italic opacity-90 underline decoration-primary-dark/10 underline-offset-8">No Rush to Finish.</div>
                 <div className="space-y-5 text-secondary-text text-[1.05rem] leading-relaxed font-medium opacity-80">
-                  <p>If you're not comfortable on <a href="/motorway-lessons" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">motorways around York</a> yet, we don't push you straight onto them. We build up through dual carriageways and faster A-roads first so the step up feels natural.</p>
+                  <p>If you're not comfortable on <a href="/motorway-lessons/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">motorways around York</a> yet, we don't push you straight onto them. We build up through dual carriageways and faster A-roads first so the step up feels natural.</p>
                   <p>By the end of your Pass Plus course, you should feel ready to drive on the roads you've covered — not just relieved it's over.</p>
                 </div>
               </div>
@@ -335,7 +336,7 @@ export default function PassPlus() {
               <p className="text-secondary-text text-[0.82rem] lg:text-[0.88rem] leading-relaxed font-medium mb-6 flex-grow">
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
-              <a href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
+              <a href="https://share.google/9B75eIsjdJNEb4cRC" target="_blank" rel="noopener noreferrer" className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm">
                 View Google Reviews
               </a>
             </div>
@@ -410,7 +411,7 @@ export default function PassPlus() {
                   {recentPasses.map((pass) => (
                     <div key={`passplus-pass-${pass.id}`} className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0">
                       <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                        <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                        <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                       </div>
                     </div>
                   ))}
@@ -446,9 +447,9 @@ export default function PassPlus() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
               {[
-                { title: "Automatic Driving Lessons", desc: "Not yet driving? Learn in an automatic car in York and build the confidence you need before taking on Pass Plus.", link: "/automatic-driving-lessons" },
-                { title: "Manual Driving Lessons", desc: "Still learning? Manual driving lessons in York cover everything the DVSA expects before you're ready for post-test training.", link: "/manual-driving-lessons" },
-                { title: "Motorway Driving Lessons", desc: "Motorway driving is a core part of Pass Plus. Book a standalone motorway session in York if you want to focus on that first.", link: "/motorway-lessons" }
+                { title: "Automatic Driving Lessons", desc: "Not yet driving? Learn in an automatic car in York and build the confidence you need before taking on Pass Plus.", link: "/automatic-driving-lessons/" },
+                { title: "Manual Driving Lessons", desc: "Still learning? Manual driving lessons in York cover everything the DVSA expects before you're ready for post-test training.", link: "/manual-driving-lessons/" },
+                { title: "Motorway Driving Lessons", desc: "Motorway driving is a core part of Pass Plus. Book a standalone motorway session in York if you want to focus on that first.", link: "/motorway-lessons/" }
               ].map((course, index) => (
                 <a key={`passplus-other-${index}`} href={course.link} className="group p-8 bg-white border border-border-main/15 rounded-3xl no-underline transition-all duration-300 hover:border-primary-dark/20 hover:shadow-2xl flex flex-col h-full bg-gradient-to-b hover:from-white hover:to-soft-bg/20">
                   <div className="mb-6">
@@ -486,7 +487,7 @@ export default function PassPlus() {
               Build Real-World <span className="italic font-extrabold text-white/40">Confidence In York.</span>
             </h2>
             <div className="flex items-center gap-3 shrink-0">
-              <a href="/york" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
+              <a href="/york/" className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg">
                 York
               </a>
               <a href="#enquiry-form" className="bg-transparent text-white border-2 border-white/25 px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:border-white/70 hover:bg-white/5">
@@ -499,6 +500,7 @@ export default function PassPlus() {
         <YorkAreaFinder />
       </main>
 
+      <RelatedLinks path="/pass-plus-course/" kind="service" />
       <Footer />
     </div>
   );

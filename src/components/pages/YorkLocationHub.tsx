@@ -3,6 +3,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Search } from 'lucide-react';
 import Header from '../Header';
 import Footer from '../Footer';
+import RelatedLinks from '../RelatedLinks';
+import FAQ from '../FAQ';
+import { zoneCopy } from '../../data/zoneCopy';
+import { zones } from '../../data/site';
 
 const locationGroups = [
   {
@@ -113,7 +117,7 @@ export default function YorkLocationHub() {
               {filteredGroups.map((group) => (
                 <section key={group.id} id={group.id} className="scroll-mt-24">
                   <div className="flex items-center gap-4 mb-6">
-                    <h2 className="text-[0.75rem] font-black text-primary-text uppercase tracking-[0.2em] whitespace-nowrap bg-primary-dark/5 px-3 py-1 rounded-full">{group.title}</h2>
+                    <h2 className="text-[0.75rem] font-black text-primary-text uppercase tracking-[0.2em] whitespace-nowrap bg-primary-dark/5 px-3 py-1 rounded-full"><a href={`/york/${group.id}/`} className="no-underline text-inherit hover:underline">{group.title}</a></h2>
                     <div className="h-px bg-border-main/10 flex-grow"></div>
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 sm:gap-4">
@@ -121,7 +125,7 @@ export default function YorkLocationHub() {
                       <motion.a
                         layout
                         key={loc.slug}
-                        href={`/${loc.slug}`}
+                        href={`/${loc.slug}/`}
                         className="group block p-4 sm:p-5 bg-white border border-border-main/20 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-primary-dark/30 transition-all duration-200 no-underline relative overflow-hidden"
                       >
                         <div className="relative z-10 flex flex-col items-center text-center">
@@ -152,9 +156,37 @@ export default function YorkLocationHub() {
             )}
           </div>
 
+
+          {/* AREA-BY-AREA GUIDE */}
+          <section className="mt-16 lg:mt-20 max-w-[1000px] mx-auto text-left" aria-label="Driving lessons by area">
+            <h2 className="text-[1.6rem] md:text-[2rem] font-black text-primary-text mb-4 tracking-tighter uppercase leading-none">Driving lessons across every part of York</h2>
+            <p className="text-secondary-text text-[0.95rem] leading-relaxed font-medium mb-8 max-w-[820px]">
+              York is a compact city, but the roads you learn on change quickly. Quiet estates sit close to the inner ring road, villages sit just inside the A1237 outer ring road, and the city centre has its own pace. Each area page explains the roads and practice routes near you. Here is what sets each part of York apart.
+            </p>
+            {locationGroups.map((group) => {
+              const zone = zones.find((z) => z.id === group.id)!;
+              return (
+                <div key={group.id} className="mb-8">
+                  <h3 className="text-[1.1rem] font-black uppercase tracking-tight text-primary-text mb-3"><a href={zone.path} className="no-underline text-inherit hover:underline">{group.title}</a></h3>
+                  <p className="text-[0.92rem] text-secondary-text font-medium leading-relaxed m-0">{zoneCopy[group.id]?.short} Covers {group.locations.map((l) => l.name).join(', ')}.</p>
+                </div>
+              );
+            })}
+          </section>
+
+          <section className="mt-12 max-w-[900px] mx-auto">
+            <h2 className="text-[1.4rem] md:text-[1.8rem] font-black text-primary-text mb-5 tracking-tighter uppercase leading-none">Questions about lessons in your area</h2>
+            <FAQ items={[
+              { question: 'Can you pick me up from home?', answer: 'Yes. In most cases we collect you from home, work, school or college anywhere in the areas listed above, and we can agree a convenient spot if you prefer.' },
+              { question: 'Which York area is best for a first lesson?', answer: 'Quiet residential estates with wide, low-traffic roads are best for a first lesson. Most areas on this page have streets like that close by, and each area page names them.' },
+              { question: 'Where does the driving test start?', answer: 'Practical driving tests in York start at the Monks Cross test centre. You can read about it on our Monks Cross driving test centre page.' },
+              { question: 'Do you cover villages outside the ring road?', answer: 'We cover Copmanthorpe, Poppleton, Wigginton and Murton as well as the city areas. If you live nearby but do not see your village, send an enquiry.' },
+            ]} />
+          </section>
         </div>
       </main>
 
+      <RelatedLinks path="/york/" kind="info" />
       <Footer />
     </div>
   );

@@ -8,72 +8,72 @@ export default function Sitemap() {
       title: "CORE PAGES",
       links: [
         { label: "Home", href: "/" },
-        { label: "About Us", href: "/about-us" },
-        { label: "Contact Us", href: "/contact-us" }
+        { label: "About Us", href: "/about-us/" },
+        { label: "Contact Us", href: "/contact-us/" }
       ]
     },
     {
       title: "LEARN TO DRIVE",
       links: [
-        { label: "Automatic Driving Lessons", href: "/automatic-driving-lessons" },
-        { label: "Manual Driving Lessons", href: "/manual-driving-lessons" },
-        { label: "Intensive Driving Courses", href: "/intensive-driving-courses" },
-        { label: "Refresher Lessons", href: "/refresher-lessons" },
-        { label: "Motorway Lessons", href: "/motorway-lessons" },
-        { label: "Mock Driving Tests", href: "/mock-driving-tests" }
+        { label: "Automatic Driving Lessons", href: "/automatic-driving-lessons/" },
+        { label: "Manual Driving Lessons", href: "/manual-driving-lessons/" },
+        { label: "Intensive Driving Courses", href: "/intensive-driving-courses/" },
+        { label: "Refresher Lessons", href: "/refresher-lessons/" },
+        { label: "Motorway Lessons", href: "/motorway-lessons/" },
+        { label: "Mock Driving Tests", href: "/mock-driving-tests/" }
       ]
     },
     {
       title: "SERVICES",
       links: [
-        { label: "Pass Plus Course", href: "/pass-plus-course" }
+        { label: "Pass Plus Course", href: "/pass-plus-course/" }
       ]
     },
     {
       title: "AREAS WE COVER",
       links: [
-        { label: "York Location Hub", href: "/york" },
-        { label: "Acomb Driving Lessons", href: "/driving-lessons-acomb-york" },
-        { label: "Holgate Driving Lessons", href: "/driving-lessons-holgate-york" },
-        { label: "Foxwood Driving Lessons", href: "/driving-lessons-foxwood-york" },
-        { label: "Dringhouses Driving Lessons", href: "/driving-lessons-dringhouses-york" },
-        { label: "Woodthorpe Driving Lessons", href: "/driving-lessons-woodthorpe-york" },
-        { label: "Clifton Driving Lessons", href: "/driving-lessons-clifton-york" },
-        { label: "Rawcliffe Driving Lessons", href: "/driving-lessons-rawcliffe-york" },
-        { label: "Bootham Driving Lessons", href: "/driving-lessons-bootham-york" },
-        { label: "Haxby Driving Lessons", href: "/driving-lessons-haxby-york" },
-        { label: "Wigginton Driving Lessons", href: "/driving-lessons-wigginton-york" },
-        { label: "Huntington Driving Lessons", href: "/driving-lessons-huntington-york" },
-        { label: "Heworth Driving Lessons", href: "/driving-lessons-heworth-york" },
-        { label: "Tang Hall Driving Lessons", href: "/driving-lessons-tang-hall-york" },
-        { label: "Osbaldwick Driving Lessons", href: "/driving-lessons-osbaldwick-york" },
-        { label: "Murton Driving Lessons", href: "/driving-lessons-murton-york" },
-        { label: "Layerthorpe Driving Lessons", href: "/driving-lessons-layerthorpe-york" },
-        { label: "Fulford Driving Lessons", href: "/driving-lessons-fulford-york" },
-        { label: "Bishopthorpe Driving Lessons", href: "/driving-lessons-bishopthorpe-york" },
-        { label: "Copmanthorpe Driving Lessons", href: "/driving-lessons-copmanthorpe-york" },
-        { label: "Heslington Driving Lessons", href: "/driving-lessons-heslington-york" },
-        { label: "Badger Hill Driving Lessons", href: "/driving-lessons-badger-hill-york" },
-        { label: "York City Centre Driving Lessons", href: "/driving-lessons-york-city-centre" },
-        { label: "Poppleton Driving Lessons", href: "/driving-lessons-poppleton-york" }
+        { label: "York Location Hub", href: "/york/" },
+        { label: "Acomb Driving Lessons", href: "/driving-lessons-acomb-york/" },
+        { label: "Holgate Driving Lessons", href: "/driving-lessons-holgate-york/" },
+        { label: "Foxwood Driving Lessons", href: "/driving-lessons-foxwood-york/" },
+        { label: "Dringhouses Driving Lessons", href: "/driving-lessons-dringhouses-york/" },
+        { label: "Woodthorpe Driving Lessons", href: "/driving-lessons-woodthorpe-york/" },
+        { label: "Clifton Driving Lessons", href: "/driving-lessons-clifton-york/" },
+        { label: "Rawcliffe Driving Lessons", href: "/driving-lessons-rawcliffe-york/" },
+        { label: "Bootham Driving Lessons", href: "/driving-lessons-bootham-york/" },
+        { label: "Haxby Driving Lessons", href: "/driving-lessons-haxby-york/" },
+        { label: "Wigginton Driving Lessons", href: "/driving-lessons-wigginton-york/" },
+        { label: "Huntington Driving Lessons", href: "/driving-lessons-huntington-york/" },
+        { label: "Heworth Driving Lessons", href: "/driving-lessons-heworth-york/" },
+        { label: "Tang Hall Driving Lessons", href: "/driving-lessons-tang-hall-york/" },
+        { label: "Osbaldwick Driving Lessons", href: "/driving-lessons-osbaldwick-york/" },
+        { label: "Murton Driving Lessons", href: "/driving-lessons-murton-york/" },
+        { label: "Layerthorpe Driving Lessons", href: "/driving-lessons-layerthorpe-york/" },
+        { label: "Fulford Driving Lessons", href: "/driving-lessons-fulford-york/" },
+        { label: "Bishopthorpe Driving Lessons", href: "/driving-lessons-bishopthorpe-york/" },
+        { label: "Copmanthorpe Driving Lessons", href: "/driving-lessons-copmanthorpe-york/" },
+        { label: "Heslington Driving Lessons", href: "/driving-lessons-heslington-york/" },
+        { label: "Badger Hill Driving Lessons", href: "/driving-lessons-badger-hill-york/" },
+        { label: "York City Centre Driving Lessons", href: "/driving-lessons-york-city-centre/" },
+        { label: "Poppleton Driving Lessons", href: "/driving-lessons-poppleton-york/" }
       ]
     },
     {
       title: "LEGAL",
       links: [
-        { label: "Privacy Policy", href: "/privacy-policy" },
-        { label: "Terms & Conditions", href: "/terms-and-conditions" },
-        { label: "Cookie Policy", href: "/cookie-policy" }
+        { label: "Privacy Policy", href: "/privacy-policy/" },
+        { label: "Terms & Conditions", href: "/terms-and-conditions/" },
+        { label: "Cookie Policy", href: "/cookie-policy/" }
       ]
     },
     {
       title: "ARTICLES",
       links: [
-        { label: "How to Pass Your Driving Test First Time in York", href: "/articles/pass-driving-test-first-time-york" },
-        { label: "Automatic vs Manual Driving Lessons: Which Should You Choose?", href: "/articles/automatic-vs-manual-driving-lessons-york" },
-        { label: "York Driving Test Routes & Common Mistakes", href: "/articles/york-driving-test-routes-common-mistakes" },
-        { label: "What Happens On The York Driving Test?", href: "/articles/what-happens-on-the-york-driving-test" },
-        { label: "Driving Test Nerves: How to Stay Calm on Test Day", href: "/articles/driving-test-nerves-how-to-stay-calm" }
+        { label: "How to Pass Your Driving Test First Time in York", href: "/articles/pass-driving-test-first-time-york/" },
+        { label: "Automatic vs Manual Driving Lessons: Which Should You Choose?", href: "/articles/automatic-vs-manual-driving-lessons-york/" },
+        { label: "York Driving Test Routes & Common Mistakes", href: "/articles/york-driving-test-routes-common-mistakes/" },
+        { label: "What Happens On The York Driving Test?", href: "/articles/what-happens-on-the-york-driving-test/" },
+        { label: "Driving Test Nerves: How to Stay Calm on Test Day", href: "/articles/driving-test-nerves-how-to-stay-calm/" }
       ]
     }
   ];

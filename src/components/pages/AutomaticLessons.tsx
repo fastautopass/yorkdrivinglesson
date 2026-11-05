@@ -6,6 +6,8 @@ import Footer from '../Footer';
 import EnquiryForm from '../EnquiryForm';
 import FAQ from '../FAQ';
 import YorkAreaFinder from '../YorkAreaFinder';
+import RelatedLinks from '../RelatedLinks';
+import { areas } from '../../data/site';
 
 export default function AutomaticLessons() {
   const [currentPassIndex, setCurrentPassIndex] = useState(0);
@@ -13,7 +15,7 @@ export default function AutomaticLessons() {
   const passTrackRef = useRef<HTMLDivElement>(null);
   const [activeStage, setActiveStage] = useState(0);
 
-  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
+  const recentPasses = Array.from({ length: 41 }, (_, i) => ({ id: i + 1, src: `/passes/thumbs/pass-${i + 1}.jpg` })).filter(p => p.id !== 4);
 
   const nextPass = () => {
     setCurrentPassIndex((prev) => (prev + 1) % recentPasses.length);
@@ -57,7 +59,7 @@ export default function AutomaticLessons() {
     },
     { 
       question: "How many lessons will I actually need to pass?", 
-      answer: "Every learner is different, but the goal is to get you to a <b>test-ready driving</b> standard safely. While the DVSA average is 45 hours, our structured approach often helps <a href='/intensive-driving-courses' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>intensive driving</a> students progress quickly. We provide honest feedback after every session." 
+      answer: "Every learner is different, but the goal is to get you to a <b>test-ready driving</b> standard safely. While the DVSA average is 45 hours, our structured approach often helps <a href='/intensive-driving-courses/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>intensive driving</a> students progress quickly. We provide honest feedback after every session." 
     },
     { 
       question: "Can I start from scratch as a complete beginner?", 
@@ -65,23 +67,23 @@ export default function AutomaticLessons() {
     },
     { 
       question: "What areas of York do you cover?", 
-      answer: "We cover the majority of the city. You can view our full coverage on the <a href='/york' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Locations Hub</a>, including Acomb, Heworth, Fulford, Clifton, and Huntington. We can usually pick you up from home, work, or college." 
+      answer: "We cover the majority of the city. You can view our full coverage on the <a href='/york/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Locations Hub</a>, including Acomb, Heworth, Fulford, Clifton, and Huntington. We can usually pick you up from home, work, or college." 
     },
     { 
       question: "Do you offer refresher lessons for automatic drivers?", 
-      answer: "Yes, we do. Our <a href='/refresher-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>refresher lessons</a> are perfect if you've had a long break or have just moved to York and want to get used to local roundabouts and busy junctions in an automatic car." 
+      answer: "Yes, we do. Our <a href='/refresher-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>refresher lessons</a> are perfect if you've had a long break or have just moved to York and want to get used to local roundabouts and busy junctions in an automatic car." 
     },
     { 
       question: "Will we practise on real York test routes?",
-      answer: "Yes. As you become more <a href='/mock-driving-tests' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>test-ready</a>, we'll spend time on real <a href='/articles/york-driving-test-routes-common-mistakes' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>DVSA test routes</a>. This helps you become familiar with the specific junctions you'll encounter at the <a href='/monks-cross-driving-test-centre' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Test Centre</a>."
+      answer: "Yes. As you become more <a href='/mock-driving-tests/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>test-ready</a>, we'll spend time on <a href='/articles/york-driving-test-routes-common-mistakes/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>roads around the York test centre</a>. This helps you become familiar with the specific junctions you'll encounter at the <a href='/monks-cross-driving-test-centre/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>York Test Centre</a>."
     },
     { 
       question: "Is learning in York's traffic harder in an automatic?", 
-      answer: "Actually, it's easier. York's inner ring road can be busy, but in an automatic, you don't worry about constant gear changes in stop-start traffic. This is especially helpful for <a href='/motorway-lessons' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>motorway-style driving</a> preparation and busy city junctions like Gillygate." 
+      answer: "Actually, it's easier. York's inner ring road can be busy, but in an automatic, you don't worry about constant gear changes in stop-start traffic. This is especially helpful for <a href='/motorway-lessons/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>motorway-style driving</a> preparation and busy city junctions like Gillygate." 
     },
     { 
       question: "Are automatic driving lessons easier than manual?", 
-      answer: "Generally, yes. Most people pick up the basics quicker without a clutch. If you're undecided, read our <a href='/articles/automatic-vs-manual-driving-lessons-york' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic vs manual guide</a>. Remember, passing in an automatic means your licence is restricted to automatics."
+      answer: "Generally, yes. Most people pick up the basics quicker without a clutch. If you're undecided, read our <a href='/articles/automatic-vs-manual-driving-lessons-york/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>automatic vs manual guide</a>. Remember, passing in an automatic means your licence is restricted to automatics."
     },
     { 
       question: "What should I expect on my first lesson?", 
@@ -89,7 +91,7 @@ export default function AutomaticLessons() {
     },
     { 
       question: "Can I take my test in an automatic car?", 
-      answer: "Yes. You'll take the same <b>practical driving test</b> as manual learners, using our modern, dual-controlled automatic car. We recommend a few <a href='/mock-driving-tests' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving tests</a> first so you go in with total composure."
+      answer: "Yes. You'll take the same <b>practical driving test</b> as manual learners, using our modern, dual-controlled automatic car. We recommend a few <a href='/mock-driving-tests/' class='font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all'>mock driving tests</a> first so you go in with total composure."
     }
   ];
 
@@ -164,7 +166,7 @@ export default function AutomaticLessons() {
           </div>
 
           <div className="flex justify-center w-full lg:justify-end">
-            <div id="enquiry-form" className="w-full max-w-[540px] relative z-10">
+            <div className="w-full max-w-[540px] relative z-10">
               <EnquiryForm />
             </div>
           </div>
@@ -183,7 +185,7 @@ export default function AutomaticLessons() {
               Our <span className="font-bold text-primary-text uppercase tracking-tighter">DVSA</span>-approved automatic driving instructors in York work at your pace and focus on what you find difficult. We work with nervous learners regularly, keeping lessons calm and building confidence on York's roads gradually.
             </p>
             <p className="text-secondary-text text-[1.05rem] md:text-[1.1rem] leading-[1.8] font-medium max-w-[90%] mx-auto">
-              By eliminating the complexity of gear changes, our local driving school in York allows you to progress faster and focus entirely on the road ahead. We prepare students for practical driving test success, from quiet residential streets to busy inner-city junctions, and our <a href="/york" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">York Locations Hub</a> covers routes and areas across the city.
+              By eliminating the complexity of gear changes, our local driving school in York allows you to progress faster and focus entirely on the road ahead. We prepare students for practical driving test success, from quiet residential streets to busy inner-city junctions, and our <a href="/york/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">York Locations Hub</a> covers routes and areas across the city.
             </p>
           </div>
         </div>
@@ -198,7 +200,7 @@ export default function AutomaticLessons() {
             </h2>
             <div className="w-16 h-1 bg-primary-dark/10 mb-4"></div>
             <p className="text-[#4B5563] text-[1.05rem] leading-relaxed font-medium">
-              Learning to drive shouldn't feel like a battle with a machine. Automatic driving tuition removes the stress of clutch control, letting you focus on becoming a safe, confident driver. If you're comparing your options, read our <a href="/articles/automatic-vs-manual-driving-lessons-york" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">automatic vs manual</a> guide to see why many <span className="text-primary-text font-bold uppercase tracking-widest text-[0.8rem]">York learners</span> prefer this route.
+              Learning to drive shouldn't feel like a battle with a machine. Automatic driving tuition removes the stress of clutch control, letting you focus on becoming a safe, confident driver. If you're comparing your options, read our <a href="/articles/automatic-vs-manual-driving-lessons-york/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">automatic vs manual</a> guide to see why many <span className="text-primary-text font-bold uppercase tracking-widest text-[0.8rem]">York learners</span> prefer this route.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
@@ -288,7 +290,7 @@ export default function AutomaticLessons() {
                 Learners highlight their growth in confidence from first lessons through to mock test preparation, benefiting from our calm teaching and in-depth York road experience.
               </p>
               <a 
-                href="https://www.google.com/search?q=York+Driving+Lesson+School+reviews" 
+                href="https://share.google/9B75eIsjdJNEb4cRC" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full bg-soft-bg text-primary-text border border-border-main/20 py-2.5 rounded-xl text-[0.72rem] font-black uppercase tracking-[0.15em] transition-all hover:bg-primary-dark hover:text-white hover:border-primary-dark shadow-sm"
@@ -381,7 +383,7 @@ export default function AutomaticLessons() {
                     className="min-w-full md:min-w-[calc(33.333%-16px)] shrink-0"
                   >
                     <div className="aspect-[4/3.2] bg-soft-bg rounded-[32px] border border-border-main/10 overflow-hidden relative group/card shadow-sm hover:shadow-xl transition-all duration-500">
-                      <img src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
+                      <img loading="lazy" decoding="async" width={360} height={480} src={pass.src} alt="York driving test pass" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                   </div>
                 ))}
@@ -440,7 +442,7 @@ export default function AutomaticLessons() {
 
             <div className="p-8 bg-white border border-border-main/30 rounded-2xl transition-all duration-300 hover:border-primary-dark/20 hover:shadow-lg hover:shadow-primary-dark/5">
               <div className="text-[1.15rem] font-black text-primary-text mb-3 tracking-tight uppercase">Calm Automatic Lessons</div>
-              <p className="text-secondary-text text-[0.92rem] leading-relaxed font-medium">Experience stress-free learning without the worry of clutch control or gears, allowing you to focus 100% on safety and surroundings.</p>
+              <p className="text-secondary-text text-[0.92rem] leading-relaxed font-medium">Experience stress-free learning without the worry of clutch control or gears, allowing you to focus more on safety and surroundings.</p>
             </div>
 
             <div className="p-8 bg-white border border-border-main/30 rounded-2xl transition-all duration-300 hover:border-primary-dark/20 hover:shadow-lg hover:shadow-primary-dark/5">
@@ -705,7 +707,7 @@ export default function AutomaticLessons() {
           </p>
           <div className="flex justify-center">
             <a 
-              href="/articles/automatic-vs-manual-driving-lessons-york" 
+              href="/articles/automatic-vs-manual-driving-lessons-york/" 
               className="inline-block bg-primary-dark text-white px-10 py-4 rounded-full text-[0.82rem] font-black uppercase tracking-widest no-underline transition-all duration-300 hover:bg-secondary-dark shadow-md hover:shadow-lg"
             >
               Compare Automatic vs Manual Lessons
@@ -722,14 +724,14 @@ export default function AutomaticLessons() {
             </h2>
             <div className="w-16 h-1 bg-primary-dark/10 mb-4 mx-auto"></div>
             <p className="text-secondary-text text-[1.05rem] leading-relaxed font-medium mx-auto max-w-[1000px]">
-              Preparing for your practical driving test in York requires more than just basic vehicle control. Our automatic driving lessons cover real <a href="/articles/york-driving-test-routes-common-mistakes" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">DVSA test routes</a> and varied conditions across the city.
+              Preparing for your practical driving test in York requires more than just basic vehicle control. Our automatic driving lessons cover <a href="/articles/york-driving-test-routes-common-mistakes/" className="font-bold text-primary-text hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">roads around the York test centre</a> and varied conditions across the city.
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 lg:gap-8 mb-16">
             <div className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] p-8 bg-white border border-border-main/30 rounded-2xl transition-all duration-300 hover:border-primary-dark/20 hover:shadow-lg hover:shadow-primary-dark/5">
               <div className="text-[1.15rem] font-black text-primary-text mb-3 tracking-tight uppercase">Mock Driving Tests</div>
-              <p className="text-secondary-text text-[0.92rem] leading-relaxed font-medium">We conduct full-length mock tests assessed to DVSA standards. This helps identify weak areas in a calm environment, providing technical and psychological readiness for the big day. Explore our dedicated <a href="/mock-driving-tests" className="font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">mock driving test preparation</a> page for a more detailed breakdown.</p>
+              <p className="text-secondary-text text-[0.92rem] leading-relaxed font-medium">We conduct full-length mock tests assessed to DVSA standards. This helps identify weak areas in a calm environment, providing technical and psychological readiness for the big day. Explore our dedicated <a href="/mock-driving-tests/" className="font-bold hover:underline underline-offset-4 decoration-primary-dark/30 transition-all">mock driving test preparation</a> page for a more detailed breakdown.</p>
             </div>
 
             <div className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] p-8 bg-white border border-border-main/30 rounded-2xl transition-all duration-300 hover:border-primary-dark/20 hover:shadow-lg hover:shadow-primary-dark/5">
@@ -777,11 +779,11 @@ export default function AutomaticLessons() {
  
           <div className="flex flex-wrap justify-center gap-3 lg:gap-4 mb-8 max-w-[1000px] mx-auto">
             {[
-              { name: "Heworth", url: "/driving-lessons-heworth-york" },
-              { name: "Tang Hall", url: "/driving-lessons-tang-hall-york" },
-              { name: "Clifton", url: "/driving-lessons-clifton-york" },
-              { name: "Fulford", url: "/driving-lessons-fulford-york" },
-              { name: "Acomb", url: "/driving-lessons-acomb-york" }
+              { name: "Heworth", url: "/driving-lessons-heworth-york/" },
+              { name: "Tang Hall", url: "/driving-lessons-tang-hall-york/" },
+              { name: "Clifton", url: "/driving-lessons-clifton-york/" },
+              { name: "Fulford", url: "/driving-lessons-fulford-york/" },
+              { name: "Acomb", url: "/driving-lessons-acomb-york/" }
             ].map((area) => (
               <a 
                 key={`auto-area-${area.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -796,7 +798,7 @@ export default function AutomaticLessons() {
  
           <div className="flex justify-center pt-4">
             <a 
-              href="/york" 
+              href="/york/" 
               className="inline-flex items-center gap-3 text-primary-dark hover:text-secondary-dark font-black uppercase tracking-[0.2em] text-[0.8rem] transition-all no-underline group border-b border-primary-dark/15 hover:border-primary-dark pb-1"
             >
               EXPLORE ALL YORK LOCATIONS 
@@ -824,17 +826,17 @@ export default function AutomaticLessons() {
               {
                 title: "Manual Driving Lessons",
                 desc: "Want a manual licence instead? Manual driving lessons in York give you full vehicle control and a licence that works in any car.",
-                link: "/manual-driving-lessons"
+                link: "/manual-driving-lessons/"
               },
               {
                 title: "Intensive Driving Courses",
                 desc: "Need to pass quickly? Our intensive driving courses in York cover everything in a shorter time frame — automatic or manual.",
-                link: "/intensive-driving-courses"
+                link: "/intensive-driving-courses/"
               },
               {
                 title: "Mock Driving Tests",
                 desc: "Feeling nearly ready? A mock driving test in York shows you exactly where you stand before you sit the real thing.",
-                link: "/mock-driving-tests"
+                link: "/mock-driving-tests/"
               }
             ].map((course) => (
               <a 
@@ -856,6 +858,49 @@ export default function AutomaticLessons() {
       </section>
 
       {/* SECTION 9: FAQ */}
+      {/* WHO AUTOMATIC LESSONS SUIT + LICENCE + AREAS */}
+      <section className="bg-soft-bg py-10 lg:py-14 px-6 sm:px-10 border-t border-border-main/10" id="is-automatic-right-for-you">
+        <div className="max-w-[1100px] mx-auto text-left">
+          <h2 className="text-[1.8rem] md:text-[2.2rem] font-black text-[#1F2937] mb-4 leading-none tracking-tighter uppercase">
+            Is an automatic lesson <span className="italic font-extrabold text-primary-text/30">right for you?</span>
+          </h2>
+          <p className="text-secondary-text text-[0.95rem] leading-relaxed font-medium max-w-[820px] mb-8">
+            Automatic driving lessons in York suit learners who want to concentrate on the road, not the gearstick. There is no clutch to balance and no gears to change, so stop-start traffic on the inner ring road and busy city junctions feel far less stressful.
+          </p>
+          <div className="grid md:grid-cols-3 gap-5 mb-10">
+            <div className="bg-white border border-border-main/20 rounded-2xl p-6">
+              <h3 className="text-[1rem] font-black uppercase tracking-tight text-primary-text mb-2">Nervous or first-time drivers</h3>
+              <p className="text-[0.88rem] text-secondary-text font-medium leading-relaxed m-0">With fewer controls to manage, many beginners build confidence sooner. Read <a href="/articles/driving-test-nerves-how-to-stay-calm/" className="font-bold underline">how to stay calm before your test</a>.</p>
+            </div>
+            <div className="bg-white border border-border-main/20 rounded-2xl p-6">
+              <h3 className="text-[1rem] font-black uppercase tracking-tight text-primary-text mb-2">Drivers returning after a break</h3>
+              <p className="text-[0.88rem] text-secondary-text font-medium leading-relaxed m-0">Moving to York or switching to an automatic car? Our <a href="/refresher-lessons/" className="font-bold underline">refresher lessons</a> help you get used to local roads again.</p>
+            </div>
+            <div className="bg-white border border-border-main/20 rounded-2xl p-6">
+              <h3 className="text-[1rem] font-black uppercase tracking-tight text-primary-text mb-2">Learners short on time</h3>
+              <p className="text-[0.88rem] text-secondary-text font-medium leading-relaxed m-0">Want to pass quickly? See our <a href="/intensive-driving-courses/" className="font-bold underline">intensive driving courses</a> and <a href="/mock-driving-tests/" className="font-bold underline">mock driving tests</a>.</p>
+            </div>
+          </div>
+
+          <h3 className="text-[1.2rem] md:text-[1.4rem] font-black text-primary-text mb-3 tracking-tighter uppercase leading-none">Automatic licence restriction</h3>
+          <p className="text-secondary-text text-[0.95rem] leading-relaxed font-medium max-w-[820px] mb-3">
+            If you pass your practical test in an automatic car, your licence only allows you to drive automatics. You can add manual entitlement later by passing a manual test. If you want to drive any car, compare it with <a href="/manual-driving-lessons/" className="font-bold underline">manual driving lessons</a> or read our guide to <a href="/articles/automatic-vs-manual-driving-lessons-york/" className="font-bold underline">automatic vs manual lessons</a>.
+          </p>
+          <p className="text-secondary-text text-[0.95rem] leading-relaxed font-medium max-w-[820px] mb-10">
+            You take the same practical test as manual learners. Many learners practise the real test area first: see the <a href="/monks-cross-driving-test-centre/" className="font-bold underline">Monks Cross test centre guide</a> and <a href="/articles/york-driving-test-routes-common-mistakes/" className="font-bold underline">York test routes and common mistakes</a>.
+          </p>
+
+          <h3 className="text-[1.2rem] md:text-[1.4rem] font-black text-primary-text mb-4 tracking-tighter uppercase leading-none">Automatic lessons by area</h3>
+          <div className="flex flex-wrap gap-2.5">
+            {areas.map((ar) => (
+              <a key={ar.path} href={ar.path} className="px-4 py-2 bg-white border border-border-main/20 rounded-full text-[0.7rem] font-black text-primary-text uppercase tracking-[0.1em] no-underline transition-all duration-300 hover:border-primary-dark/30 hover:bg-soft-bg/50 hover:shadow-sm">
+                Automatic lessons in {ar.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white py-8 lg:py-12 px-6 sm:px-10 border-t border-border-main/20" id="faq">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-8 lg:mb-10">
@@ -875,7 +920,7 @@ export default function AutomaticLessons() {
           </h2>
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href="/york"
+              href="/york/"
               className="bg-white text-primary-dark px-7 py-3 rounded-full text-[0.78rem] font-black uppercase tracking-widest no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-lg"
             >
               York
@@ -892,6 +937,7 @@ export default function AutomaticLessons() {
 
       <YorkAreaFinder />
 
+      <RelatedLinks path="/automatic-driving-lessons/" kind="service" />
       <Footer />
     </div>
   );

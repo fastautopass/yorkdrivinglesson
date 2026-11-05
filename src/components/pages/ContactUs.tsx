@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, MessageSquare, Mail, Star, MapPin, ChevronRight, ClipboardList, Navigation, Award, BookOpen } from 'lucide-react';
 import Header from '../Header';
 import Footer from '../Footer';
+import { ADDRESS, MAP_URL, MAP_EMBED_URL } from '../../data/site';
 
 const GoogleLogo = () => (
   <svg viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
@@ -47,11 +48,11 @@ export default function ContactUs() {
   ];
 
   const lessonLinks = [
-    { label: "Automatic driving lessons", href: "/automatic-driving-lessons", icon: <Award className="w-4 h-4" /> },
-    { label: "Manual driving lessons", href: "/manual-driving-lessons", icon: <Award className="w-4 h-4" /> },
-    { label: "Intensive courses", href: "/intensive-driving-courses", icon: <Award className="w-4 h-4" /> },
-    { label: "Mock driving tests", href: "/mock-driving-tests", icon: <ClipboardList className="w-4 h-4" /> },
-    { label: "Refresher lessons", href: "/refresher-lessons", icon: <Navigation className="w-4 h-4" /> }
+    { label: "Automatic driving lessons", href: "/automatic-driving-lessons/", icon: <Award className="w-4 h-4" /> },
+    { label: "Manual driving lessons", href: "/manual-driving-lessons/", icon: <Award className="w-4 h-4" /> },
+    { label: "Intensive courses", href: "/intensive-driving-courses/", icon: <Award className="w-4 h-4" /> },
+    { label: "Mock driving tests", href: "/mock-driving-tests/", icon: <ClipboardList className="w-4 h-4" /> },
+    { label: "Refresher lessons", href: "/refresher-lessons/", icon: <Navigation className="w-4 h-4" /> }
   ];
 
   return (
@@ -183,12 +184,12 @@ export default function ContactUs() {
                 </div>
                 <div className="flex flex-col gap-4">
                   {[
-                    { label: "Acomb", href: "/driving-lessons-acomb-york" },
-                    { label: "Clifton", href: "/driving-lessons-clifton-york" },
-                    { label: "Fulford", href: "/driving-lessons-fulford-york" },
-                    { label: "Heworth", href: "/driving-lessons-heworth-york" },
-                    { label: "Haxby", href: "/driving-lessons-haxby-york" },
-                    { label: "View All York Areas", href: "/york", highlight: true }
+                    { label: "Acomb", href: "/driving-lessons-acomb-york/" },
+                    { label: "Clifton", href: "/driving-lessons-clifton-york/" },
+                    { label: "Fulford", href: "/driving-lessons-fulford-york/" },
+                    { label: "Heworth", href: "/driving-lessons-heworth-york/" },
+                    { label: "Haxby", href: "/driving-lessons-haxby-york/" },
+                    { label: "View All York Areas", href: "/york/", highlight: true }
                   ].map((link: any, idx) => (
                     <a 
                       key={`contact-area-${idx}`}
@@ -213,7 +214,7 @@ export default function ContactUs() {
                 </div>
                 <div className="flex flex-col gap-4">
                   {[
-                    { label: "Monks Cross Driving Test Centre", href: "/monks-cross-driving-test-centre" }
+                    { label: "Monks Cross Driving Test Centre", href: "/monks-cross-driving-test-centre/" }
                   ].map((link, idx) => (
                     <a 
                       key={`contact-info-${idx}`}
@@ -227,6 +228,31 @@ export default function ContactUs() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* WHAT HAPPENS NEXT */}
+        <section className="bg-white py-12 lg:py-16 px-6 sm:px-10 border-t border-border-main/10">
+          <div className="max-w-[900px] mx-auto text-left">
+            <h2 className="text-[1.6rem] md:text-[2rem] font-black text-primary-text mb-5 tracking-tighter uppercase leading-none">What happens after you get in touch</h2>
+            <address className="not-italic text-[0.95rem] text-secondary-text font-medium leading-relaxed mb-6">
+              <span className="font-black text-primary-text">York Driving Lesson</span><br />
+              {ADDRESS.street}, {ADDRESS.locality}, {ADDRESS.postcode}<br />
+              Phone: <a href="tel:+447763999317" className="font-bold underline">07763 999317</a> · Email: <a href="mailto:support@yorkdrivinglesson.co.uk" className="font-bold underline">support@yorkdrivinglesson.co.uk</a>
+            </address>
+            <div className="w-full h-[320px] bg-soft-bg rounded-[24px] border border-border-main/20 mb-3 overflow-hidden shadow-inner">
+              <iframe title="York Driving Lesson location on Google Maps" src={MAP_EMBED_URL} width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p className="mb-6"><a href={MAP_URL} target="_blank" rel="noopener noreferrer" className="text-[0.85rem] font-black uppercase tracking-widest text-primary-dark underline">Open in Google Maps</a></p>
+            <ol className="list-none m-0 p-0 space-y-4">
+              <li className="text-[0.95rem] text-secondary-text font-medium leading-relaxed"><span className="font-black text-primary-text">1. You send your details.</span> Use the enquiry form, call 07763 999317 or email support@yorkdrivinglesson.co.uk with your name, mobile number, postcode and the type of lesson you want.</li>
+              <li className="text-[0.95rem] text-secondary-text font-medium leading-relaxed"><span className="font-black text-primary-text">2. We reply with availability.</span> We aim to respond within two hours with times that suit your part of York, and we can answer questions about automatic or manual lessons, intensive courses and mock tests.</li>
+              <li className="text-[0.95rem] text-secondary-text font-medium leading-relaxed"><span className="font-black text-primary-text">3. We agree a plan.</span> You tell us your experience, how quickly you want to progress and any test date you already hold. Nothing is booked until you are happy with the plan.</li>
+              <li className="text-[0.95rem] text-secondary-text font-medium leading-relaxed"><span className="font-black text-primary-text">4. Your first lesson.</span> Lessons start from home, work or college in your area and begin on quiet roads. See the <a href="/york/" className="font-bold underline">areas we cover</a> or <a href="/driving-lessons/" className="font-bold underline">all lesson types</a>.</li>
+            </ol>
+            <p className="text-[0.95rem] text-secondary-text font-medium leading-relaxed mt-6">
+              Not sure what to ask? Our guides cover <a href="/articles/what-happens-on-the-york-driving-test/" className="font-bold underline">what happens on the York driving test</a> and <a href="/monks-cross-driving-test-centre/" className="font-bold underline">the Monks Cross test centre</a>, and you can compare <a href="/articles/automatic-vs-manual-driving-lessons-york/" className="font-bold underline">automatic and manual lessons</a> before you decide.
+            </p>
           </div>
         </section>
       </main>
